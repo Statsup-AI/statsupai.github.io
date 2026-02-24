@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emerging Knowledge Trend in Statistical Research | StatsUpAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Manrope', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      line-height: 1.8;
+      color: #333;
+      background: radial-gradient(circle at 10% -10%, rgba(30,58,95,0.08), transparent 45%),
+                  radial-gradient(circle at 90% 10%, rgba(17,24,39,0.08), transparent 40%),
+                  #f3f6fb;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 0 24px rgba(0,0,0,0.08);
+      border-radius: 0;
+    }
+
+    .header {
+      background: #0f172a;
+      color: #fff;
+      padding: 20px 50px;
+      border-bottom: 2px solid #1f2937;
+      text-align: center;
+    }
+
+    .header .event-tag {
+      font-size: 0.9em;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e0e0e0;
+      opacity: 0.9;
+    }
+
+    .article-info {
+      padding: 56px 60px 44px;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
+      background: #fff;
+    }
+
+    .article-title {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 2.35em;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #1d4e89;
+    }
+
+    .paper-block {
+      background: linear-gradient(120deg, rgba(30,58,95,0.08), rgba(17,24,39,0.04));
+      border-bottom: 1px solid #dbe4f1;
+    }
+
+    .paper-block-inner {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      padding: 28px 50px;
+      position: relative;
+    }
+
+    .paper-block-inner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(0deg, rgba(255,255,255,0.55) 0, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 6px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .paper-content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      color: #444;
+      text-align: left;
+    }
+
+    .paper-content p {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.82;
+      color: #444;
+    }
+
+    .paper-content .meta-links {
+      margin-top: 14px;
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    .paper-content a {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,26,26,0.26);
+    }
+
+    .content { padding: 40px 50px 44px; }
+
+    .section-stack {
+      margin-top: 14px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .section-card {
+      background: linear-gradient(135deg, rgba(30,58,95,0.08), rgba(17,24,39,0.03));
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      padding: 32px 30px;
+    }
+
+    .section-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(0deg, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 1px, transparent 1px, transparent 6px);
+      opacity: 0.32;
+      pointer-events: none;
+    }
+
+    .section-inner { position: relative; z-index: 1; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .section-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      color: #dbeafe;
+      font-weight: 700;
+      font-size: 0.95em;
+      border: 1px solid rgba(59,130,246,0.45);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 40px;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 1.58em;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #1a1a1a;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(26,26,26,0.16);
+    }
+
+    .section-body {
+      color: #4b4b4b;
+      font-size: 1em;
+      line-height: 1.86;
+      margin-top: 12px;
+    }
+
+    .section-body p { margin-bottom: 14px; }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .section-body ul {
+      margin: 10px 0 14px;
+      padding-left: 22px;
+    }
+
+    .section-body li { margin: 8px 0; }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+      margin: 12px 0 14px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .topic-grid li {
+      margin: 0;
+      padding: 10px 12px;
+      border: 1px solid rgba(26,26,26,0.12);
+      background: #fff;
+      border-radius: 0;
+      line-height: 1.6;
+    }
+
+    .paper-figure {
+      width: 100%;
+      margin: 20px 0 0;
+      text-align: center;
+    }
+
+    .paper-figure img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+
+    .paper-figure.narrow img {
+      width: 72%;
+    }
+
+    .paper-figure .caption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+      padding: 0 20px;
+      line-height: 1.7;
+    }
+
+    .figure-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .figure-row .paper-figure.narrow img {
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .paper-block-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .figure-row { grid-template-columns: 1fr; }
+      .figure-row .paper-figure.narrow img { width: 100%; }
+      .paper-figure.narrow img { width: 100%; }
+      .topic-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .header { padding: 15px 25px; }
+      .article-info { padding: 38px 25px 30px; }
+      .article-title { font-size: 1.65em; }
+      .content { padding: 30px 25px; }
+      .section-card { padding: 24px 18px; }
+      .section-head { grid-template-columns: 42px 1fr; gap: 10px; }
+      .section-number { width: 34px; height: 34px; font-size: 0.85em; }
+      .section-title { font-size: 1.3em; }
+      .paper-figure .caption { padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="event-tag">StatsUpAI · Research Trend Analysis</div>
+    </div>
+
+    <div class="article-info">
+      <h1 class="article-title">Emerging Knowledge Trend in Statistical Research</h1>
+      <div class="article-subtitle"></div>
+    </div>
+
+    <div class="paper-block">
+      <div class="paper-block-inner">
+        <div class="paper-content">
+          <p><strong>Publication</strong><br>Chenxuan He, Feifei Wang, &amp; Liping Zhu. (2026). Emerging Knowledge Trend in Statistical Research: A Content-Based Analysis using Covariate-Assisted Dynamic Topic Model. Journal of the American Statistical Association (JASA).</p>
+          <div class="meta-links">
+            DOI: <a href="https://doi.org/10.1080/01621459.2025.2602833" target="_blank" rel="noopener">https://doi.org/10.1080/01621459.2025.2602833</a><br>
+            GitHub: <a href="https://github.com/chenxuan-he/CDTM2" target="_blank" rel="noopener">https://github.com/chenxuan-he/CDTM2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="section-stack">
+
+        <section class="section-card" id="intro">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">1</div>
+              <h2 class="section-title">Introduction</h2>
+            </div>
+            <div class="section-body">
+              <p>Statistics has changed dramatically over the last 40+ years—from foundational ideas like the bootstrap and LASSO to today’s deep learning theory, interpretability, privacy, and causal ML. But what exactly changed, when, and how? Which shifts reflect emerging scientific needs? How does statistics connect to modern data science and AI? A research team from Renmin University of China answers those questions with a large-scale, content-based analysis of statistical research.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="data">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">2</div>
+              <h2 class="section-title">What We Analyzed</h2>
+            </div>
+            <div class="section-body">
+              <p>We assembled a corpus spanning both “core statistics” and the statistics–AI interface:</p>
+              <ul>
+                <li>Four top statistics journals: Journal of the American Statistical Association (JASA), Annals of Statistics (AOS), Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB), Biometrika (BKA), covering 1980–2024</li>
+                <li>Three AI conferences with strong statistics overlap: NeurIPS, ICML, AISTATS, covering 2014–2024. We filtered conference papers to focus on those most relevant to statistical research.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="volume">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">3</div>
+              <h2 class="section-title">Diverging Publication Volumes: Rapid Conference Growth vs. Stable Journals</h2>
+            </div>
+            <div class="section-body">
+              <p>Since around 2010, statistics-relevant AI conferences have expanded rapidly, while the annual publication volume of the four statistics journals has remained relatively stable. This divergence is consistent with different publication strategies:</p>
+              <ul>
+                <li>Conferences often keep acceptance rates within a relatively stable range, so the number of accepted papers can grow as submissions grow.</li>
+                <li>Journals often maintain a more fixed annual page budget, which limits publication volume and leads to lower acceptance rates.</li>
+              </ul>
+              <p>One implication is that some frontier work may appear in conferences earlier (or more frequently) than in journals.</p>
+
+              <div class="paper-figure narrow">
+                <img src="jasa_figure1.jpg" alt="Publication counts by venue over time (1980-2024, log scale)">
+                <div class="caption">Publication counts by venue over time (1980–2024, log scale) in the paper.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="cited">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">4</div>
+              <h2 class="section-title">Highly-Cited Papers Analysis: From Foundational Methods to AI-Era Challenges</h2>
+            </div>
+            <div class="section-body">
+              <p>We analyzed highly cited papers across two periods: before and after 2015. Review papers are excluded.</p>
+              <ul>
+                <li><strong>Period 1 (1979–2014): Method-building milestones.</strong><br>We analyzed papers with more than 10,000 citations by Google Scholar. These highly-cited papers established core tools used across fields (multiple testing/FDR, sparsity and high-dimensional methods, resampling, causal inference, computation).</li>
+                <li><strong>Period 2 (2015–2024): Responding to AI-era demands.</strong><br>To compare newer papers more fairly, the paper highlights high impact using citations per year. The top items reflect modern themes such as causal ML and heterogeneous effects, interpretability, deep learning theory, and privacy.</li>
+              </ul>
+
+              <div class="paper-figure">
+                <img src="jasa_figure2.jpg" alt="Highly-cited papers analysis across two periods">
+              </div>
+
+              <div class="paper-figure">
+                <img src="jasa_figure3.jpg" alt="High impact papers in 2015-2024 measured by citations per year">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="topics">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">5</div>
+              <h2 class="section-title">Eight Core Topics in Statistical Research</h2>
+            </div>
+            <div class="section-body">
+              <p>Using the developed topic modeling method (with K = 8 topics), we found a compact, interpretable map of the literature:</p>
+              <ul class="topic-grid">
+                <li>Topic 1: Algorithm and optimization</li>
+                <li>Topic 2: Bayesian statistics</li>
+                <li>Topic 3: Deep learning</li>
+                <li>Topic 4: Biostatistics</li>
+                <li>Topic 5: Nonparametric statistics</li>
+                <li>Topic 6: Regression</li>
+                <li>Topic 7: Unsupervised learning</li>
+                <li>Topic 8: Other classic areas</li>
+              </ul>
+              <p>From the extracted topics, we can see that statistics is increasingly engaging with AI-related issues. For example, deep learning (Topic 3) has emerged as a key area within modern data science. With further analysis, we found classical statistical methods also remain relevant: regression analysis (Topic 6) is widely used in predictive modeling, and Bayesian statistics (Topic 2) underpins probabilistic inference in machine learning, including deep learning and reinforcement learning. Overall, classical statistical theories continue to evolve alongside modern data science, driving innovation across fields.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="dynamic">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">6</div>
+              <h2 class="section-title">Evolving Statistical Focus: Growth of Deep Learning and Algorithms</h2>
+            </div>
+            <div class="section-body">
+              <p>We analyzed the dynamic evolution of topics and found some key topic trends.</p>
+              <ul>
+                <li>Deep learning grows rapidly after the mid-2010s.</li>
+                <li>Algorithm/optimization stays important throughout and rises in the modern era.</li>
+                <li>Topic vocabulary shifts over time (e.g., from EM-style language toward stochastic optimization and modern ML terms).</li>
+              </ul>
+
+              <div class="figure-row">
+                <div class="paper-figure narrow">
+                  <img src="jasa_figure4.jpg" alt="Dynamic change of topic proportions over time">
+                  <div class="caption">Dynamic change of topic proportions over time (solid line–Topic 3: deep learning; dashed line–Topic 1: algorithm and optimization)</div>
+                </div>
+
+                <div class="paper-figure narrow">
+                  <img src="jasa_figure5.jpg" alt="Dynamic changes in the high-probability words of topics over time">
+                  <div class="caption">Dynamic changes in the high-probability words of Topics 1(deep learning). Gray indicates the word appears while white indicates absence.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
