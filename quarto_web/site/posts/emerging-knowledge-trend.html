@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Shan Gao">
+<meta name="dcterms.date" content="2026-03-08">
+<meta name="description" content="This news highlights how statistical research has evolved over the past four decades—from classical methods to modern AI-linked themes such as deep learning, interpretability, privacy, and causal machine learning.">
+
+<title>Emerging Knowledge Trend in Statistical Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+<link href="../img/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>#title-block-header{display:none!important}</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">Emerging Knowledge Trend in Statistical Research</h1>
+<p class="author">Shan Gao</p>
+
+<p class="date">2026-03-08</p>
+</header>
+
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emerging Knowledge Trend in Statistical Research | StatsUpAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Manrope', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      line-height: 1.8;
+      color: #333;
+      background: radial-gradient(circle at 10% -10%, rgba(30,58,95,0.08), transparent 45%),
+                  radial-gradient(circle at 90% 10%, rgba(17,24,39,0.08), transparent 40%),
+                  #f3f6fb;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 0 24px rgba(0,0,0,0.08);
+      border-radius: 0;
+    }
+
+    .header {
+      background: #0f172a;
+      color: #fff;
+      padding: 20px 50px;
+      border-bottom: 2px solid #1f2937;
+      text-align: center;
+    }
+
+    .header .event-tag {
+      font-size: 0.9em;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e0e0e0;
+      opacity: 0.9;
+    }
+
+    .article-info {
+      padding: 56px 60px 44px;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
+      background: #fff;
+    }
+
+    .article-title {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 2.35em;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #1d4e89;
+    }
+
+    .paper-block {
+      background: linear-gradient(120deg, rgba(30,58,95,0.08), rgba(17,24,39,0.04));
+      border-bottom: 1px solid #dbe4f1;
+    }
+
+    .paper-block-inner {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      padding: 28px 50px;
+      position: relative;
+    }
+
+    .paper-block-inner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(0deg, rgba(255,255,255,0.55) 0, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 6px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .paper-content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      color: #444;
+      text-align: left;
+    }
+
+    .paper-content p {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.82;
+      color: #444;
+    }
+
+    .paper-content .meta-links {
+      margin-top: 14px;
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    .paper-content a {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,26,26,0.26);
+    }
+
+    .content { padding: 40px 50px 44px; }
+
+    .section-stack {
+      margin-top: 14px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .section-card {
+      background: linear-gradient(135deg, rgba(30,58,95,0.08), rgba(17,24,39,0.03));
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      padding: 32px 30px;
+    }
+
+    .section-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(0deg, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 1px, transparent 1px, transparent 6px);
+      opacity: 0.32;
+      pointer-events: none;
+    }
+
+    .section-inner { position: relative; z-index: 1; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .section-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      color: #dbeafe;
+      font-weight: 700;
+      font-size: 0.95em;
+      border: 1px solid rgba(59,130,246,0.45);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 40px;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 1.58em;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #1a1a1a;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(26,26,26,0.16);
+    }
+
+    .section-body {
+      color: #4b4b4b;
+      font-size: 1em;
+      line-height: 1.86;
+      margin-top: 12px;
+    }
+
+    .section-body p { margin-bottom: 14px; }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .section-body ul {
+      margin: 10px 0 14px;
+      padding-left: 22px;
+    }
+
+    .section-body li { margin: 8px 0; }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+      margin: 12px 0 14px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .topic-grid li {
+      margin: 0;
+      padding: 10px 12px;
+      border: 1px solid rgba(26,26,26,0.12);
+      background: #fff;
+      border-radius: 0;
+      line-height: 1.6;
+    }
+
+    .paper-figure {
+      width: 100%;
+      margin: 20px 0 0;
+      text-align: center;
+    }
+
+    .paper-figure img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+
+    .paper-figure.narrow img {
+      width: 72%;
+    }
+
+    .paper-figure .caption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+      padding: 0 20px;
+      line-height: 1.7;
+    }
+
+    .figure-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .figure-row .paper-figure.narrow img {
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .paper-block-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .figure-row { grid-template-columns: 1fr; }
+      .figure-row .paper-figure.narrow img { width: 100%; }
+      .paper-figure.narrow img { width: 100%; }
+      .topic-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .header { padding: 15px 25px; }
+      .article-info { padding: 38px 25px 30px; }
+      .article-title { font-size: 1.65em; }
+      .content { padding: 30px 25px; }
+      .section-card { padding: 24px 18px; }
+      .section-head { grid-template-columns: 42px 1fr; gap: 10px; }
+      .section-number { width: 34px; height: 34px; font-size: 0.85em; }
+      .section-title { font-size: 1.3em; }
+      .paper-figure .caption { padding: 0 10px; }
+    }
+  </style>
+
+
+  <div class="container">
+    <div class="header">
+      <div class="event-tag">StatsUpAI · Research Trend Analysis</div>
+    </div>
+
+    <div class="article-info">
+      <h1 class="article-title">Emerging Knowledge Trend in Statistical Research</h1>
+      <div class="article-subtitle"></div>
+    </div>
+
+    <div class="paper-block">
+      <div class="paper-block-inner">
+        <div class="paper-content">
+          <p><strong>Publication</strong><br>Chenxuan He, Feifei Wang, &amp; Liping Zhu. (2026). Emerging Knowledge Trend in Statistical Research: A Content-Based Analysis using Covariate-Assisted Dynamic Topic Model. Journal of the American Statistical Association (JASA).</p>
+          <div class="meta-links">
+            DOI: <a href="https://doi.org/10.1080/01621459.2025.2602833" target="_blank" rel="noopener">https://doi.org/10.1080/01621459.2025.2602833</a><br>
+            GitHub: <a href="https://github.com/chenxuan-he/CDTM2" target="_blank" rel="noopener">https://github.com/chenxuan-he/CDTM2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="section-stack">
+
+        <section class="section-card" id="intro">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">1</div>
+              <h2 class="section-title anchored">Introduction</h2>
+            </div>
+            <div class="section-body">
+              <p>Statistics has changed dramatically over the last 40+ years—from foundational ideas like the bootstrap and LASSO to today’s deep learning theory, interpretability, privacy, and causal ML. But what exactly changed, when, and how? Which shifts reflect emerging scientific needs? How does statistics connect to modern data science and AI? A research team from Renmin University of China answers those questions with a large-scale, content-based analysis of statistical research.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="data">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">2</div>
+              <h2 class="section-title anchored">What We Analyzed</h2>
+            </div>
+            <div class="section-body">
+              <p>We assembled a corpus spanning both “core statistics” and the statistics–AI interface:</p>
+              <ul>
+                <li>Four top statistics journals: Journal of the American Statistical Association (JASA), Annals of Statistics (AOS), Journal of the Royal Statistical Society Series B: Statistical Methodology (JRSSB), Biometrika (BKA), covering 1980–2024</li>
+                <li>Three AI conferences with strong statistics overlap: NeurIPS, ICML, AISTATS, covering 2014–2024. We filtered conference papers to focus on those most relevant to statistical research.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="volume">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">3</div>
+              <h2 class="section-title anchored">Diverging Publication Volumes: Rapid Conference Growth vs. Stable Journals</h2>
+            </div>
+            <div class="section-body">
+              <p>Since around 2010, statistics-relevant AI conferences have expanded rapidly, while the annual publication volume of the four statistics journals has remained relatively stable. This divergence is consistent with different publication strategies:</p>
+              <ul>
+                <li>Conferences often keep acceptance rates within a relatively stable range, so the number of accepted papers can grow as submissions grow.</li>
+                <li>Journals often maintain a more fixed annual page budget, which limits publication volume and leads to lower acceptance rates.</li>
+              </ul>
+              <p>One implication is that some frontier work may appear in conferences earlier (or more frequently) than in journals.</p>
+
+              <div class="paper-figure narrow">
+                <img src="figures/jasa_emerging_figure1.jpg" alt="Publication counts by venue over time (1980-2024, log scale)">
+                <div class="caption">Publication counts by venue over time (1980–2024, log scale) in the paper.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="cited">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">4</div>
+              <h2 class="section-title anchored">Highly-Cited Papers Analysis: From Foundational Methods to AI-Era Challenges</h2>
+            </div>
+            <div class="section-body">
+              <p>We analyzed highly cited papers across two periods: before and after 2015. Review papers are excluded.</p>
+              <ul>
+                <li><strong>Period 1 (1979–2014): Method-building milestones.</strong><br>We analyzed papers with more than 10,000 citations by Google Scholar. These highly-cited papers established core tools used across fields (multiple testing/FDR, sparsity and high-dimensional methods, resampling, causal inference, computation).</li>
+                <li><strong>Period 2 (2015–2024): Responding to AI-era demands.</strong><br>To compare newer papers more fairly, the paper highlights high impact using citations per year. The top items reflect modern themes such as causal ML and heterogeneous effects, interpretability, deep learning theory, and privacy.</li>
+              </ul>
+
+              <div class="paper-figure">
+                <img src="figures/jasa_emerging_figure2.jpg" alt="Highly-cited papers analysis across two periods">
+              </div>
+
+              <div class="paper-figure">
+                <img src="figures/jasa_emerging_figure3.jpg" alt="High impact papers in 2015-2024 measured by citations per year">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="topics">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">5</div>
+              <h2 class="section-title anchored">Eight Core Topics in Statistical Research</h2>
+            </div>
+            <div class="section-body">
+              <p>Using the developed topic modeling method (with K = 8 topics), we found a compact, interpretable map of the literature:</p>
+              <ul class="topic-grid">
+                <li>Topic 1: Algorithm and optimization</li>
+                <li>Topic 2: Bayesian statistics</li>
+                <li>Topic 3: Deep learning</li>
+                <li>Topic 4: Biostatistics</li>
+                <li>Topic 5: Nonparametric statistics</li>
+                <li>Topic 6: Regression</li>
+                <li>Topic 7: Unsupervised learning</li>
+                <li>Topic 8: Other classic areas</li>
+              </ul>
+              <p>From the extracted topics, we can see that statistics is increasingly engaging with AI-related issues. For example, deep learning (Topic 3) has emerged as a key area within modern data science. With further analysis, we found classical statistical methods also remain relevant: regression analysis (Topic 6) is widely used in predictive modeling, and Bayesian statistics (Topic 2) underpins probabilistic inference in machine learning, including deep learning and reinforcement learning. Overall, classical statistical theories continue to evolve alongside modern data science, driving innovation across fields.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="dynamic">
+          <div class="section-inner">
+            <div class="section-head">
+              <div class="section-number">6</div>
+              <h2 class="section-title anchored">Evolving Statistical Focus: Growth of Deep Learning and Algorithms</h2>
+            </div>
+            <div class="section-body">
+              <p>We analyzed the dynamic evolution of topics and found some key topic trends.</p>
+              <ul>
+                <li>Deep learning grows rapidly after the mid-2010s.</li>
+                <li>Algorithm/optimization stays important throughout and rises in the modern era.</li>
+                <li>Topic vocabulary shifts over time (e.g., from EM-style language toward stochastic optimization and modern ML terms).</li>
+              </ul>
+
+              <div class="figure-row">
+                <div class="paper-figure narrow">
+                  <img src="figures/jasa_emerging_figure4.jpg" alt="Dynamic change of topic proportions over time">
+                  <div class="caption">Dynamic change of topic proportions over time (solid line–Topic 3: deep learning; dashed line–Topic 1: algorithm and optimization)</div>
+                </div>
+
+                <div class="paper-figure narrow">
+                  <img src="figures/jasa_emerging_figure5.jpg" alt="Dynamic changes in the high-probability words of topics over time">
+                  <div class="caption">Dynamic changes in the high-probability words of Topics 1(deep learning). Gray indicates the word appears while white indicates absence.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+<!-- GoatCounter Tracker -->
+<script data-goatcounter="https://statsupai.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+<!-- Per-Page View Counter (Footer Style) -->
+<style>
+#goatcounter-footer {
+  --gc-counter-color: #2b786bef;
+  display: flex; 
+  align-items: center; 
+  column-gap: 5px;
+  color: #8e8e8e; 
+  font-size: 13px; 
+  font-family: Arial, sans-serif;
+}
+#goatcounter-footer .statcounter {
+  font-family: 'Courier New', monospace; 
+  color: var(--gc-counter-color);
+  font-weight: bold; 
+  margin-left: 3px; 
+}
+</style>
+
+<!-- GoatCounter Tracker -->
+<div id="goatcounter-footer"><span style="margin-left: 3px;">Loading views...</span></div>
+<script>
+    const path = window.location.pathname;
+    console.log('window.location.pathname:', path);
+    // If at the root, skip fetching views for now
+    if (path.endsWith('index.html') || path.endsWith('/posts/')) {
+      
+      const display = document.getElementById("goatcounter-footer");
+      if (display) {
+        display.innerHTML = "";
+        console.log("Skipping views for root path:", path);
+      }
+      
+    } else {
+      
+      // Trim path to remove everything before /quarto_web/site/ for easier local testing
+      var trimmedPath = path.replace(/^.*\/posts\//, '\/quarto_web\/site\/posts\/');
+      // If the path is exactly /posts/, set trimmedPath to the index.html file
+      if (path === '\/posts\/') {
+          console.log('Path is exactly /posts/, setting trimmedPath to index.html');
+          trimmedPath = '/quarto_web/site/posts/index.html';
+      }
+      console.log('trimmedPath:', trimmedPath);
+      
+      // setInterval to check every 100ms because GoatCounter may not be available immediately
+      var t = setInterval(function() {
+          console.log('Checking for GoatCounter availability...window.goatcounter:', window.goatcounter);
+          // Check if GoatCounter is available
+          if (window.goatcounter && window.goatcounter.visit_count) {
+
+              // GoatCounter is available, clear the timer
+              clearInterval(t)
+              // Resolve the counter color to a concrete value
+              var footer = document.getElementById('goatcounter-footer');
+              var resolvedColor = footer ? getComputedStyle(footer).getPropertyValue('--gc-counter-color').trim() : '';
+              console.log('Resolved counter color:', resolvedColor);
+              // Update the display with the current visit count
+              const display = document.getElementById("goatcounter-footer");
+              if (display) {
+                display.innerHTML = '<span">Page Views: </span>';
+                console.log('display.innerHTML:', display.innerHTML);
+              }
+              
+              
+              goatcounter.visit_count({
+                no_branding: true,
+                path: trimmedPath,
+                append: '#goatcounter-footer', 
+                style: `
+                  body {
+                    background: transparent !important;
+                  }
+                  div { 
+                    background: transparent !important;
+                    border-width: 0px;
+                    border: 0 !important;
+                    display: flex;
+                  }
+                  #gcvc-for {
+                    font-size: 0px;
+                  }
+                  #gcvc-views { 
+                      font-family: 'Courier New', monospace; 
+                      font-size: 13px;
+                      color: ${resolvedColor}; 
+                      font-weight: bold; 
+                      margin-top: 29px;
+                  }`
+              })
+
+          }
+      }, 100)
+      
+    }
+</script>
+
+
+
+
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+  tabsets.forEach(function(tabset) {
+    const tabby = new Tabby('#' + tabset.id);
+  });
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'light-border',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+
+
+
+
+</body></html>
