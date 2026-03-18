@@ -141,9 +141,13 @@ ul {
 /* ===== Footer ===== */
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.5fr 0.5fr 1fr 1fr;
+  gap: 24px;
   margin-bottom: 48px;
+}
+
+.footer-content > div {
+  min-width: 0;
 }
 
 .footer-brand h3 {
