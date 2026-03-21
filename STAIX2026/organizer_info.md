@@ -35,6 +35,8 @@ Fill in the affiliation and website URL for each person below.
 | Jian Kang | University of Michigan | https://public.websites.umich.edu/~jiankang/ |
 | Tracy Ke | Harvard University | https://www.tracyke.net/ |
 | Junwei Lu | Harvard University | https://junwei-lu.github.io/ |
+| Morgane Austern | Harvard University | https://sites.google.com/view/morganeaustern/home |
+| Xiaotong Shen | University of Minnesota | http://users.stat.umn.edu/~xshen/ |
 
 ## Short Course Committee
 
