@@ -24,14 +24,12 @@
                 <a href="https://statsupai.org">
                     <img src="../img/logo.png" alt="StatsUpAI Logo" class="h-10 w-auto">
                 </a>
-                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X</span>
-                <span class="text-sm font-medium text-gray-500 mt-1">2026</span>
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
             </div>
 
             <div class="flex gap-x-8 text-sm font-medium text-gray-600">
                 <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
                 <a href="call-for-papers.html" class="nav-link hover:text-gray-900">Call for Papers</a>
-                <a href="submission-guide.html" class="nav-link hover:text-gray-900">Submission Guide</a>
                 <a href="call-for-short-course.html" class="nav-link hover:text-gray-900">Short Course Proposal</a>
                 <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
                 <a href="organizers.html" class="nav-link text-[#E07A5F]">Organizers</a>
@@ -41,13 +39,31 @@
     </nav>
 
     <div class="max-w-7xl mx-auto px-6 py-16 mt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-28 glass-card p-5">
+                    <nav class="space-y-3 text-sm">
+                        <a href="#co-chairs" class="block text-gray-700 hover:text-[#E07A5F]">Co-chairs</a>
+                        <a href="#program-committee" class="block text-gray-700 hover:text-[#E07A5F]">Program Committee</a>
+                        <a href="#local-committee" class="block text-gray-700 hover:text-[#E07A5F]">Local Committee</a>
+                        <a href="#short-course-committee" class="block text-gray-700 hover:text-[#E07A5F]">Short Course Committee</a>
+                        <a href="#sponsorship-committee" class="block text-gray-700 hover:text-[#E07A5F]">Sponsorship Committee</a>
+                        <a href="#outreach" class="block text-gray-700 hover:text-[#E07A5F]">Outreach</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-4">
 
         <h1 class="text-4xl md:text-5xl font-bold text-center mb-16">
             Organizing Committee
         </h1>
 
         <!-- Co-chairs -->
-        <section class="mb-20">
+        <section id="co-chairs" class="mb-20 scroll-mt-28">
             <h2 class="text-2xl font-semibold mb-10 text-center">Co-chairs</h2>
         
             <div class="flex justify-center gap-12 flex-wrap">
@@ -80,7 +96,7 @@
         </section>
 
         <!-- Local Committee -->
-        <section class="mb-20">
+        <section id="local-committee" class="mb-20 scroll-mt-28">
             <h2 class="text-2xl font-semibold mb-10 text-center">Local Committee</h2>
         
             <div class="flex justify-center gap-12 flex-wrap">
@@ -117,7 +133,7 @@
         </section>
 
         <!-- Program Committee -->
-        <section class="mb-20">
+        <section id="program-committee" class="mb-20 scroll-mt-28">
             <h2 class="text-2xl font-semibold mb-10 text-center">Program Committee</h2>
         
             <!-- Chairs -->
@@ -222,12 +238,18 @@
                         <p class="text-sm text-gray-500 italic">Johns Hopkins University</p>
                     </div>
 
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/avatar.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://scholars.duke.edu/person/alexander.volfovsky" class="hover:underline">Alexander Volfovsky</a></p>
+                        <p class="text-sm text-gray-500 italic">Duke University</p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Short course committee -->
-        <section class="mb-16">
+        <section id="short-course-committee" class="mb-16 scroll-mt-28">
             <h2 class="text-2xl font-semibold mb-8 text-center">Short Course Committee</h2>
 
             <div class="flex justify-center">
@@ -246,7 +268,7 @@
         </section>
 
         <!-- Sponsorship Committee -->
-        <section class="mb-16">
+        <section id="sponsorship-committee" class="mb-16 scroll-mt-28">
             <h2 class="text-2xl font-semibold mb-8 text-center">Sponsorship Committee</h2>
 
             <div class="flex justify-center gap-12 flex-wrap">
@@ -273,7 +295,7 @@
         </section>
 
         <!-- Outreach -->
-        <section>
+        <section id="outreach" class="scroll-mt-28">
             <h2 class="text-2xl font-semibold mb-8 text-center">Outreach</h2>
 
             <div class="flex justify-center">
@@ -285,6 +307,8 @@
             </div>
         </section>
 
+            </div> <!-- end main content col -->
+        </div> <!-- end grid -->
     </div>
 
 </body>
