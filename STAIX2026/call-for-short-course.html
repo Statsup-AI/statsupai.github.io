@@ -28,7 +28,15 @@
             </div>
             <div class="flex gap-x-8 text-sm font-medium text-gray-600">
                 <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
-                <a href="call-for-papers.html" class="nav-link hover:text-gray-900">Call for Papers</a>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Call for Papers ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E07A5F] rounded-t-lg">Call for Papers</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#E07A5F] rounded-b-lg">Submission Guide</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="partners.html" class="nav-link hover:text-gray-900">Partners</a>
                 <a href="call-for-short-course.html" class="nav-link text-[#E07A5F]">Short Course Proposal</a>
                 <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
