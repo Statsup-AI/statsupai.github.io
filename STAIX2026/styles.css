@@ -13,10 +13,11 @@ h1, h2, h3, .nav-link, .font-semibold, .font-bold, .font-extrabold {
     font-family: 'Inter', sans-serif; 
 }
 
-.glass-nav { 
-    background-color: transparent;
-    backdrop-filter: none;
-    border-bottom: none;
+.glass-nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-link:hover { 
