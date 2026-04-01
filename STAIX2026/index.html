@@ -139,18 +139,22 @@
                 <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
                     <div class="font-bold text-lg text-gray-900">Submission</div>
                     <div class="text-lg font-semibold text-[#E68971] mt-2">May 11, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-05-12T03:59:00Z"></div>
                 </div>
                 <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
                     <div class="font-bold text-lg text-gray-900">Poster Acceptance</div>
                     <div class="text-lg font-semibold text-[#E68971] mt-2">May 16, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-05-17T03:59:00Z"></div>
                 </div>
                 <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
                     <div class="font-bold text-lg text-gray-900">Paper Acceptance</div>
                     <div class="text-lg font-semibold text-[#E68971] mt-2">June 11, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-06-12T03:59:00Z"></div>
                 </div>
                 <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
                     <div class="font-bold text-lg text-gray-900">Registration</div>
                     <div class="text-lg font-semibold text-[#E68971] mt-2">Early-bird: June 1, 2026<br>Regular: June 25, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-06-02T03:59:00Z"></div>
                 </div>
             </div>
         </section>
@@ -267,6 +271,28 @@
     </div>
   </footer>
     
+  <script>
+    // Countdown timers
+    function updateCountdowns() {
+      document.querySelectorAll('.countdown').forEach(function(el) {
+        var target = new Date(el.getAttribute('data-date'));
+        var now = new Date();
+        var diff = target - now;
+        if (diff <= 0) {
+          el.textContent = 'Passed';
+          el.classList.add('text-gray-400');
+          return;
+        }
+        var days = Math.floor(diff / 86400000);
+        var hours = Math.floor((diff % 86400000) / 3600000);
+        var mins = Math.floor((diff % 3600000) / 60000);
+        el.textContent = days + 'd ' + hours + 'h ' + mins + 'm remaining';
+      });
+    }
+    updateCountdowns();
+    setInterval(updateCountdowns, 60000);
+  </script>
+
   <script>
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
   </script>
