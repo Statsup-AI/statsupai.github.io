@@ -14,9 +14,9 @@ h1, h2, h3, .nav-link, .font-semibold, .font-bold, .font-extrabold {
 }
 
 .glass-nav { 
-    background-color: rgba(255, 255, 255, 0.7); 
-    backdrop-filter: blur(20px); 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    background-color: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
 }
 
 .nav-link:hover { 
