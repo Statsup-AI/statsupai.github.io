@@ -210,6 +210,7 @@ ul {
 
 #mobile-menu.open {
     max-height: 500px;
+    padding-bottom: 1rem;
 }
 
 #mobile-menu .mobile-submenu {
