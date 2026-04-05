@@ -201,6 +201,27 @@ ul {
   color: #86868b;
 }
 
+/* ===== Mobile Navigation ===== */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#mobile-menu.open {
+    max-height: 500px;
+}
+
+#mobile-menu .mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+
+#mobile-menu .mobile-submenu.open {
+    max-height: 200px;
+}
+
 /* Make footer stack properly on mobile */
 @media (max-width: 768px) {
   .footer-content {
