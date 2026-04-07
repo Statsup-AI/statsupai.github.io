@@ -1,7 +1,7 @@
 
 body { 
     /* The white gradient overlay ensures text stays readable! */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('image/bg1.jpg'); 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('image/bg12.png'); 
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed; 
@@ -21,7 +21,7 @@ h1, h2, h3, .nav-link, .font-semibold, .font-bold, .font-extrabold {
 }
 
 .nav-link:hover { 
-    color: #E68971; 
+    color: #4682B4; 
 }
 
 .glass-card {
@@ -160,7 +160,7 @@ ul {
 }
 
 .footer-brand h3 span {
-  color: #E68971; 
+  color: #4682B4; 
 }
 
 .footer-brand p, .footer-contact p {
@@ -187,7 +187,7 @@ ul {
 }
 
 .footer-links a:hover, .footer-contact a:hover {
-  color: #E68971;
+  color: #4682B4;
   padding-left: 4px; /* Subtle hover animation */
 }
 
@@ -225,6 +225,43 @@ ul {
 
 /* Make footer stack properly on mobile */
 @media (max-width: 768px) {
+  /* Simpler, less distracting background on mobile */
+  body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url('image/bg12.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  /* Hero title scaling for mobile */
+  #home {
+    padding: 2rem 15px;
+  }
+
+  #home h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  #home .glass-card {
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  #home .glass-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  #home .mt-12 {
+    margin-top: 1.5rem;
+  }
+
+  #home .text-lg {
+    font-size: 0.85rem;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 32px;
