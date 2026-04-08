@@ -1,7 +1,7 @@
 
 body { 
     /* The white gradient overlay ensures text stays readable! */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('image/bg12.png'); 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('image/7.png'); 
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed; 
@@ -227,7 +227,7 @@ ul {
 @media (max-width: 768px) {
   /* Simpler, less distracting background on mobile */
   body {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url('image/bg12.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url('image/7.png');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
