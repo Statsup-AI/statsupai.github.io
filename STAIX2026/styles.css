@@ -201,6 +201,43 @@ ul {
   color: #86868b;
 }
 
+/* ===== Sponsor Tiers ===== */
+.sponsor-tier-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 120px;
+    margin: 0 auto 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sponsor-tier-heading span {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.sponsor-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+    color: #9ca3af;
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.sponsor-platinum img { height: 256px; width: auto; object-fit: contain; }
+.sponsor-gold img { height: 192px; width: auto; object-fit: contain; }
+.sponsor-silver img { height: 144px; width: auto; object-fit: contain; }
+.sponsor-regular img { height: 112px; width: auto; object-fit: contain; }
+
 /* ===== Mobile Navigation ===== */
 #mobile-menu {
     max-height: 0;
@@ -261,6 +298,15 @@ ul {
   #home .text-lg {
     font-size: 0.85rem;
   }
+
+  .sponsor-tier-heading {
+    width: 160px;
+    height: 90px;
+  }
+  .sponsor-platinum img { height: 160px; }
+  .sponsor-gold img { height: 120px; }
+  .sponsor-silver img { height: 96px; }
+  .sponsor-regular img { height: 72px; }
 
   .footer-content {
     grid-template-columns: 1fr;
