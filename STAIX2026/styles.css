@@ -233,10 +233,6 @@ ul {
     font-style: italic;
 }
 
-.sponsor-platinum img { height: 256px; width: auto; object-fit: contain; }
-.sponsor-gold img { height: 192px; width: auto; object-fit: contain; }
-.sponsor-silver img { height: 144px; width: auto; object-fit: contain; }
-.sponsor-regular img { height: 112px; width: auto; object-fit: contain; }
 
 /* ===== Mobile Navigation ===== */
 #mobile-menu {
@@ -303,11 +299,6 @@ ul {
     width: 160px;
     height: 90px;
   }
-  .sponsor-platinum img { height: 160px; }
-  .sponsor-gold img { height: 120px; }
-  .sponsor-silver img { height: 96px; }
-  .sponsor-regular img { height: 72px; }
-
   .footer-content {
     grid-template-columns: 1fr;
     gap: 32px;
