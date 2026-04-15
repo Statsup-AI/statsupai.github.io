@@ -2725,7 +2725,7 @@ No matching items
     } else {
       
       // Trim path to remove everything before /quarto_web/site/ for easier local testing
-      var trimmedPath = path.replace(/^.*\/posts\//, '\/quarto_web\/site\/posts\/');
+      var trimmedPath = path;
       // If the path is exactly /posts/, set trimmedPath to the index.html file
       if (path === '\/posts\/') {
           console.log('Path is exactly /posts/, setting trimmedPath to index.html');
