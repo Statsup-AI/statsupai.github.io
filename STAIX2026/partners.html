@@ -76,22 +76,17 @@
         </div>
     </nav>
 
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#partner-journals" data-target="partner-journals"><span class="dot" aria-hidden="true"></span><span class="label">Partner Journals</span></a></li>
+            <li><a href="#partner-organizations" data-target="partner-organizations"><span class="dot" aria-hidden="true"></span><span class="label">Partner Organizations</span></a></li>
+            <li><a href="#sponsors" data-target="sponsors"><span class="dot" aria-hidden="true"></span><span class="label">Sponsors</span></a></li>
+        </ul>
+    </nav>
+
     <main class="flex-grow max-w-7xl mx-auto px-6 md:px-12 mt-24 mb-24 w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
-
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="sticky top-28 glass-card p-5">
-                    <nav class="space-y-3 text-sm">
-                        <a href="#partner-journals" class="block text-gray-700 hover:text-[#4682B4]">Partner Journals</a>
-                        <a href="#partner-organizations" class="block text-gray-700 hover:text-[#4682B4]">Partner Organizations</a>
-                        <a href="#sponsors" class="block text-gray-700 hover:text-[#4682B4]">Sponsors</a>
-                    </nav>
-                </div>
-            </aside>
-
-            <!-- Main Content -->
-            <div class="lg:col-span-4 space-y-12">
+        <div class="space-y-12">
 
                 <section id="partner-journals" class="scroll-mt-28">
                     <div class="glass-card p-8 md:p-10">
@@ -247,7 +242,6 @@
                     </div>
                 </section>
 
-            </div>
         </div>
     </main>
 
@@ -304,6 +298,48 @@
       this.querySelector('svg').classList.toggle('rotate-180');
     });
   });
+
+  // Section rail: scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail || !('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
 </script>
 </body>
 </html>

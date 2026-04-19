@@ -80,26 +80,24 @@
         </div>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-6 py-16 mt-20">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#co-chairs" data-target="co-chairs"><span class="dot" aria-hidden="true"></span><span class="label">Co-chairs</span></a></li>
+            <li><a href="#local-committee" data-target="local-committee"><span class="dot" aria-hidden="true"></span><span class="label">Local Committee</span></a></li>
+            <li><a href="#program-committee" data-target="program-committee"><span class="dot" aria-hidden="true"></span><span class="label">Program Committee</span></a></li>
+            <li><a href="#short-course-committee" data-target="short-course-committee"><span class="dot" aria-hidden="true"></span><span class="label">Short Course Committee</span></a></li>
+            <li><a href="#sponsorship-committee" data-target="sponsorship-committee"><span class="dot" aria-hidden="true"></span><span class="label">Sponsorship Committee</span></a></li>
+            <li><a href="#outreach" data-target="outreach"><span class="dot" aria-hidden="true"></span><span class="label">Outreach</span></a></li>
+            <li><a href="#award-committee" data-target="award-committee"><span class="dot" aria-hidden="true"></span><span class="label">Award Committee</span></a></li>
+        </ul>
+    </nav>
 
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="sticky top-28 glass-card p-5">
-                    <nav class="space-y-3 text-sm">
-                        <a href="#co-chairs" class="block text-gray-700 hover:text-[#4682B4]">Co-chairs</a>
-                        <a href="#local-committee" class="block text-gray-700 hover:text-[#4682B4]">Local Committee</a>
-                        <a href="#program-committee" class="block text-gray-700 hover:text-[#4682B4]">Program Committee</a>
-                        <a href="#short-course-committee" class="block text-gray-700 hover:text-[#4682B4]">Short Course Committee</a>
-                        <a href="#sponsorship-committee" class="block text-gray-700 hover:text-[#4682B4]">Sponsorship Committee</a>
-                        <a href="#outreach" class="block text-gray-700 hover:text-[#4682B4]">Outreach</a>
-                        <a href="#award-committee" class="block text-gray-700 hover:text-[#4682B4]">Award Committee</a>
-                    </nav>
-                </div>
-            </aside>
+    <div class="max-w-7xl mx-auto px-6 py-16 mt-20">
+        <div>
 
             <!-- Main Content -->
-            <div class="lg:col-span-4">
+            <div>
 
         <h1 class="text-4xl md:text-5xl font-bold text-center mb-16">
             Organizing Committee
@@ -469,6 +467,48 @@
       this.querySelector('svg').classList.toggle('rotate-180');
     });
   });
+
+  // Section rail: scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail || !('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
 </script>
 </body>
 </html>
