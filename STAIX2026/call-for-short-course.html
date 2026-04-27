@@ -18,6 +18,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a {
+        padding: 5px 0;
+      }
+      @media (max-width: 768px) {
+        .footer-pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
 </head>
 <body class="text-gray-900 flex flex-col min-h-screen">
 
@@ -127,45 +145,49 @@
     </main>
 
     <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>STAI-X<span>'26</span></h3>
-                    <p>To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <a href="index.html">Home</a>
-                    <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
-                    <a href="submission-guide.html">Submission Guide</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="challenge.html">Challenge</a>
-                    <a href="partners.html">Partners & Sponsors</a>
-                    <a href="call-for-short-course.html">Call for Short Course Proposal</a>
-          <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
-                    <a href="program.html">Program</a>
-                    <a href="organizers.html">Organizers</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Volunteers</h4>
-                    <p>Yuhan Geng (University of Michigan)</p>
-                    <p>Zhiqiu Xia (Rutgers University)</p>
-                    <p>Ling Chang (UT MD Anderson Cancer Center)</p>
-                    <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>For inquiries about the conference:</p>
-                    <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
-                    <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 STAI-X. All rights reserved.</p>
-                <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
-            </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
         </div>
-    </footer>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="call-for-short-course.html">Call for Short Course Proposal</a>
+            <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
+            <a href="program.html">Program</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>For inquiries about the conference:</p>
+          <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
+          <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
     
     <script>
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
