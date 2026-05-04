@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Shan Gao">
+<meta name="dcterms.date" content="2026-05-03">
+<meta name="description" content="A graduate course at UNC, Spring 2026. Modern AI taught with the rigor of statistics — built around real biomedical data: imaging, genomics, electronic health records, and beyond.">
+
+<title>BIOS 740: Deep Learning Methods in Biomedical Sciences with PyTorch</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+<link href="../img/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>#title-block-header{display:none!important}</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">BIOS 740: Deep Learning Methods in Biomedical Sciences with PyTorch</h1>
+<p class="author">Shan Gao</p>
+
+<p class="date">2026-05-03</p>
+</header>
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOS 740 — Deep Learning Methods in Biomedical Sciences with PyTorch | UNC</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <style>
+        .bios740-page {
+            --ink:        #0e1116;
+            --paper:      #f6f3ec;
+            --paper-deep: #efeae0;
+            --rule:       #1a1a1a;
+            --muted:      #6b6357;
+            --accent:     #4B9CD3;
+            --accent-deep:#13294B;
+            --highlight:  #ffe066;
+
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bios740-page * { box-sizing: border-box; }
+        .bios740-page a { color: inherit; }
+        .bios740-page ::selection { background: var(--highlight); color: var(--ink); }
+
+        .bios740-page .wrap {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ---------- Top bar ---------- */
+        .bios740-page .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            font-size: 0.78em;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--muted);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .bios740-page .topbar .dot {
+            display: inline-block;
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* ---------- HERO ---------- */
+        .bios740-page .hero {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 70px;
+            align-items: center;
+            padding: 80px 0 100px;
+            position: relative;
+        }
+
+        .bios740-page .hero::before {
+            content: "BIOS 740";
+            position: absolute;
+            top: 8px;
+            left: -10px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 13em;
+            font-weight: 900;
+            font-style: italic;
+            color: var(--paper-deep);
+            letter-spacing: -0.04em;
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .bios740-page .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .bios740-page .hero .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.78em;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent-deep);
+            margin-bottom: 28px;
+        }
+
+        .bios740-page .hero .kicker::before {
+            content: "";
+            display: inline-block;
+            width: 36px;
+            height: 1px;
+            background: var(--accent-deep);
+        }
+
+        .bios740-page .hero h1 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(2.4em, 5vw, 4em);
+            line-height: 1.0;
+            letter-spacing: -0.025em;
+            margin: 0 0 28px;
+        }
+
+        .bios740-page .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent-deep);
+        }
+
+        .bios740-page .hero .lede {
+            font-size: 1.12em;
+            line-height: 1.55;
+            color: var(--ink);
+            max-width: 42ch;
+            margin: 0 0 36px;
+        }
+
+        .bios740-page .hero .lede .mark {
+            background: linear-gradient(180deg, transparent 60%, var(--highlight) 60%);
+            padding: 0 2px;
+        }
+
+        .bios740-page .ctas {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .bios740-page .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--ink);
+            color: var(--paper);
+            padding: 14px 24px 14px 26px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .bios740-page .cta-primary:hover {
+            background: var(--accent-deep);
+            transform: translateX(4px);
+        }
+
+        .bios740-page .cta-primary .arr {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+
+        .bios740-page .cta-primary:hover .arr { transform: translateX(4px); }
+
+        .bios740-page .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid var(--ink);
+            padding: 14px 0 12px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .bios740-page .cta-link:hover {
+            color: var(--accent-deep);
+            border-color: var(--accent);
+        }
+
+        .bios740-page .hero-poster {
+            position: relative;
+            z-index: 1;
+        }
+
+        .bios740-page .hero-poster a {
+            display: block;
+            position: relative;
+            line-height: 0;
+            transform: rotate(1.2deg);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow:
+                0 1px 0 rgba(0,0,0,0.05),
+                0 30px 60px -20px rgba(19, 41, 75, 0.35),
+                0 12px 30px -8px rgba(0,0,0,0.18);
+            background: white;
+            padding: 14px 14px 18px;
+        }
+
+        .bios740-page .hero-poster a:hover {
+            transform: rotate(0deg) translateY(-6px);
+            box-shadow:
+                0 1px 0 rgba(0,0,0,0.05),
+                0 50px 80px -20px rgba(19, 41, 75, 0.45),
+                0 16px 36px -8px rgba(0,0,0,0.22);
+        }
+
+        .bios740-page .hero-poster img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .bios740-page .hero-poster .badge {
+            position: absolute;
+            top: -18px;
+            right: -18px;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--accent-deep);
+            color: var(--paper);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            line-height: 1.05;
+            transform: rotate(-8deg);
+            box-shadow: 0 10px 24px rgba(19,41,75,0.35);
+            z-index: 2;
+        }
+
+        .bios740-page .hero-poster .badge .small {
+            font-size: 0.62em;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .bios740-page .hero-poster .badge .big {
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+
+        .bios740-page .hero-poster .caption {
+            margin-top: 16px;
+            font-size: 0.78em;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-align: right;
+            transform: rotate(1.2deg);
+        }
+
+        /* ---------- Chapters ---------- */
+        .bios740-page section.chapter {
+            padding: 80px 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        .bios740-page .chapter-head {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 60px;
+            align-items: baseline;
+            margin-bottom: 40px;
+        }
+
+        .bios740-page .chapter-num {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-size: 1.4em;
+            color: var(--muted);
+        }
+
+        .bios740-page .chapter-num b {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 2em;
+            color: var(--ink);
+            margin-right: 14px;
+            letter-spacing: -0.02em;
+        }
+
+        .bios740-page .chapter h2 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(1.8em, 3.8vw, 2.8em);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin: 0;
+            max-width: 22ch;
+        }
+
+        .bios740-page .chapter h2 em { font-style: italic; font-weight: 400; color: var(--accent-deep); }
+
+        .bios740-page .curriculum-list {
+            margin-left: 260px;
+        }
+
+        .bios740-page .curriculum-list .row {
+            display: grid;
+            grid-template-columns: 60px 1fr 2fr;
+            gap: 32px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(26,26,26,0.14);
+            align-items: baseline;
+            transition: padding-left 0.25s ease, background 0.25s ease;
+        }
+
+        .bios740-page .curriculum-list .row:hover {
+            padding-left: 14px;
+            background: linear-gradient(90deg, rgba(75,156,211,0.10) 0%, transparent 70%);
+        }
+
+        .bios740-page .curriculum-list .num {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1.1em;
+        }
+
+        .bios740-page .curriculum-list .topic {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.35em;
+            font-weight: 500;
+            line-height: 1.15;
+            color: var(--ink);
+        }
+
+        .bios740-page .curriculum-list .desc {
+            color: var(--muted);
+            font-size: 0.98em;
+        }
+
+        /* ---------- Data strip ---------- */
+        .bios740-page .data-strip {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 56px 0;
+        }
+
+        .bios740-page .data-strip .strip-label {
+            font-size: 0.78em;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 22px;
+        }
+
+        .bios740-page .data-strip h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(1.6em, 3.2vw, 2.4em);
+            font-weight: 500;
+            line-height: 1.15;
+            margin: 0 0 36px;
+            max-width: 24ch;
+            color: var(--paper);
+        }
+
+        .bios740-page .data-strip h3 em { font-style: italic; color: var(--accent); }
+
+        .bios740-page .data-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px 48px;
+            border-top: 1px solid rgba(255,255,255,0.18);
+            padding-top: 28px;
+        }
+
+        .bios740-page .data-row .item {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-size: 1.4em;
+            color: var(--paper);
+            line-height: 1;
+        }
+
+        .bios740-page .data-row .item .n {
+            display: block;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.55em;
+            color: var(--accent);
+            letter-spacing: 0.12em;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        /* ---------- Why ---------- */
+        .bios740-page .why-cols {
+            margin-left: 260px;
+            column-count: 2;
+            column-gap: 56px;
+        }
+
+        .bios740-page .why-cols p {
+            break-inside: avoid;
+            margin: 0 0 26px;
+            padding-left: 22px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .bios740-page .why-cols p strong {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-style: italic;
+            display: block;
+            font-size: 1.18em;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+
+        /* ---------- Audience ---------- */
+        .bios740-page .audience-line {
+            margin-left: 260px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(1.3em, 2.4vw, 1.85em);
+            line-height: 1.45;
+            font-weight: 400;
+            color: var(--ink);
+            max-width: 38ch;
+        }
+
+        .bios740-page .audience-line span {
+            background: linear-gradient(180deg, transparent 60%, var(--highlight) 60%);
+            padding: 0 4px;
+        }
+
+        /* ---------- Instructor ---------- */
+        .bios740-page .instructor {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 28px;
+            align-items: center;
+            margin-left: 260px;
+            max-width: 640px;
+            padding: 28px 0;
+            border-top: 1px solid rgba(26,26,26,0.14);
+            border-bottom: 1px solid rgba(26,26,26,0.14);
+        }
+
+        .bios740-page .instructor img {
+            width: 200px;
+            height: auto;
+            display: block;
+            border: 1px solid rgba(0,0,0,0.08);
+            filter: grayscale(0.05);
+        }
+
+        .bios740-page .instructor .label {
+            font-size: 0.72em;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .bios740-page .instructor .who {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.3em;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .bios740-page .instructor .who em { font-style: italic; color: var(--accent-deep); }
+
+        /* ---------- Colophon ---------- */
+        .bios740-page .colophon {
+            border-top: 1px solid var(--rule);
+            padding: 22px 0 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.76em;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        @media (max-width: 900px) {
+            .bios740-page .wrap { padding: 0 24px; }
+            .bios740-page .hero { grid-template-columns: 1fr; gap: 50px; padding: 50px 0 70px; }
+            .bios740-page .hero::before { font-size: 6em; top: -10px; }
+            .bios740-page .hero-poster .badge { width: 78px; height: 78px; top: -14px; right: -10px; }
+            .bios740-page .hero-poster .badge .big { font-size: 1.3em; }
+
+            .bios740-page .chapter-head { grid-template-columns: 1fr; gap: 16px; }
+            .bios740-page .curriculum-list,
+            .bios740-page .why-cols,
+            .bios740-page .audience-line,
+            .bios740-page .instructor { margin-left: 0; }
+            .bios740-page .curriculum-list .row { grid-template-columns: 36px 1fr; gap: 12px; }
+            .bios740-page .curriculum-list .desc { grid-column: 2; }
+            .bios740-page .why-cols { column-count: 1; }
+            .bios740-page section.chapter { padding: 56px 0; }
+        }
+    </style>
+
+
+
+<div class="bios740-page">
+
+<div class="wrap">
+
+    <!-- Top bar -->
+    <div class="topbar">
+        <span><span class="dot"></span>BIOS 740 · Spring 2026</span>
+        <span>UNC · Department of Biostatistics</span>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-text">
+            <div class="kicker">A graduate course at UNC</div>
+            <h1>Deep Learning Methods in <em>Biomedical Sciences</em> with PyTorch</h1>
+            <p class="lede">
+                A modern AI curriculum taught with the rigor of statistics —
+                built around <span class="mark">real biomedical data</span> and the problems
+                that actually matter: imaging, genomics, electronic health records, and beyond.
+            </p>
+            <div class="ctas">
+                <a class="cta-primary" href="https://bios740.github.io/" target="_blank" rel="noopener">
+                    Visit the course <span class="arr">→</span>
+                </a>
+                <a class="cta-link" href="https://bios740.github.io/syllabus/" target="_blank" rel="noopener">
+                    Read the syllabus
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-poster">
+            <a href="https://bios740.github.io/syllabus/" target="_blank" rel="noopener" aria-label="Open the BIOS 740 syllabus">
+                <img src="figures/bios740_poster.jpg" alt="BIOS 740 — Deep Learning Methods in Biomedical Sciences with PyTorch (Spring 2026 poster)">
+                <div class="badge">
+                    <span class="small">Spring</span>
+                    <span class="big">2026</span>
+                </div>
+            </a>
+            <div class="caption">New syllabus · materials online</div>
+        </div>
+    </header>
+
+    <!-- 01 · Curriculum -->
+    <section class="chapter">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>01</b>The Curriculum</div>
+            <h2 class="anchored">From foundations <em>to the frontier.</em></h2>
+        </div>
+
+        <div class="curriculum-list">
+            <div class="row">
+                <div class="num">i.</div>
+                <div class="topic">Foundations of Deep Learning &amp; PyTorch</div>
+                <div class="desc">Tensors, autograd, optimization, training loops — the practical scaffolding behind every model.</div>
+            </div>
+            <div class="row">
+                <div class="num">ii.</div>
+                <div class="topic">CNNs, RNNs, LSTMs &amp; GRUs</div>
+                <div class="desc">The classic architectures, taught well — still the bedrock of imaging and sequence modeling.</div>
+            </div>
+            <div class="row">
+                <div class="num">iii.</div>
+                <div class="topic">Graph Neural Networks &amp; Generative Models</div>
+                <div class="desc">From molecular graphs to diffusion — how to model structure and how to generate it.</div>
+            </div>
+            <div class="row">
+                <div class="num">iv.</div>
+                <div class="topic">Transformers, Attention, NLP &amp; LLMs</div>
+                <div class="desc">The dominant architecture of modern AI — pretraining, fine-tuning, and clinical text.</div>
+            </div>
+            <div class="row">
+                <div class="num">v.</div>
+                <div class="topic">Image Segmentation &amp; Registration</div>
+                <div class="desc">Pixel-level decision-making for medical imaging — where models meet radiology.</div>
+            </div>
+            <div class="row">
+                <div class="num">vi.</div>
+                <div class="topic">Spatio-Temporal Modeling</div>
+                <div class="desc">Methods for biomedical data with spatial and temporal structure — fMRI, longitudinal records, and more.</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Data strip -->
+<section class="data-strip">
+    <div class="wrap">
+        <div class="strip-label">— The data you'll work with</div>
+        <h3 class="anchored">Multimodal biomedical data, <em>at real-world scale.</em></h3>
+        <div class="data-row">
+            <div class="item"><span class="n">01</span>MRI</div>
+            <div class="item"><span class="n">02</span>CT</div>
+            <div class="item"><span class="n">03</span>Pathology</div>
+            <div class="item"><span class="n">04</span>Genomics</div>
+            <div class="item"><span class="n">05</span>Clinical &amp; time series</div>
+        </div>
+    </div>
+</section>
+
+<div class="wrap">
+
+    <!-- 02 · Why -->
+    <section class="chapter">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>02</b>Why It's Different</div>
+            <h2 class="anchored">Most courses teach tools. <em>This one teaches judgment.</em></h2>
+        </div>
+
+        <div class="why-cols">
+            <p>
+                <strong>Application-driven.</strong>
+                Real scientific problems and real datasets — not curated
+                benchmarks built for demonstrations.
+            </p>
+            <p>
+                <strong>Statistics meets ML.</strong>
+                Few courses sit at the intersection of statistics, machine learning,
+                and biomedical data science. This one lives there.
+            </p>
+            <p>
+                <strong>Built for the AI era.</strong>
+                Skills that translate directly to research labs and production teams —
+                not just to the next assignment.
+            </p>
+            <p>
+                <strong>Project-shaped.</strong>
+                You leave with work you can show — to advisors, to reviewers,
+                to hiring committees.
+            </p>
+        </div>
+    </section>
+
+    <!-- 03 · Who -->
+    <section class="chapter">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>03</b>Who It's For</div>
+            <h2 class="anchored">Built for graduate students <em>and researchers.</em></h2>
+        </div>
+
+        <p class="audience-line">
+            Ideal for students and researchers in
+            <span>biostatistics</span>, <span>statistics</span>,
+            <span>computer science</span>, <span>biomedical imaging</span>,
+            <span>genomics</span>, <span>neuroscience</span>,
+            <span>medicine</span>, and <span>public health</span>.
+        </p>
+    </section>
+
+    <!-- 04 · Instructor -->
+    <section class="chapter" style="padding: 60px 0;">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>04</b>Taught By</div>
+            <h2 class="anchored">The team behind <em>the course.</em></h2>
+        </div>
+
+        <div class="instructor">
+            <img src="figures/bios740.jpg" alt="BIOS 740 instructors">
+            <div>
+                <div class="label">Instructors</div>
+                <div class="who">
+                    <em>Prof. Hongtu Zhu</em> · with TA Runpeng Dai<br>
+                    Department of Biostatistics, UNC Chapel Hill
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colophon -->
+    <div class="colophon">
+        <span>BIOS 740 · UNC Chapel Hill</span>
+        <span>Department of Biostatistics</span>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- GoatCounter Tracker -->
+<script data-goatcounter="https://statsupai.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+<!-- Per-Page View Counter (Footer Style) -->
+<style>
+#goatcounter-footer {
+  --gc-counter-color: #2b786bef;
+  display: flex; 
+  align-items: center; 
+  column-gap: 5px;
+  color: #8e8e8e; 
+  font-size: 13px; 
+  font-family: Arial, sans-serif;
+}
+#goatcounter-footer .statcounter {
+  font-family: 'Courier New', monospace; 
+  color: var(--gc-counter-color);
+  font-weight: bold; 
+  margin-left: 3px; 
+}
+</style>
+
+<!-- GoatCounter Tracker -->
+<div id="goatcounter-footer"><span style="margin-left: 3px;">Loading views...</span></div>
+<script>
+    const path = window.location.pathname;
+    console.log('window.location.pathname:', path);
+    // If at the root, skip fetching views for now
+    if (path.endsWith('index.html') || path.endsWith('/posts/')) {
+      
+      const display = document.getElementById("goatcounter-footer");
+      if (display) {
+        display.innerHTML = "";
+        console.log("Skipping views for root path:", path);
+      }
+      
+    } else {
+      
+      // Trim path to remove everything before /quarto_web/site/ for easier local testing
+      var trimmedPath = path;
+      // If the path is exactly /posts/, set trimmedPath to the index.html file
+      if (path === '\/posts\/') {
+          console.log('Path is exactly /posts/, setting trimmedPath to index.html');
+          trimmedPath = '/quarto_web/site/posts/index.html';
+      }
+      console.log('trimmedPath:', trimmedPath);
+      
+      // setInterval to check every 100ms because GoatCounter may not be available immediately
+      var t = setInterval(function() {
+          console.log('Checking for GoatCounter availability...window.goatcounter:', window.goatcounter);
+          // Check if GoatCounter is available
+          if (window.goatcounter && window.goatcounter.visit_count) {
+
+              // GoatCounter is available, clear the timer
+              clearInterval(t)
+              // Resolve the counter color to a concrete value
+              var footer = document.getElementById('goatcounter-footer');
+              var resolvedColor = footer ? getComputedStyle(footer).getPropertyValue('--gc-counter-color').trim() : '';
+              console.log('Resolved counter color:', resolvedColor);
+              // Update the display with the current visit count
+              const display = document.getElementById("goatcounter-footer");
+              if (display) {
+                display.innerHTML = '<span">Page Views: </span>';
+                console.log('display.innerHTML:', display.innerHTML);
+              }
+              
+              
+              goatcounter.visit_count({
+                no_branding: true,
+                path: trimmedPath,
+                append: '#goatcounter-footer', 
+                style: `
+                  body {
+                    background: transparent !important;
+                  }
+                  div { 
+                    background: transparent !important;
+                    border-width: 0px;
+                    border: 0 !important;
+                    display: flex;
+                  }
+                  #gcvc-for {
+                    font-size: 0px;
+                  }
+                  #gcvc-views { 
+                      font-family: 'Courier New', monospace; 
+                      font-size: 13px;
+                      color: ${resolvedColor}; 
+                      font-weight: bold; 
+                      margin-top: 29px;
+                  }`
+              })
+
+          }
+      }, 100)
+      
+    }
+</script>
+
+
+
+
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+  tabsets.forEach(function(tabset) {
+    const tabby = new Tabby('#' + tabset.id);
+  });
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'light-border',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+
+
+
+
+</body></html>
