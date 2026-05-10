@@ -55,7 +55,15 @@
             <!-- Desktop links (hidden below lg) -->
             <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
                 <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
-                <a href="registration.html" class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">Registration</a>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="relative group">
                     <span class="nav-link text-[#4682B4] cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
                     <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
@@ -79,7 +87,16 @@
         <!-- Mobile menu (hidden at lg+) -->
         <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
             <a href="index.html" class="block py-2 nav-link">Home</a>
-            <a href="registration.html" class="inline-block my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">Registration</a>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
             <div>
                 <button class="mobile-submenu-toggle w-full text-left py-2 nav-link text-[#4682B4] flex justify-between items-center">
                     Call for Papers &amp; Posters
@@ -245,6 +262,7 @@
           <div class="footer-pages-grid">
             <a href="index.html">Home</a>
             <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
             <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
             <a href="submission-guide.html">Submission Guide</a>
             <a href="faq.html">FAQ</a>
