@@ -11,6 +11,14 @@ If you’re new to web maintenance (or you just want a low-stress workflow), the
 
 > **You can install Jekyll and use `make preview` to see the whole site locally** (including raw HTML + Quarto-built pages), even if you’re not actively editing the Jekyll part.
 
+## Documentation map (audience-first)
+
+Use these docs based on your role:
+
+- **Public contributor toolkit (canonical overview):** [`docs/all-you-need-to-know.md`](docs/all-you-need-to-know.md)
+- **Maintainer / agent operations details:** [`docs/maintainer-agent-ops.md`](docs/maintainer-agent-ops.md)
+- **Parent-issue + sub-issue structure templates:** [`docs/issue-hierarchy-templates.md`](docs/issue-hierarchy-templates.md)
+
 ---
 
 ## Big picture: what lives where?
