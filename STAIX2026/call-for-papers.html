@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2026 - Call for Papers &amp; Posters</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a {
+        padding: 5px 0;
+      }
+      @media (max-width: 768px) {
+        .footer-pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="nav-link text-[#4682B4] cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
+                <a href="partners.html" class="nav-link hover:text-gray-900">Partners<br>& Sponsors</a>
+                <a href="short-courses.html" class="nav-link hover:text-gray-900">Short<br>Courses</a>
+                <a href="reviewer-recruitment.html" class="nav-link hover:text-gray-900">Reviewer<br>Recruitment</a>
+                <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
+                <a href="organizers.html" class="nav-link hover:text-gray-900">Organizers</a>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link text-[#4682B4] flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link text-[#4682B4]">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="short-courses.html" class="block py-2 nav-link">Short Courses</a>
+            <a href="reviewer-recruitment.html" class="block py-2 nav-link">Reviewer Recruitment</a>
+            <a href="program.html" class="block py-2 nav-link">Program</a>
+            <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#topics" data-target="topics"><span class="dot" aria-hidden="true"></span><span class="label">Topics</span></a></li>
+            <li><a href="#cfp" data-target="cfp"><span class="dot" aria-hidden="true"></span><span class="label">Submission Tracks</span></a></li>
+            <li><a href="#deadlines" data-target="deadlines"><span class="dot" aria-hidden="true"></span><span class="label">Key Dates</span></a></li>
+            <li><a href="#features" data-target="features"><span class="dot" aria-hidden="true"></span><span class="label">Features</span></a></li>
+            <li><a href="#to-authors" data-target="to-authors"><span class="dot" aria-hidden="true"></span><span class="label">To Authors</span></a></li>
+            <li class="rail-divider" aria-hidden="true"></li>
+            <li><a href="submission-guide.html"><span class="dot" aria-hidden="true"></span><span class="label">Submission Guide →</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 md:px-12 mt-24 mb-24 w-full">
+        <div class="space-y-12">
+
+                <section id="vision" class="scroll-mt-28">
+                  <div class="glass-card p-8 md:p-10 lg:p-12 max-w-6xl mx-auto">
+                    <p class="text-lg leading-8 text-gray-800">STAI'X 2026 aims to create an innovative hybrid conference model for methodological and application-driven research at the interface of statistics and artificial intelligence (AI). We invite submissions spanning a broad range of topics that advance the theory, methods, and real-world impact of statistics and AI.</p>
+                  </div>
+                </section>
+
+                <section id="topics" class="scroll-mt-28">
+                  <div class="glass-card p-8 md:p-10 lg:p-12 max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-8">Topics</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-700">
+                      <div>
+                        <h3 class="text-base font-bold text-gray-900 mb-3">Foundations and Methods at the Interface of AI and Statistics</h3>
+                        <ul class="space-y-2 text-sm list-disc list-inside">
+                          <li>Foundation models, generative models and learning methods</li>
+                          <li>Synthetic data</li>
+                          <li>Statistical and theoretical foundations of AI</li>
+                          <li>Statistical inference and generative AI</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 class="text-base font-bold text-gray-900 mb-3">AI Agents and Benchmarks for Data-Driven Discovery</h3>
+                        <ul class="space-y-2 text-sm list-disc list-inside">
+                          <li>Agentic AI and co-scientists for X</li>
+                          <li>Scalability for resource-constrained training environments</li>
+                          <li>Benchmarking of AI-assisted tools and models</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 class="text-base font-bold text-gray-900 mb-3">AI x Statistics x Science and Society</h3>
+                        <ul class="space-y-2 text-sm list-disc list-inside">
+                          <li>AI x statistics x health and biological science</li>
+                          <li>AI x statistics x physical science and engineering</li>
+                          <li>AI x statistics x social science, business, and law</li>
+                          <li>Ethical AI</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section id="cfp" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-6">Submission Tracks</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700">
+                            <!-- Papers -->
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Papers</h3>
+                                <ul class="list-disc list-inside space-y-1 text-sm mb-3">
+                                    <li>Length: Up to <span class="font-semibold">8 pages</span> including figures and tables, excluding references.</li>
+                                    <li>Must be original work not under review elsewhere</li>
+                                    <li>Preprints (e.g., arXiv) are allowed</li>
+                                </ul>
+                                <p class="text-sm"><span class="font-semibold">Accepted papers</span> will be eligible for: oral (platform) presentations, poster presentations, paper awards, and fast-track journal review (selected papers).</p>
+                            </div>
+                            <!-- Posters -->
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Posters (Long Abstracts)</h3>
+                                <ul class="list-disc list-inside space-y-1 text-sm mb-3">
+                                    <li> Length: Up to <span class="font-semibold">2 pages</span> including figures and tables, excluding references.</li>
+                                    <li>The poster track is non-archival, and parallel submissions to other venues are permitted</li>
+                                    <li>The 2-page long abstract should clearly state: (a) the problem, (b) why it is interesting/meaningful/challenging, (c) your approach and results, and (d) the key contribution.</li>
+                                </ul>
+                                <p class="text-sm"><span class="font-semibold">Accepted posters</span> will be eligible for: poster presentations, lightning talks, and stellar abstract awards.</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Partner Journals (Fast-Track)</h3>
+                            <p class="text-sm text-gray-700 mb-2">A subset of top-ranked accepted papers will be invited for fast-track review at partner journals, including:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1 columns-2">
+                                <li>Journal of the American Statistical Association (JASA)</li>
+                                <li>Annals of Applied Statistics (AOAS)</li>
+                                <li>Harvard Data Science Review (HDSR)</li>
+                                <li>Canadian Journal of Statistics</li>
+                                <li>ASA Discoveries</li>
+                                <li>Genome Research</li>
+                                <li>GENETICS</li>
+                                <li>Data Science in Science</li>
+                                <li>Statistics and Data Science in Imaging</li>
+                            </ul>
+                            <p class="text-sm text-gray-500 mt-2">See <a href="#to-authors" class="text-[#4682B4] hover:underline">To Authors</a> for full details on the journal fast-track process.</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-4">
+                            <a href="assets/STAIX_2026_Template.zip" download class="inline-block bg-[#7AB8E0] hover:bg-[#5BA3D9] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Download Overleaf Template</a>
+                            <a href="https://www.overleaf.com/latex/templates/staix-2026-template/mnzwjfxckrrp" target="_blank" class="inline-block bg-[#7AB8E0] hover:bg-[#5BA3D9] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Start Your Manuscript in Overleaf</a>
+                            <a href="submission-guide.html" class="inline-block bg-[#7AB8E0] hover:bg-[#5BA3D9] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Submission Guide</a>
+                            <a href="https://openreview.net/group?id=STAI-X/2026/Conference" target="_blank" class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Submission Portal (Paper)</a>
+                            <a href="https://openreview.net/group?id=STAI-X/2026/Poster_Track" target="_blank" class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Submission Portal (Poster)</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="deadlines" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10">Key Dates</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                            <!-- Poster Track -->
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Poster Track</h3>
+                                <div class="space-y-0">
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Poster Submission</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">May 11 (AOE)</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Review (Posters)</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">May 11 &ndash; May 21</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Meta Review (Posters)</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">May 21 &ndash; May 24</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Notifications (Posters)</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">May 25</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper Track -->
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Paper Track</h3>
+                                <div class="space-y-0">
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Paper Submission</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">May 11 (AOE)</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Review (Papers)</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">May 11 &ndash; May 30</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Rebuttal (Papers)</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">May 30 &ndash; June 6</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Meta Review (Papers)</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">June 6 &ndash; June 10</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4 relative pb-6">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                            <div class="w-0.5 bg-gray-200 flex-grow"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Notifications (Papers)</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">June 11</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div class="flex flex-col items-center">
+                                            <div class="w-3 h-3 rounded-full bg-[#4682B4] mt-1.5 shrink-0 z-10"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-gray-900">Author Preference Indication</div>
+                                            <div class="text-sm font-semibold text-[#4682B4]">June 12 &ndash; 16</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Registration -->
+                        <div class="mt-10 pt-8 border-t border-gray-200 text-center">
+                            <div class="font-bold text-lg text-gray-900">Registration</div>
+                            <div class="text-lg font-semibold text-[#4682B4] mt-2">Early-bird: June 1, 2026 (AOE) &nbsp;&bull;&nbsp; Regular: June 25, 2026 (AOE)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="features" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-6">Features of STAI-X Integrated Conference-Journal Peer-Review Process</h2>
+                        <p class="text-base leading-7 text-gray-700 mb-8">STAI-X offers a platform for the rapid dissemination of innovative research, tools and results at the interface of Statistics and AI, along with their applications in science and society. It is designed to:</p>
+                        <div class="space-y-6 text-gray-700">
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="text-lg md:text-xl font-semibold text-gray-950 mb-2">Ensure alignment between reviewer expertise and submission domain</h3>
+                                <p class="text-base leading-7">Submissions are evaluated through a peer-review process in which papers are assessed by reviewers with demonstrated statistical x AI expertise and relevant domain knowledge.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="text-lg md:text-xl font-semibold text-gray-950 mb-2">Bridge the gap between conference pace and journal publication</h3>
+                                <p class="text-base leading-7">STAI-X combines rapid turnaround with high-quality feedback and early visibility. At the same time, it establishes structured pathways for expanded versions of accepted papers to be considered for invitation of fast-track reviews by leading partner statistical and science journals under aligned editorial policies.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="text-lg md:text-xl font-semibold text-gray-950 mb-2">Increase the visibility and impact of statistical AI research</h3>
+                                <p class="text-base leading-7">The STAI-X Conference Proceedings actively collaborates with its growing network of partner organizations and establishes various venues to amplify the reach and engagement of the published proceedings papers across disciplines to help authors disseminate their published work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="to-authors" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-8">To Authors</h2>
+                        <div class="space-y-8 text-gray-700">
+
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-semibold text-gray-950 mb-4">Partner Journals</h3>
+                                <div class="space-y-4 text-base leading-7">
+                                    <p>A limited subset of top-ranked accepted papers will be eligible for fast-track review opportunities by partner journals, as selected by the authors. STAI-X's current partner journals include Journal of the American Statistical Association (JASA); Annals of Applied Statistics (AOAS), Canadian Journal of Statistics, ASA Discoveries, Harvard Data Science Review (HDSR), Genome Research, Genetics, Data Science in Science, and Statistics and Data Science in Imaging. After conference acceptance, authors will be asked to indicate their preferred partner journal for consideration of reviewing an expanded version of their work. Guidance for authors of accepted papers, including journal information and selection criteria, will be provided to authors to help them choose appropriate journals.</p>
+                                    <p>Editors of each partner journal will select a limited number of suitable top-ranked papers based on authors' preferences for invitation for fast-track reviews. Journals can ask authors of selected papers to prepare a substantially expanded journal version rather than simply resubmitting the conference paper. Specific journals may have specific additional requirements, including expanding the conference version, for example by including: stronger motivation and positioning, additional methodological details or theory when needed, more comprehensive experiments or data analysis, and a clearer discussion of scientific or practical impact. Journal review processes will be handled by the respective journals independently, and acceptance is not guaranteed.</p>
+                                    <p>After the invitation, authors will decide whether or not to submit their paper to the journal. Papers that decide to submit to certain partner journals, such as JASA, AoAS, and ASA Discoveries, must opt out of publication in the STAI-X proceedings and notify STAI-X accordingly. Failure to do so may result in rejection by the partner journal due to dual-submission policies. All accepted papers that do not proceed with the journal submission will be published in the STAI-X Proceedings after the camera-ready stage.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-semibold text-gray-950 mb-4">AI-assisted Review</h3>
+                                <div class="space-y-4 text-base leading-7">
+                                    <p>As part of our efforts to improve the consistency, transparency, and efficiency of the review process, authorized AI tools may be used on submissions that have already been made publicly available by the authors (e.g., arXiv, bioRxiv) or, at a later stage, camera-ready manuscripts of accepted papers. These systems are designed to (i) assist reviewers by providing structured feedback on their review reports and (ii) generate reproducibility reports that assess submitted code and its consistency with the manuscript for all accepted papers.</p>
+                                    <p>The automated feedback provided to reviewers does not introduce new substantive content and is intended to support, rather than replace, human judgment. Reviewers remain fully responsible for their evaluations, and all decisions are made by the program committee. The goal of these tools is to reduce time spent on routine or labor-intensive checks, allowing reviewers to focus more directly on the intellectual contributions and significance of the work. For accepted papers, the AI-assisted reproducibility report will be shared with all authors, who will have the opportunity to revise their manuscripts accordingly.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-semibold text-gray-950 mb-4">Reciprocal Review Policy</h3>
+                                <div class="text-base leading-7">
+                                    <p>We require that at least one author who has research experience equivalent to a tenure-track faculty member be nominated to serve as a reviewer. If there are no authors at this career stage, for instance, all authors are either still trainees (postdoctoral research fellow equivalent or earlier stage) or senior (tenured associate professor equivalent or more senior), then an exemption can be granted. In this case, authors need to provide a detailed justification for their exemption request.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-semibold text-gray-950 mb-4">Dual Submission Policy</h3>
+                                <div class="text-base leading-7">
+                                    <p>For the full paper track, paper submissions must be original and may not be under concurrent review at another journal or conference. Preprint server submissions are allowed without restrictions. For the poster track, parallel submissions to other journals or conferences are permitted. Submissions based on the same work should be made to only one track.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-semibold text-gray-950 mb-4">Data and Confidentiality</h3>
+                                <div class="text-base leading-7">
+                                    <p>All automated processing is conducted using secure, institutionally managed AI services. Submission content is protected and will not be used to train AI models. Data is handled under strict confidentiality controls and is retained only while it is required for providing the service.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+        </div>
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="short-courses.html">Short Courses</a>
+            <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
+            <a href="program.html">Program</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>For inquiries about the conference:</p>
+          <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
+          <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+
+  // Section rail: toggle + scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail) return;
+    var toggle = document.createElement('button');
+    toggle.className = 'rail-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    rail.insertBefore(toggle, rail.firstChild);
+    try {
+      if (localStorage.getItem('sectionRailCollapsed') === '1') rail.classList.add('collapsed');
+    } catch (e) {}
+    toggle.addEventListener('click', function() {
+      rail.classList.toggle('collapsed');
+      try {
+        localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+      } catch (e) {}
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+</script>
+</body>
+</html>

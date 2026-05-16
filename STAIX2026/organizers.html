@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2026 | Organizers</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
+                <a href="partners.html" class="nav-link hover:text-gray-900">Partners<br>& Sponsors</a>
+                <a href="short-courses.html" class="nav-link hover:text-gray-900">Short<br>Courses</a>
+                <a href="reviewer-recruitment.html" class="nav-link hover:text-gray-900">Reviewer<br>Recruitment</a>
+                <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
+                <a href="organizers.html" class="nav-link text-[#4682B4]">Organizers</a>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="short-courses.html" class="block py-2 nav-link">Short Courses</a>
+            <a href="reviewer-recruitment.html" class="block py-2 nav-link">Reviewer Recruitment</a>
+            <a href="program.html" class="block py-2 nav-link">Program</a>
+            <a href="organizers.html" class="block py-2 nav-link text-[#4682B4]">Organizers</a>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#co-chairs" data-target="co-chairs"><span class="dot" aria-hidden="true"></span><span class="label">Co-chairs</span></a></li>
+            <li><a href="#local-committee" data-target="local-committee"><span class="dot" aria-hidden="true"></span><span class="label">Local Committee</span></a></li>
+            <li><a href="#program-committee" data-target="program-committee"><span class="dot" aria-hidden="true"></span><span class="label">Program Committee</span></a></li>
+            <li><a href="#short-course-committee" data-target="short-course-committee"><span class="dot" aria-hidden="true"></span><span class="label">Short Course Committee</span></a></li>
+            <li><a href="#sponsorship-committee" data-target="sponsorship-committee"><span class="dot" aria-hidden="true"></span><span class="label">Sponsorship Committee</span></a></li>
+            <li><a href="#challenge-committee" data-target="challenge-committee"><span class="dot" aria-hidden="true"></span><span class="label">Challenge Committee</span></a></li>
+            <li><a href="#outreach" data-target="outreach"><span class="dot" aria-hidden="true"></span><span class="label">Outreach</span></a></li>
+            <li><a href="#award-committee" data-target="award-committee"><span class="dot" aria-hidden="true"></span><span class="label">Award Committee</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-16 mt-20">
+        <div>
+
+            <!-- Main Content -->
+            <div>
+
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-16">
+            Organizing Committee
+        </h1>
+
+        <!-- Co-chairs -->
+        <section id="co-chairs" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Co-chairs</h2>
+        
+            <div class="flex justify-center gap-12 flex-wrap">
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
+                    <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="../img/xihonglin.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://hsph.harvard.edu/profile/xihong-lin/" class="hover:underline">Xihong Lin</a></p>
+                    <p class="text-sm text-gray-500 italic">Harvard University</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
+                    <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="../img/linjunzhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
+                    <p class="text-sm text-gray-500 italic">Rutgers University</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="../img/tianzheng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="http://www.stat.columbia.edu/~tzheng/" class="hover:underline">Tian Zheng</a></p>
+                    <p class="text-sm text-gray-500 italic">Columbia University</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Local Committee -->
+        <section id="local-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Local Committee</h2>
+        
+            <!-- Chair -->
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+        
+                <div class="flex justify-center">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/tracyke.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.tracyke.net/" class="hover:underline">Tracy Ke</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Members -->
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+        
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/MorganeAustern.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.google.com/view/morganeaustern/home" class="hover:underline">Morgane Austern</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+        
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/jackson_lautier.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://jacksonlautier.com/" class="hover:underline">Jackson Lautier</a></p>
+                        <p class="text-sm text-gray-500 italic">Bentley University</p>
+                    </div>
+        
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/EmilyPalmer.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://statistics.fas.harvard.edu/people/emily-palmer" class="hover:underline">Emily Palmer</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+        
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/PragyaSur.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.harvard.edu/prs499/" class="hover:underline">Pragya Sur</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Committee -->
+        <section id="program-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Program Committee</h2>
+        
+            <!-- Chairs -->
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chairs</h3>
+        
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
+                        <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/linjunzhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
+                        <p class="text-sm text-gray-500 italic">Rutgers University</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Members -->
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+        
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/MorganeAustern.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.google.com/view/morganeaustern/home" class="hover:underline">Morgane Austern</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/GraceDeng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.niss.org/people/grace-deng" class="hover:underline">Grace Deng</a></p>
+                        <p class="text-sm text-gray-500 italic">Google</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/SebastienHaneuse.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://hsph.harvard.edu/profile/sebastien-haneuse/" class="hover:underline">Sebastien Haneuse</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/jiankang.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://public.websites.umich.edu/~jiankang/" class="hover:underline">Jian Kang</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/tracyke.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.tracyke.net/" class="hover:underline">Tracy Ke</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/LinglongKong.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.ualberta.ca/~lkong/" class="hover:underline">Linglong Kong</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Alberta</p>
+                    </div>
+
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/LexinLi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://lexinli.biostat.berkeley.edu/" class="hover:underline">Lexin Li</a></p>
+                        <p class="text-sm text-gray-500 italic">University of California, Berkeley</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/martinlindquist.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.google.com/view/martinlindquist/home" class="hover:underline">Martin Lindquist</a></p>
+                        <p class="text-sm text-gray-500 italic">Johns Hopkins University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/razieh.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://raziehnabi.com/" class="hover:underline">Razieh Nabi</a></p>
+                        <p class="text-sm text-gray-500 italic">Emory University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/ChengchunShi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://callmespring.github.io/" class="hover:underline">Chengchun Shi</a></p>
+                        <p class="text-sm text-gray-500 italic">London School of Economics and Political Science</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/PragyaSur.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.harvard.edu/prs499/" class="hover:underline">Pragya Sur</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/alexvolfosky.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://volfovsky.github.io/" class="hover:underline">Alexander Volfovsky</a></p>
+                        <p class="text-sm text-gray-500 italic">Duke University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/OwenWard.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://owenward.github.io/" class="hover:underline">Owen Ward</a></p>
+                        <p class="text-sm text-gray-500 italic">Simon Fraser University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/zhenkewu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://zhenkewu.com/" class="hover:underline">Zhenke Wu</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/BingxinZhao.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.bingxinzhao.com/" class="hover:underline">Bingxin Zhao</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/tianzheng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.stat.columbia.edu/tzheng/" class="hover:underline">Tian Zheng</a></p>
+                        <p class="text-sm text-gray-500 italic">Columbia University</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Short course committee -->
+        <section id="short-course-committee" class="mb-16 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-8 text-center">Short Course Committee</h2>
+
+            <!-- Chair -->
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+
+                <div class="flex justify-center">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/jiankang.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://public.websites.umich.edu/~jiankang/" class="hover:underline">Jian Kang</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Members -->
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/SubhabrateSen.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.harvard.edu/sus977/" class="hover:underline">Subhabrata Sen</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsorship Committee -->
+        <section id="sponsorship-committee" class="mb-16 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-8 text-center">Sponsorship Committee</h2>
+        
+            <!-- Chair -->
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+        
+                <div class="flex justify-center">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/PeterSong.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://websites.umich.edu/~songlab/" class="hover:underline">Peter Song</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Members -->
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+        
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/jackson_lautier.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://jacksonlautier.com/" class="hover:underline">Jackson Lautier</a></p>
+                        <p class="text-sm text-gray-500 italic">Bentley University</p>
+                    </div>
+        
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
+                        <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/tianzheng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.stat.columbia.edu/tzheng/" class="hover:underline">Tian Zheng</a></p>
+                        <p class="text-sm text-gray-500 italic">Columbia University</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Committee -->
+        <section id="challenge-committee" class="mb-16 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-8 text-center">Challenge Committee</h2>
+
+            <!-- Chair -->
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+
+                <div class="flex justify-center">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Members -->
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/rashid_naim.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://naimurashid.github.io/" class="hover:underline">Naim Rashid</a></p>
+                        <p class="text-sm text-gray-500 italic">UNC Chapel Hill</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/chris_volinsky.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.chrisvolinsky.com/" class="hover:underline">Chris Volinsky</a></p>
+                        <p class="text-sm text-gray-500 italic">New York University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/Alex_Young.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.google.com/view/alexander-l-young" class="hover:underline">Alex Young</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/daiwei_Zhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.daviddaiweizhang.com/" class="hover:underline">David Zhang</a></p>
+                        <p class="text-sm text-gray-500 italic">UNC Chapel Hill</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/jinfeng_zhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://ani.stat.fsu.edu/~jinfeng/index.html" class="hover:underline">Jinfeng Zhang</a></p>
+                        <p class="text-sm text-gray-500 italic">Florida State University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/hongtuzhu.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sph.unc.edu/adv_profile/hongtu-zhu-phd/" class="hover:underline">Hongtu Zhu</a></p>
+                        <p class="text-sm text-gray-500 italic">UNC Chapel Hill</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Outreach -->
+        <section id="outreach" class="mb-16 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-8 text-center">Outreach</h2>
+
+            <div class="flex justify-center">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="../img/jackson_lautier.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://jacksonlautier.com/" class="hover:underline">Jackson Lautier</a></p>
+                    <p class="text-sm text-gray-500 italic">Bentley University</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Award Committee -->
+        <section id="award-committee" class="mb-16 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-8 text-center">Award Committee</h2>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            </div> <!-- end main content col -->
+        </div> <!-- end grid -->
+    </div>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+
+  // Section rail: toggle + scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail) return;
+    var toggle = document.createElement('button');
+    toggle.className = 'rail-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    rail.insertBefore(toggle, rail.firstChild);
+    try {
+      if (localStorage.getItem('sectionRailCollapsed') === '1') rail.classList.add('collapsed');
+    } catch (e) {}
+    toggle.addEventListener('click', function() {
+      rail.classList.toggle('collapsed');
+      try {
+        localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+      } catch (e) {}
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+</script>
+</body>
+</html>

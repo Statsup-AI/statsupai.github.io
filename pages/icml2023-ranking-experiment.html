@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The ICML 2023 Ranking Experiment — StatsUpAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink: #0f2a52;
+      --ink-soft: #1e3f6f;
+      --accent: #8b1a2b;
+      --accent-soft: #b83048;
+      --paper: #f4f7fc;
+      --surface: #ffffff;
+      --rule: #dde4ef;
+      --muted: #5a6474;
+    }
+
+    body {
+      font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      line-height: 1.8;
+      color: #2b2b2b;
+      background:
+        radial-gradient(circle at 12% -8%, rgba(15,42,82,0.10), transparent 45%),
+        radial-gradient(circle at 92% 6%, rgba(139,26,43,0.06), transparent 40%),
+        var(--paper);
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--surface);
+      overflow: hidden;
+      box-shadow: 0 2px 30px rgba(27,32,48,0.08);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(100deg, var(--ink) 0%, var(--ink-soft) 100%);
+      color: #f7f3ec;
+      padding: 18px 50px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .header .event-tag {
+      font-size: 0.78em;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #cfdcef;
+    }
+
+    .header .series {
+      font-size: 0.78em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(247,243,236,0.7);
+    }
+
+    /* Hero (title + small cover image) */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: center;
+      padding: 48px 60px 44px;
+      background: linear-gradient(100deg, #f4f7fc 0%, #eaf0fa 100%);
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 60px;
+      top: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    .hero-kicker {
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .article-title {
+      font-family: 'Source Serif 4', 'Times New Roman', serif;
+      font-size: 2.6em;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
+
+    .hero-sub {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.15em;
+      color: var(--ink-soft);
+      font-style: italic;
+      line-height: 1.45;
+      padding-left: 14px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .hero-image {
+      width: 100%;
+      box-shadow: 0 10px 24px rgba(15,42,82,0.18);
+      border: 1px solid rgba(15,42,82,0.12);
+      background: #fff;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Paper meta strip */
+    .paper-meta {
+      padding: 30px 60px;
+      background: #eef3fa;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px 30px;
+    }
+
+    .paper-citation {
+      flex: 1;
+      min-width: 300px;
+      color: #3a3226;
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.08em;
+      line-height: 1.7;
+    }
+
+    .paper-citation .authors {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .paper-citation em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .paper-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 0.85em;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.18s ease;
+    }
+    .chip:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .chip .arrow { font-size: 0.9em; transition: transform 0.18s; }
+    .chip:hover .arrow { transform: translateX(2px); }
+
+    /* Content */
+    .content { padding: 50px 60px 60px; }
+
+    .section-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.55em;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 36px 0 18px;
+      padding-left: 14px;
+      border-left: 4px solid var(--accent);
+      line-height: 1.35;
+    }
+
+    .content p {
+      color: #2e2e2e;
+      font-size: 1.0em;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .formula {
+      display: block;
+      background: #eef3fa;
+      border-left: 3px solid var(--accent-soft);
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-family: 'Source Serif 4', serif;
+      color: var(--ink);
+      font-size: 0.98em;
+    }
+
+    .article-image {
+      margin: 30px 0 24px;
+      text-align: center;
+    }
+
+    .article-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid var(--rule);
+      box-shadow: 0 6px 18px rgba(27,32,48,0.08);
+      background: #fff;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 0.88em;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* Discussion */
+    .discussion {
+      margin-top: 52px;
+      padding: 40px 36px 30px;
+      background: linear-gradient(180deg, #eef3fa 0%, #e3ecf8 100%);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+    }
+
+    .discussion-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.6em;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .discussion-lede {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .commentator {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      padding: 22px 26px 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(27,32,48,0.04);
+    }
+
+    .commentator-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--rule);
+    }
+
+    .commentator-num {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.15em;
+      font-weight: 700;
+      color: var(--accent);
+      font-style: italic;
+      flex-shrink: 0;
+    }
+
+    .commentator-name {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .commentator-body p {
+      color: #3a3a3a;
+      font-size: 0.97em;
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+    .commentator-body p:last-child { margin-bottom: 0; }
+
+    a.inline-link {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a.inline-link:hover { color: var(--accent-soft); }
+
+    @media (max-width: 768px) {
+      .header { padding: 14px 22px; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 36px 22px 30px;
+        gap: 24px;
+      }
+      .hero::before { left: 22px; }
+      .article-title { font-size: 1.8em; }
+      .paper-meta { padding: 18px 22px; }
+      .content { padding: 30px 22px 40px; }
+      .discussion { padding: 28px 18px 18px; }
+      .commentator { padding: 18px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="event-tag">StatsUpAI</div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="article-title">The ICML 2023 Ranking Experiment</h1>
+        <div class="hero-sub">Examining Author Self-Assessment in ML/AI Peer Review</div>
+      </div>
+      <div class="hero-image">
+        <img src="weijie0.jpg" alt="ICML 2023 Ranking Experiment cover">
+      </div>
+    </div>
+
+    <div class="paper-meta">
+      <div class="paper-citation">
+        <span class="authors">Buxin Su, Jiayao Zhang, Natalie Collina, Yuling Yan, Didong Li, Kyunghyun Cho, Jianqing Fan, Aaron Roth, and Weijie Su.</span> 2025. "The ICML 2023 Ranking Experiment: Examining Author Self-Assessment in ML/AI Peer Review." <em>Journal of the American Statistical Association</em>, July, 1–12. doi:10.1080/01621459.2025.2510006.
+      </div>
+      <div class="paper-links">
+        <a href="https://doi.org/10.1080/01621459.2025.2510006" class="chip" target="_blank" rel="noopener">Paper <span class="arrow">→</span></a>
+        <a href="https://blog.icml.cc/2026/01/12/introducing-icml-2026-policy-for-self-ranking-in-reviews/" class="chip" target="_blank" rel="noopener">ICML 2026 Policy <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>In recent years, AI conferences have seen an exponentially increasing number of submissions. In contrast, the pool of high-quality reviewers has grown much more slowly, raising widespread concerns about the quality of peer review. A research team from the University of Pennsylvania investigated an underexplored approach to improving review quality: author self-rankings of multiple submissions to the same AI conference. Grounded in game-theoretic reasoning, the team hypothesized that self-rankings are informative because authors have a unique understanding of their own work. To test this hypothesis, the team conducted a large-scale experiment at the International Conference on Machine Learning (ICML) 2023, in which 1,342 researchers self-ranked 2,592 submissions by perceived quality. The team conducted an empirical analysis showing how author-provided self-rankings can be leveraged to improve peer review at AI conferences via the Isotonic Mechanism. Based on these results, the team proposed several potential applications of author self-rankings, some of which have been incorporated into the ICML 2026 review process (see <a class="inline-link" href="https://blog.icml.cc/2026/01/12/introducing-icml-2026-policy-for-self-ranking-in-reviews/" target="_blank" rel="noopener">https://blog.icml.cc/2026/01/12/introducing-icml-2026-policy-for-self-ranking-in-reviews/</a>).</p>
+
+      <h2 class="section-title">Where does this framework come from?</h2>
+      <p>The starting point is a simple observation: authors typically have the best knowledge of their own papers but are often reluctant to share their relative preferences truthfully. This idea was formalized as the Isotonic Mechanism, a computationally efficient approach for improving the accuracy of noisy review scores by incorporating author self-rankings of their submissions.</p>
+      <p>The Isotonic Mechanism operates as follows. Consider an author who submits n papers to a conference. The mechanism asks the author to rank these submissions in descending order of perceived quality, denoted by π. Given the (average) raw review scores y for the n submissions, the Isotonic Mechanism outputs calibrated scores r by minimizing the Euclidean distance between y and r, subject to the constraint that r is consistent with the author's ranking. Formally, this convex optimization problem is equivalent to isotonic regression. For example, if y=(8,7,4,3) and (π(1),π(2),π(3),π(4))=(1,3,2,4), then the calibrated scores are (8,5.5,5.5,3).</p>
+      <p>Under this mechanism, the pre-rebuttal review scores are then calibrated to be consistent with these self-rankings. The team shows that authors are incentivized to report their rankings truthfully, because truthful reporting maximizes their expected utility. Building on this finding, the team conducted a large-scale experiment at ICML 2023.</p>
+
+      <h2 class="section-title">Community surveys</h2>
+      <p>The ICML 2023 survey was conducted on OpenReview, which hosted the peer review process for ICML 2023, in conjunction with OpenRank.cc, a platform the team developed to implement the experiment. The survey was anonymous, GDPR-compliant, and administered after the full-paper submission deadline. Immediately after this deadline, authors with multiple submissions were asked to provide self-rankings by ordering their papers according to perceived quality and significance. Once pre-rebuttal review scores became available, the team computed a calibrated score for each submission using the Isotonic Mechanism. This process produced a rich dataset of self-rankings from 1,342 authors, covering 2,592 ICML 2023 submissions, along with their official review scores and acceptance decisions.</p>
+
+      <h2 class="section-title">Calibrated scores better reflect submission quality</h2>
+      <p>The team first compared the outputs of the Isotonic Mechanism (the calibrated scores) with the pre-rebuttal review scores in terms of how accurately they reflect submission quality. To do so, one needed a proxy for ground-truth submission quality. Because each submission typically receives multiple reviews, the team used the average of the remaining review scores as a proxy for the ground-truth expected review score when evaluating an estimator applied to a single randomly selected review score. The team found that the Isotonic Mechanism substantially reduces proxy estimation error, as measured by mean squared error and mean absolute error. Moreover, the improvement becomes more pronounced as the number of submissions per author increases.</p>
+
+      <div class="article-image">
+        <img src="weijie1.jpg" alt="Isotonic Mechanism reduces estimation error">
+      </div>
+
+      <p>This dependence suggests that having more author self-rankings can lead to greater error reduction under the Isotonic Mechanism. Because the change in proxy estimation error is an unbiased estimator of the change in ground-truth estimation error, one can construct confidence intervals for the reduction in ground-truth squared error. The team observed substantial decreases that are statistically significant at the 99% confidence level.</p>
+
+      <div class="article-image">
+        <img src="weijie2.jpg" alt="Error reduction grows with submissions per author">
+      </div>
+
+      <h2 class="section-title">Applications</h2>
+      <p>The team's first application has been incorporated into the ICML 2026 review process. Immediately after the full-paper submission deadline, authors will receive a request to provide self-rankings by ordering their submissions according to perceived quality and significance. The team will compute calibrated scores using the Isotonic Mechanism and, once pre-rebuttal review scores are available, compute the discrepancy between the calibrated scores and the pre-rebuttal review scores.</p>
+      <p>ICML 2026 will use the absolute value of this discrepancy as a signal: submissions with large discrepancies are those for which authors disagree with the reviewers. To keep the signal appropriately coarse, a three-level discrepancy indicator (High, Medium, or Low) will be shown only to area chairs (and not to reviewers). Area chairs may use this indicator to prioritize follow-up actions, such as recruiting additional reviews or re-examining the existing reviews. The goal is to provide a pragmatic measure of potential review-quality concerns and thereby support an efficient allocation of area-chair attention.</p>
+
+      <div class="article-image">
+        <img src="weijie3.jpg" alt="ICML 2026 application of self-ranking">
+      </div>
+
+      <p>The team also proposes an additional application for best paper award selection. ML/AI conferences typically select a small number of papers to receive awards. The process often begins by forming a shortlist, consisting of papers with high average review scores or those nominated by area chairs. A selection committee then carefully reviews the shortlisted papers to identify award recipients.</p>
+      <p>In this context, author self-rankings could be made visible to a small number of program chairs who are not on the selection committee. The selection committee would continue to rely on its expertise and deliberate without access to the author-provided self-rankings. After the committee submits its recommendations, the program chairs could then scrutinize the proposed awardees and raise flags if a recommended paper received low self-rankings from its authors, suggesting that the committee may want to gather additional evidence before finalizing the award decision.</p>
+
+      <div class="discussion">
+        <h2 class="discussion-title">Discussion: perspectives and future directions</h2>
+        <div class="discussion-lede">We invited several prominent scholars in computer science and statistics to provide comments and engage in a brainstorming discussion. Their perspectives are summarized below.</div>
+
+        <div class="commentator">
+          <div class="commentator-head">
+            <span class="commentator-num">1</span>
+            <span class="commentator-name">Yoshua Bengio (University of Montreal) and Dinghuai Zhang (Microsoft Research)</span>
+          </div>
+          <div class="commentator-body">
+            <p>Bengio and Zhang highlight the "powerful synergy between ML and statistics" illustrated by this paper, praising the authors for proposing a "novel path" that utilizes author insights to improve review quality. The commentators note that the study sets a "high standard for future work" by demonstrating, through a large-scale experiment, how statistical tools can solve modern socio-technical challenges. For future research, the discussants suggest expanding the mechanism beyond a single quality score to "elicit author opinions along multiple axes," such as "novelty," "rigor," and "predicted long-term impact." Additionally, they recommend "fusing" these insights with other information sources, for instance asking authors to rank current submissions against their "previously published papers", to anchor evaluations and increase information density.</p>
+          </div>
+        </div>
+
+        <div class="commentator">
+          <div class="commentator-head">
+            <span class="commentator-num">2</span>
+            <span class="commentator-name">Sanmi Koyejo (Stanford University) and Andreas Haupt (Stanford University)</span>
+          </div>
+          <div class="commentator-body">
+            <p>Koyejo and Haupt praise the authors for their "empirically grounded and pragmatic" approach, specifically endorsing their "cautious" recommendation to limit the mechanism's initial use to low-stakes tasks like oversight. The discussants view this measured strategy as "warranted and scientifically prudent," allowing the community to evaluate the tool while respecting the "high stakes of conference decisions" that shape researchers' careers. Regarding equity, the commentators note that the current mechanism creates an "asymmetry" by providing "greater protection against noisy reviews" to established authors with many submissions while leaving junior researchers with "residual uncertainty." To address this, they suggest developing "algorithmic variants" that distribute benefits "more uniformly across the author population." Additionally, they encourage "longitudinal studies" to observe "multi-year learning effects" as the community adapts to these new incentives over time.</p>
+          </div>
+        </div>
+
+        <div class="commentator">
+          <div class="commentator-head">
+            <span class="commentator-num">3</span>
+            <span class="commentator-name">Weichen Wang (University of Hong Kong) and Chengchun Shi (London School of Economics and Political Science)</span>
+          </div>
+          <div class="commentator-body">
+            <p>Wang and Shi congratulate the authors on a "comprehensive and insightful empirical investigation," acknowledging the study as a "valuable contribution" that addresses the "noisy and low-quality reviews" hampering the field. They validate the original findings, noting that the empirical results clearly demonstrate that leveraging author rankings "yields much smaller mean squared and absolute errors" than relying on raw review scores alone. To address potential "fairness concerns" regarding newer researchers and the risk of authors "gaming the system," the discussants suggest an alternative approach: "leveraging ranking information from reviewers." They argue that this method is "inherently fair regardless of the number of submissions per author" and demonstrate via simulation that "combining ranking information from both reviewers and authors" ultimately yields the most accurate evaluation of submission quality.</p>
+          </div>
+        </div>
+
+        <div class="commentator">
+          <div class="commentator-head">
+            <span class="commentator-num">4</span>
+            <span class="commentator-name">Linjun Zhang (Rutgers University) and Lexin Li (University of California at Berkeley)</span>
+          </div>
+          <div class="commentator-body">
+            <p>Zhang and Li commend the study as "carefully designed and empirically grounded," noting that the "deliberately conservative" mechanism successfully limits strategic manipulation while proving that author self-assessment is "intuitive and empirically well supported." Looking forward, Zhang and Li suggest adapting the mechanism to journal settings by leveraging "authors' past publications" or "revision self-assessment" where simultaneous submissions are rare. Furthermore, they advocate for "randomized controlled trials" to test "reviewer recognition and reward" systems, such as "public badges", to ensure they causally improve "review timeliness" and quality rather than just correlating with them.</p>
+          </div>
+        </div>
+
+        <div class="commentator">
+          <div class="commentator-head">
+            <span class="commentator-name">Xiao-Li Meng (Harvard University)</span>
+          </div>
+          <div class="commentator-body">
+            <p>Meng commends the work as a pioneering effort that applies statistics to address a severe practical challenge in the machine learning community: an overwhelmed peer review system. He highlights the cleverness of the proposed author-assisted scoring mechanism, which asks authors to provide relative rankings of their own submissions. Meng specifically appreciates how this unconventional approach pushes the academic community beyond familiar comfort zones, successfully bypassing the critical shortage of reliable, high-quality reviewers, whom he terms "Swiss-watch volunteers", by creatively leveraging authors' own incentive structures. He proposes a rigorous data science endeavor, spanning experimental design and causal inference, to deeply study these nuanced author incentive structures and how hidden motives might introduce noise into the review process. Furthermore, to address the broader peer review crisis, Meng advocates for the development of collaborative "Human+AI" editorial teams, suggesting an "Appraise, Generate, Integrate" (AGI) workflow where AI serves as an assistant to provide rapid second opinions and refine language, thereby reallocating scarce human effort toward the highest-value scientific judgments.</p>
+          </div>
+        </div>
+
+        <div class="commentator">
+          <div class="commentator-head">
+            <span class="commentator-name">Ying Wang (New York University) and Mengye Ren (New York University)</span>
+          </div>
+          <div class="commentator-body">
+            <p>Wang and Ren commend the paper as an "important and timely study" that addresses the severe strain placed on the ML/AI peer review system by exponential submission growth. They praise the proposed mechanism for demonstrating that calibrating reviewer scores with authors' self-rankings yields "more accurate assessments than raw scores alone," serving as a "valuable tool for reducing noise" in the evaluation process. They specifically appreciate the authors' cautious framing, agreeing that appropriately limiting the mechanism to "low-risk uses", such as assisting Area Chair oversight, informing award decisions, and recruiting emergency reviewers, helps mitigate the risks of strategic manipulation. They emphasize that the mechanism's inherent biases, such as its potential to disproportionately favor senior authors with multiple submissions, require further analysis regarding internal lab dynamics and participation patterns. They propose a "phased deployment" strategy for future implementations: first making self-rankings mandatory to mitigate self-selection bias, and then gradually introducing controlled interventions to deeply analyze strategic behaviors. Furthermore, they suggest a broader, more transformative shift to "separate dissemination from evaluation." They envision an open ecosystem where papers are published to open repositories for continuous community review, author-calibrated scores guide readers, and reviewers earn reputation or "karma" based on the long-term predictiveness of their feedback, which is an evolution they stress is urgently needed to safeguard the system against the growing influx of generative AI submissions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

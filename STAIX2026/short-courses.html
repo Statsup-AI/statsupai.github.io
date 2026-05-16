@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2026 - Short Courses</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a {
+        padding: 5px 0;
+      }
+      @media (max-width: 768px) {
+        .footer-pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      details > summary {
+        cursor: pointer;
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker { display: none; }
+      details > summary::before {
+        content: "▸ ";
+        display: inline-block;
+        transition: transform 0.2s;
+        color: #4682B4;
+        font-weight: bold;
+      }
+      details[open] > summary::before {
+        transform: rotate(90deg);
+      }
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
+                <a href="partners.html" class="nav-link hover:text-gray-900">Partners<br>& Sponsors</a>
+                <a href="short-courses.html" class="nav-link text-[#4682B4]">Short<br>Courses</a>
+                <a href="reviewer-recruitment.html" class="nav-link hover:text-gray-900">Reviewer<br>Recruitment</a>
+                <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
+                <a href="organizers.html" class="nav-link hover:text-gray-900">Organizers</a>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="short-courses.html" class="block py-2 nav-link text-[#4682B4]">Short Courses</a>
+            <a href="reviewer-recruitment.html" class="block py-2 nav-link">Reviewer Recruitment</a>
+            <a href="program.html" class="block py-2 nav-link">Program</a>
+            <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#overview" data-target="overview"><span class="dot" aria-hidden="true"></span><span class="label">Overview</span></a></li>
+            <li><a href="#sc1" data-target="sc1"><span class="dot" aria-hidden="true"></span><span class="label">SC1: Agentic AI</span></a></li>
+            <li><a href="#sc2" data-target="sc2"><span class="dot" aria-hidden="true"></span><span class="label">SC2: Scaling Theory</span></a></li>
+            <li><a href="#sc3" data-target="sc3"><span class="dot" aria-hidden="true"></span><span class="label">SC3: LLMs Overview</span></a></li>
+            <li><a href="#sc4" data-target="sc4"><span class="dot" aria-hidden="true"></span><span class="label">SC4: Reinforcement Learning</span></a></li>
+            <li><a href="#sc5" data-target="sc5"><span class="dot" aria-hidden="true"></span><span class="label">SC5: AI in Clinical Trials</span></a></li>
+            <li><a href="#sc6" data-target="sc6"><span class="dot" aria-hidden="true"></span><span class="label">SC6: Diffusion Models</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 md:px-12 mt-24 mb-24 w-full">
+        <div class="space-y-12">
+
+            <section id="overview" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-4">Short Courses</h1>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        STAI-X 2026 will host six short courses on <span class="font-semibold">July 31, 2026</span> at Harvard University. Courses are taught by leading researchers and cover foundational and applied topics across statistics, machine learning, and AI &mdash; from agentic AI workflows and scaling theory to large language models, reinforcement learning, clinical trials, and diffusion models.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Three morning courses (8:00 AM &ndash; 12:00 PM) and three afternoon courses (1:00 PM &ndash; 5:00 PM) will run in parallel. Participants may register for one morning and one afternoon course.
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-white/40">
+                                    <th class="border border-gray-200 p-3 text-sm font-semibold text-gray-900">#</th>
+                                    <th class="border border-gray-200 p-3 text-sm font-semibold text-gray-900">Time</th>
+                                    <th class="border border-gray-200 p-3 text-sm font-semibold text-gray-900">Title</th>
+                                    <th class="border border-gray-200 p-3 text-sm font-semibold text-gray-900">Instructor(s)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm text-gray-700">
+                                <tr><td class="border border-gray-200 p-3 font-semibold">SC1</td><td class="border border-gray-200 p-3">8:00 AM &ndash; 12:00 PM</td><td class="border border-gray-200 p-3"><a href="#sc1" class="text-[#4682B4] hover:underline">Agentic AI: From Zero to Infinity</a></td><td class="border border-gray-200 p-3">Tian Zheng (Columbia)</td></tr>
+                                <tr><td class="border border-gray-200 p-3 font-semibold">SC2</td><td class="border border-gray-200 p-3">8:00 AM &ndash; 12:00 PM</td><td class="border border-gray-200 p-3"><a href="#sc2" class="text-[#4682B4] hover:underline">Theory of Scaling in Modern Deep Learning</a></td><td class="border border-gray-200 p-3">Soufiane Hayou (JHU), Nikhil Ghosh (Flatiron)</td></tr>
+                                <tr><td class="border border-gray-200 p-3 font-semibold">SC3</td><td class="border border-gray-200 p-3">8:00 AM &ndash; 12:00 PM</td><td class="border border-gray-200 p-3"><a href="#sc3" class="text-[#4682B4] hover:underline">An Overview of LLMs for Statisticians</a></td><td class="border border-gray-200 p-3">Linjun Zhang (Rutgers)</td></tr>
+                                <tr><td class="border border-gray-200 p-3 font-semibold">SC4</td><td class="border border-gray-200 p-3">1:00 PM &ndash; 5:00 PM</td><td class="border border-gray-200 p-3"><a href="#sc4" class="text-[#4682B4] hover:underline">Reinforcement Learning: Foundations and Applications</a></td><td class="border border-gray-200 p-3">Chengchun Shi (LSE)</td></tr>
+                                <tr><td class="border border-gray-200 p-3 font-semibold">SC5</td><td class="border border-gray-200 p-3">1:00 PM &ndash; 5:00 PM</td><td class="border border-gray-200 p-3"><a href="#sc5" class="text-[#4682B4] hover:underline">The Role of AI in Accelerating Clinical Trials and Drug Development</a></td><td class="border border-gray-200 p-3">Alexia Iasonos (MSKCC), John O&rsquo;Quigley (UCL)</td></tr>
+                                <tr><td class="border border-gray-200 p-3 font-semibold">SC6</td><td class="border border-gray-200 p-3">1:00 PM &ndash; 5:00 PM</td><td class="border border-gray-200 p-3"><a href="#sc6" class="text-[#4682B4] hover:underline">Theory for Diffusion Models: Continuous and Discrete</a></td><td class="border border-gray-200 p-3">Sitan Chen (Harvard)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sc1" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <div class="flex flex-wrap items-baseline gap-x-4 mb-3">
+                        <span class="inline-block bg-[#4682B4] text-white text-xs font-bold px-3 py-1 rounded-full">SC1</span>
+                        <span class="text-sm font-semibold text-gray-600">July 31, 2026 &middot; 8:00 AM &ndash; 12:00 PM</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-4">Agentic AI: From Zero to Infinity &mdash; A Hands-On Workshop for Statisticians on Building and Debugging AI Workflows</h2>
+                    <p class="text-base text-gray-700 mb-6"><span class="font-semibold">Instructor:</span> Tian Zheng, Columbia University</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Course Description</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Agentic AI systems, which iteratively plan, act, and refine outputs, are rapidly reshaping how research, teaching, and professional workflows are conducted. This hands-on workshop introduces statisticians to the design and use of such systems through a practical, systems-oriented lens. Participants will build a simple agentic AI workflow that addresses a task in their own research, teaching, or professional practice. Participants will learn how to identify and diagnose common failure modes, such as inconsistency, bias, and context mis-specification, and how to iteratively improve system performance using natural language as a programming interface. By the end of the session, participants will have developed and refined a working prototype, along with a principled framework for evaluating and extending agentic AI workflows in their own work.</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Prerequisites</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">This workshop is designed for statisticians and data scientists with basic familiarity with programming and an interest in integrating AI into their workflows. No prior experience with agentic AI systems is required.</p>
+
+                    <details class="border-t border-gray-100 pt-4">
+                        <summary class="text-sm font-semibold text-gray-700 hover:text-[#4682B4]">Instructor Biography</summary>
+                        <div class="mt-4 space-y-3 text-sm text-gray-700 leading-relaxed">
+                            <p><span class="font-semibold">Tian Zheng</span> is currently Professor of Statistics at Columbia University. In her research, she develops novel methods for exploring and understanding patterns in complex data from different application domains such as biology, psychology, climate modeling, etc. Her research has been recognized by the 2008 Outstanding Statistical Application Award from the American Statistical Association (ASA), the Mitchell Prize from ISBA, and a Google research award. She became a Fellow of the American Statistical Association in 2014, a Fellow of the Institute of Mathematical Statistics in 2022, and a Fellow of the American Association for the Advancement of Science in 2024. From 2017 to 2020, she served as Associate Director for Education at the Columbia Data Science Institute. From 2019 to 2025, she was chair of the Department of Statistics at Columbia. Professor Zheng is the recipient of the 2017 Columbia Presidential Award for Outstanding Teaching. In 2021, she was recognized with a Lenfest Distinguished Columbia Faculty Award, which honors the excellence of faculty as teachers and mentors of both undergraduate and graduate students.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section id="sc2" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <div class="flex flex-wrap items-baseline gap-x-4 mb-3">
+                        <span class="inline-block bg-[#4682B4] text-white text-xs font-bold px-3 py-1 rounded-full">SC2</span>
+                        <span class="text-sm font-semibold text-gray-600">July 31, 2026 &middot; 8:00 AM &ndash; 12:00 PM</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-4">Theory of Scaling in Modern Deep Learning</h2>
+                    <p class="text-base text-gray-700 mb-6"><span class="font-semibold">Instructors:</span> Soufiane Hayou, Johns Hopkins University &middot; Nikhil Ghosh, Flatiron Institute</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Scope and Course Objectives</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Scaling modern deep learning models such as large language models is constrained by hyperparameter (HP) tuning cost. This short course explains how theory can guide scaling in practice via techniques such as the Maximal Update Parameterization (muP). We connect the theoretical analysis (infinite-width training dynamics, stability of effective learning rates, and parameterization design) to practical workflows for reliable HP transfer across width and depth.</p>
+
+                    <p class="text-gray-700 leading-relaxed mb-2"><span class="font-semibold">Learning objectives.</span> Attendees will:</p>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1 mb-6 pl-2">
+                        <li>Understand what it means for HPs to be transferable across scale and why this matters for compute-optimal experimentation.</li>
+                        <li>Learn the core design principles of muP and how they arise from theory (including a self-contained proof sketch).</li>
+                        <li>Learn how to implement muP and HP transfer in practice and how to diagnose common failure modes.</li>
+                        <li>Understand the notion of fast transfer, when it is guaranteed/useful, and when it fails.</li>
+                        <li>Leave with actionable recipes for transferring LR, weight decay, and related HPs from small proxy runs to large runs.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Course Content</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">The short course will focus on the theory of scaling of neural networks. We will re-visit topics on infinite-width analysis such as the Neural Tangent Kernel (Jacot et al. 2018) and feature-learning infinite-width networks (Yang et al. 2022). It will (tentatively) be structured as follows:</p>
+
+                    <p class="text-gray-700 leading-relaxed mb-1"><span class="font-semibold">Part I: General introduction to hyperparameter transfer</span></p>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1 mb-4 pl-2">
+                        <li>The scaling bottleneck: why direct HP tuning at large scale is infeasible; the proxy-run paradigm.</li>
+                        <li>Definitions: transfer error, stability across width/depth, and what practitioners actually need (scale-invariant HPs).</li>
+                    </ul>
+
+                    <p class="text-gray-700 leading-relaxed mb-1"><span class="font-semibold">Part II: Theory of muP and why it works</span></p>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1 mb-4 pl-2">
+                        <li>From standard parameterization to muP: what is being stabilized (update magnitudes / effective learning rates).</li>
+                        <li>Tensor Programs intuition: width limits, feature learning vs. lazy regimes, and how parameterization controls the limit.</li>
+                        <li>A proof for LR transfer with muP: a self-contained derivation showing how muP equalizes per-layer update scales and yields width-stable training dynamics under standard assumptions.</li>
+                        <li>Practical implications: what HPs transfer well (LR, weight decay, init scales) and which typically do not.</li>
+                        <li>Extensions and related ideas: depth-wise considerations, and how theory predicts additional scaling rules.</li>
+                    </ul>
+
+                    <p class="text-gray-700 leading-relaxed mb-1"><span class="font-semibold">Part III: Fast HP transfer</span></p>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1 mb-6 pl-2">
+                        <li>Defining fast transfer: suboptimality from transferring HPs vanishes faster than the finite-scale performance gap.</li>
+                        <li>When fast transfer provably holds vs. fails: dependence on problem structure; synthetic counterexamples and what they teach us.</li>
+                        <li>A conjectured mechanism: decomposing loss improvement into width-stable vs. width-sensitive components as a lens into the structure of fast transfer.</li>
+                        <li>Practical implications: using the decomposition lens to provide intuition for when transfer will be fast or slow.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">References</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-700 leading-relaxed space-y-1 mb-6 pl-2">
+                        <li>G. Yang et al. &ldquo;Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer&rdquo; (NeurIPS 2021 / arXiv:2203.03466).</li>
+                        <li>S. Hayou. &ldquo;A Proof of Learning Rate Transfer&rdquo; (AISTATS 2026 / arXiv:2511.01734).</li>
+                        <li>N. Ghosh, D. Wu, A. Bietti. &ldquo;Understanding the Mechanisms of Fast Hyperparameter Transfer&rdquo; (ICLR 2026 / arXiv:2512.22768).</li>
+                        <li>G. Yang et al. &ldquo;Tensor Programs VI: Feature Learning in Infinite-Depth Neural Networks&rdquo; (ICLR 2024 / arXiv:2310.02244).</li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Prerequisites</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Standard concentration results (central limit theorem and advanced variants).</p>
+
+                    <details class="border-t border-gray-100 pt-4">
+                        <summary class="text-sm font-semibold text-gray-700 hover:text-[#4682B4]">Instructor Biographies</summary>
+                        <div class="mt-4 space-y-3 text-sm text-gray-700 leading-relaxed">
+                            <p><span class="font-semibold">Soufiane Hayou</span> is currently an assistant professor at Johns Hopkins in the department of Applied Mathematics and Statistics with a secondary appointment at the Computer Science department. He is also a member of the Data Science and AI Institute. Previously, he was a research fellow at Simons Institute, UC Berkeley, and a visiting assistant professor of mathematics at the National University of Singapore. He obtained his PhD in statistics and machine learning in 2021 from the University of Oxford, and graduated from Ecole Polytechnique in 2018 before joining Oxford. His research is mainly focused on the theory and practice of learning at scale: theoretical analysis of large scale neural networks with the goal of obtaining principled methods for training/finetuning.</p>
+                            <p><span class="font-semibold">Nikhil Ghosh</span> is a Research Fellow at the Flatiron Institute. His main interests are in the theory of deep learning, particularly in the topics of optimization and scaling of neural networks. Previously he was a PhD student in the Statistics department at UC Berkeley working with Bin Yu and Song Mei.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section id="sc3" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <div class="flex flex-wrap items-baseline gap-x-4 mb-3">
+                        <span class="inline-block bg-[#4682B4] text-white text-xs font-bold px-3 py-1 rounded-full">SC3</span>
+                        <span class="text-sm font-semibold text-gray-600">July 31, 2026 &middot; 8:00 AM &ndash; 12:00 PM</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-4">An Overview of LLMs for Statisticians: Basics, LLM-assisted Statistical Analysis, and Agentic AI</h2>
+                    <p class="text-base text-gray-700 mb-6"><span class="font-semibold">Instructor:</span> Linjun Zhang, Rutgers University</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Course Description</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">This course explores the foundations and frontiers of modern large language models (LLMs). We will cover the statistical principles underlying embeddings, transformers, and the LLM training pipeline (pretraining, parameter-efficient finetuning, reinforcement learning from human feedback). Building on this foundation, we will discuss reasoning models, agentic AI (including context engineering and harness engineering), and key issues of AI safety. The course emphasizes both statistical insights and practical applications, equipping students with tools to critically analyze and design trustworthy AI systems.</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Prerequisites</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Linear algebra, calculus, basic probability theory and mathematical statistics, basic skills of vibe coding.</p>
+
+                    <details class="border-t border-gray-100 pt-4">
+                        <summary class="text-sm font-semibold text-gray-700 hover:text-[#4682B4]">Instructor Biography</summary>
+                        <div class="mt-4 space-y-3 text-sm text-gray-700 leading-relaxed">
+                            <p><span class="font-semibold">Linjun Zhang</span> is an Associate Professor in the Department of Statistics and an associated faculty member of Computer Science, at Rutgers University. He obtained his Ph.D. in Statistics at the Wharton School, the University of Pennsylvania in 2019, and received the J. Parker Bursk Memorial Prize and Donald S. Murray Prize for excellence in research and teaching, respectively, upon graduation. He also received the NSF CAREER Award, Rutgers Presidential Teaching Award in 2024, and the Warren I. Susman Award for Excellence in Teaching in 2025. His current research interests include statistical foundations of large language models, algorithmic fairness, privacy-preserving data analysis, and deep learning theory.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section id="sc4" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <div class="flex flex-wrap items-baseline gap-x-4 mb-3">
+                        <span class="inline-block bg-[#d86f54] text-white text-xs font-bold px-3 py-1 rounded-full">SC4</span>
+                        <span class="text-sm font-semibold text-gray-600">July 31, 2026 &middot; 1:00 PM &ndash; 5:00 PM</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-4">Reinforcement Learning: Foundations and Applications</h2>
+                    <p class="text-base text-gray-700 mb-6"><span class="font-semibold">Instructor:</span> Chengchun Shi, London School of Economics and Political Science</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Course Description</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">This short course offers a comprehensive introduction to reinforcement learning (RL), combining foundational theory with modern applications. Drawing on the RL &ldquo;bible&rdquo; (Sutton &amp; Barto) and more recent advances in artificial intelligence, it covers Markov decision processes, planning and learning, Q-learning, policy- and model-based methods, and offline reinforcement learning, and their applications to video games, ridesharing, and large language models. The course has been delivered at over 10 universities, with its materials openly available on <a href="https://github.com/callmespring/RL-short-course" target="_blank" class="text-[#4682B4] underline">GitHub</a>.</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Prerequisites</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Basic knowledge of probability and statistics is required.</p>
+
+                    <details class="border-t border-gray-100 pt-4">
+                        <summary class="text-sm font-semibold text-gray-700 hover:text-[#4682B4]">Instructor Biography</summary>
+                        <div class="mt-4 space-y-3 text-sm text-gray-700 leading-relaxed">
+                            <p><span class="font-semibold">Chengchun Shi</span> is an Associate Professor in the Department of Statistics at LSE. He works at the interface of RL, LLMs and statistics, with applications to ride-sharing and healthcare. His work brings to light the relevance and significance of statistical learning in AI, and demonstrates the usefulness of RL as a framework for policy evaluation and A/B testing in two-sided marketplaces. Chengchun has published over 70 papers, with majority of them accepted in prestigious statistical journals (JRSSB, JASA, AoS) and top machine learning venues (NeurIPS, ICML, KDD, JMLR, CVPR, ICLR). His outstanding contributions have been recognized with esteemed awards such as the Peter Gavin Hall IMS Early Career Prize, IMS Tweedie Award and the Royal Statistical Society Research Prize. He has served as the associate editor of prestigious journals JRSS-B, JASA and AoAS.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section id="sc5" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <div class="flex flex-wrap items-baseline gap-x-4 mb-3">
+                        <span class="inline-block bg-[#d86f54] text-white text-xs font-bold px-3 py-1 rounded-full">SC5</span>
+                        <span class="text-sm font-semibold text-gray-600">July 31, 2026 &middot; 1:00 PM &ndash; 5:00 PM</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-4">The Role of AI in Accelerating Clinical Trials and Drug Development</h2>
+                    <p class="text-base text-gray-700 mb-6"><span class="font-semibold">Instructors:</span> Alexia Iasonos, Memorial Sloan Kettering Cancer Center &middot; John O&rsquo;Quigley, University College London</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Course Description</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Artificial Intelligence (AI) is transforming drug development by accelerating discovery, optimizing clinical trials, and reducing overall costs and timelines. Traditional drug development is often lengthy and expensive, hindered by high attrition rates and complex uncertainties. AI-driven methods, including machine learning, deep learning, and natural language processing, enable rapid analysis of vast biomedical datasets to identify novel drug targets, predict molecular interactions, and optimize compound design. In preclinical stages, AI models simulate pharmacokinetics, toxicity, and efficacy, narrowing down viable candidates before laboratory testing. During clinical development, AI can assist in trial design, expedite patient recruitment, and real-time monitoring, improving efficiency and precision. Furthermore, AI enhances repurposing of existing drugs by uncovering new therapeutic applications through pattern recognition in genomic and clinical data.</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Integration of AI with advances in computational biology, genomics, and high-throughput screening is driving a paradigm shift toward data-driven, personalized, and adaptive drug discovery processes. However, challenges remain in data quality, interpretability, regulatory acceptance, and ethical governance. Continued collaboration between AI experts, pharmaceutical industry partners, and regulatory bodies will be essential to fully harness AI&rsquo;s potential in creating safer, more effective, and accessible treatments.</p>
+                    <p class="text-gray-700 leading-relaxed mb-2">In this course, we will illustrate three applications of AI use in oncology clinical trials:</p>
+                    <ol class="list-decimal list-inside text-gray-700 leading-relaxed space-y-2 mb-6 pl-2">
+                        <li>The setting of Phase III pivotal, registrational trials where there is a head-to-head definitive comparison with a survival endpoint that leverages real-world data and synthetic controls.</li>
+                        <li>The Phase II single-arm setting with limited sample size using pick-the-winner approaches that optimize drug portfolio selection.</li>
+                        <li>The causal inference setting in Phase I dose-finding studies where the aim is to compare different dose levels with respect to both safety and efficacy.</li>
+                    </ol>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Prerequisites</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Statistical knowledge required: general clinical trial design expertise. Examples include 2-arm sample size calculations with time-to-event endpoints, single-arm 2-stage Simon design, and model-based Phase I designs. No programming required.</p>
+
+                    <details class="border-t border-gray-100 pt-4">
+                        <summary class="text-sm font-semibold text-gray-700 hover:text-[#4682B4]">Instructor Profiles</summary>
+                        <div class="mt-4 space-y-3 text-sm text-gray-700 leading-relaxed">
+                            <p><span class="font-semibold">Alexia Iasonos</span>, Memorial Sloan Kettering Cancer Center. <a href="https://www.mskcc.org/profile/alexia-iasonos" target="_blank" class="text-[#4682B4] underline">Profile</a>.</p>
+                            <p><span class="font-semibold">John O&rsquo;Quigley</span>, University College London. <a href="https://profiles.ucl.ac.uk/72162-john-o'quigley/publications" target="_blank" class="text-[#4682B4] underline">Publications</a>.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section id="sc6" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <div class="flex flex-wrap items-baseline gap-x-4 mb-3">
+                        <span class="inline-block bg-[#d86f54] text-white text-xs font-bold px-3 py-1 rounded-full">SC6</span>
+                        <span class="text-sm font-semibold text-gray-600">July 31, 2026 &middot; 1:00 PM &ndash; 5:00 PM</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-4">Theory for Diffusion Models: Continuous and Discrete</h2>
+                    <p class="text-base text-gray-700 mb-6"><span class="font-semibold">Instructor:</span> Sitan Chen, Harvard University</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Course Description</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">This short course will overview recent theoretical developments in diffusion generative modeling over both continuous and discrete spaces. Following an overview of the basic notions underlying these models (Fokker-Planck, time reversal, flow matching, continuous Markov chains, etc.), the course will present three threads of research in this area: (1) discretization bounds which control the number of sampling steps needed to produce a sample with small statistical error; (2) provably correct algorithms for estimating the score function of a distribution and computational hardness results; and (3) methods for &ldquo;steering&rdquo; the outputs of diffusion-based samplers towards downstream objectives (e.g., guidance, sequential Monte Carlo, stochastic optimal control, etc.). While the focus will be on presenting rigorous results, the course will also be an opportunity to surface contemporary challenges which do not yet possess a crisp mathematical framing, but which could benefit from a more principled statistical and algorithmic lens.</p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Prerequisites</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Familiarity with the basics of convex optimization, log-concave sampling, and high-dimensional probability is encouraged.</p>
+
+                    <details class="border-t border-gray-100 pt-4">
+                        <summary class="text-sm font-semibold text-gray-700 hover:text-[#4682B4]">Instructor Biography</summary>
+                        <div class="mt-4 space-y-3 text-sm text-gray-700 leading-relaxed">
+                            <p><span class="font-semibold">Sitan Chen</span> is an Assistant Professor of Computer Science at Harvard University, where he is a member of the Theory of Computation, the ML Foundations group, and the Harvard Quantum Initiative. Previously, he was an NSF math postdoc at UC Berkeley, after completing his PhD in EECS at MIT in 2021. He is broadly interested in algorithmic questions about learning from data, most recently related to the science and theory of diffusion generative modeling, and the design of quantum protocols for learning about the physical universe. His work has been recognized with an NSF CAREER award, an ICML Outstanding Paper Award, and the Harvard Dean&rsquo;s Competitive Fund for Promising Scholarship.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="short-courses.html">Short Courses</a>
+            <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
+            <a href="program.html">Program</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>For inquiries about the conference:</p>
+          <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
+          <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+
+  // Section rail: toggle + scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail) return;
+    var toggle = document.createElement('button');
+    toggle.className = 'rail-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    rail.insertBefore(toggle, rail.firstChild);
+    try {
+      if (localStorage.getItem('sectionRailCollapsed') === '1') rail.classList.add('collapsed');
+    } catch (e) {}
+    toggle.addEventListener('click', function() {
+      rail.classList.toggle('collapsed');
+      try {
+        localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+      } catch (e) {}
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+</script>
+</body>
+</html>

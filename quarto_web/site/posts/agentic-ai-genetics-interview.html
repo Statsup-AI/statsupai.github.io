@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Shan Gao">
+<meta name="dcterms.date" content="2026-03-08">
+<meta name="description" content="On autonomy, domain grounding, scientific integrity, and standards for responsible AI co-scientists.">
+
+<title>In Conversation with Bingxin Zhao: Agentic AI for Genetic Discovery</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+<link href="../img/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>#title-block-header{display:none!important}</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">In Conversation with Bingxin Zhao: Agentic AI for Genetic Discovery</h1>
+<p class="author">Shan Gao</p>
+
+<p class="date">2026-03-08</p>
+</header>
+
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview: Agentic AI in Genetic Discovery — StatsUpAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Manrope', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      line-height: 1.8;
+      color: #333;
+      background: radial-gradient(circle at 10% -10%, rgba(22,74,62,0.10), transparent 45%),
+                  radial-gradient(circle at 90% 10%, rgba(31,41,55,0.08), transparent 40%),
+                  #f2f5f3;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 0 24px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      background: #0f2f28;
+      color: white;
+      padding: 20px 50px;
+      border-bottom: 2px solid #1a4a3f;
+      text-align: center;
+    }
+
+    .header .event-tag {
+      font-size: 0.9em;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e0e0e0;
+      opacity: 0.9;
+    }
+
+    .article-info {
+      padding: 60px 60px 50px;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
+      background: white;
+    }
+
+    .article-title {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 2.25em;
+      font-weight: 700;
+      color: #12332c;
+      line-height: 1.35;
+      margin-bottom: 15px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #0f766e;
+    }
+
+    .article-subtitle {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 1.05em;
+      color: #555;
+      margin-top: 14px;
+    }
+
+    .content { padding: 40px 50px; }
+
+    .paper-block {
+      background: linear-gradient(120deg, rgba(15,118,110,0.09), rgba(31,41,55,0.04));
+      border-bottom: 1px solid #d7e7e2;
+    }
+
+    .paper-block-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 26px 50px;
+      position: relative;
+    }
+
+    .paper-block-inner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(0deg, rgba(255,255,255,0.55) 0, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 6px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .paper-content {
+      position: relative;
+      z-index: 1;
+      color: #444;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .paper-preview {
+      flex-shrink: 0;
+      width: 440px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      background: #fff;
+      text-decoration: none;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .paper-preview:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
+    }
+
+    .paper-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .paper-content p {
+      margin: 0;
+      font-size: 0.98em;
+      line-height: 1.8;
+    }
+
+    .link-button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 30px;
+      background: #0f2f28;
+      color: #ccfbf1;
+      text-decoration: none;
+      border: 2px solid #2dd4bf;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .link-button:hover {
+      background: #2dd4bf;
+      color: #0f2f28;
+    }
+
+    .qa-section {
+      margin-top: 12px;
+      padding: 36px 32px;
+      background: linear-gradient(135deg, rgba(15,118,110,0.09), rgba(31,41,55,0.03));
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .qa-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(0deg, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 1px, transparent 1px, transparent 6px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .section-title {
+      font-size: 1.6em;
+      color: #12332c;
+      margin-bottom: 32px;
+      font-weight: 700;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #0f766e;
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      letter-spacing: 0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .qa-item {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      border: 1px solid rgba(26,26,26,0.08);
+      border-radius: 16px;
+      padding: 26px 28px 28px;
+      margin-bottom: 26px;
+      box-shadow: 0 10px 24px rgba(15,15,15,0.08);
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 18px;
+    }
+
+    .qa-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #0f2f28, #1a4a3f);
+      color: #ccfbf1;
+      font-weight: 700;
+      font-size: 1.05em;
+      border: 2px solid rgba(45,212,191,0.58);
+      flex-shrink: 0;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    .qa-question {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #12332c;
+      line-height: 1.5;
+      padding-bottom: 12px;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed rgba(26,26,26,0.12);
+      position: relative;
+      grid-column: 2 / -1;
+    }
+
+    .qa-question::before {
+      content: "Question";
+      position: absolute;
+      top: -18px;
+      left: 0;
+      font-size: 0.72em;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(26,26,26,0.55);
+      font-weight: 600;
+    }
+
+    .qa-answer {
+      color: #4b4b4b;
+      font-size: 0.98em;
+      line-height: 1.85;
+      margin-top: 12px;
+      grid-column: 2 / -1;
+    }
+
+    .qa-answer p { margin-bottom: 14px; }
+    .qa-answer p:last-child { margin-bottom: 0; }
+
+    .article-image {
+      width: 100%;
+      margin: 34px 0 28px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+
+    .bio-section {
+      margin-top: 42px;
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      border: 1px solid rgba(26,26,26,0.08);
+      border-left: 4px solid #0f766e;
+      border-radius: 14px;
+      padding: 24px 24px;
+      box-shadow: 0 8px 20px rgba(15,15,15,0.06);
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .bio-title {
+      font-family: 'Fraunces', 'Times New Roman', serif;
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #12332c;
+      margin-bottom: 10px;
+    }
+
+    .bio-photo {
+      margin: 2px 0 0;
+      text-align: center;
+    }
+
+    .bio-photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border: 3px solid #fff;
+      outline: 1px solid rgba(15,118,110,0.55);
+      border-radius: 50%;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+      background: #fff;
+    }
+
+    .bio-content {
+      min-width: 0;
+    }
+
+    .bio-text {
+      color: #4b4b4b;
+      line-height: 1.85;
+      font-size: 0.98em;
+    }
+
+    @media (max-width: 768px) {
+      .header { padding: 15px 25px; }
+      .article-info { padding: 40px 25px 30px; }
+      .article-title { font-size: 1.6em; }
+      .paper-block-inner { flex-direction: column; padding: 22px 25px; gap: 20px; }
+      .paper-preview { width: 100%; max-width: 100%; }
+      .content { padding: 30px 25px; }
+      .qa-section { padding: 26px 18px; }
+      .qa-item { padding: 20px 18px; grid-template-columns: 1fr; }
+      .qa-number { width: 44px; height: 44px; border-radius: 12px; }
+      .qa-question, .qa-answer { grid-column: 1 / -1; }
+      .qa-answer { margin-top: 14px; }
+      .bio-section { grid-template-columns: 1fr; }
+    }
+  </style>
+
+
+  <div class="container">
+    <div class="header">
+      <div class="event-tag">StatsUpAI · Interview</div>
+    </div>
+
+    <div class="article-info">
+      <h1 class="article-title">Interview: Agentic AI for Genetic Discovery</h1>
+      <div class="article-subtitle">On autonomy, domain grounding, scientific integrity, and standards for responsible AI co-scientists.</div>
+    </div>
+
+    <div class="paper-block">
+      <div class="paper-block-inner">
+        <a href="https://www.nature.com/articles/s41588-025-02487-6" class="paper-preview" target="_blank" rel="noopener">
+          <img src="figures/bingxin1.jpg" alt="Nature Genetics original article preview">
+        </a>
+        <div class="paper-content">
+          <p>AI co-scientists can act as virtual research collaborators in statistical genetics, accelerating genetic discovery and translation. Realizing this potential depends on robust domain-specific data and infrastructures, together with interdisciplinary teamwork to build community standards that ensure rigor and responsible deployment.</p>
+          <a href="https://www.nature.com/articles/s41588-025-02487-6" class="link-button" target="_blank" rel="noopener">Link to the paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="qa-section">
+        <h2 class="section-title anchored">Q&amp;A</h2>
+
+        <div class="qa-item">
+          <span class="qa-number">1</span>
+          <div class="qa-question">On Agentic Autonomy: "You distinguish 'agentic AI' from standard models by its ability to plan and adapt autonomously. In the complex workflow of GWAS or PRS application, where do you draw the line between tasks the AI can execute independently and those requiring mandatory 'human-in-the-loop' verification?"</div>
+          <div class="qa-answer">
+            <p>That's a great question and one I think about a lot in this work. The way I see it, there are tasks where the current AI models are essentially able to handle execution very well given current intelligence levels and base model capabilities, such as correctly querying the GWAS Catalog, submitting jobs to FUMA, or running a PennPRS pipeline with the optimal data resources. These are bounded and procedural, and if something goes wrong it is usually immediately obvious. I'm more comfortable letting the AI execute those independently.</p>
+            <p>Where I get more cautious is when the agentic system shifts from doing to interpreting. The moment it starts reasoning about what results mean biologically, or drawing conclusions across specific diseases, a human expert may need to be in the loop (for example, as a reviewer), because that's where domain expertise matters most and where confident-sounding errors are hardest to catch. I also draw a hard line around clinical application. You can automate PRS model training, but when those scores start informing healthcare decisions (such as higher genetic risk), the error costs become substantial in a way that makes human-in-the-loop verification necessary.</p>
+            <p>That said, these boundaries aren't fixed. They will likely evolve as base models and data resources improve, and they'll need to be systematically benchmarked and calibrated depending on the specific scientific question, the base model's performance, and how the agent is designed. What requires human oversight today may not in a year's time, and the reverse is equally possible as we deploy these systems in increasingly complex settings, pushing toward a higher level of scientific intelligence.</p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <span class="qa-number">2</span>
+          <div class="qa-question">On Domain Grounding: "Your framework relies on grounding agents in domain-specific infrastructures like FUMA and PennPRS. How do you prevent the AI from misapplying these tools—for example, by ignoring specific statistical assumptions like LD-reference panel matching—that a human expert would intuitively catch?"</div>
+          <div class="qa-answer">
+            <p>This is an important question. At its core, we need to train these agentic systems to become true masters of domain-specific statistical genetics tasks. General-purpose AI models may not naturally internalize the assumptions underlying GWAS or PRS workflows, things like LD-reference panel matching, ancestry-specific considerations, or knowing when a particular method simply shouldn't be applied. Addressing this will likely require additional training on domain-specific data, enabling the agent's reasoning to operate more like a domain expert (rather than a capable generalist).</p>
+            <p>This also means building comprehensive knowledge of the platforms themselves, GWAS Catalog, FUMA, PennPRS, or FAVOR, not just the ability to call their APIs, but a deep understanding of their assumptions, their limitations, and the contexts in which they should or shouldn't be used. Designing targeted benchmarks and incorporating reinforcement learning-based reward signals are promising pathways toward achieving this level of mastery.</p>
+            <p>In practice, we can approach this in stages. Initially, misapplication risks can be partially mitigated through careful prompting and infrastructure-level constraints. But ultimately this can be viewed a training problem, and the community needs to invest seriously in building the evaluation datasets and benchmarks that make that mastery rigorous and verifiable. The goal is AI agents that don't just execute these tools correctly, but understand them as deeply as a domain expert would, including knowing when not to use them at all.</p>
+          </div>
+        </div>
+
+        <div class="article-image">
+          <img src="figures/bingxin3.jpg" alt="Bingxin Zhao interview figure">
+          <div class="caption">Fig. 1: The potential of AI co-scientists to reshape the future of statistical genetics.</div>
+        </div>
+
+        <div class="qa-item">
+          <span class="qa-number">3</span>
+          <div class="qa-question">On Scientific Integrity: "With the ability to rapidly generate and test hypotheses, there is a risk of 'p-hacking at scale.' What specific constraints or 'reflection' protocols does your AI co-scientist use to ensure that its discoveries are biologically plausible rather than just statistically significant noise?"</div>
+          <div class="qa-answer">
+            <p>This is a concern that needs to be taken very seriously, and I think two things need to work together to address it effectively. First, statistical rigor needs to be hardwired into the agent's design, multiple testing corrections, pre-specified analysis plans, and strict reporting thresholds should be built in as non-negotiable constraints, not left to downstream interpretation. But statistical rigor alone isn't enough. Agent design needs to go beyond statistics and incorporate genuine biological and medical domain knowledge. For example, an agent that only knows how to run a GWAS pipeline is fundamentally different from one that understands genetics of disease biology, tissue and cell-type specificity, and biological plausibility. That deeper knowledge is what allows the AI system to focus not just on “is this genetic variant statistically significant?" but on "does this variant actually make biological sense?", which is the question a domain expert would ask first and a more important one.</p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <span class="qa-number">4</span>
+          <div class="qa-question">On Future Interdisciplinary Standards: "You call for 'interdisciplinary teamwork' to build community standards for AI in genetics. What is the most critical benchmark or 'turing test' we should establish today to certify an AI co-scientist for responsible use in genetic discovery?"</div>
+          <div class="qa-answer">
+            <p>This is a great question. One critical benchmark we can frame around is a domain expert replication test: can the AI co-scientist, given the same inputs and research question as a trained domain scientist (or a team of them), arrive at the same research findings? Not just produce correct outputs, but demonstrate the reasoning process that a domain expert would recognize as sound. This matters because passing a narrow performance benchmark on a specific task, such as a QA question, is much easier than demonstrating the kind of generalizable scientific judgment that responsible use actually requires in real research settings.</p>
+            <p>Within that test, I think the community needs benchmarks across at least three dimensions. First, methodological correctness: Does the agent apply the right tools under the right assumptions? Second, biomedical coherence: Does it distinguish statistically significant noise from biologically plausible findings? Third, translational impact: Can its outputs meaningfully inform drug target prioritization or disease risk prediction in ways that genetic findings are expected to deliver? These benchmarks need to be co-developed by interdisciplinary scientists, as defining what responsible AI-assisted genetic discovery looks like is itself a scientific and community question, not just a technical one.</p>
+          </div>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-photo">
+            <img src="figures/bingxin2.jpg" alt="Bingxin Zhao portrait">
+          </div>
+          <div class="bio-content">
+            <div class="bio-title">Personal Biosketch</div>
+            <div class="bio-text">
+              <p>Bingxin Zhao is an assistant professor in Statistics and Data Science at the Wharton School of the University of Pennsylvania, with a secondary appointment in the Department of Medicine at the Perelman School of Medicine. His research develops statistical and AI methods for science and medicine, with a focus on integrating multimodal data, such as imaging, genomics, and knowledge graphs, to enable discovery and translation. He is also working on unifying statistical rigor, software engineering, and agentic AI to build practical systems for scientific and medical research.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- GoatCounter Tracker -->
+<script data-goatcounter="https://statsupai.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+
+<!-- Per-Page View Counter (Footer Style) -->
+<style>
+#goatcounter-footer {
+  --gc-counter-color: #2b786bef;
+  display: flex; 
+  align-items: center; 
+  column-gap: 5px;
+  color: #8e8e8e; 
+  font-size: 13px; 
+  font-family: Arial, sans-serif;
+}
+#goatcounter-footer .statcounter {
+  font-family: 'Courier New', monospace; 
+  color: var(--gc-counter-color);
+  font-weight: bold; 
+  margin-left: 3px; 
+}
+</style>
+
+<!-- GoatCounter Tracker -->
+<div id="goatcounter-footer"><span style="margin-left: 3px;">Loading views...</span></div>
+<script>
+    const path = window.location.pathname;
+    console.log('window.location.pathname:', path);
+    // If at the root, skip fetching views for now
+    if (path.endsWith('index.html') || path.endsWith('/posts/')) {
+      
+      const display = document.getElementById("goatcounter-footer");
+      if (display) {
+        display.innerHTML = "";
+        console.log("Skipping views for root path:", path);
+      }
+      
+    } else {
+      
+      // Trim path to remove everything before /quarto_web/site/ for easier local testing
+      var trimmedPath = path.replace(/^.*\/posts\//, '\/quarto_web\/site\/posts\/');
+      // If the path is exactly /posts/, set trimmedPath to the index.html file
+      if (path === '\/posts\/') {
+          console.log('Path is exactly /posts/, setting trimmedPath to index.html');
+          trimmedPath = '/quarto_web/site/posts/index.html';
+      }
+      console.log('trimmedPath:', trimmedPath);
+      
+      // setInterval to check every 100ms because GoatCounter may not be available immediately
+      var t = setInterval(function() {
+          console.log('Checking for GoatCounter availability...window.goatcounter:', window.goatcounter);
+          // Check if GoatCounter is available
+          if (window.goatcounter && window.goatcounter.visit_count) {
+
+              // GoatCounter is available, clear the timer
+              clearInterval(t)
+              // Resolve the counter color to a concrete value
+              var footer = document.getElementById('goatcounter-footer');
+              var resolvedColor = footer ? getComputedStyle(footer).getPropertyValue('--gc-counter-color').trim() : '';
+              console.log('Resolved counter color:', resolvedColor);
+              // Update the display with the current visit count
+              const display = document.getElementById("goatcounter-footer");
+              if (display) {
+                display.innerHTML = '<span">Page Views: </span>';
+                console.log('display.innerHTML:', display.innerHTML);
+              }
+              
+              
+              goatcounter.visit_count({
+                no_branding: true,
+                path: trimmedPath,
+                append: '#goatcounter-footer', 
+                style: `
+                  body {
+                    background: transparent !important;
+                  }
+                  div { 
+                    background: transparent !important;
+                    border-width: 0px;
+                    border: 0 !important;
+                    display: flex;
+                  }
+                  #gcvc-for {
+                    font-size: 0px;
+                  }
+                  #gcvc-views { 
+                      font-family: 'Courier New', monospace; 
+                      font-size: 13px;
+                      color: ${resolvedColor}; 
+                      font-weight: bold; 
+                      margin-top: 29px;
+                  }`
+              })
+
+          }
+      }, 100)
+      
+    }
+</script>
+
+
+
+
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+  tabsets.forEach(function(tabset) {
+    const tabby = new Tabby('#' + tabset.id);
+  });
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'light-border',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+
+
+
+
+</body></html>

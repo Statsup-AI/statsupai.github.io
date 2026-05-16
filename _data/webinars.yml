@@ -49,3 +49,20 @@
   theme:
     bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
     affiliation_logo: "/assets/img/speakers/affiliations/stanford-university.png"
+
+- date: 2026-05-08
+  time_et: "2:00 PM"
+  speaker: "Curtis Huttenhower"
+  affiliation: "Harvard T.H. Chan School of Public Health"
+  title: "Quantitative methods for microbial communities and the human microbiome"
+  registration_link: "https://us02web.zoom.us/meeting/register/6V5L7h7YQ0-qs6JqnElBfg"
+  series: "Health"
+  abstract: |
+    Statistical methods for microbial community research have evolved to address most of the tasks necessary for end-to-end environmental or human population study design and execution. These include power calculations, data handling and denoising, simulations and evaluation, and biostatistics for phenotypic and covariate analysis. All must take into account the now well-established properties of typical microbial ecology data, including compositionality, sparsity, and nonindependence. I will review the state of the art and discuss solutions for linear modeling, mediation analysis, and omnibus testing. The second bridges feature-wise association testing with interaction analyses, correcting false discovery rates and demonstrating substantial lack of agreement among mediation approaches. The third investigates the widespread use of PERMANOVA and similar methods, suggesting corrections that again better control false discovery rates and quantify biologically interpretable effect sizes. Together, these provide a flexible toolkit enabling most commonly needed quantitative analyses for microbial community science.
+  speaker_bio: |
+    co-directs the Harvard Chan Microbiome in Public Health Center and the associated Harvard Chan Microbiome Analysis and Collection Cores. He received his PhD from Princeton University and his MS from Carnegie Mellon. He participated extensively in the NIH Human Microbiome Project, led the Microbiome Quality Control Project and the Human Microbiome Bioactives Resource, and currently co-leads the Human Virome Program Coordinating Center. 
+  personal_website: "https://huttenhower.sph.harvard.edu/home"
+  speaker_image: "/assets/img/speakers/2026/05-08-curtis-huttenhower.jpeg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+    affiliation_logo: "/assets/img/speakers/affiliations/harvard_university.png"

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2026 - Frequently Asked Questions</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a {
+        padding: 5px 0;
+      }
+      @media (max-width: 768px) {
+        .footer-pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="nav-link text-[#4682B4] cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
+                <a href="partners.html" class="nav-link hover:text-gray-900">Partners<br>& Sponsors</a>
+                <a href="short-courses.html" class="nav-link hover:text-gray-900">Short<br>Courses</a>
+                <a href="reviewer-recruitment.html" class="nav-link hover:text-gray-900">Reviewer<br>Recruitment</a>
+                <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
+                <a href="organizers.html" class="nav-link hover:text-gray-900">Organizers</a>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link text-[#4682B4] flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link text-[#4682B4]">FAQ</a>
+                </div>
+            </div>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="short-courses.html" class="block py-2 nav-link">Short Courses</a>
+            <a href="reviewer-recruitment.html" class="block py-2 nav-link">Reviewer Recruitment</a>
+            <a href="program.html" class="block py-2 nav-link">Program</a>
+            <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="call-for-papers.html"><span class="dot" aria-hidden="true"></span><span class="label">← Call for Papers &amp; Posters</span></a></li>
+            <li class="rail-divider" aria-hidden="true"></li>
+            <li><a href="#why-publish" data-target="why-publish"><span class="dot" aria-hidden="true"></span><span class="label">Why Publish in STAI-X</span></a></li>
+            <li><a href="#submission-tracks" data-target="submission-tracks"><span class="dot" aria-hidden="true"></span><span class="label">Submission Tracks</span></a></li>
+            <li><a href="#dual-submission" data-target="dual-submission"><span class="dot" aria-hidden="true"></span><span class="label">Dual Submission</span></a></li>
+            <li><a href="#partner-journals" data-target="partner-journals"><span class="dot" aria-hidden="true"></span><span class="label">Partner Journals</span></a></li>
+            <li><a href="#review-process" data-target="review-process"><span class="dot" aria-hidden="true"></span><span class="label">Review Process</span></a></li>
+            <li><a href="#partnerships" data-target="partnerships"><span class="dot" aria-hidden="true"></span><span class="label">Organizational Partnerships</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 md:px-12 mt-24 mb-24 w-full">
+        <div class="space-y-12">
+
+                <section class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-4">Frequently Asked Questions</h1>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Answers to common questions about STAI-X 2026 submissions, dual submission policy, partner journal fast-track reviews, and the review process. If your question is not addressed here, please contact us at
+                            <a href="mailto:staix.contact@gmail.com" class="text-[#4682B4] underline">staix.contact@gmail.com</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="why-publish" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-6">Why Publish Papers in the STAI-X Proceedings</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">In a fast-moving field like AI, timely dissemination is critical. The STAI-X proceedings are designed to enable:</p>
+                        <ul class="space-y-3 text-gray-700 leading-relaxed list-disc pl-6 mb-6">
+                            <li>Rapid, high-quality peer review grounded in statistical x AI expertise</li>
+                            <li>Fast dissemination of cross-disciplinary research at the interface of statistics and AI and their real-world applications</li>
+                            <li>Increased visibility and impact through early exposure of the work across statistics, AI, and domain science communities</li>
+                        </ul>
+                        <p class="text-gray-700 leading-relaxed">In addition, STAI-X collaborates with partner organizations and establishes various venues to promote accepted papers through their networks, amplifying reach and engagement across disciplines.</p>
+                    </div>
+                </section>
+
+                <section id="submission-tracks" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-6">Submission Tracks</h2>
+                        <div class="space-y-6">
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Can I submit both a paper and a poster?</h3>
+                                <p class="text-gray-700 leading-relaxed">Only if they are different projects. Submissions based on the same work should be made to only one track. The paper track is for original work that is not simultaneously submitted elsewhere, while the poster track is more flexible and can accommodate work that is under consideration elsewhere.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Is there a cap on the number of papers one person can submit?</h3>
+                                <p class="text-gray-700 leading-relaxed">There is no formal cap on the number of submissions per individual. However, the conference may act against submissions that appear abusive or intended to game the review process.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Can I serve as a reviewer and also submit a paper?</h3>
+                                <p class="text-gray-700 leading-relaxed">Yes. STAI-X uses double-blind review, so reviewers do not know author identities and authors do not know reviewer identities during the review process.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="dual-submission" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-6">Dual Submission Policy</h2>
+                        <div class="space-y-6">
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">My paper is under review at a journal or another conference. Can I submit it to the paper track?</h3>
+                                <p class="text-gray-700 leading-relaxed">No. Per STAI-X's dual submission policy, paper submissions must be original and may not be under concurrent review at another journal or conference. Preprint posting is allowed.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Can work under review elsewhere be submitted as a poster?</h3>
+                                <p class="text-gray-700 leading-relaxed">Yes. Poster submissions are long abstracts, and parallel submissions to other journals or conferences are permitted. Accepted poster submissions are eligible for poster presentations, lightning talks, and stellar abstract awards.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">Will work that is under review elsewhere be considered for partner-journal fast-track review?</h3>
+                                <p class="text-gray-700 leading-relaxed">Partner-journal fast-track consideration only applies to eligible accepted papers to STAI-X. Submitting work that is already under review elsewhere is a violation of the STAI-X dual submission policy, even if the work is intended for fast-track consideration by the same journal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="partner-journals" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-6">Partner Journals &amp; Fast-Track Reviews</h2>
+                        <div class="space-y-6">
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">When will authors be notified about partner-journal invitations of fast-track reviews?</h3>
+                                <p class="text-gray-700 leading-relaxed">The notification timeline depends on the journal. After paper acceptance by STAI-X, authors will be asked to indicate their partner-journal preferences, after receiving the fast track review timeline and guidance for authors from the participating journals at that stage. A limited subset of top-ranked accepted papers may receive fast-track journal invitations.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">If a paper is accepted by the conference but not selected by a partner journal, will it still be published in the proceedings?</h3>
+                                <p class="text-gray-700 leading-relaxed">Yes. Papers accepted by the conference will be published in the STAI-X Proceedings unless withdrawn by the authors before the camera ready deadline.</p>
+                            </div>
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">How does STAI-X partner with journals?</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">A limited subset of STAI-X accepted papers will be invited for fast-track review opportunities by partner journals. STAI-X's current partner journals include Journal of the American Statistical Association (JASA); Annals of Applied Statistics (AoAS), Canadian Journal of Statistics, Harvard Data Science Review (HDSR), ASA Discoveries, ASA Data Science in Science, ASA Statistics and Data Science in Imaging, and Genome Research, Genetics. After conference paper acceptance by STAI-X, authors will be asked to indicate their preferred partner journal for consideration of publishing an expanded version of their work. Guidance for authors of accepted papers, including information on the journal's fast-track review process and selection criteria such as topic preference and the number of invited papers, will be provided to authors to help them choose appropriate journals.</p>
+                                <p class="text-gray-700 leading-relaxed mb-4">Editors of each partner journal will select and invite a few well-aligned and top-ranked accepted papers for submitting expanded versions for fast-track reviews, among those papers that have indicated a preference for the given journal. Journals will ask authors of selected papers to prepare a substantially expanded journal version. Specific journals may have specific additional requirements, in addition to expanding the conference version, for example, by including: stronger motivation and positioning, additional methodological details or theory when needed, more comprehensive experiments or data analysis, and a clearer discussion of scientific or practical impact. Journal review processes will be handled by the respective journals independently, and acceptance is not guaranteed.</p>
+                                <p class="text-gray-700 leading-relaxed">After the invitation, authors will decide whether or not to submit their paper to the journal. Certain partner journals may request authors to withdraw from publishing in the STAI-X proceedings before submitting their papers for fast-track consideration. All accepted papers will be published in the STAI-X Proceedings unless the authors withdraw their submissions before the camera-ready deadline.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="review-process" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-6">Review Process</h2>
+                        <div class="space-y-6">
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">How will the papers be reviewed?</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">In the paper track, each paper will be reviewed by two reviewers. As part of our efforts to improve the consistency, transparency, and efficiency of the review process, authorized AI tools may be used to improve review quality of the submissions that have already been made publicly available by the authors (e.g., arXiv, bioRxiv) or, at a later stage, camera-ready manuscripts of accepted papers. These systems are designed to (i) assist reviewers by providing structured feedback on their review reports and (ii) generate reproducibility reports that assess submitted code and its consistency with the manuscript for all accepted papers.</p>
+                                <p class="text-gray-700 leading-relaxed">The automated AI-assisted feedback provided to reviewers does not introduce new substantive content and is intended to support, rather than replace, human judgment. Reviewers remain fully responsible for their evaluations, and all decisions are made by the program committee. The goal of these tools is to reduce time spent on routine or labor-intensive checks, allowing reviewers to focus more directly on the intellectual contributions and significance of the work. For accepted papers, the AI-assisted reproducibility report will be shared with all authors, who will have the opportunity to revise their manuscripts accordingly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="partnerships" class="scroll-mt-28">
+                    <div class="glass-card p-8 md:p-10">
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-950 mb-6">Organizational Partnerships</h2>
+                        <div class="space-y-6">
+                            <div class="border border-gray-100 rounded-xl p-6 bg-white/30">
+                                <h3 class="font-bold text-gray-900 text-lg mb-2">How does STAI-X partner with professional organizations and journals?</h3>
+                                <p class="text-gray-700 leading-relaxed">STAI-X actively collaborates with partner organizations and journals, with representatives of partner organizations and journals serving program committee members and area chairs. Editorial representatives of partner journals serve on the program committee. The top accepted papers have an opportunity to be invited for fast-track reviews by partner journals. STAI-X also works with partner organizations to promote accepted papers through their networks, amplifying the reach and engagement of the published papers across disciplines to help authors disseminate their published work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+        </div>
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="short-courses.html">Short Courses</a>
+            <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
+            <a href="program.html">Program</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>For inquiries about the conference:</p>
+          <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
+          <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+
+  // Section rail: toggle + scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail) return;
+    var toggle = document.createElement('button');
+    toggle.className = 'rail-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    rail.insertBefore(toggle, rail.firstChild);
+    try {
+      if (localStorage.getItem('sectionRailCollapsed') === '1') rail.classList.add('collapsed');
+    } catch (e) {}
+    toggle.addEventListener('click', function() {
+      rail.classList.toggle('collapsed');
+      try {
+        localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+      } catch (e) {}
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+</script>
+</body>
+</html>

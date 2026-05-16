@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2026</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a {
+        padding: 5px 0;
+      }
+      @media (max-width: 768px) {
+        .footer-pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="#home" class="nav-link text-[#4682B4]">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="challenge.html" class="nav-link">Challenge</a>
+                <a href="partners.html" class="nav-link">Partners<br>& Sponsors</a>
+                <a href="short-courses.html" class="nav-link hover:text-gray-900">Short<br>Courses</a>
+                <a href="reviewer-recruitment.html" class="nav-link">Reviewer<br>Recruitment</a>
+                <a href="program.html" class="nav-link">Program</a>
+                <a href="organizers.html" class="nav-link">Organizers</a>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="#home" class="block py-2 nav-link text-[#4682B4]">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="short-courses.html" class="block py-2 nav-link">Short Courses</a>
+            <a href="reviewer-recruitment.html" class="block py-2 nav-link">Reviewer Recruitment</a>
+            <a href="program.html" class="block py-2 nav-link">Program</a>
+            <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto p-6 md:p-12 mt-20 space-y-16 mb-24 w-full">
+        
+        <section id="home" class="py-4 text-center scroll-mt-32">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tighter leading-tight text-gray-950 max-w-4xl mx-auto">
+                <span class="inline-flex items-center justify-center gap-3 align-middle">
+                    <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-12 md:h-16 w-auto inline-block">
+                    STAI-X '26
+                </span>
+                <br class="hidden md:block">
+                Statistics and Trustworthy AI for <br class="hidden md:block">
+                Cross (X)-Domain Acceleration
+            </h1>
+
+            <div class="mt-6">
+                <a href="registration.html" class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-all duration-300 text-lg">
+                    Registration
+                </a>
+                <p class="mt-3 text-sm text-gray-600 italic">Early bird rate applies before June 1, 2026</p>
+            </div>
+
+            <div class="glass-card mt-4 p-6 max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+                </p>
+            </div>
+
+            <div class="mt-4 text-lg text-gray-500 font-medium space-y-2"><p>Harvard University, Cambridge, MA &nbsp;&bull;&nbsp; July 31 &ndash; August 1, 2026</p></div>
+
+            <p class="mt-4 text-center">
+                Organized By <a href="https://statsupai.org" class="inline-flex items-center gap-2 text-[#4682B4] underline align-middle">
+                    <img src="../img/logo.png" alt="StatsUpAI Logo" class="h-6 w-auto inline-block no-underline">
+                    StatsUpAI, an ASA Interest Group
+                </a>.
+            </p>
+        </section>
+
+        <!-- Co-hosts & Partner Organizations & Partner Journals -->
+        <section id="partners-preview" class="scroll-mt-28">
+            <div class="glass-card p-8 md:p-10">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Co-hosts</h3>
+                <p class="text-center text-gray-700 mb-8">
+                    <a href="https://statsupai.org" target="_blank" class="hover:text-[#4682B4] hover:underline font-semibold">ASA StatsUpAI Interest Group</a> <span class="text-gray-500">(Lead Organizer)</span> &nbsp;&bull;&nbsp;
+                    <a href="https://statistics.fas.harvard.edu/" target="_blank" class="hover:text-[#4682B4] hover:underline">Department of Statistics, Harvard University</a> &nbsp;&bull;&nbsp;
+                    <a href="https://www.hsph.harvard.edu/biostatistics/" target="_blank" class="hover:text-[#4682B4] hover:underline">Department of Biostatistics, Harvard University</a>
+                </p>
+                <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Partner Organizations</h3>
+                <div class="flex flex-wrap gap-6 items-center justify-center mb-8">
+                    <a href="https://www.nationalacademies.org/our-work/committee-on-applied-and-theoretical-statistics" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white px-4 py-3 text-sm font-semibold text-gray-700 text-center whitespace-nowrap">National Academies Committee on Applied and Theoretical Statistics</a>
+                    <a href="https://community.amstat.org/copss/home" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/copss_logo.png" alt="COPSS" class="h-12 w-auto object-contain"></a>
+                    <a href="https://www.niss.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/niss_logo.png" alt="NISS" class="h-12 w-auto object-contain"></a>
+                    <a href="https://www.amstat.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/ASA_logo.png" alt="ASA" class="h-12 w-auto object-contain"></a>
+                    <a href="https://www.enar.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/enar_logo.png" alt="ENAR" class="h-12 w-auto object-contain"></a>
+                    <a href="https://imstat.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/ims_logo.png" alt="IMS" class="h-12 w-auto object-contain"></a>
+                    <a href="https://www.wnar.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/wnar_logo.png" alt="WNAR" class="h-12 w-auto object-contain"></a>
+                    <a href="https://www.icsa.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/icsa_logo.png" alt="ICSA" class="h-12 w-auto object-contain"></a>
+                    <a href="https://ssc.ca/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white"><img src="../img/ssc_logo.png" alt="SSC" class="h-12 w-auto object-contain"></a>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Partner Journals</h3>
+                <p class="text-center text-gray-700">
+                    <a href="https://www.tandfonline.com/journals/uasa20" target="_blank" class="hover:text-[#4682B4] hover:underline">JASA</a> &nbsp;&bull;&nbsp;
+                    <a href="https://www.imstat.org/journals-and-publications/annals-of-applied-statistics/" target="_blank" class="hover:text-[#4682B4] hover:underline">AOAS</a> &nbsp;&bull;&nbsp;
+                    <a href="https://hdsr.mitpress.mit.edu/" target="_blank" class="hover:text-[#4682B4] hover:underline">HDSR</a> &nbsp;&bull;&nbsp;
+                    <a href="https://www.tandfonline.com/toc/uasd20/current" target="_blank" class="hover:text-[#4682B4] hover:underline">ASA Discoveries</a> &nbsp;&bull;&nbsp;
+                    <a href="https://onlinelibrary.wiley.com/journal/1708945x" target="_blank" class="hover:text-[#4682B4] hover:underline">Canadian Journal of Statistics</a> &nbsp;&bull;&nbsp;
+                    <a href="https://genome.cshlp.org/" target="_blank" class="hover:text-[#4682B4] hover:underline">Genome Research</a> &nbsp;&bull;&nbsp;
+                    <a href="https://academic.oup.com/genetics" target="_blank" class="hover:text-[#4682B4] hover:underline">GENETICS</a> &nbsp;&bull;&nbsp;
+                    <a href="https://www.tandfonline.com/journals/udss20" target="_blank" class="hover:text-[#4682B4] hover:underline">Data Science in Science</a> &nbsp;&bull;&nbsp;
+                    <a href="https://www.tandfonline.com/journals/usdi20" target="_blank" class="hover:text-[#4682B4] hover:underline">Statistics and Data Science in Imaging</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Latest Announcements -->
+        <section id="announcements" class="scroll-mt-28">
+            <div class="bg-blue-50/50 border border-blue-100 p-8 rounded-xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Latest Announcements</h2>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                        <span><span class="font-semibold">Data Challenge is Live</span> May 4 – July 1. <a href="challenge.html" class="text-[#4682B4] underline">Learn more</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                        <span><span class="font-semibold">Registration is open:</span> early bird by 6/1. <a href="registration.html" class="text-[#4682B4] underline">Register here</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                        <span><span class="font-semibold">Information on Short Courses are posted.</span> <a href="short-courses.html" class="text-[#4682B4] underline">View here</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                        <span><span class="font-semibold">FAQ is here!</span> <a href="faq.html" class="text-[#4682B4] underline">Check it out</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-gray-400 shrink-0"></span>
+                        <span><span class="font-semibold">Reviewer Nomination Form is now open.</span> <a href="https://forms.gle/MyEjP4g7dcS4rqtW8" target="_blank" class="text-[#4682B4] underline">Submit here</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-gray-400 shrink-0"></span>
+                        <span><span class="font-semibold">Intent to Submit Survey is now open.</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScQcHK0QlvLN1LM9-vN_PPGCgZDS41ju4tzD6v6xj7L1FzOuA/viewform?pli=1" target="_blank" class="text-[#4682B4] underline">Submit here</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-gray-400 shrink-0"></span>
+                        <span><span class="font-semibold">Apr 10 4-4:30pm EST: Info & Q&A Session</span> with STAI-X 2026 organizers. <a href="https://youtu.be/NQUlbBkAeWg" target="_blank" class="font-semibold text-[#4682B4] underline hover:opacity-75">Watch recording here</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-gray-400 shrink-0"></span>
+                        <span><span class="font-semibold">OpenReview submission is now open.</span> Paper track: <a href="https://openreview.net/group?id=STAI-X/2026/Conference" target="_blank" class="text-[#4682B4] underline">Submit here</a>. Poster track: <a href="https://openreview.net/group?id=STAI-X/2026/Poster_Track" target="_blank" class="text-[#4682B4] underline">Submit here</a>.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-gray-400 shrink-0"></span>
+                        <span><span class="font-semibold">Partner journals:</span> <a href="https://www.tandfonline.com/journals/uasa20" target="_blank" class="underline hover:opacity-75">JASA</a>, <a href="https://imstat.org/journals-and-publications/annals-of-applied-statistics/" target="_blank" class="underline hover:opacity-75">AOAS</a>, <a href="https://hdsr.mitpress.mit.edu/" target="_blank" class="underline hover:opacity-75">HDSR</a>, <a href="https://www.tandfonline.com/journals/uasd20" target="_blank" class="underline hover:opacity-75">ASA Discoveries</a>, <a href="https://onlinelibrary.wiley.com/journal/1708945x" target="_blank" class="underline hover:opacity-75">Canadian Journal of Statistics</a>, <a href="https://genome.cshlp.org/" target="_blank" class="underline hover:opacity-75">Genome Research</a>, <a href="https://academic.oup.com/genetics" target="_blank" class="underline hover:opacity-75">GENETICS</a>, <a href="https://www.tandfonline.com/journals/udss20" target="_blank" class="underline hover:opacity-75">Data Science in Science</a>, and <a href="https://www.tandfonline.com/journals/usdi20" target="_blank" class="underline hover:opacity-75">Statistics and Data Science in Imaging</a> have joined us.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-gray-400 shrink-0"></span>
+                        <span><span class="font-semibold">Partner organizations:</span> <a href="https://www.nationalacademies.org/our-work/committee-on-applied-and-theoretical-statistics" target="_blank" class="underline hover:opacity-75">NASEM-CATS</a>, <a href="https://copss.org/" target="_blank" class="underline hover:opacity-75">COPSS</a>, <a href="https://www.niss.org/" target="_blank" class="underline hover:opacity-75">NISS</a>, <a href="https://www.amstat.org/" target="_blank" class="underline hover:opacity-75">ASA</a>, <a href="https://www.enar.org/" target="_blank" class="underline hover:opacity-75">ENAR</a>, <a href="https://imstat.org/" target="_blank" class="underline hover:opacity-75">IMS</a>, <a href="https://www.wnar.org/" target="_blank" class="underline hover:opacity-75">WNAR</a>, <a href="https://icsa.org/" target="_blank" class="underline hover:opacity-75">ICSA</a>, and <a href="https://ssc.ca/" target="_blank" class="underline hover:opacity-75">SSC</a> have joined us.</span>
+                    </li>
+                </ul>
+                <!-- <div class="mt-6 rounded-xl overflow-hidden border border-blue-100 bg-white shadow-sm">
+                    <div class="px-5 py-3 border-b border-blue-100 bg-blue-50">
+                        <p class="text-sm font-semibold text-gray-700">Recording: Info &amp; Q&amp;A Session with STAI-X 2026 Organizers &mdash; Apr 10, 2026</p>
+                    </div>
+                    <div class="aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/NQUlbBkAeWg" title="Info & Q&A Session Recording" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="topics" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-8 text-center">Topics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-700">
+                <div>
+                    <h3 class="text-base font-bold text-gray-900 mb-3">Foundations and Methods at the Interface of AI and Statistics</h3>
+                    <ul class="space-y-2 text-sm list-disc list-inside">
+                        <li>Foundation models, generative models and machine learning methods</li>
+                        <li>Synthetic data</li>
+                        <li>Statistical and theoretical foundations of AI</li>
+                        <li>Statistical inference and generative AI</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-gray-900 mb-3">AI Agents and Benchmarks for Data-Driven Discovery</h3>
+                    <ul class="space-y-2 text-sm list-disc list-inside">
+                        <li>Agentic AI and co-scientists for X</li>
+                        <li>Scalability for resource-constrained training environments</li>
+                        <li>Benchmarking of AI-assisted tools and models</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-gray-900 mb-3">AI x Statistics x Science and Society</h3>
+                    <ul class="space-y-2 text-sm list-disc list-inside">
+                        <li>AI x statistics x health and biological science</li>
+                        <li>AI x statistics x physical science and engineering</li>
+                        <li>AI x statistics x social science, business, and law</li>
+                        <li>Ethical AI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="submission" class="scroll-mt-28">
+            <div class="bg-blue-50/50 border border-blue-100 p-8 rounded-xl">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Instructions for Submission</h3>
+                <ul class="list-disc list-inside mb-4 text-gray-700 space-y-2">
+                    <li><span class="font-semibold">Papers:</span> Submit a paper of up to 8 pages. Accepted papers will be eligible for being selected for platform (oral) presentations and paper awards. Moreover, a subset of accepted papers may be invited for fast-track review opportunities at selected ASA and IMS journals.</li>
+                    <li><span class="font-semibold">Posters:</span> Submit a 2-page abstract. Parallel submissions to other conferences are permitted. Accepted submissions will be eligible for poster presentations, lightning talks, and stellar abstract awards.</li>
+                </ul>
+                <p class="text-gray-700 mb-6">All submissions should be made through the official OpenReview portal for STAI-X 2026.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="call-for-papers.html" class="inline-block bg-[#4682B4] hover:bg-[#d86f54] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Call for Papers &amp; Posters</a>
+                    <a href="https://openreview.net/group?id=STAI-X/2026/Conference" target="_blank" class="inline-block bg-[#4682B4] hover:bg-[#d86f54] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">OpenReview Submission</a>
+                    <a href="submission-guide.html" class="inline-block bg-[#4682B4] hover:bg-[#d86f54] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Submission Guide</a>
+                </div>
+                <p class="font-semibold text-gray-900 mt-6">Fast track to journal review: <span class="text-[#4682B4]">Journal of the American Statistical Association (JASA): Theory and Methods (T&M), Applications and Case Studies (A&CS), Annals of Applied Statistics (AOAS), Harvard Data Science Review (HDSR), Genome Research (GR), GENETICS, Canadian Journal of Statistics, Data Science in Science, and ASA Discoveries</span></p>
+            </div>
+        </section> -->
+        
+
+        <section id="why-publish" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-8 text-center">Why Publish in the STAI-X Proceedings</h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-8 text-center max-w-3xl mx-auto">In a fast-moving field like AI, timely dissemination is critical. The STAI-X proceedings are designed to enable:</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700">
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-base font-bold text-gray-900 mb-3">Rapid, High-Quality Peer Review</h3>
+                    <p class="text-sm leading-relaxed">Reviews grounded in statistical x AI expertise.</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-base font-bold text-gray-900 mb-3">Fast Dissemination</h3>
+                    <p class="text-sm leading-relaxed">Cross-disciplinary research at the interface of statistics and AI and their real-world applications.</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-base font-bold text-gray-900 mb-3">Increased Visibility &amp; Impact</h3>
+                    <p class="text-sm leading-relaxed">Early exposure of the work across statistics, AI, and domain science communities.</p>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed mt-8 text-center max-w-3xl mx-auto">In addition, STAI-X collaborates with partner organizations and establishes various venues to promote accepted papers through their networks, amplifying reach and engagement across disciplines.</p>
+        </section>
+
+         <section id="call-for-papers" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10 text-center">Key Dates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Submission</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">May 11, 2026 (AOE)</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-05-12T11:59:00Z"></div>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Poster Acceptance</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">May 25, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-05-26T11:59:00Z"></div>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Paper-track Author Rebuttal Period Starts</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">May 30, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-05-31T11:59:00Z"></div>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Paper-track Author Rebuttal Period Ends</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">June 6, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-06-07T11:59:00Z"></div>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Paper Acceptance</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">June 11, 2026</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-06-12T11:59:00Z"></div>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Registration</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">Early-bird: June 1, 2026 (AOE)<br>Regular: June 25, 2026 (AOE)</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2026-06-02T11:59:00Z"></div>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Short Courses</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">July 31, 2026</div>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="font-bold text-lg text-gray-900">Conference</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">August 1, 2026</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsors" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-2 text-center">Sponsors</h2>
+            <div class="flex justify-center mb-10">
+                <div class="w-16 h-1 bg-gray-950 rounded"></div>
+            </div>
+
+            <!-- Gold -->
+            <div class="sponsor-tier-heading" style="background-image: url('sponsor/gold_crop.png');">
+                <span style="color: #C9B06B;">Gold</span>
+            </div>
+            <div class="grid grid-cols-1 gap-8 justify-items-center mb-14 sponsor-gold">
+                <a href="https://mbzuai.ac.ae/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/MBZUAI_new_logo_crop.jpg" alt="MBZUAI" class="h-28 w-auto object-contain">
+                </a>
+            </div>
+
+            <!-- Silver -->
+            <div class="sponsor-tier-heading" style="background-image: url('sponsor/sliver_crop.png');">
+                <span style="color: #8E8E8E;">Silver</span>
+            </div>
+            <div class="grid grid-cols-1 gap-8 justify-items-center mb-14 min-h-[48px] sponsor-silver">
+                <a href="https://www.abbvie.com/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/AbbVieLogo.png" alt="AbbVie" class="h-24 w-auto object-contain">
+                </a>
+            </div>
+
+            <!-- Regular -->
+            <div class="sponsor-tier-heading" style="background-image: url('sponsor/bronze_crop.png');">
+                <span style="color: #7A6B3A;">Regular</span>
+            </div>
+            <div class="grid grid-cols-3 gap-8 justify-items-center sponsor-regular">
+                <a href="https://www.bentley.edu/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/bentley_logo_long.png" alt="Bentley University" class="h-20 w-auto object-contain">
+                </a>
+                <a href="https://stat.columbia.edu/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/Columbia_logo.png" alt="Columbia University Department of Statistics" class="h-20 w-auto object-contain">
+                </a>
+                <a href="https://sph.umich.edu/biostat/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/Biostat_Logo.png" alt="University of Michigan Department of Biostatistics" class="h-20 w-auto object-contain">
+                </a>
+                <a href="https://gsbs.uth.edu/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/UTH_logo_crop.png" alt="UT GSBS" class="h-20 w-auto object-contain">
+                </a>
+                <a href="https://www.statsinimaging.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/logo_ASA_imaging.png" alt="ASA Section on Imaging Science" class="h-20 w-auto object-contain">
+                </a>
+                <a href="https://www.twosigma.com/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/twoSigma_logo.svg" alt="Two Sigma" class="h-20 w-auto object-contain">
+                </a>
+                <a href="https://community.amstat.org/biop/home" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/ASA Biopharm_logo_crop.png" alt="ASA Biopharmaceutical Section" class="h-20 w-auto object-contain">
+                </a>
+                <a href="https://community.amstat.org/slds/home" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/SLDS_logo.png" alt="ASA Section on Statistical Learning and Data Science" class="h-20 w-auto object-contain">
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="short-courses.html">Short Courses</a>
+            <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
+            <a href="program.html">Program</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>For inquiries about the conference:</p>
+          <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
+          <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+    
+  <script>
+    // Countdown timers
+    function updateCountdowns() {
+      document.querySelectorAll('.countdown').forEach(function(el) {
+        var target = new Date(el.getAttribute('data-date'));
+        var now = new Date();
+        var diff = target - now;
+        if (diff <= 0) {
+          el.textContent = 'Passed';
+          el.classList.add('text-gray-400');
+          return;
+        }
+        var days = Math.floor(diff / 86400000);
+        var hours = Math.floor((diff % 86400000) / 3600000);
+        var mins = Math.floor((diff % 3600000) / 60000);
+        el.textContent = days + 'd ' + hours + 'h ' + mins + 'm remaining';
+      });
+    }
+    updateCountdowns();
+    setInterval(updateCountdowns, 60000);
+  </script>
+
+  <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+  </script>
+    
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+</script>
+</body>
+</html>

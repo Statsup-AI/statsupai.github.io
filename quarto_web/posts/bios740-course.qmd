@@ -1,0 +1,713 @@
+---
+title: "BIOS 740: Deep Learning Methods in Biomedical Sciences with PyTorch"
+description: "A graduate course at UNC, Spring 2026. Modern AI taught with the rigor of statistics — built around real biomedical data: imaging, genomics, electronic health records, and beyond."
+image: figures/bios740_poster.jpg
+author:
+  - name: "Shan Gao"
+categories:
+  - Resources
+date: "2026-05-03"
+
+format:
+  html:
+    page-layout: full
+    toc: false
+    theme: none
+    title-block-style: none
+    include-in-header: hide-title-block.html
+---
+```{=html}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOS 740 — Deep Learning Methods in Biomedical Sciences with PyTorch | UNC</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .bios740-page {
+            --ink:        #0e1116;
+            --paper:      #f6f3ec;
+            --paper-deep: #efeae0;
+            --rule:       #1a1a1a;
+            --muted:      #6b6357;
+            --accent:     #4B9CD3;
+            --accent-deep:#13294B;
+            --highlight:  #ffe066;
+
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bios740-page * { box-sizing: border-box; }
+        .bios740-page a { color: inherit; }
+        .bios740-page ::selection { background: var(--highlight); color: var(--ink); }
+
+        .bios740-page .wrap {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ---------- Top bar ---------- */
+        .bios740-page .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            font-size: 0.78em;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--muted);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .bios740-page .topbar .dot {
+            display: inline-block;
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* ---------- HERO ---------- */
+        .bios740-page .hero {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 70px;
+            align-items: center;
+            padding: 80px 0 100px;
+            position: relative;
+        }
+
+        .bios740-page .hero::before {
+            content: "BIOS 740";
+            position: absolute;
+            top: 8px;
+            left: -10px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 13em;
+            font-weight: 900;
+            font-style: italic;
+            color: var(--paper-deep);
+            letter-spacing: -0.04em;
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .bios740-page .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .bios740-page .hero .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.78em;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent-deep);
+            margin-bottom: 28px;
+        }
+
+        .bios740-page .hero .kicker::before {
+            content: "";
+            display: inline-block;
+            width: 36px;
+            height: 1px;
+            background: var(--accent-deep);
+        }
+
+        .bios740-page .hero h1 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(2.4em, 5vw, 4em);
+            line-height: 1.0;
+            letter-spacing: -0.025em;
+            margin: 0 0 28px;
+        }
+
+        .bios740-page .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent-deep);
+        }
+
+        .bios740-page .hero .lede {
+            font-size: 1.12em;
+            line-height: 1.55;
+            color: var(--ink);
+            max-width: 42ch;
+            margin: 0 0 36px;
+        }
+
+        .bios740-page .hero .lede .mark {
+            background: linear-gradient(180deg, transparent 60%, var(--highlight) 60%);
+            padding: 0 2px;
+        }
+
+        .bios740-page .ctas {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .bios740-page .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--ink);
+            color: var(--paper);
+            padding: 14px 24px 14px 26px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .bios740-page .cta-primary:hover {
+            background: var(--accent-deep);
+            transform: translateX(4px);
+        }
+
+        .bios740-page .cta-primary .arr {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+
+        .bios740-page .cta-primary:hover .arr { transform: translateX(4px); }
+
+        .bios740-page .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid var(--ink);
+            padding: 14px 0 12px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .bios740-page .cta-link:hover {
+            color: var(--accent-deep);
+            border-color: var(--accent);
+        }
+
+        .bios740-page .hero-poster {
+            position: relative;
+            z-index: 1;
+        }
+
+        .bios740-page .hero-poster a {
+            display: block;
+            position: relative;
+            line-height: 0;
+            transform: rotate(1.2deg);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow:
+                0 1px 0 rgba(0,0,0,0.05),
+                0 30px 60px -20px rgba(19, 41, 75, 0.35),
+                0 12px 30px -8px rgba(0,0,0,0.18);
+            background: white;
+            padding: 14px 14px 18px;
+        }
+
+        .bios740-page .hero-poster a:hover {
+            transform: rotate(0deg) translateY(-6px);
+            box-shadow:
+                0 1px 0 rgba(0,0,0,0.05),
+                0 50px 80px -20px rgba(19, 41, 75, 0.45),
+                0 16px 36px -8px rgba(0,0,0,0.22);
+        }
+
+        .bios740-page .hero-poster img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .bios740-page .hero-poster .badge {
+            position: absolute;
+            top: -18px;
+            right: -18px;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--accent-deep);
+            color: var(--paper);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            line-height: 1.05;
+            transform: rotate(-8deg);
+            box-shadow: 0 10px 24px rgba(19,41,75,0.35);
+            z-index: 2;
+        }
+
+        .bios740-page .hero-poster .badge .small {
+            font-size: 0.62em;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .bios740-page .hero-poster .badge .big {
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+
+        .bios740-page .hero-poster .caption {
+            margin-top: 16px;
+            font-size: 0.78em;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-align: right;
+            transform: rotate(1.2deg);
+        }
+
+        /* ---------- Chapters ---------- */
+        .bios740-page section.chapter {
+            padding: 80px 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        .bios740-page .chapter-head {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 60px;
+            align-items: baseline;
+            margin-bottom: 40px;
+        }
+
+        .bios740-page .chapter-num {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-size: 1.4em;
+            color: var(--muted);
+        }
+
+        .bios740-page .chapter-num b {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 2em;
+            color: var(--ink);
+            margin-right: 14px;
+            letter-spacing: -0.02em;
+        }
+
+        .bios740-page .chapter h2 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(1.8em, 3.8vw, 2.8em);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin: 0;
+            max-width: 22ch;
+        }
+
+        .bios740-page .chapter h2 em { font-style: italic; font-weight: 400; color: var(--accent-deep); }
+
+        .bios740-page .curriculum-list {
+            margin-left: 260px;
+        }
+
+        .bios740-page .curriculum-list .row {
+            display: grid;
+            grid-template-columns: 60px 1fr 2fr;
+            gap: 32px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(26,26,26,0.14);
+            align-items: baseline;
+            transition: padding-left 0.25s ease, background 0.25s ease;
+        }
+
+        .bios740-page .curriculum-list .row:hover {
+            padding-left: 14px;
+            background: linear-gradient(90deg, rgba(75,156,211,0.10) 0%, transparent 70%);
+        }
+
+        .bios740-page .curriculum-list .num {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1.1em;
+        }
+
+        .bios740-page .curriculum-list .topic {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.35em;
+            font-weight: 500;
+            line-height: 1.15;
+            color: var(--ink);
+        }
+
+        .bios740-page .curriculum-list .desc {
+            color: var(--muted);
+            font-size: 0.98em;
+        }
+
+        /* ---------- Data strip ---------- */
+        .bios740-page .data-strip {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 56px 0;
+        }
+
+        .bios740-page .data-strip .strip-label {
+            font-size: 0.78em;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 22px;
+        }
+
+        .bios740-page .data-strip h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(1.6em, 3.2vw, 2.4em);
+            font-weight: 500;
+            line-height: 1.15;
+            margin: 0 0 36px;
+            max-width: 24ch;
+            color: var(--paper);
+        }
+
+        .bios740-page .data-strip h3 em { font-style: italic; color: var(--accent); }
+
+        .bios740-page .data-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px 48px;
+            border-top: 1px solid rgba(255,255,255,0.18);
+            padding-top: 28px;
+        }
+
+        .bios740-page .data-row .item {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-size: 1.4em;
+            color: var(--paper);
+            line-height: 1;
+        }
+
+        .bios740-page .data-row .item .n {
+            display: block;
+            font-style: normal;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.55em;
+            color: var(--accent);
+            letter-spacing: 0.12em;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        /* ---------- Why ---------- */
+        .bios740-page .why-cols {
+            margin-left: 260px;
+            column-count: 2;
+            column-gap: 56px;
+        }
+
+        .bios740-page .why-cols p {
+            break-inside: avoid;
+            margin: 0 0 26px;
+            padding-left: 22px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .bios740-page .why-cols p strong {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 700;
+            font-style: italic;
+            display: block;
+            font-size: 1.18em;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+
+        /* ---------- Audience ---------- */
+        .bios740-page .audience-line {
+            margin-left: 260px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(1.3em, 2.4vw, 1.85em);
+            line-height: 1.45;
+            font-weight: 400;
+            color: var(--ink);
+            max-width: 38ch;
+        }
+
+        .bios740-page .audience-line span {
+            background: linear-gradient(180deg, transparent 60%, var(--highlight) 60%);
+            padding: 0 4px;
+        }
+
+        /* ---------- Instructor ---------- */
+        .bios740-page .instructor {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 28px;
+            align-items: center;
+            margin-left: 260px;
+            max-width: 640px;
+            padding: 28px 0;
+            border-top: 1px solid rgba(26,26,26,0.14);
+            border-bottom: 1px solid rgba(26,26,26,0.14);
+        }
+
+        .bios740-page .instructor img {
+            width: 200px;
+            height: auto;
+            display: block;
+            border: 1px solid rgba(0,0,0,0.08);
+            filter: grayscale(0.05);
+        }
+
+        .bios740-page .instructor .label {
+            font-size: 0.72em;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .bios740-page .instructor .who {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.3em;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .bios740-page .instructor .who em { font-style: italic; color: var(--accent-deep); }
+
+        /* ---------- Colophon ---------- */
+        .bios740-page .colophon {
+            border-top: 1px solid var(--rule);
+            padding: 22px 0 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.76em;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        @media (max-width: 900px) {
+            .bios740-page .wrap { padding: 0 24px; }
+            .bios740-page .hero { grid-template-columns: 1fr; gap: 50px; padding: 50px 0 70px; }
+            .bios740-page .hero::before { font-size: 6em; top: -10px; }
+            .bios740-page .hero-poster .badge { width: 78px; height: 78px; top: -14px; right: -10px; }
+            .bios740-page .hero-poster .badge .big { font-size: 1.3em; }
+
+            .bios740-page .chapter-head { grid-template-columns: 1fr; gap: 16px; }
+            .bios740-page .curriculum-list,
+            .bios740-page .why-cols,
+            .bios740-page .audience-line,
+            .bios740-page .instructor { margin-left: 0; }
+            .bios740-page .curriculum-list .row { grid-template-columns: 36px 1fr; gap: 12px; }
+            .bios740-page .curriculum-list .desc { grid-column: 2; }
+            .bios740-page .why-cols { column-count: 1; }
+            .bios740-page section.chapter { padding: 56px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bios740-page">
+
+<div class="wrap">
+
+    <!-- Top bar -->
+    <div class="topbar">
+        <span><span class="dot"></span>BIOS 740 · Spring 2026</span>
+        <span>UNC · Department of Biostatistics</span>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-text">
+            <div class="kicker">A graduate course at UNC</div>
+            <h1>Deep Learning Methods in <em>Biomedical Sciences</em> with PyTorch</h1>
+            <p class="lede">
+                A modern AI curriculum taught with the rigor of statistics —
+                built around <span class="mark">real biomedical data</span> and the problems
+                that actually matter: imaging, genomics, electronic health records, and beyond.
+            </p>
+            <div class="ctas">
+                <a class="cta-primary" href="https://bios740.github.io/" target="_blank" rel="noopener">
+                    Visit the course <span class="arr">→</span>
+                </a>
+                <a class="cta-link" href="https://bios740.github.io/syllabus/" target="_blank" rel="noopener">
+                    Read the syllabus
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-poster">
+            <a href="https://bios740.github.io/syllabus/" target="_blank" rel="noopener" aria-label="Open the BIOS 740 syllabus">
+                <img src="figures/bios740_poster.jpg" alt="BIOS 740 — Deep Learning Methods in Biomedical Sciences with PyTorch (Spring 2026 poster)">
+                <div class="badge">
+                    <span class="small">Spring</span>
+                    <span class="big">2026</span>
+                </div>
+            </a>
+            <div class="caption">New syllabus · materials online</div>
+        </div>
+    </header>
+
+    <!-- 01 · Curriculum -->
+    <section class="chapter">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>01</b>The Curriculum</div>
+            <h2>From foundations <em>to the frontier.</em></h2>
+        </div>
+
+        <div class="curriculum-list">
+            <div class="row">
+                <div class="num">i.</div>
+                <div class="topic">Foundations of Deep Learning &amp; PyTorch</div>
+                <div class="desc">Tensors, autograd, optimization, training loops — the practical scaffolding behind every model.</div>
+            </div>
+            <div class="row">
+                <div class="num">ii.</div>
+                <div class="topic">CNNs, RNNs, LSTMs &amp; GRUs</div>
+                <div class="desc">The classic architectures, taught well — still the bedrock of imaging and sequence modeling.</div>
+            </div>
+            <div class="row">
+                <div class="num">iii.</div>
+                <div class="topic">Graph Neural Networks &amp; Generative Models</div>
+                <div class="desc">From molecular graphs to diffusion — how to model structure and how to generate it.</div>
+            </div>
+            <div class="row">
+                <div class="num">iv.</div>
+                <div class="topic">Transformers, Attention, NLP &amp; LLMs</div>
+                <div class="desc">The dominant architecture of modern AI — pretraining, fine-tuning, and clinical text.</div>
+            </div>
+            <div class="row">
+                <div class="num">v.</div>
+                <div class="topic">Image Segmentation &amp; Registration</div>
+                <div class="desc">Pixel-level decision-making for medical imaging — where models meet radiology.</div>
+            </div>
+            <div class="row">
+                <div class="num">vi.</div>
+                <div class="topic">Spatio-Temporal Modeling</div>
+                <div class="desc">Methods for biomedical data with spatial and temporal structure — fMRI, longitudinal records, and more.</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Data strip -->
+<section class="data-strip">
+    <div class="wrap">
+        <div class="strip-label">— The data you'll work with</div>
+        <h3>Multimodal biomedical data, <em>at real-world scale.</em></h3>
+        <div class="data-row">
+            <div class="item"><span class="n">01</span>MRI</div>
+            <div class="item"><span class="n">02</span>CT</div>
+            <div class="item"><span class="n">03</span>Pathology</div>
+            <div class="item"><span class="n">04</span>Genomics</div>
+            <div class="item"><span class="n">05</span>Clinical &amp; time series</div>
+        </div>
+    </div>
+</section>
+
+<div class="wrap">
+
+    <!-- 02 · Why -->
+    <section class="chapter">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>02</b>Why It's Different</div>
+            <h2>Most courses teach tools. <em>This one teaches judgment.</em></h2>
+        </div>
+
+        <div class="why-cols">
+            <p>
+                <strong>Application-driven.</strong>
+                Real scientific problems and real datasets — not curated
+                benchmarks built for demonstrations.
+            </p>
+            <p>
+                <strong>Statistics meets ML.</strong>
+                Few courses sit at the intersection of statistics, machine learning,
+                and biomedical data science. This one lives there.
+            </p>
+            <p>
+                <strong>Built for the AI era.</strong>
+                Skills that translate directly to research labs and production teams —
+                not just to the next assignment.
+            </p>
+            <p>
+                <strong>Project-shaped.</strong>
+                You leave with work you can show — to advisors, to reviewers,
+                to hiring committees.
+            </p>
+        </div>
+    </section>
+
+    <!-- 03 · Who -->
+    <section class="chapter">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>03</b>Who It's For</div>
+            <h2>Built for graduate students <em>and researchers.</em></h2>
+        </div>
+
+        <p class="audience-line">
+            Ideal for students and researchers in
+            <span>biostatistics</span>, <span>statistics</span>,
+            <span>computer science</span>, <span>biomedical imaging</span>,
+            <span>genomics</span>, <span>neuroscience</span>,
+            <span>medicine</span>, and <span>public health</span>.
+        </p>
+    </section>
+
+    <!-- 04 · Instructor -->
+    <section class="chapter" style="padding: 60px 0;">
+        <div class="chapter-head">
+            <div class="chapter-num"><b>04</b>Taught By</div>
+            <h2>The team behind <em>the course.</em></h2>
+        </div>
+
+        <div class="instructor">
+            <img src="figures/bios740.jpg" alt="BIOS 740 instructors">
+            <div>
+                <div class="label">Instructors</div>
+                <div class="who">
+                    <em>Prof. Hongtu Zhu</em> · with TA Runpeng Dai<br>
+                    Department of Biostatistics, UNC Chapel Hill
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colophon -->
+    <div class="colophon">
+        <span>BIOS 740 · UNC Chapel Hill</span>
+        <span>Department of Biostatistics</span>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
+```

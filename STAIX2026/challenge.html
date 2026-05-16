@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X Challenge 2026</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --ink: #1d2528;
+            --muted: #5f6769;
+            --paper: #fbf7ef;
+            --panel: rgba(255, 252, 246, 0.86);
+            --line: rgba(29, 37, 40, 0.13);
+            --blue: #315f86;
+            --blue-dark: #1f486d;
+            --gold: #b58b2f;
+            --wash: #e8f0f3;
+        }
+
+        h1, h2, h3, .footer-brand h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .glass-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 30px;
+            box-shadow: 0 24px 80px rgba(31, 72, 109, 0.10);
+            backdrop-filter: blur(20px);
+        }
+        .glass-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: inherit;
+            background:
+                linear-gradient(120deg, rgba(255,255,255,0.42), transparent 32%),
+                radial-gradient(circle at top right, rgba(49, 95, 134, 0.09), transparent 38%);
+        }
+        .glass-card > * {
+            position: relative;
+            z-index: 1;
+        }
+        .section-heading {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--ink);
+            margin-bottom: 24px;
+        }
+        .section-heading::after {
+            content: "";
+            width: 72px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+        }
+
+        .award-card {
+            background: rgba(255, 255, 255, 0.52);
+            border-radius: 22px;
+            padding: 24px;
+            border: 1px solid var(--line);
+            min-height: 170px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .award-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(31, 72, 109, 0.10);
+        }
+        .award-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--blue-dark);
+            margin-bottom: 8px;
+        }
+        .award-card p {
+            font-size: 0.98rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--line);
+            color: var(--muted);
+            line-height: 1.7;
+        }
+        .step-item:last-child { border-bottom: none; }
+        .step-num {
+            flex-shrink: 0;
+            width: 32px; height: 32px;
+            background: transparent;
+            color: var(--blue);
+            border-radius: 50%;
+            border: 1px solid rgba(49, 95, 134, 0.35);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            margin-top: 1px;
+        }
+
+        code.inline-code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.88em;
+            background: rgba(49, 95, 134, 0.10);
+            color: var(--blue-dark);
+            padding: 2px 6px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.95rem;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+        }
+        .styled-table thead tr {
+            background: var(--ink);
+            color: #fffaf0;
+        }
+        .styled-table th {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .styled-table td {
+            padding: 14px 18px;
+            color: var(--muted);
+            border-bottom: 1px solid var(--line);
+            background: rgba(255,255,255,0.5);
+        }
+        .styled-table tbody tr:last-child td { border-bottom: none; }
+        .styled-table tbody tr:hover td { background: rgba(232, 240, 243, 0.82); }
+        .styled-table td strong { color: var(--blue-dark); }
+
+        .limit-card {
+            background: rgba(255,255,255,0.56);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 18px;
+            text-align: center;
+        }
+        .limit-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 6px;
+        }
+        .limit-value {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .integrity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            color: var(--muted);
+            line-height: 1.65;
+        }
+        .integrity-item:last-child { border-bottom: none; }
+        .integrity-dot {
+            width: 8px; height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+
+        .rules-list { padding-left: 20px; margin: 8px 0 12px; }
+        .rules-list li {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 6px;
+        }
+        .rules-list li::marker { color: var(--gold); }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 2.8px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+        .accent-em {
+            font-style: normal;
+            color: var(--blue);
+        }
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: -0.035em;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--ink);
+            color: #fff !important;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: 0.25s ease;
+            letter-spacing: 0.3px;
+        }
+        .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 28px;
+            border: 1.5px solid rgba(49, 95, 134, 0.35);
+            color: var(--blue-dark) !important;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: 0.25s ease;
+            background: rgba(255,255,255,0.42);
+        }
+        .btn-outline:hover { border-color: var(--blue); background: var(--wash); }
+        .rule-note {
+            border-left: 1px solid var(--gold);
+            padding-left: 18px;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+    
+      .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a {
+        padding: 5px 0;
+      }
+      @media (max-width: 768px) {
+        .footer-pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="challenge.html" class="nav-link text-[#4682B4]">Challenge</a>
+                <a href="partners.html" class="nav-link hover:text-gray-900">Partners<br>&amp; Sponsors</a>
+                <a href="short-courses.html" class="nav-link hover:text-gray-900">Short<br>Courses</a>
+                <a href="reviewer-recruitment.html" class="nav-link hover:text-gray-900">Reviewer<br>Recruitment</a>
+                <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
+                <a href="organizers.html" class="nav-link hover:text-gray-900">Organizers</a>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="challenge.html" class="block py-2 nav-link text-[#4682B4]">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="short-courses.html" class="block py-2 nav-link">Short Courses</a>
+            <a href="reviewer-recruitment.html" class="block py-2 nav-link">Reviewer Recruitment</a>
+            <a href="program.html" class="block py-2 nav-link">Program</a>
+            <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#problem" data-target="problem"><span class="dot" aria-hidden="true"></span><span class="label">Problem Statement</span></a></li>
+            <li><a href="#awards" data-target="awards"><span class="dot" aria-hidden="true"></span><span class="label">Awards Summary</span></a></li>
+            <li><a href="#participate" data-target="participate"><span class="dot" aria-hidden="true"></span><span class="label">How to Participate</span></a></li>
+            <li><a href="#dates" data-target="dates"><span class="dot" aria-hidden="true"></span><span class="label">Key Dates</span></a></li>
+            <li><a href="#rules" data-target="rules"><span class="dot" aria-hidden="true"></span><span class="label">Participant Rules</span></a></li>
+        </ul>
+    </nav>
+
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 md:px-12 mt-24 mb-24 w-full">
+        <div class="space-y-12">
+
+            <!-- Hero -->
+            <section class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-12 text-center max-w-5xl mx-auto">
+                    <span class="hero-eyebrow">STAI-X 2026 · Harvard University · July 31–August 1, 2026</span>
+                    <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-950 leading-tight mb-5">
+                        STAI-X Challenge 2026
+                    </h1>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
+                        A statistics and AI challenge for autonomous data analysis
+                        and reusable statistical agents.
+                    </p>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <a href="https://forms.gle/S25CpcJfP3EdfzjG9" class="btn-outline">Register Team</a>
+                        <a href="https://www.kaggle.com/t/117f935f903c610c7c6162325bd62288" class="btn-outline">Join Competition</a>
+                        <a href="mailto:staix.contact@gmail.com" class="btn-outline">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problem Statement -->
+            <section id="problem" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <h2 class="section-heading">Problem Statement</h2>
+                    <div class="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed">
+                        <p>
+                            The STAI-X Challenge invites participants to develop integrated statistical and AI-driven solutions
+                            for a high-impact public health problem: <strong class="text-gray-900">forecasting state-level rates of suspected nonfatal
+                            overdose emergency department visits</strong>. Drug overdose remains a leading cause of injury-related
+                            mortality in the United States, and timely, accurate surveillance is critical for public health response.  Participants harness a broad array of public signals: social determinants of health, environmental exposures, digital behavioral indicators
+                            and clinical syndromic surveillance to forecast.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Awards Summary -->
+            <section id="awards" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <h2 class="section-heading">Awards Summary</h2>
+                    <div class="grid gap-4 md:grid-cols-3">
+                        <div class="award-card">
+                            <h3>Award A — Leaderboard Excellence</h3>
+                            <p>Work on a public health-related data prediction task and get the best performance.</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>Award B — AI Automation</h3>
+                            <p>Develop a general-purpose AI-driven automated data analysis pipeline.</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>Award C — Statistical Agents</h3>
+                            <p>Develop all kinds of statistical analysis agents and skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How to Participate -->
+            <section id="participate" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <h2 class="section-heading">How to Participate</h2>
+                    <div>
+                        <div class="step-item">
+                            <span class="step-num">1</span>
+                            <span>Read the <a href="https://www.dropbox.com/scl/fi/1m4lu2j3shiwu4wq66vn1/STAI-X_Challenge_2026_Rules.docx?rlkey=dt3hqejmrhhpvjkaplsxjvg0e&dl=0" class="text-[#315f86] font-semibold">competition rules</a> carefully.</span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-num">2</span>
+                            <span>Assemble your team up to 4 members.</span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-num">3</span>
+                            <span>
+                                Decide your award track(s) and you can attend all tracks.
+                                <br>• <strong class="text-gray-900">Award A: Leaderboard Excellence.</strong> Submit a Kaggle notebook that writes a valid prediction file.
+                                <br>• <strong class="text-gray-900">Award B: AI Automation.</strong> Must attend Award A as the case to illustrate the performance of your AI pipeline hosted on Github repository.
+                                <br>• <strong class="text-gray-900">Award C: Statistical Agents.</strong> Publish a Kaggle Discussion post with the Github repository link.
+                            </span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-num">4</span>
+                            <span>Complete the official <a href="https://forms.gle/S25CpcJfP3EdfzjG9" class="text-[#315f86] font-semibold">registration form</a> before submitting to any award track. Registration closes <strong class="text-gray-900">2026/06/01 at 11:59pm UTC</strong>.</span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-num">5</span>
+                            <span>Join the Kaggle competition using the <a href="https://www.kaggle.com/t/117f935f903c610c7c6162325bd62288" class="text-[#315f86] font-semibold">competition link</a>. Only registered teams are qualified for awards. The competition will be open from <strong class="text-gray-900">2026/05/04 at 12:00am UTC</strong> to <strong class="text-gray-900">2026/06/15 at 11:59pm UTC</strong>.</span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-num">6</span>
+                            <span>Deadline for all award submissions is <strong class="text-gray-900">2026/06/15 at 11:59pm UTC</strong>.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Dates -->
+            <section id="dates" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <h2 class="section-heading">Key Dates</h2>
+                    <div class="overflow-x-auto rounded-xl">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Phase</th>
+                                    <th>Dates</th>
+                                    <th>Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Registration Deadline</strong></td><td>Jun 1, 2026</td><td>Teams must register before submitting to any award track.</td></tr>
+                                <tr><td><strong>Phase I — Competition</strong></td><td>May 4 – Jun 15, 2026</td><td>All award submissions are due <strong>2026/06/15 at 11:59pm UTC</strong>.</td></tr>
+                                <tr><td><strong>Phase II — Evaluation</strong></td><td>Jun 16 – Jun 30, 2026</td><td>The committee reviews award participants and determines winners.</td></tr>
+                                <tr><td><strong>Phase III — Announcement</strong></td><td>Jul 1, 2026</td><td>Winners announced.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Participant Rules -->
+            <section id="rules" class="scroll-mt-28">
+                <div class="glass-card p-8 md:p-10">
+                    <h2 class="section-heading">Participant Rules</h2>
+
+                    <!-- 1. Eligibility -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">1. Eligibility &amp; Registration</h3>
+                            <ul class="rules-list list-disc">
+                                <li>Open to individuals and teams worldwide.</li>
+                                <li>One Kaggle account per person. Multi-account participation disqualifies all affiliated submissions.</li>
+                                <li>Maximum team size is <strong class="text-gray-900">4</strong>. Team mergers are not allowed.</li>
+                                <li>Sponsor employees, organizers, and reviewers may participate but are not eligible to be ranked.</li>
+                                <li>Every team must register by <strong class="text-gray-900">2026/06/01 at 11:59pm UTC</strong>. Team membership cannot change after registration.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 2. Data rules -->
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">2. Data Rules</h3>
+                            <ul class="rules-list list-disc">
+                                <li>The official competition dataset is the only permitted source.</li>
+                                <li>No external data: no web scraping, no third-party datasets, and no attached Kaggle datasets beyond the official competition files.</li>
+                                <li>Do not redistribute the competition data outside Kaggle.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 3. Award A -->
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">3. Award A — Leaderboard Excellence</h3>
+                            <ul class="rules-list list-disc">
+                                <li>Submit a Kaggle notebook in Python or R that writes a valid <code class="inline-code">submission.csv</code>.</li>
+                                <li>Internet is disabled at evaluation. Notebook size is limited to 1 MB and runtime to 9 hours CPU / 9 hours GPU.</li>
+                                <li>Daily limit: <strong class="text-gray-900">1 submission per team per day</strong>. Each team selects one final submission before the deadline.</li>
+                            </ul>
+                            <p class="rule-note mt-3">
+                                Final ranking combines Stage 1 performance on the current holdout with Stage 2 re-execution on a later window. Each scoring category contributes equally through block-averaged MAE.
+                            </p>
+                        </div>
+
+                        <!-- 4. Award B -->
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">4. Award B — AI Automation</h3>
+                            <ul class="rules-list list-disc">
+                                <li>Participants for Award B must also enter Award A.</li>
+                                <li>After Phase I, up to the top 20 teams by Stage 1 full-holdout MAE are selected for Award B evaluation.</li>
+                                <li>Add the Award B markdown cell as the first cell of the Award A notebook so reviewers can find team information, GitHub repository, and architecture notes.</li>
+                                <li>Tag the repository commit <code class="inline-code">award-b-submission</code> before <strong class="text-gray-900">2026/06/15 11:59pm UTC</strong>.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 6. Award C -->
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">5. Award C — Statistical Agents</h3>
+                            <ul class="rules-list list-disc">
+                                <li>Publish one Kaggle Discussion post with the title prefix <code class="inline-code">[Award C]</code>.</li>
+                                <li>Add the necessary information in the post so reviewers can find team information, GitHub repository, and architecture notes.</li>
+                                <li>Describe what the statistical agent or skills does in plain language, and include team information.</li>
+                                <li>Include a demo link, architecture summary, and reproducibility link or notebook.</li>
+                                <li>Tag the repository commit <code class="inline-code">award-c-submission</code> before <strong class="text-gray-900">2026/06/15 11:59pm UTC</strong>.</li>
+                                <li>Posts must be published by <strong class="text-gray-900">2026/06/15 at 11:59pm UTC</strong>.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 7. General Integrity -->
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">6. General Integrity Rules</h3>
+                            <div class="mt-3">
+                                <div class="integrity-item">
+                                    <span class="integrity-dot"></span>
+                                    <span><strong class="text-gray-900">Use one identity.</strong> Account sharing, sockpuppets, and multi-account participation are prohibited.</span>
+                                </div>
+                                <div class="integrity-item">
+                                    <span class="integrity-dot"></span>
+                                    <span><strong class="text-gray-900">Keep work reproducible.</strong> Finalist notebooks and agent repositories may be re-run by organizers exactly as submitted.</span>
+                                </div>
+                                <div class="integrity-item">
+                                    <span class="integrity-dot"></span>
+                                    <span><strong class="text-gray-900">Respect data boundaries.</strong> Do not use or redistribute non-official data for the competition.</span>
+                                </div>
+                                <div class="integrity-item">
+                                    <span class="integrity-dot"></span>
+                                    <span><strong class="text-gray-900">No private evaluation discussion.</strong> Questions about rules or evaluation should go through public competition channels.</span>
+                                </div>
+                                <div class="integrity-item">
+                                    <span class="integrity-dot"></span>
+                                    <span><strong class="text-gray-900">Committee decisions are final.</strong> Organizers may disqualify submissions that violate the published rules.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Contact note -->
+        <p class="text-center text-gray-600 text-base mt-4">
+            Please reach out to <a href="mailto:staix.contact@gmail.com" class="text-[#315f86] font-semibold">staix.contact@gmail.com</a> if you have any questions about the data challenge.
+        </p>
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="short-courses.html">Short Courses</a>
+            <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
+            <a href="program.html">Program</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>For inquiries about the conference:</p>
+          <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
+          <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+      // Section rail: toggle + scroll-synced active state
+      (function() {
+        var rail = document.getElementById('section-rail');
+        if (!rail) return;
+        var toggle = document.createElement('button');
+        toggle.className = 'rail-toggle';
+        toggle.type = 'button';
+        toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+        toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+        rail.insertBefore(toggle, rail.firstChild);
+        try {
+          if (localStorage.getItem('sectionRailCollapsed') === '1') rail.classList.add('collapsed');
+        } catch (e) {}
+        toggle.addEventListener('click', function() {
+          rail.classList.toggle('collapsed');
+          try {
+            localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+          } catch (e) {}
+        });
+        if (!('IntersectionObserver' in window)) return;
+        var links = {};
+        rail.querySelectorAll('a[data-target]').forEach(function(a) {
+          links[a.getAttribute('data-target')] = a;
+        });
+        var sections = Object.keys(links)
+          .map(function(id) { return document.getElementById(id); })
+          .filter(Boolean);
+        var setActive = function(id) {
+          Object.keys(links).forEach(function(k) {
+            var a = links[k];
+            if (k === id) {
+              a.classList.add('is-active');
+              a.setAttribute('aria-current', 'true');
+            } else {
+              a.classList.remove('is-active');
+              a.removeAttribute('aria-current');
+            }
+          });
+        };
+        var visible = new Map();
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting) {
+              visible.set(e.target.id, e.intersectionRatio);
+            } else {
+              visible.delete(e.target.id);
+            }
+          });
+          if (visible.size === 0) return;
+          var topId = null, topRatio = -1;
+          visible.forEach(function(ratio, id) {
+            if (ratio > topRatio) { topRatio = ratio; topId = id; }
+          });
+          if (topId) setActive(topId);
+        }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+        sections.forEach(function(s) { observer.observe(s); });
+      })();
+    </script>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+    <script>
+      document.getElementById('nav-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('open');
+      });
+      document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var sub = this.nextElementSibling;
+          sub.classList.toggle('open');
+          this.querySelector('svg').classList.toggle('rotate-180');
+        });
+      });
+
+    </script>
+</body>
+</html>

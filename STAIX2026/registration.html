@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2026 - Registration</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a {
+        padding: 5px 0;
+      }
+      @media (max-width: 768px) {
+        .footer-pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Call for Papers<br>&amp; Posters ▾</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
+                <a href="partners.html" class="nav-link hover:text-gray-900">Partners<br>& Sponsors</a>
+                <a href="short-courses.html" class="nav-link hover:text-gray-900">Short<br>Courses</a>
+                <a href="reviewer-recruitment.html" class="nav-link hover:text-gray-900">Reviewer<br>Recruitment</a>
+                <a href="program.html" class="nav-link hover:text-gray-900">Program</a>
+                <a href="organizers.html" class="nav-link hover:text-gray-900">Organizers</a>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="short-courses.html" class="block py-2 nav-link">Short Courses</a>
+            <a href="reviewer-recruitment.html" class="block py-2 nav-link">Reviewer Recruitment</a>
+            <a href="program.html" class="block py-2 nav-link">Program</a>
+            <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto p-6 md:p-12 mt-20 space-y-16 mb-24 w-full">
+
+        <section id="register" class="py-4 text-center scroll-mt-32">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tighter leading-tight text-gray-950">
+                Registration
+            </h1>
+            <div class="glass-card mt-6 p-10 max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Registration for STAI-X 2026 is open through the ASA membersuite portal.
+                </p>
+                <a href="https://amstat.users.membersuite.com/events/2e04bc98-0078-c8e4-518d-0b49947acb94/details"
+                   target="_blank" rel="noopener"
+                   class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-4 px-10 rounded-full shadow-lg transition-all duration-300 text-lg">
+                    Register Now
+                </a>
+            </div>
+        </section>
+
+        <section id="instructions" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10 text-center">Instructions</h2>
+            <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed">
+                <li>Early bird rates ends June 1st, 2026. Register early.</li>
+                <li>An account is free and required. ASA membership is NOT required.</li>
+                <li>Breakfast, coffee breaks, lunch and reception on August 1st are INCLUDED in the registration fee.</li>
+                <li>We value your inputs on our conference. Please fill out the optional survey questions.</li>
+                <li>Short courses are add-ons for additional fees. See the <a href="short-courses.html" class="text-[#4682B4] hover:underline">Short Courses</a> tab for descriptions.</li>
+                <li>A lunch ticket option for short course participants may be added for July 31. Be sure to click "Add" to purchase this option.</li>
+                <li>You may edit registration details such as answers to registration questions or purchase add-ons later.</li>
+                <li>Cancellation policy: Cancelations received through July 20, 2026, will be refunded less a 20 percent all items. Requests for refunds received after July 20, 2026, will not be honored. All cancelations must be submitted in writing and emailed to <a href="mailto:ASAInfo@amstat.org" class="text-[#4682B4] hover:underline">ASAInfo@amstat.org</a>.</li>
+            </ul>
+        </section>
+
+        <section id="registration-fee" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10 text-center">Registration Fee</h2>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Conference</h3>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full text-center border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border border-gray-200 bg-white/30 p-3" rowspan="2"></th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Early Bird (before June 1)</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Regular (after June 1)</th>
+                        </tr>
+                        <tr>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-200 p-3 font-semibold text-gray-800 bg-white/30">Conference</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$250</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$350</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$150</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$300</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$420</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$180</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Short Course</h3>
+            <p class="text-gray-600 text-sm italic mb-4">See the <a href="short-courses.html" class="text-[#4682B4] hover:underline">Short Courses</a> tab for course schedules and descriptions.</p>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full text-center border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border border-gray-200 bg-white/30 p-3" rowspan="2"></th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Early Bird (before June 1)</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Regular (after June 1)</th>
+                        </tr>
+                        <tr>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
+                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-200 p-3 font-semibold text-gray-800 bg-white/30">Short Course</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$270</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$370</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$170</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$320</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$400</td>
+                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$190</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-gray-600 text-sm italic">*Trainee includes students and postdocs. Travel awards for trainees and junior faculty will be made available.</p>
+        </section>
+
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="short-courses.html">Short Courses</a>
+            <a href="reviewer-recruitment.html">Reviewer Recruitment</a>
+            <a href="program.html">Program</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>For inquiries about the conference:</p>
+          <p><a href="mailto:staix.contact@gmail.com">staix.contact@gmail.com</a></p>
+          <p style="margin-top: 16px;">Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+</script>
+</body>
+</html>

@@ -6,13 +6,13 @@ layout: null
 <head>
     <link rel="icon" href="/img/logo.png" type="image/png">
 	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZF2MZCZ03F"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNEBGTKKFH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-ZF2MZCZ03F');
+  gtag('config', 'G-NNEBGTKKFH');
 </script>
 <meta charset="utf-8">
 <title>StatsUpAI · Community News</title>
@@ -25,42 +25,77 @@ layout: null
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
- 
+
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
 
 </head>
 <body>
 <div id="wrapper">
 
 	<!-- start header -->
-		<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                  <a class="navbar-brand" href="index.html"><img src="img/logo2.jpg" alt="logo"/></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
-						<li><a href="datasets.html">Datasets</a></li>
-						<li><a href="article.html">Review Articles</a></li>
-                        <li><a href="pipeline.html">Pipeline</a></li>
-                        <li  class="active"><a href="community-news.html">Community News</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="events/webinars/">Events</a></li>
-                    </ul>
+	<header>
+    <nav style="background-color: #4C737D; font-family: 'Inter', sans-serif;">
+        <div id="nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; height: 64px;">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0; text-decoration: none;">
+                    <img src="img/new_logo2.png" alt="StatsUpAI logo" style="height: 40px; width: auto;" />
+                    <div style="line-height: 1.25;">
+                        <span style="color: white; font-weight: bold; font-size: 18px; line-height: 28px;">Stats Up AI</span>
+                        <span style="display: block; color: #e5e7eb; font-size: 12px; line-height: 16px; font-weight: 400;">A community for Statistics and Biostatistics in AI</span>
+                    </div>
+                </a>
+                <button id="mobile-menu-btn" style="display: none; color: white; background: none; border: none; cursor: pointer;">
+                    <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <div id="desktop-nav" style="display: flex; align-items: center; gap: 4px;">
+                    <a href="index.html" style="color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Home</a>
+                    <a href="datasets.html" style="color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Datasets</a>
+                    <a href="article.html" style="color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Review Articles</a>
+                    <a href="pipeline.html" style="color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Pipeline</a>
+                    <a href="community-news.html" style="color: #48CAE4; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Community News</a>
+                    <a href="team.html" style="color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Team</a>
+                    <a href="events/webinars/" style="color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Events</a>
                 </div>
             </div>
         </div>
-	</header><!-- end header -->
+        <div id="mobile-menu" style="display: none; padding: 0 16px 16px;">
+            <a href="index.html" style="display: block; color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Home</a>
+            <a href="datasets.html" style="display: block; color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Datasets</a>
+            <a href="article.html" style="display: block; color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Review Articles</a>
+            <a href="pipeline.html" style="display: block; color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Pipeline</a>
+            <a href="community-news.html" style="display: block; color: #48CAE4; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Community News</a>
+            <a href="team.html" style="display: block; color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Team</a>
+            <a href="events/webinars/" style="display: block; color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Events</a>
+        </div>
+    </nav>
+    <style>
+    @media (min-width: 640px) {
+        #nav-container { padding: 0 24px !important; }
+    }
+    @media (min-width: 1024px) {
+        #nav-container { padding: 0 32px !important; }
+    }
+    @media (max-width: 768px) {
+        #desktop-nav { display: none !important; }
+        #mobile-menu-btn { display: block !important; }
+    }
+    #desktop-nav a:hover, #mobile-menu a:hover { color: #48CAE4 !important; }
+    </style>
+    </header><!-- end header -->
+    <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    });
+    </script>
 	<section id="inner-headline">
 	<div class="container">
 		<div class="row">
