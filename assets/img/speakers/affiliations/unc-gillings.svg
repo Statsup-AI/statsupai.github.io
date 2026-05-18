@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">UNC Gillings School of Global Public Health</title>
+  <desc id="desc">Wordmark used as affiliation logo watermark for webinar cards.</desc>
+  <rect width="900" height="300" fill="none"/>
+  <text x="40" y="120" fill="#4B9CD3" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="700">UNC</text>
+  <text x="40" y="195" fill="#1F4E79" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="600">GILLINGS SCHOOL OF</text>
+  <text x="40" y="250" fill="#1F4E79" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="600">GLOBAL PUBLIC HEALTH</text>
+</svg>

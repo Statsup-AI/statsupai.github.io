@@ -83,3 +83,6 @@
     is an Associate Professor of Biostatistics at the UNC Gillings School of Global Public Health, with a joint appointment at the UNC Lineberger Comprehensive Cancer Center. His research group develops statistical and machine learning methods for precision oncology, spanning adaptive and Bayesian trial design, deep learning, and high-dimensional inference for genomic data. The group’s translational work has produced open-source software and CLIA-certified clinical diagnostics now used in clinical practice and multi-site trials. Dr. Rashid serves on the Nature Medicine Statistical Advisory Panel and the V Foundation Scientific Advisory Board, is an Associate Editor of the Annals of Applied Statistics, and co-directs biostatistics cores for the UNC breast and pancreatic SPOREs. His group has recently developed internal policies for the deliberate use of AI coding tools in research and graduate training.
   personal_website: "https://sph.unc.edu/adv_profile/naim-rashid-phd/"
   speaker_image: "/assets/img/speakers/2026/05-26-naim-rashid.avif"
+  theme:
+    affiliation_logo: "/assets/img/speakers/affiliations/unc-gillings.svg"
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
