@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
-  <title id="title">University of North Carolina logo</title>
-  <desc id="desc">UNC university wordmark used as affiliation logo watermark for webinar cards.</desc>
-  <rect width="1200" height="380" fill="none"/>
-  <circle cx="150" cy="190" r="116" fill="none" stroke="#4B9CD3" stroke-width="24"/>
-  <text x="92" y="196" fill="#16385c" font-family="Inter, Arial, sans-serif" font-size="108" font-weight="700">N</text>
-  <text x="168" y="222" fill="#16385c" font-family="Inter, Arial, sans-serif" font-size="108" font-weight="700">C</text>
-  <text x="320" y="178" fill="#4B9CD3" font-family="Inter, Arial, sans-serif" font-size="158" font-weight="700">UNC</text>
-  <text x="320" y="272" fill="#16385c" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700">THE UNIVERSITY OF</text>
-  <text x="320" y="330" fill="#16385c" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700">NORTH CAROLINA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 760" role="img" aria-labelledby="title desc">
+  <title id="title">University of North Carolina seal style logo</title>
+  <desc id="desc">UNC university seal-style watermark used as affiliation logo on webinar cards.</desc>
+  <rect width="760" height="760" fill="none"/>
+  <circle cx="380" cy="380" r="330" fill="none" stroke="#4B9CD3" stroke-width="38"/>
+  <circle cx="380" cy="380" r="265" fill="none" stroke="#4B9CD3" stroke-width="8"/>
+  <circle cx="380" cy="380" r="190" fill="none" stroke="#16385c" stroke-width="8"/>
+  <text x="380" y="142" fill="#16385c" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">UNIVERSITY OF</text>
+  <text x="380" y="615" fill="#16385c" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">NORTH CAROLINA</text>
+  <text x="380" y="428" fill="#16385c" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="190" font-weight="700">NC</text>
+  <text x="380" y="500" fill="#4B9CD3" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">CHAPEL HILL</text>
 </svg>
