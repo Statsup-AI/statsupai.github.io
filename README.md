@@ -256,6 +256,18 @@ This workflow keeps things simple—edit, commit, push—and GitHub Desktop take
 
 ---
 
+## Webinar add workflow (locked-in checklist)
+
+When adding a new webinar, use this sequence so content and preview stay in sync:
+
+1. Add or update the webinar entry in `_data/webinars.yml`.
+2. Add speaker/affiliation images under `assets/img/speakers/` (use locally checked-in assets).
+3. If affiliation logos are needed, use official university marks (prefer Wikipedia/Wikimedia sources).
+4. Rebuild local preview (`make rebuild` or `make preview`) and refresh `.preview/events.html`.
+5. Verify the card in mobile/static preview before committing.
+
+---
+
 ## FAQ
 
 **Q: Is this a Jekyll site or not?**
@@ -285,4 +297,4 @@ A: Don’t edit `_site/` (generated output). If something keeps regenerating aft
 ---
 
 
-🕒 *Last updated: January 31, 2026*
+🕒 *Last updated: May 19, 2026*
