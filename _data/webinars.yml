@@ -65,7 +65,7 @@
   speaker_image: "/assets/img/speakers/2026/05-08-curtis-huttenhower.jpeg"
   theme:
     bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
-    affiliation_logo: "/assets/img/speakers/affiliations/harvard_university.png"
+    affiliation_logo: "/assets/img/speakers/affiliations/harvard-university.png"
 
 - date: 2026-05-26
   time_et: "2:00 PM"
@@ -84,5 +84,5 @@
   personal_website: "https://sph.unc.edu/adv_profile/naim-rashid-phd/"
   speaker_image: "/assets/img/speakers/2026/05-26-naim-rashid.avif"
   theme:
-    affiliation_logo: "/assets/img/speakers/affiliations/unc-gillings.svg"
+    affiliation_logo: "/assets/img/speakers/affiliations/unc-chapel-hill.png"
     bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
