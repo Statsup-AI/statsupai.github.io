@@ -262,9 +262,24 @@ When adding a new webinar, use this sequence so content and preview stay in sync
 
 1. Add or update the webinar entry in `_data/webinars.yml`.
 2. Add speaker/affiliation images under `assets/img/speakers/` (use locally checked-in assets).
-3. If affiliation logos are needed, use official university marks from the exact Wikipedia/Wikimedia source page, save the file locally under `assets/img/speakers/affiliations/`, and record the exact source URL in your PR notes. If you cannot access/verify the official source, do not recreate or adapt a logo manually—request the source asset from a maintainer first.
-4. Rebuild local preview (`make rebuild` or `make preview`) and refresh `.preview/events.html`.
-5. Verify the card in mobile/static preview before committing.
+3. If affiliation logos are needed, use official university marks from the exact Wikipedia/Wikimedia source page, save the file locally under `assets/img/speakers/affiliations/`, and record the exact source URL in your PR notes.
+   - If you cannot access/verify the official source, do not recreate or adapt a logo manually.
+   - Post an explicit PR blocker comment immediately using this format:
+     - `BLOCKER: Unable to verify/download official affiliation logo`
+     - `Webinar: <speaker + date>`
+     - `Source URL: <exact Wikipedia/Wikimedia URL>`
+     - `Reason blocked: <network/access/verification issue>`
+     - `Action needed: maintainer-provided verified asset before merge`
+   - Replace any temporary/non-authoritative logo with the verified wiki-sourced file in a follow-up commit before closing the PR.
+4. Rebuild local preview (`make rebuild` or `make preview`) and refresh `.preview/events.html` in the same change set whenever webinar data, event template/CSS, or assets are updated.
+5. Verify the card in mobile/static preview before committing, and include an updated screenshot in the PR.
+6. In the PR description, include this checklist and fill in all evidence fields:
+   - `[ ] Webinar data updated in _data/webinars.yml (path + date): <evidence>`
+   - `[ ] Affiliation logo source verified (exact URL): <evidence>`
+   - `[ ] Affiliation logo file committed under assets/img/speakers/affiliations/: <evidence>`
+   - `[ ] .preview/events.html refreshed in same change set: <evidence>`
+   - `[ ] Mobile/static preview screenshot attached: <evidence>`
+   - `[ ] If blocked: PR blocker comment link posted: <evidence or N/A>`
 
 ---
 
