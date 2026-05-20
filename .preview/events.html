@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Webinars 2026 | StatsUpAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../img/logo.png" type="image/png">
+  <style>:root{
+  /* === THEME: tweak these later === */
+  --ev-primary:     #5d9e98;      /* teal vibe */
+  --ev-primary-2: #54837fee;    /* grey-ish teal */
+  --ev-bg: #fffffff5;
+  --ev-surface: rgba(142, 159, 161, 0.08);      /* light teal-tinted surface */
+  --ev-border: rgba(0,0,0,.10);
+  --ev-text: #1e3b36;
+  --ev-muted: rgba(11,31,35,.70);
+
+  --ev-radius: 14px;
+  --ev-maxw: 860px;
+}
+
+/* @media (prefers-color-scheme: dark){
+  :root{
+    --ev-bg: #0b1214;
+    --ev-surface: #0f1b1e;
+    --ev-border: rgba(255,255,255,.14);
+    --ev-text: rgba(255,255,255,.92);
+    --ev-muted: rgba(255,255,255,.70);
+  }
+} */
+
+.ev-body{
+  margin: 0;
+  padding-bottom: 80px;
+  background: var(--ev-bg);
+  color: var(--ev-text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.ev-wrap{
+  max-width: var(--ev-maxw);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* Header */
+.ev-header{
+  background: var(--ev-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.ev-header .ev-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-bottom: 1px solid color-mix(in srgb, transparent, var(--ev-primary) 15%);
+}
+
+.ev-brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ev-text);
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.ev-mark{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #ffffff55, transparent 45%),
+              linear-gradient(135deg, var(--ev-primary), var(--ev-primary-2));
+  box-shadow: 0 0 0 2px rgba(0,0,0,.06);
+}
+
+.ev-nav{
+  display: flex;
+  gap: 14px;
+}
+
+.ev-nav a{
+  text-decoration: none;
+  color: var(--ev-primary-2);
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.ev-nav a:hover{
+  background: color-mix(in srgb, transparent, var(--ev-primary-2) 5%);
+}
+
+.ev-accent-line{
+  height: 6px;
+  background: var(--ev-primary);
+  opacity: .95;
+  box-shadow: 0 1px 0 rgba(0,0,0,.12) inset;
+}
+
+/* Main */
+.ev-main{
+  /* padding: 22px 0 40px 0; */
+}
+
+.ev-page-title{
+  margin: 10px 0 16px 0;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+@media (max-width: 420px){
+  .ev-page-title{ font-size: 30px; }
+}
+
+.ev-content{
+  padding-top: 36px;
+}
+
+/* Links inside content */
+.ev-content a{
+  color: var(--ev-primary-2);
+  text-underline-offset: 3px;
+}
+
+.ev-content a:visited{
+  color: color-mix(in srgb, var(--ev-primary-2) 80%, var(--ev-muted) 20%);
+}
+.ev-content a:hover{
+  color: var(--ev-primary);
+  text-decoration: underline;
+}
+
+/* "Last updated" */
+.last-updated{
+  margin-top: 26px;
+  font-size: .92em;
+  opacity: .75;
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* Timeline */
+.timeline{
+  position: relative;
+  margin: 18px 0 8px 0;
+  padding-left: 26px;
+}
+
+.timeline:before{
+  content:"";
+  position:absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: color-mix(in srgb, var(--ev-primary-2) 80%, transparent);
+  box-shadow: 1px 2px 4px rgba(0,0,0,.15);
+}
+
+.timeline-item{
+  position: relative;
+  margin: 0 0 18px 0;
+}
+
+.timeline-marker{
+  position:absolute;
+  left: 2px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--ev-bg);
+  border: 2px solid var(--ev-primary);
+}
+
+.timeline-content{
+  position: relative;     /* Creates stacking context */
+  overflow: clip;      /* Clip overflowing watermarks */
+  margin-bottom: 28px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--ev-border);
+  border-radius: var(--ev-radius);
+  background-color: var(--ev-surface);
+  box-shadow: 1px 6px 12px rgba(0,0,0,.08);
+  z-index: 0;             /* Create stacking context */
+}
+
+/* Base wrapper for all watermark layers */
+.webinar-watermark {
+  position: absolute;   /* Position it to fill the parent */
+  inset: 0;             /* Top, right, bottom, left = 0 */
+  pointer-events: none;
+  z-index: -1;          /* Explicitly keep it in back */
+  mask-image: radial-gradient(ellipse at center, 
+    rgba(0,0,0,0.4) 50%,
+    rgba(0,0,0,1) 70%
+  );
+}
+
+.webinar-watermark img {
+  position: absolute;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+/* StatsUpAI Logo */
+.webinar-logo-svg{
+  right: 0%;            /* offset by container width */
+  bottom: 0%;           /* offset by container height */
+  width: 50%;           /* scale relative to container */
+  transform: translate(10%, 25%);  /* shift by IMAGE width & height */
+  opacity: .08;
+}
+
+/* Affiliation Logo */
+.webinar-affiliation-svg {
+  top: 0%;              /* offset by container width */
+  left: 0%;             /* offset by container height */
+  width: 50%;           /* scale relative to container */
+  transform: translate(-10%, -25%);  /* shift by IMAGE width & height */
+  opacity: .10;
+}
+
+/* Background pattern */
+.webinar-bg-pattern-svg {
+  left: 0%;
+  bottom: 0%;
+  width: 200%;
+  transform: translate(-30%, 20%);
+  opacity: .25;
+}
+
+@media (max-width: 520px){
+  .webinar-logo-svg{
+    width: 80%;
+    transform: translate(10%, 20%);
+  }
+  .webinar-affiliation-svg {
+    width: 100%;
+    transform: translate(-15%, -10%);
+  }
+  .webinar-bg-pattern-svg {
+    width: auto;
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Webinar Content */
+
+/* circular speaker photo on the left of the title block */
+.webinar-speaker-photo {
+  float: inline-start;                 /* let text flow around the image */
+  margin: 0.2em 0.5em 0 0;          /* space between photo and text */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: clip;
+  border: 2px solid color-mix(in srgb, var(--ev-muted) 40%, transparent);
+  box-shadow: 1px 1px 4px color-mix(in srgb, var(--ev-primary-2) 60%, transparent);
+}
+
+.webinar-speaker-photo img {
+  width: 110%;
+  height: auto;
+  object-fit: cover;
+  transform: translate(0%, -5%);  /* center the image within the circle */
+}
+
+@media (max-width: 520px){
+  .webinar-heading {
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+  }
+}
+
+.webinar-title{
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  line-height: 1.2;
+  border-left: 4px solid var(--ev-primary-2);
+  padding-left: 10px;
+}
+
+.webinar-meta{
+  margin: 0 0 10px 0;
+  color: var(--ev-muted);
+  font-weight: 600;
+  /* font-size: 0.98rem; */
+}
+
+.webinar-section {
+  margin: 0;         /* no default top/bottom margin */
+}
+
+/* spacing only between sections */
+.webinar-section + .webinar-section {
+  margin-top: 8px;
+}
+
+.webinar-label {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.webinar-section p{
+  display: inline;
+  margin: 0 0 10px 0;
+}
+
+.webinar-section p:last-child{
+  margin-bottom: 0;
+}
+
+/* Speaker Bio Box */
+/* bottom box: grey-ish */
+.webinar-section.speaker-bio{
+  color: color-mix(in srgb, var(--ev-text) 60%, var(--ev-primary-2) 40%);
+  margin-top: 1em;
+  margin-left: 0.2em;
+  margin-bottom: 1.2em;
+  position: relative;
+  top: 0.5em;                             /* shift down */
+  border-radius: calc(var(--ev-radius) / 3);
+  border: color-mix(in srgb, var(--ev-primary-2) 20%, transparent) 1px solid;
+  box-shadow: 1px 1px 8px rgba(0,0,0,.04);  /* x-offset, y-offset, blur-radius, color */
+  padding: 0 1em 1.2em 0.2em;           /* top right bottom left */
+  background: rgba(191, 191, 191, 0.24);
+  z-index: 0;                             /* make sure this sits above ::before */
+}
+
+/* top box: white-ish, diagonally offset to top-left */
+.webinar-section.speaker-bio::before{
+  content: "";
+  position: absolute;   /* absolutely positioned inside speaker-bio */
+  top: -0.6em;          /* shift slightly upward */
+  left: -0.8em;         /* shift slightly to the left */
+  right: 0.6em;         /* inset a bit from the right edge */
+  bottom: 0.5em;        /* inset a bit from the bottom edge */
+  border: color-mix(in srgb, var(--ev-muted) 30%, transparent) 1px solid;
+  border-radius: inherit;
+  box-shadow: inherit;
+  background: color-mix(in srgb, var(--ev-bg) 90%, transparent);
+  z-index: -1;                         /* send this behind the main text */
+}
+
+.webinar-section.registration-button a{
+  display: inline-block;
+  margin-top: .3em;
+  margin-left: -.4em;
+  margin-bottom: -.3em;
+  border: var(--ev-border) 2px solid;
+  border-radius: calc(var(--ev-radius) * 2);
+  background: var(--ev-primary-2);
+  color: #ffffff;
+  padding: 0.3em .8em 0.5em .8em; /* top right bottom left */
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+  box-shadow: 1px 2px 6px rgba(0,0,0,.20);
+}
+
+/* Footer */
+.ev-footer{
+  border-top: 1px solid var(--ev-border);
+  padding: 0.5em 0;
+  background: var(--ev-bg);
+}
+
+.ev-footer-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ev-muted);
+  font-weight: 500;
+  margin: 0 -1em;
+}
+
+@media (max-width: 520px){
+  .ev-nav{ display:none; } /* keep it clean on mobile for now */
+  .ev-footer-row{ 
+    flex-direction: column; 
+    text-align: right;
+    gap: 1px;
+    margin: -.5em -1em;
+  }
+}</style>
+</head>
+<body>
+<header>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');</style>
+  <nav style="background-color: #4C737D; font-family: 'Inter', sans-serif;">
+    <div id="nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;"><div style="display: flex; align-items: center; justify-content: space-between; height: 64px;">
+      <a href="../index.html" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0; text-decoration: none;"><img src="../img/new_logo2.png" alt="StatsUpAI logo" style="height: 40px; width: auto;" /><div style="line-height: 1.25;"><span style="color: white; font-weight: bold; font-size: 18px; line-height: 28px;">Stats Up AI</span><span style="display: block; color: #e5e7eb; font-size: 12px; line-height: 16px; font-weight: 400;">A community for Statistics and Biostatistics in AI</span></div></a>
+      <div id="desktop-nav" style="display: flex; align-items: center; gap: 4px;"><a href="../events/webinars/#events" style="color: #48CAE4; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 8px 12px; text-decoration: none;">Events</a></div>
+    </div></div>
+  </nav>
+  <section id="inner-headline"><div class="container"><div class="row"><div class="col-lg-12"><h2 class="pageTitle" id="events">Events</h2></div></div></div></section>
+</header>
+<div class="ev-body">
+  <section>
+    <div class="ev-header"><div class="ev-wrap"><h3>Webinars 2026</h3><nav class="ev-nav" aria-label="Events navigation"><a href="#events" target="_self">All</a><a href="#health-data-science-series" target="_self">Health Data Science Series</a><a href="#genai-stats-series" target="_self">GenAI×Stats Series</a></nav></div></div>
+    <main class="ev-main"><div class="ev-wrap"><div class="ev-content"><div id="health-data-science-series" style="text-align: center; margin-bottom: 2em;">
+  <span><i>Ongoing Webinar Series</i></span>
+  <h2>Statistical and AI Methods <br> for Health Data Science</h2>
+  Empowering Health Data Science through the Integration of Statistics and AI
+</div>
+<div class="timeline"><div class="timeline-item" id="webinar-2026-05-26">
+  <div class="timeline-content">
+    <div class="webinar-watermark"><img src="../assets/img/logo.svg" alt="StatsUpAI Logo" class="webinar-logo-svg" /><img src="../assets/img/speakers/affiliations/unc-chapel-hill.png" alt="UNC Gillings School of Global Public Health" class="webinar-affiliation-svg" /><img src="../assets/img/bg/polygon-1.svg" class="webinar-bg-pattern-svg" /></div>
+    <div class="webinar-heading"><h2 class="webinar-title">Staying in the Driver&#x27;s Seat: Calibrating AI Use in Statistical Research, Training, and Practice</h2></div>
+    <p class="webinar-meta"><a href="https://sfu.zoom.us/meeting/register/t_dkc6edSq2ql2STmKquqw" target="_blank"><strong>May 26, 2026</strong> · 2:00 PM ET · Naim Rashid (UNC Gillings School of Global Public Health)</a></p>
+    <div class="webinar-section speaker-bio">
+      <div class="webinar-speaker-photo"><a href="https://sph.unc.edu/adv_profile/naim-rashid-phd/" target="_blank"><img src="../assets/img/speakers/2026/05-26-naim-rashid.avif" alt="Naim Rashid"/></a></div>
+      <a class="webinar-label" href="https://sph.unc.edu/adv_profile/naim-rashid-phd/" target="_blank">Naim Rashid, PhD</a> <p>is an Associate Professor of Biostatistics at the UNC Gillings School of Global Public Health, with a joint appointment at the UNC Lineberger Comprehensive Cancer Center. His research group develops statistical and machine learning methods for precision oncology, spanning adaptive and Bayesian trial design, deep learning, and high-dimensional inference for genomic data. The group’s translational work has produced open-source software and CLIA-certified clinical diagnostics now used in clinical practice and multi-site trials. Dr. Rashid serves on the Nature Medicine Statistical Advisory Panel and the V Foundation Scientific Advisory Board, is an Associate Editor of the Annals of Applied Statistics, and co-directs biostatistics cores for the UNC breast and pancreatic SPOREs. His group has recently developed internal policies for the deliberate use of AI coding tools in research and graduate training.</p>
+    </div>
+    <div class="webinar-section"><span class="webinar-label">Abstract: </span><p>Generative AI tools have become part of daily statistical research and training. They can accelerate everyday tasks, help us work in unfamiliar coding frameworks, and reduce the friction of writing first drafts. But these gains raise a less obvious question: as we use AI for more substantive parts of our work, how do we stay actively engaged with the choices and reasoning embedded in its output? Without deliberate attention, reliance on AI output may make us less vigilant about errors, less attentive to nuance, and less disciplined about what we still need to understand ourselves.</p><p>This talk presents principles, daily habits, and project-level practices for using AI effectively while maintaining genuine ownership of our work. It draws on a working guide developed within the Rashid Lab, originally focused on AI coding assistants, and extends it to broader settings where the same dynamics arise: our own research, the doctoral students we train, and the students we teach. The argument is grounded in pre-AI cognitive science on tool use, learning, and expert intuition (Bjork &amp; Bjork, 2011; Risko &amp; Gilbert, 2016; Kahneman &amp; Klein, 2009), as well as emerging peer-reviewed evidence on AI use in learning contexts (Bastani et al., PNAS 2025). Our central aim is practical: to show how researchers, trainees, and instructors can use AI in ways that support continual learning while preserving the understanding needed to judge, explain, and defend our work.</p></div>
+    <div class="webinar-section registration-button"><a href="https://sfu.zoom.us/meeting/register/t_dkc6edSq2ql2STmKquqw" target="_blank">Register! ↗</a></div>
+  </div>
+</div><div class="timeline-item" id="webinar-2026-05-08">
+  <div class="timeline-content">
+    <div class="webinar-watermark"><img src="../assets/img/logo.svg" alt="StatsUpAI Logo" class="webinar-logo-svg" /><img src="../assets/img/speakers/affiliations/harvard-university.png" alt="Harvard T.H. Chan School of Public Health" class="webinar-affiliation-svg" /><img src="../assets/img/bg/polygon-1.svg" class="webinar-bg-pattern-svg" /></div>
+    <div class="webinar-heading"><h2 class="webinar-title">Quantitative methods for microbial communities and the human microbiome</h2></div>
+    <p class="webinar-meta"><a href="https://us02web.zoom.us/meeting/register/6V5L7h7YQ0-qs6JqnElBfg" target="_blank"><strong>May 8, 2026</strong> · 2:00 PM ET · Curtis Huttenhower (Harvard T.H. Chan School of Public Health)</a></p>
+    <div class="webinar-section speaker-bio">
+      <div class="webinar-speaker-photo"><a href="https://huttenhower.sph.harvard.edu/home" target="_blank"><img src="../assets/img/speakers/2026/05-08-curtis-huttenhower.jpeg" alt="Curtis Huttenhower"/></a></div>
+      <a class="webinar-label" href="https://huttenhower.sph.harvard.edu/home" target="_blank">Curtis Huttenhower</a> <p>co-directs the Harvard Chan Microbiome in Public Health Center and the associated Harvard Chan Microbiome Analysis and Collection Cores. He received his PhD from Princeton University and his MS from Carnegie Mellon. He participated extensively in the NIH Human Microbiome Project, led the Microbiome Quality Control Project and the Human Microbiome Bioactives Resource, and currently co-leads the Human Virome Program Coordinating Center.</p>
+    </div>
+    <div class="webinar-section"><span class="webinar-label">Abstract: </span><p>Statistical methods for microbial community research have evolved to address most of the tasks necessary for end-to-end environmental or human population study design and execution. These include power calculations, data handling and denoising, simulations and evaluation, and biostatistics for phenotypic and covariate analysis. All must take into account the now well-established properties of typical microbial ecology data, including compositionality, sparsity, and nonindependence. I will review the state of the art and discuss solutions for linear modeling, mediation analysis, and omnibus testing. The second bridges feature-wise association testing with interaction analyses, correcting false discovery rates and demonstrating substantial lack of agreement among mediation approaches. The third investigates the widespread use of PERMANOVA and similar methods, suggesting corrections that again better control false discovery rates and quantify biologically interpretable effect sizes. Together, these provide a flexible toolkit enabling most commonly needed quantitative analyses for microbial community science.</p></div>
+    <div class="webinar-section registration-button"><a href="https://us02web.zoom.us/meeting/register/6V5L7h7YQ0-qs6JqnElBfg" target="_blank">Register! ↗</a></div>
+  </div>
+</div><div class="timeline-item" id="webinar-2026-01-09">
+  <div class="timeline-content">
+    <div class="webinar-watermark"><img src="../assets/img/logo.svg" alt="StatsUpAI Logo" class="webinar-logo-svg" /><img src="../assets/img/speakers/affiliations/indiana-university.png" alt="Indiana University School of Medicine" class="webinar-affiliation-svg" /><img src="../assets/img/bg/polygon-2.svg" class="webinar-bg-pattern-svg" /></div>
+    <div class="webinar-heading"><h2 class="webinar-title">Deconstructing Alzheimer’s Disease and Related Dementias to Enable Precision Medicine: Challenges, Models, and Resources for Data Science</h2></div>
+    <p class="webinar-meta"><a href="https://upenn.zoom.us/meeting/register/uA1Jh_J8T3Wez4q0rbpTLQ#/registration" target="_blank"><strong>Jan 9, 2026</strong> · 12:00 PM ET · Andrew Saykin (Indiana University School of Medicine)</a></p>
+    <div class="webinar-section speaker-bio">
+      <div class="webinar-speaker-photo"><a href="https://medicine.iu.edu/faculty/6962/saykin-andrew" target="_blank"><img src="../assets/img/speakers/2026/01-09-andrew-saykin.png" alt="Andrew Saykin"/></a></div>
+      <a class="webinar-label" href="https://medicine.iu.edu/faculty/6962/saykin-andrew" target="_blank">Dr. Andrew J. Saykin</a> <p>, Psy.D., is the Raymond C. Beeler Professor of Radiology and Imaging Sciences and Professor of Medical and Molecular Genetics at the Indiana University School of Medicine. Dr. Saykin serves as director of the Indiana Alzheimer&#x27;s Disease Research Center (IADRC) and IU Center for Neuroimaging. He leads the ADNI Genetics Core and is an MPI of several NIA-sponsored consortia (CLEAR-AD, KBASE, AI4AD) with experience in collaborative, transdisciplinary, and multi-institutional team science. His current research program focuses on systems biology approaches to understanding pathways driving AD/ADRD, leveraging multimodal neuroimaging, multi-omics biomarkers, and AI-based strategies. Dr. Saykin is the founding editor-in-chief of *Brain Imaging and Behavior*, and a highly cited author with over 700 publications.</p>
+    </div>
+    <div class="webinar-section"><span class="webinar-label">Abstract: </span><p>Alzheimer’s disease (AD) and related dementia (ADRD) research has become increasingly big data-driven, relying on large, heterogeneous, and longitudinal datasets that span imaging, biomarkers, genetics, and clinical phenotyping. Experimental data from model systems and clinical trials now often include rich high dimensional data along with key outcomes. Although researchers have known about plaques and tangles, composed of amyloid beta and tau proteins for over a century, the underlying causes of most forms of AD/ADRD remain unknown. This lecture will discuss foundational questions and challenges in ADRD research including how data sciences/AI can help advance precision diagnostic and therapeutic strategies for ADRD and will introduce the growing ensemble of accessible data resources available for analysis in an open science framework. Major NIA-funded observational data resources such as the National Alzheimer’s Coordinating Center (NACC) and Alzheimer’s Disease Neuroimaging Initiative (ADNI) and affiliated neuroimaging, genetics, and multi-omics data repositories will be described, along with efforts at data harmonization. Future directions include increasing use of large-scale electronic health records and national databases providing a window to diagnoses, treatment and outcomes in real-world clinical healthcare settings. Finally, bottlenecks in advancing knowledge of causal mechanisms, early detection, and development of novel therapeutic strategies will be discussed.</p></div>
+    <div class="webinar-section registration-button"><a href="https://upenn.zoom.us/meeting/register/uA1Jh_J8T3Wez4q0rbpTLQ#/registration" target="_blank">Register! ↗</a></div>
+  </div>
+</div></div><hr style="margin: 2em 0;"><div id="genai-stats-series" style="text-align: center; margin-bottom: 2em;">
+  <span><i>Ongoing Webinar Series</i></span>
+  <h2>Generative AI and Statistics</h2>
+  Bridging the Gap Between Generative AI and Statistical Methodologies
+</div>
+<div class="timeline"><div class="timeline-item" id="webinar-2026-02-11">
+  <div class="timeline-content">
+    <div class="webinar-watermark"><img src="../assets/img/logo.svg" alt="StatsUpAI Logo" class="webinar-logo-svg" /><img src="../assets/img/speakers/affiliations/stanford-university.png" alt="Stanford University" class="webinar-affiliation-svg" /><img src="../assets/img/bg/polygon-2.svg" class="webinar-bg-pattern-svg" /></div>
+    <div class="webinar-heading"><h2 class="webinar-title">AI agents to accelerate scientific discoveries</h2></div>
+    <p class="webinar-meta"><a href="https://sfu.zoom.us/meeting/register/3MLcnkc9TJCYfHNrdVSbeQ#/registration" target="_blank"><strong>Feb 11, 2026</strong> · 1:00 PM ET · James Zou (Stanford University)</a></p>
+    <div class="webinar-section speaker-bio">
+      <div class="webinar-speaker-photo"><a href="https://www.james-zou.com" target="_blank"><img src="../assets/img/speakers/2026/02-11-james-zou.avif" alt="James Zou"/></a></div>
+      <a class="webinar-label" href="https://www.james-zou.com" target="_blank">James Zou</a> <p>is an Associate Professor of Biomedical Data Science and, by courtesy, Computer Science and Electrical Engineering at Stanford University. His research focuses on making AI more reliable and human-compatible, with particular interest in applications for human disease and health. He is a two-time Chan-Zuckerberg Investigator (2017, 2023), Faculty Director at the Stanford Data Science Institute, and a member of the Stanford AI Lab. He received the Overton Prize, NSF CAREER Award, and Sloan Fellowship, along with multiple best paper awards and faculty awards from Google, Amazon, Genentech, and Apple.</p>
+    </div>
+    <div class="webinar-section"><span class="webinar-label">Abstract: </span><p>AI agents--large language models equipped with tools and reasoning capabilities--are emerging as powerful research enablers. This talk will explore how agentic AI can accelerate scientific discoveries. I’ll first introduce the Virtual Lab--a collaborative team of AI scientist agents conducting in silico research meetings to tackle open-ended research projects. As an example application, the Virtual Lab designed new nanobody binders to recent Covid variants that we experimentally validated. Then I will introduce Paper2Agent, a framework to automatically convert passive research papers into interactive AI agents. Finally I will discuss learnings from Agents4Science, the first conference where the authors and reviewers are primarily AI systems.</p></div>
+    <div class="webinar-section registration-button"><a href="https://sfu.zoom.us/meeting/register/3MLcnkc9TJCYfHNrdVSbeQ#/registration" target="_blank">Register! ↗</a></div>
+  </div>
+</div><div class="timeline-item" id="webinar-2026-01-16">
+  <div class="timeline-content">
+    <div class="webinar-watermark"><img src="../assets/img/logo.svg" alt="StatsUpAI Logo" class="webinar-logo-svg" /><img src="../assets/img/speakers/affiliations/duke-university.png" alt="Duke University" class="webinar-affiliation-svg" /><img src="../assets/img/bg/polygon-1.svg" class="webinar-bg-pattern-svg" /></div>
+    <div class="webinar-heading"><h2 class="webinar-title">Leveraging LLMs for student feedback in introductory data science courses</h2></div>
+    <p class="webinar-meta"><a href="https://upenn.zoom.us/meeting/register/7iwjCrS6Qia0EbrBodLyQw#/registration" target="_blank"><strong>Jan 16, 2026</strong> · 12:00 PM ET · Mine Çetinkaya-Rundel (Duke University)</a></p>
+    <div class="webinar-section speaker-bio">
+      <div class="webinar-speaker-photo"><a href="https://mine-cr.com" target="_blank"><img src="../assets/img/speakers/2026/01-16-mine-cetinkaya-rundel.jpg" alt="Mine Çetinkaya-Rundel"/></a></div>
+      <a class="webinar-label" href="https://mine-cr.com" target="_blank">Mine Çetinkaya-Rundel</a> <p>is a Professor of the Practice and Director of Undergraduate Studies in the Department of Statistical Science at Duke University, and Director of the First-Year Experience in Trinity College of Arts &amp; Sciences. Her work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education. She is a contributor to the OpenIntro Statistics textbook and develops R packages and resources for data science education.</p>
+    </div>
+    <div class="webinar-section"><span class="webinar-label">Abstract: </span><p>A considerable recent challenge for learners and teachers of data science courses is the increasing use of LLM-based tools in generating answers. In this talk, I will introduce an R package that leverages LLMs to produce immediate feedback on student work to motivate them to give it a try themselves first. I will discuss the technical details of augmenting models with course materials, as well as backend and user interface decisions, challenges surrounding evaluations that are not performed correctly by the LLM, and student feedback from the first set of users. Finally, I will discuss incorporating this tool into low-stakes assessments and address ethical considerations for the formal assessment structure of the course, which relies on LLMs.</p></div>
+    <div class="webinar-section registration-button"><a href="https://upenn.zoom.us/meeting/register/7iwjCrS6Qia0EbrBodLyQw#/registration" target="_blank">Register! ↗</a></div>
+  </div>
+</div></div></div></div></main>
+  </section>
+</div>
+<footer class="ev-footer"><div class="ev-wrap"><div class="ev-footer-row" style="font-style: italic;"><span><span class="last-updated" style="display: inline;">Last updated: May 18, 2026</span></span><span>↩ Read more on <a style="color: #3C898A;" href="https://statsupai.org/community-news.html" target="_blank">Community News 📰</a></span></div></div></footer>
+</body>
+</html>
