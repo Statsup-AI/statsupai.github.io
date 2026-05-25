@@ -1,0 +1,35 @@
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign upcoming_count = 0 %}
+{% assign past_count = 0 %}
+{% for t in include.all_talks %}
+  {% assign t_day = t.date | date: "%Y-%m-%d" %}
+  {% if t_day >= today %}
+    {% assign upcoming_count = upcoming_count | plus: 1 %}
+  {% else %}
+    {% assign past_count = past_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+<div class="agenda-card" id="{{ include.anchor_id }}" data-series="{{ include.series }}">
+  <span class="agenda-series-tag">Webinar Series · {{ include.series }}</span>
+  <h3 class="agenda-series-title">{{ include.series_label }}</h3>
+  <p class="agenda-series-tagline">{{ include.series_tagline }}</p>
+
+  {% if include.next_talk %}
+    <a href="#webinar-{{ include.next_talk.date }}" class="agenda-next">
+      <div class="agenda-next-label">Next up</div>
+      <div class="agenda-next-date">
+        <strong>{{ include.next_talk.date | date: "%b %-d, %Y" }}</strong>
+        · {{ include.next_talk.time_et }} ET
+      </div>
+      <div class="agenda-next-speaker">{{ include.next_talk.speaker }} ({{ include.next_talk.affiliation }})</div>
+      <div class="agenda-next-title">{{ include.next_talk.title }}</div>
+    </a>
+  {% else %}
+    <div class="agenda-next agenda-next-empty">No upcoming talks scheduled — see past talks below.</div>
+  {% endif %}
+
+  <div class="agenda-counts">
+    {{ upcoming_count }} upcoming · {{ past_count }} past
+  </div>
+</div>

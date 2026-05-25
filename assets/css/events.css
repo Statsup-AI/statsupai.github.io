@@ -10,6 +10,10 @@
 
   --ev-radius: 14px;
   --ev-maxw: 860px;
+
+  /* Per-series accents */
+  --series-health: #5d9e98;
+  --series-genai:  #6b5fc2;
 }
 
 /* @media (prefers-color-scheme: dark){
@@ -376,10 +380,192 @@
 
 @media (max-width: 520px){
   .ev-nav{ display:none; } /* keep it clean on mobile for now */
-  .ev-footer-row{ 
-    flex-direction: column; 
+  .ev-footer-row{
+    flex-direction: column;
     text-align: right;
     gap: 1px;
     margin: -.5em -1em;
   }
 }
+
+/* ===== Webinars page: two parallel columns, one series per column ===== */
+
+/* Widen the page so each column has room for a content-rich card */
+.ev-webinars .ev-wrap { max-width: 1400px; }
+
+.webinars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin: 8px 0 28px 0;
+}
+
+.webinars-col {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Inside the per-series column we drop the default card margins so the
+   flex `gap` controls vertical rhythm consistently */
+.webinars-col .timeline-item { margin: 0; }
+.webinars-col .timeline-content { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .ev-webinars .ev-wrap { max-width: 860px; }
+  .webinars-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Series filtering via :target — when any anchor inside a column is the
+   current target (the series agenda card OR any webinar card within it),
+   collapse to a single centered column showing only that series.
+   The "All" link points to #events on the grid itself, which is not
+   inside a column, so both columns remain visible. */
+.webinars-grid:has(.webinars-col :target) {
+  grid-template-columns: 1fr;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.webinars-grid:has(.webinars-col :target) .webinars-col:not(:has(:target)) {
+  display: none;
+}
+
+/* Keep anchor jumps clear of the sticky header */
+.ev-webinars .agenda-card,
+.ev-webinars .timeline-item { scroll-margin-top: 80px; }
+
+.agenda-card {
+  position: relative;
+  padding: 14px 16px 16px;
+  border: 1px solid var(--ev-border);
+  border-left-width: 6px;
+  border-radius: var(--ev-radius);
+  background-color: var(--ev-surface);
+  box-shadow: 1px 4px 8px rgba(0,0,0,.06);
+}
+
+.agenda-card[data-series="GenAI"]  { border-left-color: var(--series-genai);  --series-color: var(--series-genai); }
+.agenda-card[data-series="Health"] { border-left-color: var(--series-health); --series-color: var(--series-health); }
+
+.agenda-series-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--series-color) 14%, transparent);
+  color: var(--series-color);
+}
+
+.agenda-series-title {
+  margin: 8px 0 2px 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--ev-text);
+}
+
+.agenda-series-tagline {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: var(--ev-muted);
+  font-style: italic;
+}
+
+.agenda-next {
+  display: block;
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--series-color) 6%, var(--ev-bg) 94%);
+  border: 1px solid color-mix(in srgb, var(--series-color) 18%, transparent);
+  border-radius: calc(var(--ev-radius) / 2);
+  text-decoration: none;
+  color: var(--ev-text);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.agenda-next:hover {
+  background: color-mix(in srgb, var(--series-color) 12%, var(--ev-bg) 88%);
+  transform: translateY(-1px);
+}
+
+.agenda-next-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--series-color);
+  margin-bottom: 4px;
+}
+
+.agenda-next-date {
+  font-size: 14px;
+  color: var(--ev-text);
+}
+
+.agenda-next-speaker {
+  font-size: 13px;
+  color: var(--ev-muted);
+  margin-top: 2px;
+}
+
+.agenda-next-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+  color: var(--ev-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.agenda-next-empty {
+  font-size: 13px;
+  color: var(--ev-muted);
+  font-style: italic;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+
+.agenda-counts {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--ev-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Per-series ribbon + tag on each card */
+.timeline-content[data-series="GenAI"]  { border-left: 6px solid var(--series-genai); }
+.timeline-content[data-series="Health"] { border-left: 6px solid var(--series-health); }
+
+.webinar-series-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.timeline-content[data-series="GenAI"] .webinar-series-tag {
+  background: color-mix(in srgb, var(--series-genai) 14%, transparent);
+  color: var(--series-genai);
+}
+.timeline-content[data-series="Health"] .webinar-series-tag {
+  background: color-mix(in srgb, var(--series-health) 14%, transparent);
+  color: var(--series-health);
+}
+
+.timeline-content[data-series="GenAI"]  .webinar-title { border-left-color: var(--series-genai); }
+.timeline-content[data-series="Health"] .webinar-title { border-left-color: var(--series-health); }
+
+.timeline-content[data-series="GenAI"]  .webinar-section.registration-button a { background: var(--series-genai); }
+.timeline-content[data-series="Health"] .webinar-section.registration-button a { background: var(--series-health); }
