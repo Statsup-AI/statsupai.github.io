@@ -74,7 +74,7 @@
   affiliation: "UNC Gillings School of Global Public Health"
   title: "Staying in the Driver's Seat: Calibrating AI Use in Statistical Research, Training, and Practice"
   registration_link: "https://sfu.zoom.us/meeting/register/t_dkc6edSq2ql2STmKquqw"
-  series: "Health"
+  series: "GenAI"
   abstract: |
     Generative AI tools have become part of daily statistical research and training. They can accelerate everyday tasks, help us work in unfamiliar coding frameworks, and reduce the friction of writing first drafts. But these gains raise a less obvious question: as we use AI for more substantive parts of our work, how do we stay actively engaged with the choices and reasoning embedded in its output? Without deliberate attention, reliance on AI output may make us less vigilant about errors, less attentive to nuance, and less disciplined about what we still need to understand ourselves.
 
