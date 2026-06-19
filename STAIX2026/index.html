@@ -135,6 +135,18 @@
         </div>
     </nav>
 
+    <!-- StatsUpAI Corner floating video card (top-left, out of layout flow) -->
+    <div id="staix-corner" class="hidden xl:block fixed top-24 left-4 z-40 w-64 glass-card p-3 shadow-xl">
+        <div class="flex items-center justify-between mb-2">
+            <h3 class="text-xs font-bold text-gray-900 leading-tight">StatsUpAI Corner with Wenyi</h3>
+            <button id="staix-corner-close" aria-label="Close video" class="ml-2 text-gray-400 hover:text-gray-700 leading-none text-lg">&times;</button>
+        </div>
+        <div class="aspect-video rounded-lg overflow-hidden">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/LyQiYBSivqk" title="StatsUpAI Corner with Wenyi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <a href="https://youtu.be/LyQiYBSivqk" target="_blank" class="block mt-2 text-center text-xs text-[#4682B4] underline hover:opacity-75">Watch on YouTube</a>
+    </div>
+
     <main class="flex-grow max-w-7xl mx-auto p-6 md:p-12 mt-20 space-y-16 mb-24 w-full">
         
         <section id="home" class="py-4 text-center scroll-mt-32">
@@ -577,6 +589,12 @@
       this.querySelector('svg').classList.toggle('rotate-180');
     });
   });
+  var staixCornerClose = document.getElementById('staix-corner-close');
+  if (staixCornerClose) {
+    staixCornerClose.addEventListener('click', function() {
+      document.getElementById('staix-corner').remove();
+    });
+  }
 </script>
 </body>
 </html>
