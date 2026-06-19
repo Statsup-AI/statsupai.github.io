@@ -84,6 +84,18 @@ layout: null
     </nav>
 </header>
 
+<!-- StatsUpAI Corner floating video card (top-left, out of layout flow) -->
+<div id="staix-corner" class="hidden xl:block fixed top-24 left-4 z-40 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-3">
+    <div class="flex items-center justify-between mb-2">
+        <h3 class="text-xs font-bold text-gray-900 leading-tight">StatsUpAI Corner with Wenyi</h3>
+        <button id="staix-corner-close" aria-label="Close video" class="ml-2 text-gray-400 hover:text-gray-700 leading-none text-lg">&times;</button>
+    </div>
+    <div class="aspect-video rounded-lg overflow-hidden">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/LyQiYBSivqk" title="StatsUpAI Corner with Wenyi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <a href="https://youtu.be/LyQiYBSivqk" target="_blank" class="block mt-2 text-center text-xs text-accent underline hover:opacity-75">Watch on YouTube</a>
+</div>
+
 <!-- STAI-X 2026 Banner -->
 <section class="bg-gradient-to-r from-[#1a1a2e] to-[#16213e] py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
@@ -303,6 +315,14 @@ layout: null
 document.getElementById('mobile-menu-btn').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
+
+// StatsUpAI Corner close button
+var staixCornerClose = document.getElementById('staix-corner-close');
+if (staixCornerClose) {
+    staixCornerClose.addEventListener('click', function() {
+        document.getElementById('staix-corner').remove();
+    });
+}
 
 // Scroll to top
 var scrollBtn = document.getElementById('scroll-top');
