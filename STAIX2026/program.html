@@ -56,6 +56,30 @@
       .program-row-key td:first-child {
         color: #ffffff !important;
       }
+      .program-row-session td {
+        background-color: #315f86;
+        color: #ffffff !important;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+      .program-row-paper td {
+        background-color: #eef4f9;
+      }
+      .talk-type {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #315f86;
+        margin-bottom: 2px;
+      }
+      .talk-affil {
+        display: block;
+        font-size: 0.8rem;
+        color: #556;
+        margin-top: 2px;
+      }
       @media (max-width: 768px) {
         .footer-pages-grid {
           grid-template-columns: 1fr;
@@ -214,23 +238,44 @@
                             <thead>
                                 <tr class="bg-[#4682B4]/10 text-gray-900">
                                     <th class="border border-gray-200 p-3 font-bold">Time</th>
-                                    <th class="border border-gray-200 p-3 font-bold">Program Item</th>
-                                    <th class="border border-gray-200 p-3 font-bold">Details</th>
+                                    <th class="border border-gray-200 p-3 font-bold">Talk</th>
+                                    <th class="border border-gray-200 p-3 font-bold">Speaker</th>
                                 </tr>
                             </thead>
                             <tbody class="text-gray-700">
                                 <tr class="program-row-meal"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">8:00 &ndash; 8:55 AM</td><td class="border border-gray-200 p-3">Breakfast</td><td class="border border-gray-200 p-3">&mdash;</td></tr>
-                                <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">8:55 &ndash; 9:00 AM</td><td class="border border-gray-200 p-3">Welcome and Opening Remarks</td><td class="border border-gray-200 p-3"></td></tr>
-                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">9:00 &ndash; 10:30 AM</td><td class="border border-gray-200 p-3">Session 1</td><td class="border border-gray-200 p-3">5 talks: 2 invited + 3 paper award talks (1h30min)</td></tr>
+                                <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">8:55 &ndash; 9:00 AM</td><td class="border border-gray-200 p-3">Welcome and Opening Remarks</td><td class="border border-gray-200 p-3">&mdash;</td></tr>
+
+                                <tr class="program-row-session"><td colspan="3" class="border border-gray-200 p-3">Session 1 &nbsp;&middot;&nbsp; 9:00 &ndash; 10:30 AM &nbsp;&middot;&nbsp; Chair: Wenyi Wang</td></tr>
+                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">9:00 &ndash; 9:30 AM</td><td class="border border-gray-200 p-3"><span class="talk-type">Invited Talk</span>Training in Imagination or Learning by Telling the Truth &mdash; A Debate on World Model</td><td class="border border-gray-200 p-3">Eric Xing<span class="talk-affil">MBZUAI &amp; Carnegie Mellon University</span></td></tr>
+                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">9:30 &ndash; 10:00 AM</td><td class="border border-gray-200 p-3"><span class="talk-type">Invited Talk</span>LabOS: The AI-XR Co-Scientist That Sees and Works With Humans</td><td class="border border-gray-200 p-3">Mengdi Wang<span class="talk-affil">Princeton University</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">10:00 &ndash; 10:10 AM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>Generative AI and Entrepreneurship: A Spatial Synthetic Difference-in-Differences Approach</td><td class="border border-gray-200 p-3">Jeff Cai<span class="talk-affil">University of Notre Dame</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">10:10 &ndash; 10:20 AM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>A Deep Generative Framework for Right-Censored Survival Data with Distribution-Matching Regularization</td><td class="border border-gray-200 p-3">Yanran Li, Zexi Cai<span class="talk-affil">Columbia University</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">10:20 &ndash; 10:30 AM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>CrossHONA: Cross-species HOmologous and Non-homologous gene-aware framework for transcriptomics integration and Annotation</td><td class="border border-gray-200 p-3">Ruohan Wang<span class="talk-affil">Center for Computational Molecular Biology, Brown University</span></td></tr>
+
                                 <tr class="program-row-meal"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">10:30 &ndash; 11:00 AM</td><td class="border border-gray-200 p-3">Coffee Break</td><td class="border border-gray-200 p-3">&mdash;</td></tr>
-                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">11:00 AM &ndash; 12:30 PM</td><td class="border border-gray-200 p-3">Session 2</td><td class="border border-gray-200 p-3">5 talks: 2 invited + 3 paper award talks (1h30min)</td></tr>
+
+                                <tr class="program-row-session"><td colspan="3" class="border border-gray-200 p-3">Session 2 &nbsp;&middot;&nbsp; 11:00 AM &ndash; 12:30 PM &nbsp;&middot;&nbsp; Chair: Linjun Zhang</td></tr>
+                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">11:00 &ndash; 11:30 AM</td><td class="border border-gray-200 p-3"><span class="talk-type">Invited Talk</span>From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence</td><td class="border border-gray-200 p-3">Andrew Wilson<span class="talk-affil">New York University</span></td></tr>
+                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">11:30 AM &ndash; 12:00 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Invited Talk</span>Synthetic Data for Black-Box Validation</td><td class="border border-gray-200 p-3">Martin Wainwright<span class="talk-affil">Massachusetts Institute of Technology</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">12:00 &ndash; 12:10 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>STAVAT: Stratified Anytime-Valid Atom Sampling for LLM Tier Placement</td><td class="border border-gray-200 p-3">Patrick Vossler<span class="talk-affil">University of California, San Francisco</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">12:10 &ndash; 12:20 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>Variance-aware Reward Modeling with Anchor Guidance</td><td class="border border-gray-200 p-3">Shuxing Fang<span class="talk-affil">The Hong Kong Polytechnic University</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">12:20 &ndash; 12:30 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>Membership Inference via Pairwise Likelihood Ratios</td><td class="border border-gray-200 p-3">Shengjie Niu<span class="talk-affil">The Hong Kong Polytechnic University</span></td></tr>
+
                                 <tr class="program-row-meal"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">12:30 &ndash; 1:40 PM</td><td class="border border-gray-200 p-3">Lunch Break</td><td class="border border-gray-200 p-3">&mdash;</td></tr>
-                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">1:40 &ndash; 2:00 PM</td><td class="border border-gray-200 p-3">Award ceremony</td><td class="border border-gray-200 p-3"></td></tr>
-                                <tr class="program-row-meal"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">2:00 &ndash; 3:30 PM</td><td class="border border-gray-200 p-3">Session 3</td><td class="border border-gray-200 p-3">5 talks: 2 invited + 3 paper award talks</td></tr>
-                                <tr class="program-row-meal"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">3:30 &ndash; 4:00 PM</td><td class="border border-gray-200 p-3">Coffee Break</td><td class="border border-gray-200 p-3"></td></tr>
+                                <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">1:40 &ndash; 2:00 PM</td><td class="border border-gray-200 p-3">Award Ceremony</td><td class="border border-gray-200 p-3">&mdash;</td></tr>
+
+                                <tr class="program-row-session"><td colspan="3" class="border border-gray-200 p-3">Session 3 &nbsp;&middot;&nbsp; 2:00 &ndash; 3:30 PM &nbsp;&middot;&nbsp; Chair: Edgar Dobriban</td></tr>
+                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">2:00 &ndash; 2:30 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Invited Talk</span>Feature Learning and the Linear Representation Hypothesis for Steering and Monitoring LLMs</td><td class="border border-gray-200 p-3">Misha Belkin<span class="talk-affil">University of California San Diego</span></td></tr>
+                                <tr class="program-row-academic"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">2:30 &ndash; 3:00 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Invited Talk</span>Statlib: A Statistical Library for Research, Education, and Beyond in an AI World</td><td class="border border-gray-200 p-3">Rajarshi Mukherjee<span class="talk-affil">Harvard T.H. Chan School of Public Health</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">3:00 &ndash; 3:10 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>Wahkon: A Statistically Principled Deep RKHS Superposition Network</td><td class="border border-gray-200 p-3">Yongkai Chen<span class="talk-affil">Harvard University</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">3:10 &ndash; 3:20 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>AI4BayesCode: From Natural Language Descriptions to Validated Modular Stateful Bayesian Samplers</td><td class="border border-gray-200 p-3">Jungang Zou<span class="talk-affil">Department of Biostatistics, Columbia University</span></td></tr>
+                                <tr class="program-row-paper"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">3:20 &ndash; 3:30 PM</td><td class="border border-gray-200 p-3"><span class="talk-type">Paper Award Talk</span>Density-Informed Pseudo-Counts for Calibrated Evidential Deep Learning</td><td class="border border-gray-200 p-3">Pietro Carlotti<span class="talk-affil">University of Texas at Austin</span></td></tr>
+
+                                <tr class="program-row-meal"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">3:30 &ndash; 4:00 PM</td><td class="border border-gray-200 p-3">Coffee Break</td><td class="border border-gray-200 p-3">&mdash;</td></tr>
                                 <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">4:00 &ndash; 5:00 PM</td><td class="border border-gray-200 p-3">Panel Discussion</td><td class="border border-gray-200 p-3">Moderated panel + audience Q&amp;A</td></tr>
                                 <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">5:00 &ndash; 5:30 PM</td><td class="border border-gray-200 p-3">Stellar Abstract Lightning Talks</td><td class="border border-gray-200 p-3">9 &times; 3-min Stellar Abstract Award talks</td></tr>
-                                <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">5:30 &ndash; 5:35 PM</td><td class="border border-gray-200 p-3">Closing Remarks</td><td class="border border-gray-200 p-3"></td></tr>
+                                <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">5:30 &ndash; 5:35 PM</td><td class="border border-gray-200 p-3">Closing Remarks</td><td class="border border-gray-200 p-3">&mdash;</td></tr>
                                 <tr class="program-row-key"><td class="border border-gray-200 p-3 font-semibold text-[#4682B4] whitespace-nowrap">5:35 &ndash; 7:30 PM</td><td class="border border-gray-200 p-3">Poster Session &amp; Reception Supported by Jump Trading</td><td class="border border-gray-200 p-3">Posters, food &amp; beverages</td></tr>
                             </tbody>
                         </table>
