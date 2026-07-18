@@ -39,6 +39,29 @@
       .award-item > span::before {
         content: counter(award-item);
       }
+      /* Collapsible award sections */
+      .award-section {
+        scroll-margin-top: 110px;
+      }
+      .award-summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+      }
+      .award-summary::-webkit-details-marker {
+        display: none;
+      }
+      .award-summary .chevron {
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+      }
+      details[open] > .award-summary .chevron {
+        transform: rotate(180deg);
+      }
       @media (max-width: 768px) {
         .footer-pages-grid {
           grid-template-columns: 1fr;
@@ -145,6 +168,16 @@
         </div>
     </nav>
 
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#paper-awards" data-target="paper-awards"><span class="dot" aria-hidden="true"></span><span class="label">Paper Awards</span></a></li>
+            <li><a href="#paper-honorable-mentions" data-target="paper-honorable-mentions"><span class="dot" aria-hidden="true"></span><span class="label">Honorable Mentions</span></a></li>
+            <li><a href="#stellar-abstract-awards" data-target="stellar-abstract-awards"><span class="dot" aria-hidden="true"></span><span class="label">Stellar Abstracts</span></a></li>
+            <li><a href="#challenge-awards" data-target="challenge-awards"><span class="dot" aria-hidden="true"></span><span class="label">Challenge Awards</span></a></li>
+        </ul>
+    </nav>
+
     <main class="flex-grow max-w-5xl mx-auto px-6 py-16 mt-20 w-full">
         <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">STAI-X Awards</h1>
         <p class="text-center text-gray-500 mb-12 font-medium">STAI-X 2026 &nbsp;&bull;&nbsp; Harvard University</p>
@@ -158,8 +191,69 @@
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Challenge Awards</h2>
+        <section id="paper-awards" class="award-section mb-12">
+            <details open>
+                <summary class="award-summary mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Paper Awards</h2>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="award-list space-y-4">
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Generative AI and Entrepreneurship: A Spatial Synthetic Difference-in-Differences Approach.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Junhui Cai, Yao Li, Gu Xian, Linda H. Zhao, Wu Zhu.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Membership Inference via Pairwise Likelihood Ratios.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Shengjie Niu, Zebin Yun, Yeheng Ge, Jian Huang.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;CrossHONA: Cross-species HOmologous and Non-homologous gene-aware framework for transcriptomics integration and Annotation.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Ruohan Wang, Yu Zhu, Zixiao Gao, Ying Ma.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;A Deep Generative Framework for Right-Censored Survival Data with Distribution-Matching Regularization.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yanran Li, Zexi Cai.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Wahkon: A Statistically Principled Deep RKHS Superposition Network.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yongkai Chen, Wenxuan Zhong, Ping Ma.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Variance-aware Reward Modeling with Anchor Guidance.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Shuxing Fang, Ruijian Han, Liangyu Zhang, Fan Zhou.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Density-Informed Pseudo-Counts for Calibrated Evidential Deep Learning.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Pietro Carlotti, Nevena Gligi&#263;, Arya Farahi.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;STAVAT: Stratified Anytime-Valid Atom Sampling for LLM Tier Placement.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Patrick Vossler, Fan Xia, Jean Feng.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;AI4BayesCode: From Natural Language Descriptions to Validated Modular Stateful Bayesian Samplers.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Jungang Zou, Alex Ziyu Jiang, Qixuan Chen.</p></div></article>
+                </div>
+            </details>
+        </section>
+
+        <section id="paper-honorable-mentions" class="award-section mb-12">
+            <details open>
+                <summary class="award-summary mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Paper Honorable Mentions</h2>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="award-list space-y-4">
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Bridging Data Gaps in Oncology: Integrating Large Language Models and Recommendation Systems for Evidence Synthesis.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Tengjie Tang, Angkai Li, Xuanyu Bai, Xingye Tan, Qingli Ji, Michael Ulis, Lu Si, Le Bao.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Haoran Lu, Luyang Fang, Wenxuan Zhong, Ping Ma.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Learning Perturbations to Extrapolate Your LLM.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Zetai Cen, Chenfei Gu, Jin Zhu, Ting Li, Yunxiao Chen, Chengchun Shi.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;VADR: Variance Adjusted Distribution Regression.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Soumyabrata Bose.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Black-Box Knowledge Transfer across Distinct Feature Sets.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Oh-Ran Kwon, Daeyoung Ham.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Bridging Probabilistic LLMs and Deterministic Statistical Validation: The PROVE Multi-Agent Framework for Clinical Trial Reporting&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Zhaohua Lu, Cheng Zheng, Yuanyuan Han.</p></div></article>
+                </div>
+            </details>
+        </section>
+
+        <section id="stellar-abstract-awards" class="award-section mb-12">
+            <details open>
+                <summary class="award-summary mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Stellar Abstract Awards</h2>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="award-list space-y-4">
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Deciphering Small Sequence Differences in T Cell Receptor-Antigen Pairing.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yi Han, Tao Wang.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Vertical Consensus Inference for High-Dimensional Random Partition.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Khai Nguyen, Yang Ni, Peter Mueller.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;SPID: Distilled Protein Backbone Generation.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Liyang Xie, Haoran Zhang, Zhendong Wang, Wesley Tansey, Mingyuan Zhou.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Distributional Evaluation of Generative Models via Relative Density Ratio.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yuliang Xu, Yun Wei, Li Ma.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Adaptive auditing of AI systems with anytime-valid guarantees.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Siyu Zhou, Patrick Vossler, Venkatesh Sivaraman, Yifan Mai, Jean Feng.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;DML-BM: Double Machine Learning for Block-wise Missing Data with Applications in Alzheimer&rsquo;s Disease Progression and Cognitive Functions.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Borui Tang, Yue Yang, Ting Li, Tengfei Li, Hongtu Zhu.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Precision Physical Activity Prescription via Reinforcement Learning for Functional Actions.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Gefei Lin, Rui Miao, Jennifer Sacheck, Xiaoke Zhang.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Incorporating LLM Embeddings for Variation Across the Human Genome.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Hongqian Niu, Xihao Li, Didong Li.</p></div></article>
+                    <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Strategic Feature Selection and Regularization.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Jivat Neet Kaur, Pratik Patil, Divya M Shanmugam, Emma Pierson, Michael I. Jordan, Nika Haghtalab, Meena Jagadeesan, Ahmed Alaa, Serena Lutong Wang.</p></div></article>
+                </div>
+            </details>
+        </section>
+
+        <section id="challenge-awards" class="award-section mb-12">
+            <details open>
+                <summary class="award-summary mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900">Challenge Awards</h2>
+                    <svg class="chevron w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
             <div class="space-y-10">
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Award A &mdash; Statistical Prediction (Forecasting Accuracy)</h3>
@@ -195,48 +289,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Paper Awards</h2>
-            <div class="award-list space-y-4">
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Generative AI and Entrepreneurship: A Spatial Synthetic Difference-in-Differences Approach.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Junhui Cai, Yao Li, Gu Xian, Linda H. Zhao, Wu Zhu.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Membership Inference via Pairwise Likelihood Ratios.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Shengjie Niu, Zebin Yun, Yeheng Ge, Jian Huang.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;CrossHONA: Cross-species HOmologous and Non-homologous gene-aware framework for transcriptomics integration and Annotation.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Ruohan Wang, Yu Zhu, Zixiao Gao, Ying Ma.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;A Deep Generative Framework for Right-Censored Survival Data with Distribution-Matching Regularization.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yanran Li, Zexi Cai.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Wahkon: A Statistically Principled Deep RKHS Superposition Network.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yongkai Chen, Wenxuan Zhong, Ping Ma.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Variance-aware Reward Modeling with Anchor Guidance.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Shuxing Fang, Ruijian Han, Liangyu Zhang, Fan Zhou.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Density-Informed Pseudo-Counts for Calibrated Evidential Deep Learning.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Pietro Carlotti, Nevena Gligi&#263;, Arya Farahi.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;STAVAT: Stratified Anytime-Valid Atom Sampling for LLM Tier Placement.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Patrick Vossler, Fan Xia, Jean Feng.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;AI4BayesCode: From Natural Language Descriptions to Validated Modular Stateful Bayesian Samplers.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Jungang Zou, Alex Ziyu Jiang, Qixuan Chen.</p></div></article>
-            </div>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Paper Honorable Mentions</h2>
-            <div class="award-list space-y-4">
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Bridging Data Gaps in Oncology: Integrating Large Language Models and Recommendation Systems for Evidence Synthesis.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Tengjie Tang, Angkai Li, Xuanyu Bai, Xingye Tan, Qingli Ji, Michael Ulis, Lu Si, Le Bao.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Haoran Lu, Luyang Fang, Wenxuan Zhong, Ping Ma.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Learning Perturbations to Extrapolate Your LLM.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Zetai Cen, Chenfei Gu, Jin Zhu, Ting Li, Yunxiao Chen, Chengchun Shi.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;VADR: Variance Adjusted Distribution Regression.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Soumyabrata Bose.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Black-Box Knowledge Transfer across Distinct Feature Sets.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Oh-Ran Kwon, Daeyoung Ham.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#6B8E9F] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Bridging Probabilistic LLMs and Deterministic Statistical Validation: The PROVE Multi-Agent Framework for Clinical Trial Reporting&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Zhaohua Lu, Cheng Zheng, Yuanyuan Han.</p></div></article>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Stellar Abstract Awards</h2>
-            <div class="award-list space-y-4">
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Deciphering Small Sequence Differences in T Cell Receptor-Antigen Pairing.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yi Han, Tao Wang.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Vertical Consensus Inference for High-Dimensional Random Partition.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Khai Nguyen, Yang Ni, Peter Mueller.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;SPID: Distilled Protein Backbone Generation.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Liyang Xie, Haoran Zhang, Zhendong Wang, Wesley Tansey, Mingyuan Zhou.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Distributional Evaluation of Generative Models via Relative Density Ratio.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Yuliang Xu, Yun Wei, Li Ma.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Adaptive auditing of AI systems with anytime-valid guarantees.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Siyu Zhou, Patrick Vossler, Venkatesh Sivaraman, Yifan Mai, Jean Feng.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;DML-BM: Double Machine Learning for Block-wise Missing Data with Applications in Alzheimer&rsquo;s Disease Progression and Cognitive Functions.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Borui Tang, Yue Yang, Ting Li, Tengfei Li, Hongtu Zhu.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Precision Physical Activity Prescription via Reinforcement Learning for Functional Actions.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Gefei Lin, Rui Miao, Jennifer Sacheck, Xiaoke Zhang.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Incorporating LLM Embeddings for Variation Across the Human Genome.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Hongqian Niu, Xihao Li, Didong Li.</p></div></article>
-                <article class="award-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#315f86] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">&ldquo;Strategic Feature Selection and Regularization.&rdquo;</h3><p class="text-gray-600 mt-2">Authors: Jivat Neet Kaur, Pratik Patil, Divya M Shanmugam, Emma Pierson, Michael I. Jordan, Nika Haghtalab, Meena Jagadeesan, Ahmed Alaa, Serena Lutong Wang.</p></div></article>
-            </div>
+            </details>
         </section>
     </main>
 
@@ -306,6 +359,64 @@
       this.querySelector('svg').classList.toggle('rotate-180');
     });
   });
+
+  // Section rail: toggle + scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail) return;
+    var toggle = document.createElement('button');
+    toggle.className = 'rail-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    rail.insertBefore(toggle, rail.firstChild);
+    try {
+      if (localStorage.getItem('sectionRailCollapsed') === '1') rail.classList.add('collapsed');
+    } catch (e) {}
+    toggle.addEventListener('click', function() {
+      rail.classList.toggle('collapsed');
+      try {
+        localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+      } catch (e) {}
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
 </script>
 </body>
 </html>
