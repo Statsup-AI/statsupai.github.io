@@ -2,32 +2,28 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #008080;
+  background-color: #5E8B95;
   color: #FFFFFF;
   text-align: center;
-  padding: 15px 10px;
+  padding: 16px 16px;
   font-size: 14px;
-  border-top: 2px solid #2F4F4F;
+  font-family: 'Inter', sans-serif;
   z-index: 1000;
 ">
-  We are an Interest Group of
-  <a href="https://www.amstat.org" target="_blank" rel="noopener noreferrer"
-     style="color: #FFFFFF; font-weight: bold; text-decoration: underline;">
-    ASA
-  </a>.
-  Non-ASA members can join our
-  <a href="https://groups.google.com/g/stats-up-ai/" target="_blank" rel="noopener noreferrer"
-     style="color: #FFFFFF; font-weight: bold; text-decoration: underline;">
-    Google Groups mailing list
-  </a>.
-  See
-  <a href="{{ '/pages/char.html' | relative_url }}" target="_blank" rel="noopener noreferrer"
-     style="color: #FFFFFF; font-weight: bold; text-decoration: underline;">
-    Organization (Charter)
-  </a>
-  and
-  <a href="{{ '/quarto_web/site/posts/2026-ec-election.html' | relative_url }}" target="_blank" rel="noopener noreferrer"
-     style="color: #FFFFFF; font-weight: bold; text-decoration: underline;">
-    2026 Executive Committee
-  </a>.
+  <style>
+    .asa-banner a { color: #FFFFFF; font-weight: 600; text-decoration: underline; transition: color .2s ease; }
+    .asa-banner a:hover { color: #48CAE4; }
+    .asa-banner .asa-sep { margin: 0 8px; opacity: .5; }
+  </style>
+  <p style="margin: 0;">
+    We are an Interest Group of <a href="https://www.amstat.org" target="_blank" rel="noopener noreferrer">ASA</a>
+    <span class="asa-sep">|</span>
+    Non-ASA members can join our <a href="https://groups.google.com/g/stats-up-ai/" target="_blank" rel="noopener noreferrer">Google Groups mailing list</a>
+    <span class="asa-sep">|</span>
+    <a href="https://bit.ly/statsupai-volunteer" target="_blank" rel="noopener noreferrer">Volunteer Sign-up</a>
+    <span class="asa-sep">|</span>
+    <a href="{{ '/pages/char.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Organization (Charter)</a>
+    <span class="asa-sep">|</span>
+    <a href="{{ '/quarto_web/site/posts/2026-ec-election.html' | relative_url }}" target="_blank" rel="noopener noreferrer">2026 Executive Committee</a>
+  </p>
 </div>
