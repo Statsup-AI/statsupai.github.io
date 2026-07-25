@@ -1,0 +1,285 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/img/logo.png" type="image/png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNEBGTKKFH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NNEBGTKKFH');
+    </script>
+    <meta charset="utf-8">
+    <title>StatsUpAI · How to Join the ASA Community Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A step-by-step guide to joining the StatsUpAI Interest Group inside the ASA Community." />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#4C737D',
+              'card-header': '#5E8B95',
+              accent: '#48CAE4',
+              'accent-dark': '#3ab5cc',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      body { font-family: 'Inter', sans-serif; }
+      .step-shot { cursor: zoom-in; transition: transform .2s ease, box-shadow .2s ease; }
+      .step-shot:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.15); }
+      /* connector line for the timeline */
+      @media (min-width: 768px) {
+        .timeline-line::before {
+          content: ""; position: absolute; left: 27px; top: 0; bottom: 0;
+          width: 2px; background: linear-gradient(#48CAE4, #4C737D); z-index: 0;
+        }
+      }
+    </style>
+</head>
+<body class="text-gray-700" style="background-color: #F1F4EF;">
+
+<!-- Navigation + Branding -->
+<header>
+    <nav class="bg-brand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+                    <img src="img/new_logo2.png" alt="StatsUpAI logo" class="h-10 w-auto" />
+                    <div class="hidden sm:block leading-tight">
+                        <span class="text-white font-bold text-lg">Stats Up AI</span>
+                        <span class="block text-gray-200 text-xs">A community for Statistics and Biostatistics in AI</span>
+                    </div>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <div class="hidden md:flex md:items-center md:space-x-1">
+                    <a href="index.html" class="text-white font-semibold text-sm uppercase px-3 py-2 rounded hover:text-accent transition">Home</a>
+                    <a href="datasets.html" class="text-white font-semibold text-sm uppercase px-3 py-2 rounded hover:text-accent transition">Datasets</a>
+                    <a href="article.html" class="text-white font-semibold text-sm uppercase px-3 py-2 rounded hover:text-accent transition">Review Articles</a>
+                    <a href="pipeline.html" class="text-white font-semibold text-sm uppercase px-3 py-2 rounded hover:text-accent transition">Pipeline</a>
+                    <a href="community-news.html" class="text-white font-semibold text-sm uppercase px-3 py-2 rounded hover:text-accent transition">Community News</a>
+                    <a href="team.html" class="text-white font-semibold text-sm uppercase px-3 py-2 rounded hover:text-accent transition">Team</a>
+                    <a href="events/webinars/" class="text-white font-semibold text-sm uppercase px-3 py-2 rounded hover:text-accent transition">Events</a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-1">
+            <a href="index.html" class="block text-white font-semibold text-sm uppercase px-3 py-2 hover:text-accent">Home</a>
+            <a href="datasets.html" class="block text-white font-semibold text-sm uppercase px-3 py-2 hover:text-accent">Datasets</a>
+            <a href="article.html" class="block text-white font-semibold text-sm uppercase px-3 py-2 hover:text-accent">Review Articles</a>
+            <a href="pipeline.html" class="block text-white font-semibold text-sm uppercase px-3 py-2 hover:text-accent">Pipeline</a>
+            <a href="community-news.html" class="block text-white font-semibold text-sm uppercase px-3 py-2 hover:text-accent">Community News</a>
+            <a href="team.html" class="block text-white font-semibold text-sm uppercase px-3 py-2 hover:text-accent">Team</a>
+            <a href="events/webinars/" class="block text-white font-semibold text-sm uppercase px-3 py-2 hover:text-accent">Events</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="bg-gradient-to-br from-[#4C737D] via-[#5E8B95] to-[#3a5a63] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
+        <span class="inline-block bg-white/15 text-accent font-semibold text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4">American Statistical Association</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight">How to Join the StatsUpAI<br class="hidden sm:block"> ASA Community Group</h1>
+        <p class="text-gray-100 text-base sm:text-lg mt-4 max-w-2xl mx-auto">Joining our Interest Group inside the ASA Community takes a few clicks that are easy to miss. This visual guide walks you through all <span class="font-semibold text-accent">8 steps</span> — screenshot by screenshot.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-7">
+            <a href="https://community.amstat.org/resources" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold text-sm py-3 px-7 rounded-full shadow-lg transition">
+                Open ASA Community
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#steps" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/40 text-white font-semibold text-sm py-3 px-7 rounded-full transition">
+                See the 8 steps
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Intro note -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
+    <div class="bg-white rounded-xl shadow-md border-l-4 border-accent p-5 sm:p-6 flex gap-4 items-start">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center">
+            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+            <h2 class="font-bold text-gray-900 text-lg">Before you start</h2>
+            <p class="text-sm text-gray-600 mt-1 leading-relaxed">You'll need an <strong>ASA account</strong> (membership). Our group is found by filtering the community list — it lives on the last page of the "Member Created Community" filter (Steps 4–6).</p>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">Not an ASA member? You can still join our <a href="https://groups.google.com/g/stats-up-ai/" target="_blank" rel="noopener noreferrer" class="text-accent font-semibold underline hover:text-accent-dark">Google Groups mailing list</a> for free. <span class="text-gray-400">Tip: click any screenshot to enlarge it.</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- Steps -->
+<section id="steps" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="timeline-line relative space-y-8">
+
+        <!-- Step 1 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-brand text-white font-extrabold text-xl flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">1</div>
+            <div class="flex-1 bg-white rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">Go to the ASA Community</h3>
+                <p class="text-sm text-gray-600 mt-1">Open <a href="https://community.amstat.org/resources" target="_blank" rel="noopener noreferrer" class="text-accent font-semibold underline hover:text-accent-dark break-all">community.amstat.org/resources</a> in your browser.</p>
+                <img src="img/join-guide/step1.png" alt="ASA Community landing page" class="step-shot mt-4 w-full rounded-lg border border-gray-200" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-brand text-white font-extrabold text-xl flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">2</div>
+            <div class="flex-1 bg-white rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">Log in with your ASA credentials</h3>
+                <p class="text-sm text-gray-600 mt-1">Use the username and password from your ASA membership account.</p>
+                <img src="img/join-guide/step2.png" alt="ASA member login form" class="step-shot mt-4 w-full max-w-md mx-auto block rounded-lg border border-gray-200" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-brand text-white font-extrabold text-xl flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">3</div>
+            <div class="flex-1 bg-white rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">Open Communities → “All Communities”</h3>
+                <p class="text-sm text-gray-600 mt-1">In the top menu, click <strong>Communities</strong> and choose <strong>All Communities</strong>.</p>
+                <img src="img/join-guide/step3.png" alt="Communities dropdown with All Communities highlighted" class="step-shot mt-4 w-full rounded-lg border border-gray-200" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-brand text-white font-extrabold text-xl flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">4</div>
+            <div class="flex-1 bg-white rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">Set the filters</h3>
+                <p class="text-sm text-gray-600 mt-1">In the filters, select <strong>“Member Created Community”</strong>, then set the second filter to <strong>“Communities I can join.”</strong></p>
+                <div class="grid sm:grid-cols-2 gap-4 mt-4">
+                    <figure>
+                        <img src="img/join-guide/step4a.png" alt="Community type filter set to Member Created Community" class="step-shot w-full rounded-lg border border-gray-200" loading="lazy">
+                        <figcaption class="text-xs text-gray-400 mt-1 text-center">Filter 1 · Member Created Community</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/join-guide/step4b.png" alt="Membership filter set to Communities I can join" class="step-shot w-full rounded-lg border border-gray-200" loading="lazy">
+                        <figcaption class="text-xs text-gray-400 mt-1 text-center">Filter 2 · Communities I can join</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-brand text-white font-extrabold text-xl flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">5</div>
+            <div class="flex-1 bg-white rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">Jump to the last page</h3>
+                <p class="text-sm text-gray-600 mt-1">Scroll to the bottom of the list and click the <strong>highest page number</strong> — our group is near the end.</p>
+                <img src="img/join-guide/step5.png" alt="Pagination control at the bottom of the list" class="step-shot mt-4 w-full max-w-xs mx-auto block rounded-lg border border-gray-200" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-brand text-white font-extrabold text-xl flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">6</div>
+            <div class="flex-1 bg-white rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">Find “Stats Up AI Interest Group” and click Join</h3>
+                <p class="text-sm text-gray-600 mt-1">Find <strong>Stats Up AI Interest Group</strong> in the list and click the <strong>Join</strong> button.</p>
+                <img src="img/join-guide/step6.png" alt="Stats Up AI Interest Group row with a Join button" class="step-shot mt-4 w-full rounded-lg border border-gray-200" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-brand text-white font-extrabold text-xl flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">7</div>
+            <div class="flex-1 bg-white rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">Choose your notifications, then confirm</h3>
+                <p class="text-sm text-gray-600 mt-1">Set your communication preferences (daily/weekly digests) and click <strong>“Yes, join the community.”</strong></p>
+                <img src="img/join-guide/step7.png" alt="Communication preferences dialog with Yes join the community button" class="step-shot mt-4 w-full max-w-md mx-auto block rounded-lg border border-gray-200" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 z-10 w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-md ring-4 ring-[#F1F4EF]">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="flex-1 bg-gradient-to-br from-white to-[#eef6f0] rounded-xl shadow-md p-5 sm:p-6">
+                <h3 class="font-bold text-gray-900 text-lg">🎉 You're in! Now go find your people</h3>
+                <p class="text-sm text-gray-600 mt-1">Confirm to visit the community homepage, introduce yourself, and start connecting with statisticians shaping the future of AI.</p>
+                <img src="img/join-guide/step8.png" alt="Visit the community confirmation dialog" class="step-shot mt-4 w-full max-w-lg mx-auto block rounded-lg border border-gray-200" loading="lazy">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Closing CTA -->
+<section class="pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-brand rounded-xl shadow-md px-6 sm:px-8 py-7 flex flex-col md:flex-row items-center justify-between gap-5">
+            <div class="text-center md:text-left">
+                <h3 class="text-white font-bold text-xl">Ready to join?</h3>
+                <p class="text-gray-200 text-sm mt-1">Open the ASA Community and follow the steps above, or use our free mailing list.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+                <a href="https://community.amstat.org/resources" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent hover:bg-accent-dark text-white font-semibold text-sm py-3 px-6 rounded-full shadow transition text-center">Join via ASA Community</a>
+                <a href="https://groups.google.com/g/stats-up-ai/" target="_blank" rel="noopener noreferrer" class="inline-block bg-white hover:bg-gray-100 text-brand font-semibold text-sm py-3 px-6 rounded-full shadow transition text-center">Google Group (Non-ASA)</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[2000] hidden items-center justify-center bg-black/80 p-4" role="dialog" aria-modal="true">
+    <button id="lightbox-close" aria-label="Close" class="absolute top-4 right-5 text-white/80 hover:text-white text-4xl leading-none">&times;</button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+</div>
+
+<!-- ASA Banner -->
+<div class="text-white text-center text-sm py-4 px-4" style="background-color: #5E8B95; position: fixed; bottom: 0; width: 100%; z-index: 1000;">
+    <p>
+        We are an Interest Group of <a href="https://www.amstat.org" target="_blank" rel="noopener noreferrer" class="underline font-semibold hover:text-accent transition">ASA</a>
+        <span class="mx-2 opacity-50">|</span>
+        Non-ASA members can join our <a href="https://groups.google.com/g/stats-up-ai/" target="_blank" rel="noopener noreferrer" class="underline font-semibold hover:text-accent transition">Google Groups mailing list</a>
+        <span class="mx-2 opacity-50">|</span>
+        <a href="/pages/char.html" target="_blank" rel="noopener noreferrer" class="underline font-semibold hover:text-accent transition">Organization (Charter)</a>
+    </p>
+</div>
+
+<script>
+// Mobile menu toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+
+// Lightbox
+(function() {
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    function open(src, alt) {
+        lbImg.src = src; lbImg.alt = alt || '';
+        lb.classList.remove('hidden'); lb.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+    function close() {
+        lb.classList.add('hidden'); lb.classList.remove('flex');
+        lbImg.src = ''; document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.step-shot').forEach(function(img) {
+        img.addEventListener('click', function() { open(img.src, img.alt); });
+    });
+    document.getElementById('lightbox-close').addEventListener('click', close);
+    lb.addEventListener('click', function(e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+</body>
+</html>
