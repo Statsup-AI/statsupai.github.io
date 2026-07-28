@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2026 Proceedings</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content { grid-template-columns: 1fr 1fr 1fr 1fr; }
+      .footer-pages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .footer-pages-grid a { padding: 5px 0; }
+      .paper-list { counter-reset: paper-item; }
+      .paper-item { counter-increment: paper-item; }
+      .paper-item > span::before { content: counter(paper-item); }
+      @media (max-width: 768px) {
+        .footer-pages-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2026</span>
+            </div>
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Registration<br>&amp; Accommodation &#9662;</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="registration.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Registration</a>
+                            <a href="accommodation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Accommodation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <span class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300 cursor-pointer leading-tight">Invited Speakers<br>&amp; Program &#9662;</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[220px]">
+                            <a href="invited-speakers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Invited Speakers &amp; Panelists</a>
+                            <a href="speaker-abstracts.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Speaker Abstracts</a>
+                            <a href="program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Program</a>
+                            <a href="awards.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Awards</a>
+                            <a href="proceedings.html" class="block px-4 py-2 text-sm text-[#4682B4] bg-gray-50">Proceedings</a>
+                            <a href="poster-presentation-instruction.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">Poster Presentation Instruction</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="short-courses.html" class="nav-link">Short<br>Courses</a>
+                <a href="challenge.html" class="nav-link">Challenge</a>
+                <a href="partners.html" class="nav-link">Partners<br>& Sponsors</a>
+                <a href="organizers.html" class="nav-link">Organizers</a>
+                <div class="relative group">
+                    <span class="nav-link hover:text-gray-900 cursor-pointer">Call for Papers<br>&amp; Posters &#9662;</span>
+                    <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#site-contact" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Registration &amp; Accommodation
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="registration.html" class="block py-2 nav-link">Registration</a>
+                    <a href="accommodation.html" class="block py-2 nav-link">Accommodation</a>
+                </div>
+            </div>
+            <div>
+                <button class="mobile-submenu-toggle inline-flex items-center gap-2 my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
+                    Invited Speakers &amp; Program
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="invited-speakers.html" class="block py-2 nav-link">Invited Speakers &amp; Panelists</a>
+                    <a href="speaker-abstracts.html" class="block py-2 nav-link">Speaker Abstracts</a>
+                    <a href="program.html" class="block py-2 nav-link">Program</a>
+                    <a href="awards.html" class="block py-2 nav-link">Awards</a>
+                    <a href="proceedings.html" class="block py-2 nav-link text-[#4682B4]">Proceedings</a>
+                    <a href="poster-presentation-instruction.html" class="block py-2 nav-link">Poster Presentation Instruction</a>
+                </div>
+            </div>
+            <a href="short-courses.html" class="block py-2 nav-link">Short Courses</a>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="partners.html" class="block py-2 nav-link">Partners &amp; Sponsors</a>
+            <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
+            <div>
+                <button class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="#site-contact" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-16 mt-20 w-full">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">STAI-X 2026 Proceedings</h1>
+        <p class="text-center text-gray-500 mb-12 font-medium">Accepted papers and proceedings QR codes</p>
+
+        <section class="grid md:grid-cols-2 gap-6 mb-12">
+            <article class="glass-card p-6 text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">STAI-X 26 Papers</h2>
+                <img src="image/STAI-X_2026_Papers_QR.png" alt="QR code for STAI-X 2026 papers" class="mx-auto w-full max-w-sm rounded-lg border border-gray-100 bg-white p-3">
+            </article>
+            <article class="glass-card p-6 text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">STAI-X 26 Posters</h2>
+                <img src="image/STAI-X_2026_Posters_QR.png" alt="QR code for STAI-X 2026 posters" class="mx-auto w-full max-w-sm rounded-lg border border-gray-100 bg-white p-3">
+            </article>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900">Accepted Papers</h2>
+                    <p class="text-gray-600 mt-2">Paper titles and author lists are posted as provided.</p>
+                </div>
+                <p class="text-sm text-gray-500">39 papers</p>
+            </div>
+            <div class="paper-list space-y-4">
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Cross-Cluster Weighted Forests</h3><p class="text-gray-600 mt-2">Authors: Maya Ramchandran; Rajarshi Mukherjee; Giovanni Parmigiani</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">SEEK-VEC: Robust Latent Structure Discovery via Ensemble Topic Modeling</h3><p class="text-gray-600 mt-2">Authors: Rebecca Danning; Tracy Ke; Rong Ma; Xihong Lin</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities</h3><p class="text-gray-600 mt-2">Authors: Yichen Xu</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Segmenting Human-LLM Co-authored Text via Change Point Detection</h3><p class="text-gray-600 mt-2">Authors: Mengchu Li; Jin Zhu; Jinglai Li; Chengchun Shi</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Gene Ontology DAG-Aware Conformal FDR Control for Multi-Label Protein Function Prediction: A Maize Application</h3><p class="text-gray-600 mt-2">Authors: Chong Wang</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Bridging Data Gaps in Oncology: Integrating Large Language Models and Recommendation Systems for Evidence Synthesis</h3><p class="text-gray-600 mt-2">Authors: Tengjie Tang; Angkai Li; Xuanyu Bai; Xingye Tan; Qingli Ji; Michael Ulis; Lu Si; Le Bao</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">FACTOR: Fairness-Aligned Conformal Transport for Optimal Regions</h3><p class="text-gray-600 mt-2">Authors: Chenyin Gao; Larry Han</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Online Continual Learning under Real Concept Drift: A Statistical Perspective</h3><p class="text-gray-600 mt-2">Authors: Haihan Xie; Yafei Wang; Jinhan Xie; Lingzhu Li; Chao Gao; Bei Jiang; Linglong Kong</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Beyond straight lines: migration costs considering geography enhance tracing human genetic ancestry</h3><p class="text-gray-600 mt-2">Authors: Jianjun Lian; Andre Python</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">DEP-GAP: Depth effects correction and lithology type prediction for geophysical inversion data</h3><p class="text-gray-600 mt-2">Authors: Yibo Zhai; Yujian Hou; Fangda Song</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">KPOTD: Kernel Principal Optimal Transport Directions for Nonlinear Sufficient Dimension Reduction</h3><p class="text-gray-600 mt-2">Authors: Peize Wang; Wenhao Jiang; Cheng Meng</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Beyond Importance: Interchange-Sobol Sensitivity Reveals Task-Specific Content Channels in Transformer Components</h3><p class="text-gray-600 mt-2">Authors: Yifeng Guo; Jin-Hong Du; Xiang Chen</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Calibrated Cross-Modal Prediction of Single-Cell Transcriptomes from Histology Images</h3><p class="text-gray-600 mt-2">Authors: Jia Yao; qin zhou; Wenqi Shi; Yuqiu Yang; Munir Buhaya; Yi Jiang; Tao Wang; Yang Xie; Emina H. Huang; Guanghua Xiao</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System</h3><p class="text-gray-600 mt-2">Authors: Tian Zheng; Carter K. T. Hsu</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Adaptive Kernel Density Estimation with Pre-training</h3><p class="text-gray-600 mt-2">Authors: Ruitong Zhang; Ke Deng</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Symbolic Density Estimation for Discrete Distributions</h3><p class="text-gray-600 mt-2">Authors: Ziwen Liu; Meng Li</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">A Wasserstein Framework for Abnormal Batch Detection in Streaming Data under Distributional Heterogeneity</h3><p class="text-gray-600 mt-2">Authors: Yisha Yao; Chenqin Xu</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Wahkon: A Statistically Principled Deep RKHS Superposition Network</h3><p class="text-gray-600 mt-2">Authors: Yongkai Chen; Wenxuan Zhong; Ping Ma</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">TabSODA: Tabular Diffusion based Imputation with Skip Pattern Detection and Ordinal Awareness</h3><p class="text-gray-600 mt-2">Authors: Yuyu Chen; Taehyo Kim; Hai Shu; Yang Feng</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Robust Empirical Risk Minimization from a Single Dependent Trajectory: Non-Asymptotic Theory under Infinite Variance</h3><p class="text-gray-600 mt-2">Authors: Jianya Lu; Bo Pan; Yafei Wang; Lihu Xu; Bei Jiang; Linglong Kong</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Generative AI and Entrepreneurship: A Spatial Synthetic Difference-in-Differences Approach</h3><p class="text-gray-600 mt-2">Authors: Junhui Cai; Yao Li; Gu Xian; Linda H. Zhao; Wu Zhu</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Density-Informed Pseudo-Counts for Calibrated Evidential Deep Learning</h3><p class="text-gray-600 mt-2">Authors: Pietro Carlotti; Nevena Gligi&#263;; Arya Farahi</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Conditional-Independence-Regularized Distributional Autoencoders for Mixed-Type Data</h3><p class="text-gray-600 mt-2">Authors: Siyuan Tang; Gongjun Xu; Ji Zhu</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Enrichment learning approach to calibrate epigenetic clocks with higher-resolution DNA methylation arrays</h3><p class="text-gray-600 mt-2">Authors: Yahui Zhang; Peter Song</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">SSP-Ensemble: A Sufficient Subspace Projection Ensemble for Multiclass Classification</h3><p class="text-gray-600 mt-2">Authors: Jun Zhu; jiafeng chen; Peize Wang; Cheng Meng; Jingyi Zhang</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">A Deep Generative Framework for Right-Censored Survival Data with Distribution-Matching Regularization</h3><p class="text-gray-600 mt-2">Authors: Yanran Li; Zexi Cai</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">GAttNHP: Group Attention Neural Hawkes Process for Extrapolation Reasoning in Temporal Knowledge Graphs</h3><p class="text-gray-600 mt-2">Authors: Xiangni Tian; Kaixian Yu; Runpeng Dai; Niansheng Tang; Hongtu Zhu</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Distance-Based Empirical Bayes: A Nonparametric B-Spline Approach using Integral Probability Metrics</h3><p class="text-gray-600 mt-2">Authors: Jian Sun; Zhigen Zhao</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">The ATLAS Penalty: Auxiliary-Transformed Location-Aware Smoothing with Applications to Spatial Transcriptomics</h3><p class="text-gray-600 mt-2">Authors: Qian Tang; Eric Chi; Wenyi Wang</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Transformers as Provable Approximators of Sparse Principal Component Analysis</h3><p class="text-gray-600 mt-2">Authors: Qinyan Liu; Yan Chen; Canhong Wen</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Global Average Treatment Effects for Individualized Randomization Experiments with Aggregate Data</h3><p class="text-gray-600 mt-2">Authors: Shuguang Yu; Ting Li; Yuchen Lu; Chengchun Shi; Fan Zhou; Zhichao Zou; Zhen Peng; Hongtu Zhu</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Optimal Auditing of Sequential Decision Systems under Dynamical Constraints</h3><p class="text-gray-600 mt-2">Authors: Zhenghan Li; Xuan Bi; Jie Ding</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">STAVAT: Stratified Anytime-Valid Atom Sampling for LLM Tier Placement</h3><p class="text-gray-600 mt-2">Authors: Patrick Vossler; Fan Xia; Jean Feng</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Optimal Self-Distillation for Rectified Flow via Linear Probing</h3><p class="text-gray-600 mt-2">Authors: Saptarshi Roy; Debepsita Mukherjee; Pratik Patil</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">VADR: Variance Adjusted Distribution Regression</h3><p class="text-gray-600 mt-2">Authors: Soumyabrata Bose</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Learning Perturbations to Extrapolate Your LLM</h3><p class="text-gray-600 mt-2">Authors: Zetai Cen; Chenfei Gu; Jin Zhu; Ting Li; Yunxiao Chen; Chengchun Shi</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">Vector Summary Pseudo Posteriors for Simulation-Based Inference with Applications to Cosmology</h3><p class="text-gray-600 mt-2">Authors: Pratik Patil; Jonah C Rose; Alex M. Garcia; Min Chen; Paul Torrey; Arya Farahi</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning</h3><p class="text-gray-600 mt-2">Authors: Haoran Lu; Luyang Fang; Wenxuan Zhong; Ping Ma</p></div></article>
+                <article class="paper-item glass-card p-6 flex gap-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#4682B4] text-white font-bold"></span><div><h3 class="text-lg font-bold text-gray-900">CrossHONA: Cross-species HOmologous and Non-homologous gene-aware framework for transcriptomics integration and Annotation.</h3><p class="text-gray-600 mt-2">Authors: Ruohan Wang; Yu Zhu; Zixiao Gao; Ying Ma</p></div></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>STAI-X<span>'26</span></h3>
+          <p>
+            To integrate statistics and artificial intelligence to accelerate trustworthy cross-domain discovery, innovation, and real-world impact.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <div class="footer-pages-grid">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Registration</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="partners.html">Partners &amp; Sponsors</a>
+            <a href="short-courses.html">Short Courses</a>
+            <a href="invited-speakers.html">Invited Speakers &amp; Panelists</a>
+            <a href="speaker-abstracts.html">Speaker Abstracts</a>
+            <a href="program.html">Program</a>
+            <a href="awards.html">Awards</a>
+            <a href="proceedings.html">Proceedings</a>
+            <a href="poster-presentation-instruction.html">Poster Presentation Instruction</a>
+            <a href="organizers.html">Organizers</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Volunteers</h4>
+          <p>Yuhan Geng (University of Michigan)</p>
+          <p>Zhiqiu Xia (Rutgers University)</p>
+          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
+          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
+        </div>
+        <div id="site-contact" class="footer-contact">
+          <h4>Contact</h4>
+          <p>Harvard University<br>Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 STAI-X. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+</script>
+</body>
+</html>
