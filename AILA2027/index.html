@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AILA 2027 | AI Leadership Academy</title>
+    <meta name="description" content="Stats Up AI Winter 2027 AI Leadership Academy (AILA) at Rice University, January 7-8, 2027 - a two-day intensive program for academic and industry leaders in statistics and data science.">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .footer-content {
+        grid-template-columns: 1.3fr 0.9fr 1fr 1fr;
+      }
+      @media (max-width: 768px) {
+        .footer-content { grid-template-columns: 1fr; }
+      }
+    </style>
+</head>
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/logo.png" alt="Stats Up AI Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">AILA 2027</span>
+            </div>
+
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="#home" class="nav-link text-[#4682B4]">Home</a>
+                <a href="advisory-board.html" class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300 leading-tight">Advisory Board</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="#home" class="block py-2 nav-link text-[#4682B4]">Home</a>
+            <a href="advisory-board.html" class="inline-block my-2 bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-2 px-5 rounded-full shadow-md transition-all duration-300">Advisory Board</a>
+        </div>
+    </nav>
+
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#overview" data-target="overview"><span class="dot" aria-hidden="true"></span><span class="label">Overview</span></a></li>
+            <li><a href="#participants" data-target="participants"><span class="dot" aria-hidden="true"></span><span class="label">Participants</span></a></li>
+            <li><a href="#objectives" data-target="objectives"><span class="dot" aria-hidden="true"></span><span class="label">Learning Objectives</span></a></li>
+            <li class="rail-divider" aria-hidden="true"></li>
+            <li><a href="#day-1" data-target="day-1"><span class="dot" aria-hidden="true"></span><span class="label">Day 1</span></a></li>
+            <li><a href="#day-2" data-target="day-2"><span class="dot" aria-hidden="true"></span><span class="label">Day 2</span></a></li>
+            <li><a href="#post-academy" data-target="post-academy"><span class="dot" aria-hidden="true"></span><span class="label">Post-Academy</span></a></li>
+            <li class="rail-divider" aria-hidden="true"></li>
+            <li><a href="#organizers" data-target="organizers"><span class="dot" aria-hidden="true"></span><span class="label">Organizers</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto p-6 md:p-12 mt-20 space-y-16 mb-24 w-full">
+
+        <!-- ===== Hero ===== -->
+        <section id="home" class="py-4 text-center scroll-mt-32">
+            <p class="text-sm md:text-base font-semibold uppercase tracking-[0.18em] text-[#4682B4] mb-4">Stats Up AI Winter 2027</p>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tighter leading-tight text-gray-950 max-w-4xl mx-auto">
+                <span class="inline-flex items-center justify-center gap-3 align-middle">
+                    <img src="../img/logo.png" alt="Stats Up AI Logo" class="h-12 md:h-16 w-auto inline-block">
+                    AI Leadership Academy
+                </span>
+                <br class="hidden md:block">
+                Leading Statistics and Data Science <br class="hidden md:block">
+                in the Age of AI
+            </h1>
+
+            <div class="glass-card mt-8 p-6 max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A two-day intensive program that equips academic and industry leaders with the vision, tools, and long-term community needed to drive sustainable AI innovation within their institutions.
+                </p>
+            </div>
+
+            <div class="mt-6 text-lg text-gray-500 font-medium space-y-2">
+                <p>Rice University, Houston, TX &nbsp;&bull;&nbsp; January 7 &ndash; 8, 2027</p>
+            </div>
+
+            <div class="mt-6">
+                <span class="inline-block bg-[#4682B4] text-white font-semibold py-3 px-10 rounded-full shadow-lg text-lg">Applications Opening Soon</span>
+                <p class="mt-3 text-sm text-gray-700 font-semibold">Cohort limited to 30 participants, selected through an application process.</p>
+            </div>
+
+            <p class="mt-8 text-center">
+                Organized By <a href="https://statsupai.org" class="inline-flex items-center gap-2 text-[#4682B4] underline align-middle">
+                    <img src="../img/logo.png" alt="Stats Up AI Logo" class="h-6 w-auto inline-block no-underline">
+                    ASA Stats Up AI Interest Group
+                </a>, hosted by the Department of Statistics and Data Science, Rice University.
+            </p>
+        </section>
+
+        <!-- ===== At a glance ===== -->
+        <section id="at-a-glance" class="scroll-mt-28">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="glass-card p-6">
+                    <div class="text-xs font-bold uppercase tracking-widest text-gray-500">Dates</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">January 7 &ndash; 8, 2027</div>
+                    <div class="countdown text-xs text-gray-500 mt-2" data-date="2027-01-07T14:00:00Z"></div>
+                </div>
+                <div class="glass-card p-6">
+                    <div class="text-xs font-bold uppercase tracking-widest text-gray-500">Host</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">Rice University</div>
+                    <div class="text-xs text-gray-500 mt-2">Department of Statistics and Data Science</div>
+                </div>
+                <div class="glass-card p-6">
+                    <div class="text-xs font-bold uppercase tracking-widest text-gray-500">Format</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">Two-day intensive</div>
+                    <div class="text-xs text-gray-500 mt-2">In person, high-engagement</div>
+                </div>
+                <div class="glass-card p-6">
+                    <div class="text-xs font-bold uppercase tracking-widest text-gray-500">Cohort</div>
+                    <div class="text-lg font-semibold text-[#4682B4] mt-2">Max. 30 participants</div>
+                    <div class="text-xs text-gray-500 mt-2">Selected by application</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Overview ===== -->
+        <section id="overview" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-8 text-center">Overview</h2>
+            <div class="max-w-4xl mx-auto space-y-5 text-gray-700 text-lg leading-relaxed">
+                <p>
+                    The current AI landscape is shifting rapidly, and academic and industry leaders in our field are proactively seeking to adapt their research, education, and team management to be AI-aware.
+                </p>
+                <p>
+                    The <span class="font-semibold text-gray-900">AI Leadership Academy (AILA)</span> is a two-day intensive program designed to facilitate this evolution by providing a foundational understanding of AI mechanics and supporting the development of tailored, actionable institutional initiatives.
+                </p>
+                <p>
+                    By fostering a collaborative network that extends beyond the academy through ongoing virtual office hours and a reunion at JSM 2027, we equip participants with the vision, tools, and long-term community necessary to drive sustainable AI innovation within their institutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Participants & Mentors ===== -->
+        <section id="participants" class="scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10 text-center">Participants &amp; Mentors</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-8 lg:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-900 mb-5">Participant Profile</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                            <span>Academic scholars, educators, and industry leaders in statistics and data science.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                            <span>Department chairs, program directors, and research executives seeking to pilot AI initiatives in education, research, or institutional administration.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                            <span>The cohort is intentionally limited (<span class="font-semibold">max. 30 academy participants</span>) to ensure high-engagement discourse and mentorship between academic and industry peers.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                            <span>Participants will be selected through an application process, with the cohort curated to ensure a balance across career stages, leadership roles, and sectors.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-5">Speakers and Mentors</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Speakers and mentors will be experienced statistical leaders who have led AI teams and initiatives.
+                    </p>
+                    <p class="mt-6 text-sm text-gray-500">
+                        The academy is guided by an <a href="advisory-board.html" class="text-[#4682B4] underline">Advisory Board</a> of leaders from academia, industry, and the profession.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Learning Objectives ===== -->
+        <section id="objectives" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-4 text-center">AI Leadership Learning Objectives</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">By the end of this two-day academy, participants will be able to:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold uppercase tracking-widest text-[#4682B4] mb-2">Strategic Perspective</div>
+                    <p class="text-sm text-gray-700 leading-relaxed">Articulate the integration of statistical principles into modern AI frameworks and identify opportunities to apply statistical expertise in AI development.</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold uppercase tracking-widest text-[#4682B4] mb-2">Curriculum Strategy</div>
+                    <p class="text-sm text-gray-700 leading-relaxed">Evaluate approaches to modernize statistical curricula to be AI-aware and promote an AI-inclusive research culture.</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold uppercase tracking-widest text-[#4682B4] mb-2">Collaborative Leadership</div>
+                    <p class="text-sm text-gray-700 leading-relaxed">Define practical strategies for managing cross-disciplinary AI research teams.</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold uppercase tracking-widest text-[#4682B4] mb-2">Advocacy &amp; Communication</div>
+                    <p class="text-sm text-gray-700 leading-relaxed">Develop clear messaging to communicate the value of statistical rigor and uncertainty quantification to diverse AI stakeholders.</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold uppercase tracking-widest text-[#4682B4] mb-2">Team Mentorship</div>
+                    <p class="text-sm text-gray-700 leading-relaxed">Identify actionable strategies to support the professional growth and leadership development of team members in AI-focused roles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Day 1 ===== -->
+        <section id="day-1" class="glass-card p-8 md:p-14 scroll-mt-28">
+            <div class="text-center mb-10">
+                <span class="agenda-tag">Day 1</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mt-3">Thursday, January 7, 2027</h2>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    Focuses on exploring the intersection of statistics and AI, featuring expert insights, collaborative sharing of research and education challenges, and community-building activities to foster leadership adaptability.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto agenda-block">
+                <div class="agenda-row">
+                    <div class="agenda-time">8:00 &ndash; 8:30</div>
+                    <div>
+                        <div class="agenda-title">Intro</div>
+                        <div class="agenda-desc">Brief welcome and overview of the two-day academy goals and structure.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">8:30 &ndash; 12:00</div>
+                    <div>
+                        <div class="agenda-title">AI for Research <span class="agenda-tag ml-2">Morning</span></div>
+                        <div class="agenda-desc">Exploring current AI advancements in research through expert insights and hands-on investigation.</div>
+                        <div class="agenda-sub">
+                            <div class="agenda-row">
+                                <div class="agenda-time">8:30 &ndash; 9:30</div>
+                                <div><div class="agenda-title">Leader share + Q&amp;A</div><div class="agenda-desc">AI research in academia.</div></div>
+                            </div>
+                            <div class="agenda-row">
+                                <div class="agenda-time">9:30 &ndash; 10:30</div>
+                                <div><div class="agenda-title">Leader share + Q&amp;A</div><div class="agenda-desc">AI research in industry.</div></div>
+                            </div>
+                            <div class="agenda-row">
+                                <div class="agenda-time">10:30 &ndash; 11:00</div>
+                                <div><div class="agenda-title text-gray-500">Break</div></div>
+                            </div>
+                            <div class="agenda-row">
+                                <div class="agenda-time">11:00 &ndash; 12:00</div>
+                                <div><div class="agenda-title">Play session</div><div class="agenda-desc">AI for research.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">12:00 &ndash; 1:30</div>
+                    <div>
+                        <div class="agenda-title">Lunch &mdash; Pain points share</div>
+                        <div class="agenda-desc">Interactive session sharing common challenges in integrating AI within statistical research and leadership.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">1:30 &ndash; 2:00</div>
+                    <div><div class="agenda-title text-gray-500">Break</div></div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">2:00 &ndash; 4:00</div>
+                    <div>
+                        <div class="agenda-title">AI for Education <span class="agenda-tag ml-2">Afternoon</span></div>
+                        <div class="agenda-desc">Strategies for modernizing statistics curricula to effectively integrate AI tools and pedagogy.</div>
+                        <div class="agenda-sub">
+                            <div class="agenda-row">
+                                <div class="agenda-time">2:00 &ndash; 3:00</div>
+                                <div><div class="agenda-title">Leader share + Q&amp;A</div><div class="agenda-desc">AI education leadership.</div></div>
+                            </div>
+                            <div class="agenda-row">
+                                <div class="agenda-time">3:00 &ndash; 4:00</div>
+                                <div><div class="agenda-title">Play session</div><div class="agenda-desc">Teaching with AI, about AI, and along AI: leader upskilling, faculty development, to AI curriculum development.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">4:00 &ndash; 4:30</div>
+                    <div><div class="agenda-title text-gray-500">Break</div></div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">4:30 &ndash; 5:30</div>
+                    <div>
+                        <div class="agenda-title">Walk and Talk</div>
+                        <div class="agenda-desc">Informal networking opportunity during a scenic group walk to the evening restaurant.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">5:30 &ndash; 7:00</div>
+                    <div>
+                        <div class="agenda-title">Dinner</div>
+                        <div class="agenda-desc">Relaxed networking dinner to build community and foster deeper professional connections among leaders.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">7:00 &ndash; 8:30</div>
+                    <div>
+                        <div class="agenda-title">Improv Training</div>
+                        <div class="agenda-desc">Fun, interactive workshop focused on creativity, adaptability, and collaboration through collaborative theater exercises.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Day 2 ===== -->
+        <section id="day-2" class="glass-card p-8 md:p-14 scroll-mt-28">
+            <div class="text-center mb-10">
+                <span class="agenda-tag">Day 2</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mt-3">Friday, January 8, 2027</h2>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    <span class="font-semibold text-gray-800">Transition &amp; Synthesis:</span> Building on Day 1 discussions regarding key research pain points and education strategy, Day 2 transitions into actionable design and resource planning for institutional initiatives.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto agenda-block">
+                <div class="agenda-row">
+                    <div class="agenda-time">8:00 &ndash; 9:00</div>
+                    <div>
+                        <div class="agenda-title">Networking Breakfast</div>
+                        <div class="agenda-desc">Informal morning gathering to continue conversations and strengthen peer connections from the academy.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">9:00 &ndash; 12:00</div>
+                    <div>
+                        <div class="agenda-title">Design Session <span class="agenda-tag ml-2">Morning</span></div>
+                        <div class="agenda-desc">Dedicated time for participants to draft and refine their own AI leadership initiatives.</div>
+                        <div class="agenda-sub">
+                            <div class="agenda-row">
+                                <div class="agenda-time">9:00 &ndash; 9:30</div>
+                                <div><div class="agenda-title">Introduction</div></div>
+                            </div>
+                            <div class="agenda-row">
+                                <div class="agenda-time">9:30 &ndash; 10:30</div>
+                                <div><div class="agenda-title">Design work session</div><div class="agenda-desc">A mentor will be assigned to each group.</div></div>
+                            </div>
+                            <div class="agenda-row">
+                                <div class="agenda-time">10:30 &ndash; 11:00</div>
+                                <div><div class="agenda-title text-gray-500">Break</div></div>
+                            </div>
+                            <div class="agenda-row">
+                                <div class="agenda-time">11:00 &ndash; 12:00</div>
+                                <div><div class="agenda-title">Peer review and mentor feedback</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">12:00 &ndash; 1:30</div>
+                    <div>
+                        <div class="agenda-title">Lunch &mdash; Design report out</div>
+                        <div class="agenda-desc">Presentation session where participants share project designs and receive constructive peer feedback.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">1:30 &ndash; 2:00</div>
+                    <div><div class="agenda-title text-gray-500">Break</div></div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">2:00 &ndash; 5:00</div>
+                    <div>
+                        <div class="agenda-title">Resource Discussion</div>
+                        <div class="agenda-desc">Collaborative review of essential resources to support sustained AI leadership and community growth.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-row">
+                    <div class="agenda-time">5:00</div>
+                    <div><div class="agenda-title">Academy concludes</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Post-Academy ===== -->
+        <section id="post-academy" class="scroll-mt-28">
+            <div class="bg-blue-50/50 border border-blue-100 p-8 md:p-10 rounded-xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Post-Academy</h2>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="mt-2 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                        <span>Continue being connected with mentors and peer-collaborators.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-2 h-2.5 w-2.5 rounded-full bg-[#4682B4] shrink-0"></span>
+                        <span><span class="font-semibold">Ongoing community:</span> monthly Zoom check-ins for participants and an informal gathering at JSM 2027.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== Organizers ===== -->
+        <section id="organizers" class="glass-card p-10 md:p-16 scroll-mt-28">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10 text-center">Organizers &amp; Partners</h2>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Organizers</h3>
+            <div class="flex flex-wrap gap-6 items-center justify-center mb-10">
+                <a href="https://statsupai.org" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/logo.png" alt="ASA Stats Up AI Interest Group" class="h-16 w-auto object-contain mx-auto block">
+                    <div class="flex justify-center mt-2">
+                        <span class="inline-flex items-center gap-1 bg-[#4682B4] text-white text-xs font-semibold px-3 py-1 rounded-full">&#9733; Lead Organizer</span>
+                    </div>
+                </a>
+                <a href="https://statistics.rice.edu/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white px-5 py-4 text-center max-w-xs">
+                    <div class="text-sm font-semibold text-gray-800 leading-snug">Department of Statistics and Data Science<br>Rice University</div>
+                    <div class="flex justify-center mt-2">
+                        <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Host</span>
+                    </div>
+                </a>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Partner Organizations</h3>
+            <div class="flex flex-wrap gap-6 items-center justify-center mb-12">
+                <a href="https://www.niss.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/niss_logo.png" alt="National Institute of Statistical Sciences" class="h-12 w-auto object-contain">
+                </a>
+                <a href="https://www.amstat.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white">
+                    <img src="../img/ASA_logo.png" alt="American Statistical Association" class="h-12 w-auto object-contain">
+                </a>
+                <a href="https://www.amstat.org/" target="_blank" class="block p-3 rounded-xl border border-gray-100 hover:shadow-md transition bg-white px-5 py-4 text-sm font-semibold text-gray-700 text-center max-w-xs">
+                    Caucus of Academic Representatives<br>American Statistical Association
+                </a>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-8 text-center">Program Committee</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <p class="font-semibold text-gray-900">Judy Wang</p>
+                    <p class="text-sm text-[#4682B4] font-semibold mt-1">Committee Chair</p>
+                    <p class="text-sm text-gray-500 italic mt-1">Local Organization Chair</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <p class="font-semibold text-gray-900">Tian Zheng</p>
+                    <p class="text-sm text-gray-500 italic mt-1">Program Chair</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <p class="font-semibold text-gray-900">Wenyi Wang</p>
+                    <p class="text-sm text-gray-500 italic mt-1">Communication Chair</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <p class="font-semibold text-gray-900">Kiros Teghegne Berhane</p>
+                    <p class="text-sm text-gray-500 italic mt-1">CAR Representative</p>
+                </div>
+                <div class="border border-gray-100 rounded-xl p-6 bg-white/40 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <p class="font-semibold text-gray-900">David Matteson</p>
+                    <p class="text-sm text-gray-500 italic mt-1">NISS Representative</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="advisory-board.html" class="inline-block bg-[#4682B4] hover:bg-[#3A6F99] text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-all duration-300">
+                    Meet the Advisory Board
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-auto py-12 border-t border-gray-100 bg-white/80 backdrop-blur-md text-xs text-gray-500">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>AILA<span>&nbsp;'27</span></h3>
+          <p>
+            The Stats Up AI Winter 2027 AI Leadership Academy: a two-day intensive program equipping leaders in statistics and data science to drive sustainable AI innovation within their institutions.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="advisory-board.html">Advisory Board</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Organizers</h4>
+          <p>ASA Stats Up AI Interest Group (Lead)</p>
+          <p>Department of Statistics and Data Science, Rice University (Host)</p>
+          <p style="margin-top: 12px;">Partners: NISS &bull; ASA Caucus of Academic Representatives</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Venue</h4>
+          <p>Rice University<br>Houston, TX</p>
+          <p style="margin-top: 16px;">January 7 &ndash; 8, 2027</p>
+          <p style="margin-top: 16px;"><a href="https://statsupai.org">statsupai.org</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2027 AI Leadership Academy. All rights reserved.</p>
+        <p>In association with <a href="https://StatsUpAI.org" style="color: #4682B4;">StatsUpAI.org</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Countdown timers
+    function updateCountdowns() {
+      document.querySelectorAll('.countdown').forEach(function(el) {
+        var target = new Date(el.getAttribute('data-date'));
+        var now = new Date();
+        var diff = target - now;
+        if (diff <= 0) {
+          el.textContent = 'Passed';
+          el.classList.add('text-gray-400');
+          return;
+        }
+        var days = Math.floor(diff / 86400000);
+        var hours = Math.floor((diff % 86400000) / 3600000);
+        var mins = Math.floor((diff % 3600000) / 60000);
+        el.textContent = days + 'd ' + hours + 'h ' + mins + 'm remaining';
+      });
+    }
+    updateCountdowns();
+    setInterval(updateCountdowns, 60000);
+  </script>
+
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sub = this.nextElementSibling;
+      sub.classList.toggle('open');
+      this.querySelector('svg').classList.toggle('rotate-180');
+    });
+  });
+
+  // Section rail: toggle + scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail) return;
+    var toggle = document.createElement('button');
+    toggle.className = 'rail-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    rail.insertBefore(toggle, rail.firstChild);
+    try {
+      if (localStorage.getItem('sectionRailCollapsed') === '1') {
+        rail.classList.add('collapsed');
+      }
+    } catch (e) {}
+    toggle.addEventListener('click', function() {
+      rail.classList.toggle('collapsed');
+      try {
+        localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+      } catch (e) {}
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+</script>
+</body>
+</html>
