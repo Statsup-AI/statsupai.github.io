@@ -562,3 +562,23 @@ ul {
         font-size: 1.6rem;
     }
 }
+
+/* Speaker line inside an agenda item */
+.agenda-speaker {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.35rem;
+    line-height: 1.55;
+    padding-left: 0.75rem;
+    border-left: 2px solid rgba(70, 130, 180, 0.35);
+}
+
+.agenda-speaker-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+a.agenda-speaker-name:hover {
+    color: #4682B4;
+}
