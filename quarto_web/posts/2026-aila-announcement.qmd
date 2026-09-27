@@ -1,0 +1,221 @@
+---
+title: "Announcing AILA 2027: AI Leadership Academy at Rice University"
+description: "The Stats Up AI Winter 2027 AI Leadership Academy (AILA) will be held January 7–8, 2027 at Rice University. Applications open October 1 and are due November 5, 2026."
+author:
+  - name: "StatsUpAI"
+categories:
+  - Announcements
+  - Events
+date: "2026-09-27"
+
+format:
+  html:
+    page-layout: full
+    toc: false
+    theme: none
+    title-block-style: none
+    include-in-header: hide-title-block.html
+---
+```{=html}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AILA 2027 &mdash; StatsUpAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #16213e;
+      --navy-deep: #1a1a2e;
+      --steel: #4682B4;
+      --coral: #E07A5F;
+      --paper: #f4f7fb;
+      --ink: #18324d;
+      --text: #2d3440;
+      --muted: #697686;
+      --rule: #dce4ef;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--paper);
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 18px 60px rgba(16,47,79,0.10);
+    }
+
+    .masthead {
+      background: linear-gradient(90deg, var(--navy-deep), var(--navy));
+      color: #fff;
+      padding: 44px 56px 36px;
+      border-bottom: 5px solid var(--coral);
+    }
+    .eyebrow {
+      color: var(--coral);
+      font-size: 0.82em;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .masthead h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .masthead .sub {
+      color: #c7d4e3;
+      font-size: 1.1em;
+      max-width: 780px;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-bottom: 1px solid var(--rule);
+    }
+    .fact {
+      padding: 20px 22px;
+      border-right: 1px solid var(--rule);
+    }
+    .fact:last-child { border-right: none; }
+    .fact-label {
+      font-size: 0.72em;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .fact-value {
+      font-weight: 700;
+      color: var(--steel);
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+
+    .content { padding: 44px 56px 56px; }
+    .content h2 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      color: var(--ink);
+      font-size: 1.6em;
+      margin: 34px 0 12px;
+    }
+    .content h2:first-child { margin-top: 0; }
+    .content p { margin-bottom: 14px; }
+    .content ul { margin: 0 0 14px 22px; }
+    .content li { margin-bottom: 6px; }
+    .content a { color: var(--steel); }
+
+    table.dates {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 18px;
+    }
+    table.dates td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+    }
+    table.dates td:first-child {
+      font-weight: 700;
+      color: var(--ink);
+      white-space: nowrap;
+      width: 38%;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .content a.btn-primary { background: var(--coral); color: #fff; }
+    .content a.btn-primary:hover { background: #d86f54; }
+    .content a.btn-outline { border: 2px solid var(--steel); color: var(--steel); }
+    .content a.btn-outline:hover { background: #eef4fa; }
+
+    @media (max-width: 760px) {
+      .masthead, .content { padding-left: 20px; padding-right: 20px; }
+      .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .fact:nth-child(2) { border-right: none; }
+      .fact:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
+      table.dates td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <div class="eyebrow">Stats Up AI Winter 2027</div>
+    <h1>AI Leadership Academy (AILA 2027)</h1>
+    <p class="sub">Leading Statistics and Data Science in the Age of AI &mdash; a two-day intensive program at Rice University for academic and industry leaders.</p>
+  </header>
+
+  <section class="facts">
+    <div class="fact"><div class="fact-label">Dates</div><div class="fact-value">January 7 &ndash; 8, 2027</div></div>
+    <div class="fact"><div class="fact-label">Venue</div><div class="fact-value">Rice University, Houston, TX</div></div>
+    <div class="fact"><div class="fact-label">Format</div><div class="fact-value">In person, two-day intensive</div></div>
+    <div class="fact"><div class="fact-label">Cohort</div><div class="fact-value">Max. 30, selected by application</div></div>
+  </section>
+
+  <main class="content">
+    <h2>About the Academy</h2>
+    <p>The ASA Stats Up AI Interest Group is pleased to announce the <strong>Winter 2027 AI Leadership Academy (AILA)</strong>, hosted by the Department of Statistics at Rice University, in partnership with NISS and the ASA Caucus of Academic Representatives.</p>
+    <p>The AI landscape is shifting rapidly, and leaders in statistics at all levels&mdash;from emerging team leads to senior administrators&mdash;are seeking to make their research, education, and team management AI-aware. AILA focuses on practical applications of AI for research and education, strategies for supporting team members in AI-aware and AI-augmented roles, and the design of tailored institutional initiatives.</p>
+    <p>The community continues beyond the academy through monthly virtual check-ins, mentor connections, and a reunion at JSM 2027.</p>
+
+    <h2>Who Should Apply</h2>
+    <ul>
+      <li>Academic scholars, educators, and industry leaders in statistics and data science.</li>
+      <li>Department chairs, program directors, and research executives seeking to pilot AI initiatives in education, research, or institutional administration.</li>
+    </ul>
+    <p>The cohort is capped at 30 participants and curated for balance across career stages, leadership roles, and sectors.</p>
+
+    <h2>Program Highlights</h2>
+    <ul>
+      <li><strong>Day 1 &mdash; AI for Research &amp; Education:</strong> leader talks and hands-on play sessions with Rafael Irizarry (Dana-Farber / Harvard), Hadley Wickham (Posit), Rebecca Nugent (Carnegie Mellon), Tian Zheng (Columbia), Shihao Yang (Georgia Tech), and Linjun Zhang (Rutgers), plus an evening improv workshop led by Richard Zink (JMP).</li>
+      <li><strong>Day 2 &mdash; Design &amp; Synthesis:</strong> participants draft their own AI leadership initiatives with an assigned mentor, followed by peer review and resource planning.</li>
+    </ul>
+
+    <h2>Key Dates</h2>
+    <table class="dates">
+      <tr><td>October 1, 2026</td><td>Applications open</td></tr>
+      <tr><td>October 15, 2026</td><td>Virtual info session, 12 PM ET (registration required)</td></tr>
+      <tr><td>November 5, 2026</td><td>Application deadline</td></tr>
+      <tr><td>November 24, 2026</td><td>Acceptance decisions sent</td></tr>
+      <tr><td>January 7 &ndash; 8, 2027</td><td>Academy at Rice University</td></tr>
+    </table>
+
+    <p>Questions? Contact <a href="mailto:contact.AILA2027@gmail.com">contact.AILA2027@gmail.com</a>.</p>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="../../../AILA2027/index.html" target="_parent">Visit the AILA 2027 Website</a>
+      <a class="btn btn-outline" href="../../../AILA2027/apply.html" target="_parent">How to Apply</a>
+      <a class="btn btn-outline" href="../../../AILA2027/speakers.html" target="_parent">Speakers</a>
+    </div>
+  </main>
+
+</div>
+</body>
+</html>
+```
