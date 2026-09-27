@@ -1,6 +1,7 @@
 ---
 title: "Announcing AILA 2027: AI Leadership Academy at Rice University"
 description: "The Stats Up AI Winter 2027 AI Leadership Academy (AILA) will be held January 7–8, 2027 at Rice University. Applications open October 1 and are due November 5, 2026."
+image: figures/2026-aila-announcement.png
 author:
   - name: "StatsUpAI"
 categories:
