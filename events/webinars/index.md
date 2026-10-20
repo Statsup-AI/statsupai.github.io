@@ -50,12 +50,7 @@ body_class: ev-webinars
       {% include webinar_card.html t=t %}
     {% endif %}
   {% endfor %}
-  {% for t in genai_talks reversed %}
-    {% assign t_day = t.date | date: "%Y-%m-%d" %}
-    {% if t_day < today %}
-      {% include webinar_card.html t=t %}
-    {% endif %}
-  {% endfor %}
+  {% include webinar_past_list.html talks=genai_talks %}
 {% endcapture %}
 
 {% capture health_col %}
@@ -72,12 +67,7 @@ body_class: ev-webinars
       {% include webinar_card.html t=t %}
     {% endif %}
   {% endfor %}
-  {% for t in health_talks reversed %}
-    {% assign t_day = t.date | date: "%Y-%m-%d" %}
-    {% if t_day < today %}
-      {% include webinar_card.html t=t %}
-    {% endif %}
-  {% endfor %}
+  {% include webinar_past_list.html talks=health_talks %}
 {% endcapture %}
 
 <div class="webinars-grid" id="events">

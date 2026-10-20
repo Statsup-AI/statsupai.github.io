@@ -1,0 +1,52 @@
+{% comment %}
+  Past talks for one series: the most recent `featured` talk(s) render as full
+  cards, older ones as a compact archive whose rows expand to the full card.
+  Only the first `rows_visible` archive rows show; the rest sit behind a toggle.
+{% endcomment %}
+{% assign featured = 1 %}
+{% assign rows_visible = 5 %}
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign past_shown = 0 %}
+{% assign archive_open = false %}
+{% assign more_open = false %}
+
+{% assign past_total = 0 %}
+{% for t in include.talks %}
+  {% assign t_day = t.date | date: "%Y-%m-%d" %}
+  {% if t_day < today %}{% assign past_total = past_total | plus: 1 %}{% endif %}
+{% endfor %}
+{% assign more_count = past_total | minus: featured | minus: rows_visible %}
+
+{% for t in include.talks reversed %}
+  {% assign t_day = t.date | date: "%Y-%m-%d" %}
+  {% if t_day < today %}
+    {% if past_shown == 0 %}<h3 class="past-heading">Past talks</h3>{% endif %}
+    {% if past_shown < featured %}
+      {% include webinar_card.html t=t %}
+    {% else %}
+      {% unless archive_open %}<div class="past-archive">{% assign archive_open = true %}{% endunless %}
+      {% assign row_index = past_shown | minus: featured %}
+      {% if row_index == rows_visible %}
+        <details class="past-more"><summary>Show {{ more_count }} earlier talk{% if more_count > 1 %}s{% endif %}</summary>
+        {% assign more_open = true %}
+      {% endif %}
+      <details class="past-row" data-series="{{ t.series }}">
+        <summary title="Show talk details">
+          <svg class="past-row-chevron" viewBox="0 0 8 12" width="8" height="12" aria-hidden="true"><path d="M1.5 1L6.5 6L1.5 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="past-row-date">{{ t.date | date: "%b %-d, %Y" }}</span>
+          <span class="past-row-main">
+            <span class="past-row-title">{{ t.title }}</span>
+            <span class="past-row-speaker">{{ t.speaker }} · {{ t.affiliation }}</span>
+          </span>
+          {% if t.recording_link and t.recording_link != "" %}
+          <a class="past-row-rec" href="{{ t.recording_link }}" target="_blank" aria-label="Watch recording of {{ t.title }}"><svg viewBox="0 0 10 12" width="9" height="11" aria-hidden="true"><path d="M0 0L10 6L0 12Z" fill="currentColor"/></svg>Watch</a>
+          {% endif %}
+        </summary>
+        {% include webinar_card.html t=t %}
+      </details>
+    {% endif %}
+    {% assign past_shown = past_shown | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% if more_open %}</details>{% endif %}
+{% if archive_open %}</div>{% endif %}
