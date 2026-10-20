@@ -18,6 +18,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #section-rail {
+            top: calc(50% + 40px);
+        }
+        #section-rail ul {
+            max-height: calc(100vh - 168px);
+            overflow-y: auto;
+            padding: 4px;
+            overscroll-behavior: contain;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
@@ -58,19 +69,23 @@
     <!-- Floating section rail (desktop only) -->
     <nav id="section-rail" class="section-rail" aria-label="Page sections">
         <ul>
-            <li><a href="#co-chairs" data-target="co-chairs"><span class="dot" aria-hidden="true"></span><span class="label">Co-chairs</span></a></li>
-            <li><a href="#local-committee" data-target="local-committee"><span class="dot" aria-hidden="true"></span><span class="label">Local Committee</span></a></li>
-            <li><a href="#program-committee" data-target="program-committee"><span class="dot" aria-hidden="true"></span><span class="label">Program Committee</span></a></li>
-            <li><a href="#short-course-committee" data-target="short-course-committee"><span class="dot" aria-hidden="true"></span><span class="label">Short Course Committee</span></a></li>
-            <li><a href="#sponsorship-committee" data-target="sponsorship-committee"><span class="dot" aria-hidden="true"></span><span class="label">Sponsorship Committee</span></a></li>
-            <li><a href="#challenge-committee" data-target="challenge-committee"><span class="dot" aria-hidden="true"></span><span class="label">Challenge Committee</span></a></li>
-            <li><a href="#outreach" data-target="outreach"><span class="dot" aria-hidden="true"></span><span class="label">Outreach</span></a></li>
-            <li><a href="#award-committee" data-target="award-committee"><span class="dot" aria-hidden="true"></span><span class="label">Award Committee</span></a></li>
-            <li><a href="#area-chairs" data-target="area-chairs"><span class="dot" aria-hidden="true"></span><span class="label">Area Chairs</span></a></li>
+            <li><a href="#advisory-board" data-target="advisory-board" title="Advisory Board"><span class="dot" aria-hidden="true"></span><span class="label">Advisory Board</span></a></li>
+            <li><a href="#organizing-chairs" data-target="organizing-chairs" title="Organizing Chairs"><span class="dot" aria-hidden="true"></span><span class="label">Organizing Chairs</span></a></li>
+            <li><a href="#program-committee" data-target="program-committee" title="Program Committee"><span class="dot" aria-hidden="true"></span><span class="label">Program Committee</span></a></li>
+            <li><a href="#local-committee" data-target="local-committee" title="Local Committee"><span class="dot" aria-hidden="true"></span><span class="label">Local Committee</span></a></li>
+            <li><a href="#openreview-workflow" data-target="openreview-workflow" title="OpenReview Workflow Chairs"><span class="dot" aria-hidden="true"></span><span class="label">OpenReview</span></a></li>
+            <li><a href="#journal-society-partnership" data-target="journal-society-partnership" title="Journal and Society Partnership Chairs"><span class="dot" aria-hidden="true"></span><span class="label">Journal &amp; Society</span></a></li>
+            <li><a href="#review-proceedings" data-target="review-proceedings" title="Review Quality, Proceedings &amp; Reproducibility Chairs"><span class="dot" aria-hidden="true"></span><span class="label">Review &amp; Proceedings</span></a></li>
+            <li><a href="#invited-talks-panels" data-target="invited-talks-panels" title="Invited Talks &amp; Panels Chairs"><span class="dot" aria-hidden="true"></span><span class="label">Talks &amp; Panels</span></a></li>
+            <li><a href="#lunch-roundtables" data-target="lunch-roundtables" title="Lunch Roundtables Chairs"><span class="dot" aria-hidden="true"></span><span class="label">Lunch Roundtables</span></a></li>
+            <li><a href="#sponsorship-committee" data-target="sponsorship-committee" title="Sponsorship Committee"><span class="dot" aria-hidden="true"></span><span class="label">Sponsorship</span></a></li>
+            <li><a href="#data-challenge-committee" data-target="data-challenge-committee" title="Data Challenge Committee"><span class="dot" aria-hidden="true"></span><span class="label">Data Challenge</span></a></li>
+            <li><a href="#awards-committee" data-target="awards-committee" title="Awards Committee"><span class="dot" aria-hidden="true"></span><span class="label">Awards</span></a></li>
+            <li><a href="#outreach-communications" data-target="outreach-communications" title="Outreach &amp; Communications"><span class="dot" aria-hidden="true"></span><span class="label">Outreach</span></a></li>
         </ul>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-6 py-16 mt-20">
+    <div class="max-w-7xl mx-auto px-6 md:pl-40 2xl:pl-6 py-16 mt-20">
         <div>
 
             <!-- Main Content -->
@@ -80,96 +95,36 @@
             Organizing Committee
         </h1>
 
-        <!-- Co-chairs -->
-        <section id="co-chairs" class="mb-20 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-10 text-center">Co-chairs</h2>
-        
+        <!-- Advisory Board -->
+        <section id="advisory-board" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Advisory Board</h2>
             <div class="flex justify-center gap-12 flex-wrap">
-
                 <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
-                    <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/xihonglin.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <img alt="Xihong Lin" src="../img/xihonglin.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
                     <p class="font-semibold"><a href="https://hsph.harvard.edu/profile/xihong-lin/" class="hover:underline">Xihong Lin</a></p>
                     <p class="text-sm text-gray-500 italic">Harvard University</p>
                 </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
-                    <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/linjunzhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
-                    <p class="text-sm text-gray-500 italic">Rutgers University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/tianzheng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="http://www.stat.columbia.edu/~tzheng/" class="hover:underline">Tian Zheng</a></p>
-                    <p class="text-sm text-gray-500 italic">Columbia University</p>
-                </div>
-
             </div>
         </section>
 
-        <!-- Local Committee -->
-        <section id="local-committee" class="mb-20 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-10 text-center">Local Committee</h2>
-        
-            <!-- Chair -->
-            <div class="mb-10">
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
-        
-                <div class="flex justify-center">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/tracyke.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://www.tracyke.net/" class="hover:underline">Tracy Ke</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
+        <!-- Organizing Chairs -->
+        <section id="organizing-chairs" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Organizing Chairs</h2>
+            <div class="flex justify-center gap-12 flex-wrap">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold">Li Ma</p>
                 </div>
-            </div>
-        
-            <!-- Members -->
-            <div>
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
-        
-                <div class="flex justify-center gap-12 flex-wrap">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/MorganeAustern.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.google.com/view/morganeaustern/home" class="hover:underline">Morgane Austern</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
-        
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/jackson_lautier.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://jacksonlautier.com/" class="hover:underline">Jackson Lautier</a></p>
-                        <p class="text-sm text-gray-500 italic">Bentley University</p>
-                    </div>
-        
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
 
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/EmilyPalmer.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://statistics.fas.harvard.edu/people/emily-palmer" class="hover:underline">Emily Palmer</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
-        
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/PragyaSur.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.harvard.edu/prs499/" class="hover:underline">Pragya Sur</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img alt="Peter Song" src="../img/PeterSong.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://websites.umich.edu/~songlab/" class="hover:underline">Peter Song</a></p>
+                    <p class="text-sm text-gray-500 italic">University of Michigan</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold">Elizabeth Tipton</p>
                 </div>
             </div>
         </section>
@@ -177,232 +132,39 @@
         <!-- Program Committee -->
         <section id="program-committee" class="mb-20 scroll-mt-28">
             <h2 class="text-2xl font-semibold mb-10 text-center">Program Committee</h2>
-        
+
             <!-- Chairs -->
             <div class="mb-10">
                 <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chairs</h3>
-        
+
                 <div class="flex justify-center gap-12 flex-wrap">
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
-                        <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                        <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold">Bryon Aragam</p>
                     </div>
 
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
-                        <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/linjunzhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
-                        <p class="text-sm text-gray-500 italic">Rutgers University</p>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Members -->
-            <div>
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
-        
-                <div class="flex justify-center gap-12 flex-wrap">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/MorganeAustern.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.google.com/view/morganeaustern/home" class="hover:underline">Morgane Austern</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/GraceDeng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://www.niss.org/people/grace-deng" class="hover:underline">Grace Deng</a></p>
-                        <p class="text-sm text-gray-500 italic">Google</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/SebastienHaneuse.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://hsph.harvard.edu/profile/sebastien-haneuse/" class="hover:underline">Sebastien Haneuse</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/jiankang.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://public.websites.umich.edu/~jiankang/" class="hover:underline">Jian Kang</a></p>
-                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/tracyke.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <img alt="Tracy Ke" src="../img/tracyke.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
                         <p class="font-semibold"><a href="https://www.tracyke.net/" class="hover:underline">Tracy Ke</a></p>
                         <p class="text-sm text-gray-500 italic">Harvard University</p>
                     </div>
 
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/LinglongKong.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.ualberta.ca/~lkong/" class="hover:underline">Linglong Kong</a></p>
-                        <p class="text-sm text-gray-500 italic">University of Alberta</p>
-                    </div>
-
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/LexinLi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://lexinli.biostat.berkeley.edu/" class="hover:underline">Lexin Li</a></p>
-                        <p class="text-sm text-gray-500 italic">University of California, Berkeley</p>
+                        <img alt="Mladen Kolar" src="../img/mladen_kolar.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.marshall.usc.edu/people/mladen-kolar" class="hover:underline">Mladen Kolar</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Southern California</p>
                     </div>
 
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/martinlindquist.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.google.com/view/martinlindquist/home" class="hover:underline">Martin Lindquist</a></p>
-                        <p class="text-sm text-gray-500 italic">Johns Hopkins University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/razieh.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://raziehnabi.com/" class="hover:underline">Razieh Nabi</a></p>
-                        <p class="text-sm text-gray-500 italic">Emory University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/ChengchunShi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://callmespring.github.io/" class="hover:underline">Chengchun Shi</a></p>
-                        <p class="text-sm text-gray-500 italic">London School of Economics and Political Science</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/PragyaSur.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.harvard.edu/prs499/" class="hover:underline">Pragya Sur</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/alexvolfosky.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://volfovsky.github.io/" class="hover:underline">Alexander Volfovsky</a></p>
-                        <p class="text-sm text-gray-500 italic">Duke University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/OwenWard.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://owenward.github.io/" class="hover:underline">Owen Ward</a></p>
-                        <p class="text-sm text-gray-500 italic">Simon Fraser University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/zhenkewu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://zhenkewu.com/" class="hover:underline">Zhenke Wu</a></p>
-                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/BingxinZhao.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://www.bingxinzhao.com/" class="hover:underline">Bingxin Zhao</a></p>
-                        <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/tianzheng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.stat.columbia.edu/tzheng/" class="hover:underline">Tian Zheng</a></p>
-                        <p class="text-sm text-gray-500 italic">Columbia University</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Short course committee -->
-        <section id="short-course-committee" class="mb-16 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-8 text-center">Short Course Committee</h2>
-
-            <!-- Chair -->
-            <div class="mb-10">
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
-
-                <div class="flex justify-center">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/jiankang.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://public.websites.umich.edu/~jiankang/" class="hover:underline">Jian Kang</a></p>
-                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Members -->
-            <div>
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
-
-                <div class="flex justify-center gap-12 flex-wrap">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/SubhabrateSen.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.harvard.edu/sus977/" class="hover:underline">Subhabrata Sen</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sponsorship Committee -->
-        <section id="sponsorship-committee" class="mb-16 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-8 text-center">Sponsorship Committee</h2>
-        
-            <!-- Chair -->
-            <div class="mb-10">
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
-        
-                <div class="flex justify-center">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/PeterSong.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://websites.umich.edu/~songlab/" class="hover:underline">Peter Song</a></p>
-                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Members -->
-            <div>
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
-        
-                <div class="flex justify-center gap-12 flex-wrap">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/jackson_lautier.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://jacksonlautier.com/" class="hover:underline">Jackson Lautier</a></p>
-                        <p class="text-sm text-gray-500 italic">Bentley University</p>
-                    </div>
-        
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <img alt="Wenyi Wang" src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
                         <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
                         <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
                     </div>
 
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/tianzheng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.stat.columbia.edu/tzheng/" class="hover:underline">Tian Zheng</a></p>
-                        <p class="text-sm text-gray-500 italic">Columbia University</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- Challenge Committee -->
-        <section id="challenge-committee" class="mb-16 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-8 text-center">Challenge Committee</h2>
-
-            <!-- Chair -->
-            <div class="mb-10">
-                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
-
-                <div class="flex justify-center">
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
-                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                        <img alt="Linjun Zhang" src="../img/linjunzhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
+                        <p class="text-sm text-gray-500 italic">Rutgers University</p>
                     </div>
                 </div>
             </div>
@@ -413,73 +175,180 @@
 
                 <div class="flex justify-center gap-12 flex-wrap">
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/rashid_naim.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://naimurashid.github.io/" class="hover:underline">Naim Rashid</a></p>
-                        <p class="text-sm text-gray-500 italic">UNC Chapel Hill</p>
+                        <img alt="Grace Deng" src="../img/GraceDeng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.niss.org/people/grace-deng" class="hover:underline">Grace Deng</a></p>
+                        <p class="text-sm text-gray-500 italic">Google</p>
                     </div>
 
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/chris_volinsky.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://www.chrisvolinsky.com/" class="hover:underline">Chris Volinsky</a></p>
-                        <p class="text-sm text-gray-500 italic">New York University</p>
+                        <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold">Bei Jiang</p>
+                        <p class="text-sm text-gray-500 italic">University of Alberta</p>
                     </div>
 
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/YuanzheXu.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold">Yuanzhe Xu</p>
-                        <p class="text-sm text-gray-500 italic">Jump Trading</p>
+                        <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold">Yinan Zheng</p>
+                        <p class="text-sm text-gray-500 italic">Abbvie</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Local Committee -->
+        <section id="local-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Local Committee</h2>
+            <div class="flex justify-center gap-12 flex-wrap">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold">David Uminsky</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold">Mark Schulze</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold">Jingshu Wang</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold">Aaron Schein</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold">Bryon Aragam</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OpenReview Workflow Chairs -->
+        <section id="openreview-workflow" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">OpenReview Workflow Chairs</h2>
+            <div class="flex justify-center gap-12 flex-wrap">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img alt="Linjun Zhang" src="../img/linjunzhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
+                    <p class="text-sm text-gray-500 italic">Rutgers University</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal and Society Partnership Chairs -->
+        <section id="journal-society-partnership" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Journal and Society Partnership Chairs</h2>
+            <div class="flex justify-center gap-12 flex-wrap">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img alt="Wenyi Wang" src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
+                    <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Quality, Proceedings &amp; Reproducibility Chairs -->
+        <section id="review-proceedings" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Review Quality, Proceedings &amp; Reproducibility Chairs</h2>
+            <div class="flex justify-center gap-12 flex-wrap">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img alt="Linjun Zhang" src="../img/linjunzhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
+                    <p class="text-sm text-gray-500 italic">Rutgers University</p>
+                </div>
+
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img alt="Edgar Dobriban" src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
+                    <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Invited Talks &amp; Panels Chairs -->
+        <section id="invited-talks-panels" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Invited Talks &amp; Panels Chairs</h2>
+            <div class="flex justify-center gap-12 flex-wrap">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img alt="Xihong Lin" src="../img/xihonglin.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://hsph.harvard.edu/profile/xihong-lin/" class="hover:underline">Xihong Lin</a></p>
+                    <p class="text-sm text-gray-500 italic">Harvard University</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lunch Roundtables Chairs -->
+        <section id="lunch-roundtables" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Lunch Roundtables Chairs</h2>
+            <div class="flex justify-center gap-12 flex-wrap">
+                <div class="text-center hover:scale-105 transition w-56">
+                    <img alt="Tracy Ke" src="../img/tracyke.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                    <p class="font-semibold"><a href="https://www.tracyke.net/" class="hover:underline">Tracy Ke</a></p>
+                    <p class="text-sm text-gray-500 italic">Harvard University</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsorship Committee -->
+        <section id="sponsorship-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Sponsorship Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/Alex_Young.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sites.google.com/view/alexander-l-young" class="hover:underline">Alex Young</a></p>
+                        <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold">Jingshu Wang</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Member</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img alt="Tian Zheng" src="../img/tianzheng.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="http://www.stat.columbia.edu/~tzheng/" class="hover:underline">Tian Zheng</a></p>
+                        <p class="text-sm text-gray-500 italic">Columbia University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Challenge Committee -->
+        <section id="data-challenge-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Data Challenge Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img alt="Hongtu Zhu" src="../img/hongtuzhu.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sph.unc.edu/adv_profile/hongtu-zhu-phd/" class="hover:underline">Hongtu Zhu</a></p>
+                        <p class="text-sm text-gray-500 italic">University of North Carolina at Chapel Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Member</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img alt="Junwei Lu" src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
                         <p class="text-sm text-gray-500 italic">Harvard University</p>
                     </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/daiwei_Zhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://www.daviddaiweizhang.com/" class="hover:underline">David Zhang</a></p>
-                        <p class="text-sm text-gray-500 italic">UNC Chapel Hill</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/jinfeng_zhang.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://ani.stat.fsu.edu/~jinfeng/index.html" class="hover:underline">Jinfeng Zhang</a></p>
-                        <p class="text-sm text-gray-500 italic">Florida State University</p>
-                    </div>
-
-                    <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/hongtuzhu.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                        <p class="font-semibold"><a href="https://sph.unc.edu/adv_profile/hongtu-zhu-phd/" class="hover:underline">Hongtu Zhu</a></p>
-                        <p class="text-sm text-gray-500 italic">UNC Chapel Hill</p>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Outreach -->
-        <section id="outreach" class="mb-16 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-8 text-center">Outreach</h2>
-
-            <div class="flex justify-center">
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/jackson_lautier.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://jacksonlautier.com/" class="hover:underline">Jackson Lautier</a></p>
-                    <p class="text-sm text-gray-500 italic">Bentley University</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Award Committee -->
-        <section id="award-committee" class="mb-16 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-8 text-center">Award Committee</h2>
-
-            <div class="mb-6">
+        <!-- Awards Committee -->
+        <section id="awards-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Awards Committee</h2>
+            <div>
                 <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
-                <div class="flex justify-center">
+                <div class="flex justify-center gap-12 flex-wrap">
                     <div class="text-center hover:scale-105 transition w-56">
-                        <img src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <img alt="Edgar Dobriban" src="../img/ed.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
                         <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
                         <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
                     </div>
@@ -487,141 +356,28 @@
             </div>
         </section>
 
-        <!-- Area Chairs -->
-        <section id="area-chairs" class="mb-16 scroll-mt-28">
-            <h2 class="text-2xl font-semibold mb-8 text-center">Area Chairs</h2>
+        <!-- Outreach &amp; Communications -->
+        <section id="outreach-communications" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Outreach &amp; Communications</h2>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img alt="Wenyi Wang" src="../img/wangwenyi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://odin.mdacc.tmc.edu/~wwang7/" class="hover:underline">Wenyi Wang</a></p>
+                        <p class="text-sm text-gray-500 italic">UT MD Anderson Cancer Center</p>
+                    </div>
 
-            <div class="flex justify-center gap-12 flex-wrap">
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/xuan_bi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://sites.google.com/site/xuanbigts/" class="hover:underline">Xuan Bi</a></p>
-                    <p class="text-sm text-gray-500 italic">University of Minnesota</p>
-                </div>
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img alt="Jackson Lautier" src="../img/jackson_lautier.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://jacksonlautier.com/" class="hover:underline">Jackson Lautier</a></p>
+                        <p class="text-sm text-gray-500 italic">Bentley University</p>
+                    </div>
 
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/fan_qiao.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://www.duke-nus.edu.sg/directory/detail/fan-qiao" class="hover:underline">Qiao Fan</a></p>
-                    <p class="text-sm text-gray-500 italic">Duke-NUS Medical School</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/jean_feng.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://www.jeanfeng.com/" class="hover:underline">Jean Feng</a></p>
-                    <p class="text-sm text-gray-500 italic">University of California, San Francisco</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/yang_feng.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://yangfengstat.github.io/" class="hover:underline">Yang Feng</a></p>
-                    <p class="text-sm text-gray-500 italic">New York University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/emily_hector.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://www.emilyhector.com/" class="hover:underline">Emily C. Hector</a></p>
-                    <p class="text-sm text-gray-500 italic">North Carolina State University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/yuling_jiao.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="http://jszy.whu.edu.cn/jiaoyuling/en/index.htm" class="hover:underline">Yuling Jiao</a></p>
-                    <p class="text-sm text-gray-500 italic">Wuhan University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/david_knowles.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://daklab.github.io/" class="hover:underline">David Knowles</a></p>
-                    <p class="text-sm text-gray-500 italic">Columbia University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/mladen_kolar.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://www.marshall.usc.edu/people/mladen-kolar" class="hover:underline">Mladen Kolar</a></p>
-                    <p class="text-sm text-gray-500 italic">University of Southern California</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/LinglongKong.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://sites.ualberta.ca/~lkong/" class="hover:underline">Linglong Kong</a></p>
-                    <p class="text-sm text-gray-500 italic">University of Alberta</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/lei_liu.webp" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://sds.wustl.edu/people/lei-liu" class="hover:underline">Lei Liu</a></p>
-                    <p class="text-sm text-gray-500 italic">Washington University in St. Louis</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/joshua_loftus.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://joshualoftus.com/" class="hover:underline">Joshua R. Loftus</a></p>
-                    <p class="text-sm text-gray-500 italic">London School of Economics and Political Science</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/junweilu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://junwei-lu.github.io/" class="hover:underline">Junwei Lu</a></p>
-                    <p class="text-sm text-gray-500 italic">Harvard University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/rajarshiMukherjee.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://rajarshi-mukherjee24.github.io/" class="hover:underline">Rajarshi Mukherjee</a></p>
-                    <p class="text-sm text-gray-500 italic">Harvard University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/razieh.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://raziehnabi.com/" class="hover:underline">Razieh Nabi</a></p>
-                    <p class="text-sm text-gray-500 italic">Emory University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/ChengchunShi.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://callmespring.github.io/" class="hover:underline">Chengchun Shi</a></p>
-                    <p class="text-sm text-gray-500 italic">London School of Economics and Political Science</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/fengzhu_sun.avif" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://dornsife.usc.edu/fsun/" class="hover:underline">Fengzhu Sun</a></p>
-                    <p class="text-sm text-gray-500 italic">University of Southern California</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/qiang_sun.png" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://sites.google.com/view/qsun" class="hover:underline">Qiang Sun</a></p>
-                    <p class="text-sm text-gray-500 italic">University of Toronto</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/alexvolfosky.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://volfovsky.github.io/" class="hover:underline">Alexander Volfovsky</a></p>
-                    <p class="text-sm text-gray-500 italic">Duke University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/di_wu.avif" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://sph.unc.edu/adv_profile/di-wu-phd/" class="hover:underline">Di Wu</a></p>
-                    <p class="text-sm text-gray-500 italic">University of North Carolina at Chapel Hill</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/sheng_yu.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://www.stat.tsinghua.edu.cn/en/info/1023/1051.htm" class="hover:underline">Sheng Yu</a></p>
-                    <p class="text-sm text-gray-500 italic">Tsinghua University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/anru_zhang.jpeg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://anruzhang.github.io/" class="hover:underline">Anru Zhang</a></p>
-                    <p class="text-sm text-gray-500 italic">Duke University</p>
-                </div>
-
-                <div class="text-center hover:scale-105 transition w-56">
-                    <img src="../img/BingxinZhao.jpg" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
-                    <p class="font-semibold"><a href="https://www.bingxinzhao.com/" class="hover:underline">Bingxin Zhao</a></p>
-                    <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/person-placeholder.svg" alt="Photo placeholder" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold">Aaron Schein</p>
+                    </div>
                 </div>
             </div>
         </section>
