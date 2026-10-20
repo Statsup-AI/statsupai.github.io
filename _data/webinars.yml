@@ -1,3 +1,174 @@
+- date: 2025-04-09
+  time_et: "12:00 PM"
+  speaker: "Martin Lindquist"
+  speaker_full_name: "Dr. Martin Lindquist"
+  affiliation: "Johns Hopkins University"
+  title: "Elements of Functional Neuroimaging"
+  registration_link: "https://upenn.zoom.us/j/94227327976"
+  recording_link: "https://www.youtube.com/watch?v=mbRuDh4Qf5g"
+  series: "Health"
+  abstract: |
+    The field of neuroimaging, particularly functional magnetic resonance imaging (fMRI), is rapidly growing, with over 1,000 new publications annually and widespread use across diverse academic disciplines. As fMRI becomes a core tool for psychologists, neuroscientists, physicians, economists, lawyers, and engineers, understanding its intricacies has never been more critical. However, the interdisciplinary nature of neuroimaging presents challenges due to its combination of necessary biological, computational, statistical, and psychological expertise. This talk seeks to provide an accessible overview of how fMRI works, focusing on its underlying principles, and explain the variety of techniques used to analyze fMRI data. We will focus on essential conceptual tools to critically evaluate fMRI studies, avoid common pitfalls, and deepen the understanding of this powerful imaging technique. Our aim is to empower researchers to navigate and assess the complexities of neuroimaging in a rapidly evolving field.
+  speaker_bio: |
+    is a Professor of Biostatistics at Johns Hopkins University. His research focuses on mathematical and statistical problems relating to functional Magnetic Resonance Imaging (fMRI). Dr. Lindquist is actively involved in developing new analysis methods to enhance our ability to understand brain function using human neuroimaging. He has published over 100 articles, and serves on the editorial boards of several scientific journals both in statistics and neuroimaging. He is a fellow of the American Statistical Association. In 2018 he was awarded the Organization for Human Brain Mapping's Education in Neuroimaging Award for teaching statistical issues to the neuroimaging community and the development of online classes that have taught fMRI methods to more than 100,000 students world-wide.
+  speaker_image: "/assets/img/speakers/2025/04-09-martin-lindquist.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
+- date: 2025-05-08
+  time_et: "3:00 PM"
+  speaker: "Ying Guo"
+  speaker_full_name: "Dr. Ying Guo"
+  affiliation: "Emory University"
+  title: "Exploring Brain Function and Connectivity with fMRI: From Data Characteristics to Statistical and AI Methods"
+  registration_link: "https://upenn.zoom.us/j/99182616852"
+  recording_link: "https://www.youtube.com/watch?v=iC10I5zXQRI"
+  series: "Health"
+  abstract: |
+    Neuroimaging technology has played a central role in advancing scientific understanding of normal brain function in humans, as well as in investigating the neural basis of psychiatric and neurological disorders. Among the various neuroimaging techniques, functional magnetic resonance imaging (fMRI) is one of the most commonly used tools in current neuroscience studies. This talk aims to introduce analytical techniques and statistical methods for investigating brain function and connectivity using fMRI. We will begin with a discussion of the background and key characteristics of fMRI data that are relevant to statistical modeling. This will be followed by an overview of fMRI analysis, with a focus on brain network and connectome analysis using statistical and AI-based approaches. The goal of the talk is to help familiarize researchers with data considerations, analysis procedures, and challenges in fMRI studies, thereby enabling more statisticians to contribute advanced and well-suited analytical tools for the field.
+  speaker_bio: |
+    is Professor in the Department of Biostatistics and Bioinformatics at Emory University, an appointed Graduate Faculty of the Emory Neuroscience Program and an Associate Faculty in Emory Department of Computer Science. She is a founding member and the current Director of the Center for Biomedical Imaging Statistics (CBIS) at Emory University. Dr. Guo’s research focuses on developing analytical methods for neuroimaging and mental health studies. Her main research areas include blind source separation (BSS) methods such as independent component analysis (ICA), brain network and connectome methods, multimodal imaging, longitudinal imaging modeling, and imaging-based prediction methods. Dr. Guo is a Fellow of the American Statistical Association (ASA) and served as the 2023 Chair of the ASA Statistics in Imaging Section. She has served on the editorial boards of several scientific journals in statistics and psychiatry, and also served as a standing member of the NIH Emerging Imaging Technologies in Neuroscience (EITN) study section.
+  speaker_image: "/assets/img/speakers/2025/05-08-ying-guo.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+
+- date: 2025-06-06
+  time_et: "11:00 AM"
+  speaker: "Hernando Ombao"
+  speaker_full_name: "Dr. Hernando Ombao"
+  affiliation: "King Abdullah University of Science and Technology (KAUST)"
+  title: "Overview of Methods for Characterizing Brain Functional Connectivity"
+  registration_link: "https://upenn.zoom.us/j/91348715596"
+  recording_link: "https://www.youtube.com/watch?v=DehZosmpAUg"
+  series: "Health"
+  abstract: |
+    Modeling dependence between nodes in a brain network is central to understanding underlying neural mechanisms such as perception, action, and memory. In this talk, we present a broad range of statistical methods for characterizing dependence in a brain network. We first review a general framework which decomposes each signal into various frequency components and then characterize the dependence properties through these oscillatory activities. The unifying theme across the talk is to explore the strength of dependence and possible lead-lag dynamics through filtering. The proposed framework is capable of representing both linear and non-linear dependencies that could occur instantaneously or after some delay (lagged dependence).
+
+    In the first part of the talk, some of the most prominent frequency domain measures such as coherence, partial coherence, and dual-frequency coherence can be derived as special cases under this general framework. Coherence can be viewed in the proposed framework as the maximal squared correlation between oscillations from a pair of nodes. It gives a more specific information that correlation because it identifies the frequency bands that drive the dependence between nodes.
+
+    In this second part of the talk, we will discuss methods for characterizing dependence between a pair of communities (of nodes) under the high dimensional setting. Here, we will introduce our proposed Kendall’s Canonical Coherence (KenCoh). The classical method of Canonical Correlation Analysis (CCA) is limited to capturing linear associations, cross-sectional studies, and is sensitive to heavy-tailed observations. The proposed KenCoh method mitigates the limitations by using a rank-based approach under elliptic symmetry. It captures non-linear associations and is robust against outliers. The work presented here is limited to multiple independent trials of multivariate time-series, although this is the usual set-up of experimental studies. Future direction of this work will look into potential Markovian dependence of trials which is applicable when trials have sequencing.
+
+    In the third and final part of the talk, we will briefly describe current work on information-theoretic measures of connectivity. This class of measures are based on joint (and conditional) distributions rather than just the first two moments. The proposed spectral transfer entropy (STE) quantifies the magnitude and direction of information flow from a certain frequency-band oscillation of a channel to an oscillation of another channel. The main advantage of our proposed approach is that it allows adjustments for multiple comparisons to control family-wise error rate. Another novel contribution is a simple, yet efficient estimation method based on vine copula theory that enables estimates to capture zero (boundary point) without the need for bias adjustments. With the vine copula representation, a null copula model, which exhibits zero STE, is defined, making significance testing for STE straightforward through a standard resampling approach. Lastly, we illustrate the advantage of our proposed measure through some numerical experiments and provide interesting and novel findings on the analysis of EEG recordings linked to a visual task.
+
+    This is joint work with the Mara Talento, Sarbojit Roy and Paolo Redondo of the Biostatistics Group at KAUST.
+  speaker_bio: |
+    is Professor of Statistics at the King Abdullah University of Science and Technology (KAUST). He is the Principal Investigator of the Biostatistics Research Group. He develops statistical models for time series with dynamic and complex structures which are motivated by problems in neuroscience, medicine and public health. Prior to coming to KAUST, he was a faculty member at UC Irvine, Brown University, University of Illinois and the University of Pittsburgh.
+
+    Dr. Ombao is Co-Editor of the Handbook of Statistical Methods for Neuroimaging. In 2019, he was Chair of the Statistics in Imaging Section of the ASA and in 2020 is Chair of the Awards committee of the Council of Presidents of the Statistical Societies. He is currently a permanent member of the study section on the Biostatistics panel of the National Institutes of Health. In 2017, he received a Mid-Career award for research excellence at UC Irvine and has served as Principal Investigator of several US NSF awards. He served as Associate Editor of the Journal of the Royal Statistical Society Series B and is currently Associate Editor for the Journal of the American Statistical Association, Annals of Applied Statistics and the Data Science in Science journal. He is also co-founding editor of the new journal Statistics and Data Science in Imaging. He is an Elected Fellow of the American Statistical Association (2016) and an Elected Fellow of the Institute of Mathematical Statistics (2024).
+  speaker_image: "/assets/img/speakers/2025/06-06-hernando-ombao.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
+- date: 2025-07-16
+  time_et: "12:00 PM"
+  speaker: "Dana Tudorascu"
+  speaker_full_name: "Dr. Dana Tudorascu"
+  affiliation: "University of Pittsburgh"
+  title: "Statistical Challenges in Data Harmonization Studies of Alzheimer’s Disease using Positron Emission Tomography (PET) and Magnetic Resonance Imaging (MRI)"
+  registration_link: "https://upenn.zoom.us/j/96801286016"
+  recording_link: "https://www.youtube.com/watch?v=ujhrkUKqTMM"
+  series: "Health"
+  abstract: |
+    Multisite imaging studies increase statistical power and enable the generalization of research outcomes; however, due to the variety of imaging acquisition, different PET tracer properties and inter-scanner variability hinders the direct comparability of multi-scanner PET data. The PET imaging field is lacking behind in terms of harmonization methods due to the complexity associated with the combination of different tracers and different scanners. Similarly, MRI present similar challenges, but mainly due to scanner differences. In this study we investigate samples of cognitively normal participants, mild cognitive impaired and Alzheimer’s disease subjects in two major multisite studies of Alzheimer’s disease.
+
+    We present challenges and solutions associated with different MRI scanners, PET tracers, as well as analysis and harmonization techniques including simple imaging standardization, Combat and deep learning methods. We show regions of interest differences in PET outcome measures before and after the harmonization in multisite studies of Alzheimer’s Disease as well as voxel level harmonization along with summary measures before and after harmonization in MRI studies.
+  speaker_bio: |
+    received her PhD in Biostatistics from University of Pittsburgh, a MS in Computational Mathematics from Duquesne University and a BS in Mathematics from University of Craiova in Romania. She is currently an Associate Professor of Psychiatry and Biostatistics in the Department of Psychiatry at the University of Pittsburgh where she Co-Leads the Study Design and Data Analysis Group. She is the Leader of the Biostatistics Core for the “The Role of Astrogliosis in Aging and the Pathological and Clinical Progression of Alzheimer’s Disease” program, Co-Leads the Data Management and Statistics Core for ADRC at Pitt as well as the Biostatistics and Data Management Core for Alzheimer’s Disease Biomarker’s Consortium-Down Syndrome (ABC-DS), an international multisite study.
+
+    Dr. Tudorascu’s research focuses on developing methods for data harmonization for multi scanner, multi center neuroimaging studies as well as on improving brain tissue classification in the presence of white matter lesions and atrophy in neuroimaging studies of Alzheimer’s disease. She is currently principal investigator of a National Institute on Aging-funded R01 grant focused on statistical methods to improve reproducibility and reduce technical variability in multimodal imaging studies of Alzheimer’s disease.
+
+    Dr. Tudorascu collaborates widely with colleagues in psychiatry, biostatistics, neurology, radiology, among many other departments at Pitt as well as outside institutions. Dr. Tudorascu’s activities include training others in statistical methods used in multimodal imaging studies of neuropsychiatric disorders.
+  speaker_image: "/assets/img/speakers/2025/07-16-dana-tudorascu.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+
+- date: 2025-08-11
+  time_et: "1:00 PM"
+  speaker: "Russell “Taki” Shinohara"
+  speaker_full_name: "Dr. Russell Takeshi “Taki” Shinohara"
+  affiliation: "University of Pennsylvania"
+  title: "Harmonizing Neuroimaging Data Acquired in Multi-Center Studies of Human Health"
+  registration_link: "https://upenn.zoom.us/meeting/register/SWlF2pdLR5SQZrAvhrgwFQ"
+  recording_link: "https://www.youtube.com/watch?v=rkNgGrGCz-4"
+  series: "Health"
+  abstract: |
+    While magnetic resonance imaging (MRI) studies are critical for the diagnosis, monitoring, and study of a wide variety of diseases, their use in quantitative analysis can be complex. An increasingly recognized issue involves the differences between MRI scanners that are used in large multi-center studies. To address this, the current state of the art is to “regress out” or “adjust for” scanner differences. The field has found these methods to be insufficient and has advocated for the adaptation of methods pioneered in genomics to help mitigate inter-scanner differences, which can vary across the brain and result in both mean and variance shifts. We further study the implications of differences in correlation structures across and between images, and how this affects downstream inference.
+  speaker_bio: |
+    is a Professor of Biostatistics at the University of Pennsylvania’s Perelman School of Medicine and Director of the Penn Statistics in Imaging and Visualization Endeavor (PennSIVE). His research focuses on developing statistical methods for analyzing structural and functional brain changes using quantitative biomedical imaging, particularly in neurological, psychiatric, and developmental disorders. He plays a central role in several interdisciplinary centers at Penn, including the Center for Clinical Epidemiology and Biostatistics and the Institute for Biomedical Informatics. Dr. Shinohara earned his Ph.D. in Biostatistics from Johns Hopkins University and has received numerous honors, including the 2023 Mortimer Spiegelman Award from the American Public Health Association. Being an elected fellow of ASA and a recognized leader in imaging science, Dr. Shinohara is widely published in high-impact journals and is known for his commitment to collaborative science and mentoring future leaders in biostatistics.
+  speaker_image: "/assets/img/speakers/2025/08-11-taki-shinohara.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
+- date: 2025-09-17
+  time_et: "12:00 PM"
+  speaker: "Zhengwu Zhang"
+  speaker_full_name: "Dr. Zhengwu Zhang"
+  affiliation: "University of North Carolina at Chapel Hill"
+  title: "Exploring Brain Structure and Connectivity with Diffusion Weighted Imaging (DWI): From Data Acquisition to Statistical Analysis Methods"
+  registration_link: "https://upenn.zoom.us/meeting/register/Dgy7tG3-R3arVeDDrWSOcA"
+  recording_link: "https://www.youtube.com/watch?v=y-We1DurbXQ"
+  series: "Health"
+  abstract: |
+    Diffusion-weighted imaging (DWI) is a powerful neuroimaging technique that captures the microscopic movement of water molecules in brain tissue, providing unique insights into white matter organization and structural connectivity. In this talk, I will introduce statistical and computational approaches for analyzing DWI data with a focus on both microstructure and connectome-level inference. We will begin with a discussion of what DWI measures and how acquisition strategies can be optimized to improve data quality. Next, I will review statistical methods for analyzing diffusion-derived microstructure measures, such as fractional anisotropy and mean diffusivity, and extend the discussion to structural connectome construction and analysis. Finally, I will highlight exciting new directions that combine advanced statistical frameworks and AI-based methods to tackle challenges in structural connectivity research. The goal of the talk is to provide researchers with an accessible overview of DWI data characteristics, analysis strategies, and emerging opportunities, and to encourage statisticians to contribute to novel methodological developments in this important field.
+  speaker_bio: |
+    is an Associate Professor in the Department of Statistics and Operations Research at the University of North Carolina at Chapel Hill. His research focuses on developing statistical and computational methods for analyzing complex biomedical data, with a particular emphasis on brain imaging and connectomics. He has contributed novel methodologies for structural and functional connectivity analysis, representation learning on manifolds and networks, and harmonization of large-scale neuroimaging datasets. Dr. Zhang has been recognized for his contributions with several honors, including the UNC Junior Faculty Development Award and the Oak Ridge Associated Universities Ralph E. Powe Junior Faculty Enhancement Award. In addition to his research, he teaches and mentors students in statistical consulting, computational tools for reproducible data science, and neuroimaging statistics.
+  speaker_image: "/assets/img/speakers/2025/09-17-zhengwu-zhang.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+    affiliation_logo: "/assets/img/speakers/affiliations/unc-chapel-hill.png"
+
+- date: 2025-10-08
+  time_et: "2:00 PM"
+  speaker: "Russell Poldrack"
+  speaker_full_name: "Dr. Russell A. Poldrack"
+  affiliation: "Stanford University"
+  title: "Building Credibility in Neuroimaging Research through Open Science"
+  registration_link: "https://upenn.zoom.us/meeting/register/hiaXRP-9ReimDcLLDDMKsg"
+  recording_link: "https://www.youtube.com/watch?v=fSjWhxbeNH4"
+  series: "Health"
+  abstract: |
+    It is now widely accepted that openness and transparency are keys to improving the reproducibility of scientific research, but many challenges remain to adoption of these practices. I will discuss the growth of an ecosystem for open science within the field of neuroimaging, focusing on platforms for open data sharing and open source tools for reproducible data analysis. I will also discuss the role of the Brain Imaging Data Structure (BIDS), a community standard for data organization, in enabling this open science ecosystem, and will outline the scientific impacts of these resources.
+  speaker_bio: |
+    is the Albert Ray Lang Professor in the Department of Psychology, and Director of the Stanford Center for Open and Reproducible Science. His research uses neuroimaging to understand the brain systems underlying decision making and executive function. His lab is also engaged in the development of neuroinformatics tools to help improve the reproducibility and transparency of neuroscience, including the Openneuro.org and Neurovault.org data sharing projects and the Cognitive Atlas ontology.
+  speaker_image: "/assets/img/speakers/2025/10-08-russell-poldrack.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+    affiliation_logo: "/assets/img/speakers/affiliations/stanford-university.png"
+
+- date: 2025-11-05
+  time_et: "12:00 PM"
+  speaker: "Brian Caffo"
+  speaker_full_name: "Dr. Brian Caffo"
+  affiliation: "Johns Hopkins University"
+  title: "Does AI Need to Be Artificial? Does It Need to Be Intelligent?"
+  registration_link: "https://upenn.zoom.us/meeting/register/9I_jSjx8RF-8HJNEKCttcg"
+  recording_link: "https://www.youtube.com/watch?v=AhhVzzZTeMY"
+  series: "Health"
+  abstract: |
+    In this talk we consider the fascinating possibility of organoid intelligence (OI). Organoid intelligence using human derived pluripotent stem cells to create neural clusters with measurable neuronal activity. We discuss a recent JHU effort in OI from a team of neuroscientists, engineers, signal processors and statisticians. The goal is to use organoids to perform complex computing tasks through stimulation and response. Measurement is obtained from an electrode shell custom designed for three dimensional measurements. Apart from OI, organoids electrophysiology experiments are useful for studying human genetic disorders and toxicity through another phenotype in vitro. Here, we will focus on the statistical challenges underlying this novel form of measurement. Time permitting, we will discuss other efforts in biocomputing.
+  speaker_bio: |
+    , PhD, is a professor in the Department of Biostatistics with a secondary appointment in the Department of Biomedical Engineering at Johns Hopkins University. He graduated from the University of Florida Department of Statistics in 2001. He has worked in statistical computing, statistical modeling, computational statistics, multivariate and decomposition methods and statistics in neuroimaging and neuroscience. He led teams that won the ADHD 200 prediction competition. He co-directs the SMART statistical group. With other faculty at JHU, he created and co-directed the Coursera Data Science Specialization, a 10-course specialization on statistical data analysis. He co-directs the JHU Data Science Lab, a group dedicated to open educational innovation and data science. He is the former director of the Biostatistics graduate programs and admissions committees. He is the co-director of the Johns Hopkins High Performance Computing Exchange supercomputing service center, former president of the Bloomberg School of Public Health faculty senate and Director of Academic Programs and Education for the Data Science and AI institute.
+  speaker_image: "/assets/img/speakers/2025/11-05-brian-caffo.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+
+- date: 2025-12-02
+  time_et: "1:00 PM"
+  speaker: "Ani Eloyan"
+  speaker_full_name: "Dr. Ani Eloyan"
+  affiliation: "Brown University"
+  title: "Manifold Learning for Modeling Shapes in Alzheimer's Disease"
+  registration_link: "https://upenn.zoom.us/meeting/register/SL8s_eubT-6qoVoMJRsK6w"
+  recording_link: "https://www.youtube.com/watch?v=RMP2cC8XdSI"
+  series: "Health"
+  abstract: |
+    Estimation of biomarkers related to disease classification and modeling of its progression is essential for treatment development for Alzheimer’s Disease (AD). The task is more daunting for characterizing relatively rare AD subtypes such as the early-onset AD. In this talk, I will describe the Longitudinal Early-onset Alzheimer’s Disease Study (LEADS) intending to collect and publicly distribute clinical, imaging, genetic, and other types of data from people with EOAD, as well as cognitively normal (CN) controls and people with early-onset non-amyloid positive (EOnonAD) dementias. I will discuss manifold estimation methods for estimation of surfaces of shapes in the brain using data clouds, factor-analytic methods for estimation of clinical biomarkers of AD and their use for modeling differences in longitudinal trajectories of clinical deterioration between CN, EOAD, and EOnonAD groups.
+  speaker_bio: |
+    is an Associate Professor and Vice Chair in the Department of Biostatistics at Brown University. Broadly, her research focuses on developing statistical methods for analyzing brain imaging data for large groups of subjects, including matrix decomposition methods, machine learning, analysis of longitudinal brain imaging data, among others. Currently, she is developing machine learning algorithms for imaging-based feature extraction from positron emission tomography data, prediction of cognitive decline, and biomarker estimation in Alzheimer’s disease. Dr. Eloyan has served on editorial boards including as Associate Editor of Journal of American Statistical Association (JASA) and Biostatistics. Her work has been published in leading statistics and imaging outlets including the Journal of Royal Statistical Society (Series B), JASA, Biostatistics, NeuroImage Clinical, and Alzheimer’s and Dementia. She leads the Biostatistics Core of the Longitudinal Early-onset Alzheimer's Disease Study (LEADS) and is the Principal Investigator of an R01 grant from NIA to develop biomarker estimation methods for multimodal-imaging studies in Alzheimer's Disease. Dr. Eloyan received her PhD in Statistics from North Carolina State University in 2010. She completed a postdoctoral fellowship in the Department of Biostatistics at Johns Hopkins Bloomberg School of Public Health in 2013.
+  speaker_image: "/assets/img/speakers/2025/12-02-ani-eloyan.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
 - date: 2026-01-09
   time_et: "12:00 PM"
   speaker: "Andrew Saykin"
@@ -5,6 +176,7 @@
   affiliation: "Indiana University School of Medicine"
   title: "Deconstructing Alzheimer’s Disease and Related Dementias to Enable Precision Medicine: Challenges, Models, and Resources for Data Science"
   registration_link: "https://upenn.zoom.us/meeting/register/uA1Jh_J8T3Wez4q0rbpTLQ#/registration"
+  recording_link: "https://www.youtube.com/watch?v=ZlyMg_kpbYg"
   series: "Health"
   abstract: |
     Alzheimer’s disease (AD) and related dementia (ADRD) research has become increasingly big data-driven, relying on large, heterogeneous, and longitudinal datasets that span imaging, biomarkers, genetics, and clinical phenotyping. Experimental data from model systems and clinical trials now often include rich high dimensional data along with key outcomes. Although researchers have known about plaques and tangles, composed of amyloid beta and tau proteins for over a century, the underlying causes of most forms of AD/ADRD remain unknown. This lecture will discuss foundational questions and challenges in ADRD research including how data sciences/AI can help advance precision diagnostic and therapeutic strategies for ADRD and will introduce the growing ensemble of accessible data resources available for analysis in an open science framework. Major NIA-funded observational data resources such as the National Alzheimer’s Coordinating Center (NACC) and Alzheimer’s Disease Neuroimaging Initiative (ADNI) and affiliated neuroimaging, genetics, and multi-omics data repositories will be described, along with efforts at data harmonization. Future directions include increasing use of large-scale electronic health records and national databases providing a window to diagnoses, treatment and outcomes in real-world clinical healthcare settings. Finally, bottlenecks in advancing knowledge of causal mechanisms, early detection, and development of novel therapeutic strategies will be discussed.
@@ -22,6 +194,7 @@
   affiliation: "Duke University"
   title: "Leveraging LLMs for student feedback in introductory data science courses"
   registration_link: "https://upenn.zoom.us/meeting/register/7iwjCrS6Qia0EbrBodLyQw#/registration"
+  recording_link: "https://www.youtube.com/watch?v=uwCr5xlRBs4"
   series: "GenAI"
   abstract: |
     A considerable recent challenge for learners and teachers of data science courses is the increasing use of LLM-based tools in generating answers. In this talk, I will introduce an R package that leverages LLMs to produce immediate feedback on student work to motivate them to give it a try themselves first. I will discuss the technical details of augmenting models with course materials, as well as backend and user interface decisions, challenges surrounding evaluations that are not performed correctly by the LLM, and student feedback from the first set of users. Finally, I will discuss incorporating this tool into low-stakes assessments and address ethical considerations for the formal assessment structure of the course, which relies on LLMs.
@@ -33,12 +206,30 @@
     bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
     affiliation_logo: "/assets/img/speakers/affiliations/duke-university.png"
 
+- date: 2026-02-09
+  time_et: "2:00 PM"
+  speaker: "Robert Kass"
+  speaker_full_name: "Dr. Rob Kass"
+  affiliation: "Carnegie Mellon University"
+  title: "Neural Data from Electrodes: Overview and Challenges"
+  registration_link: "https://upenn.zoom.us/meeting/register/XQ5KxNmfQIaAd4sZ-Fol6Q"
+  recording_link: "https://www.youtube.com/watch?v=zfPiPtz37WA"
+  series: "Health"
+  abstract: |
+    I will review the two main kinds of electrode recordings made within the brain by neurophysiologists: spike trains from individual neurons (often modeled as point processes) and local field potentials, which represent activity from many dozens of neurons (they are time series). I will focus on the Allen Brain Observatory's Neuropixels Dataset in the context of identifying interactions across distinct parts of the brain. My goal is to explain, briefly, the way electrodes produce spike trains and local field potentials; the information these measurements can provide; and both the opportunities and statistical challenges in identifying neural communication across the brain using this kind of relatively large dataset. I will also mention a hybrid AI-statistical method based on what we have called a GLM-Transformer model, and I will touch on the ways multiple investigators have been developing and deploying foundation models (typically based on Transformers) to learn from neural data.
+  speaker_bio: |
+    is the Maurice Falk University Professor of Statistics and Computational Neuroscience at Carnegie Mellon University (CMU), with appointments in the Department of Statistics & Data Science, the Machine Learning Department, and the Neuroscience Institute. Dr. Kass received Ph.D. in Statistics from the University of Chicago, and has made foundational contributions to Bayesian inference and the differential geometry of statistical models, including influential reassessments of Bayes factors and prior specification. Since 2000, his research has focused on statistical methods for neuroscience, particularly the analysis of neural spike train data using point process models to study information processing and interactions across brain regions during behavior. Dr. Kass is co-author of *Analysis of Neural Data* and has written widely cited review and perspective articles that clarify how statistical reasoning advances scientific understanding. Dr. Kass, a former Department Head of Statistics at CMU, has served as founding Editor-in-Chief of *Bayesian Analysis*, and Executive Editor of *Statistical Science*. In addition, Dr. Kass is an elected fellow of the ASA, IMS, and AAAS, a recipient of numerous major professional awards (e.g., Distinguished Achievement Award and Lectureship from the Committee of Presidents of Statistical Societies in 2017), and an elected member of the National Academy of Sciences.
+  speaker_image: "/assets/img/speakers/2026/02-09-robert-kass.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
 - date: 2026-02-11
   time_et: "1:00 PM"
   speaker: "James Zou"
   affiliation: "Stanford University"
   title: "AI agents to accelerate scientific discoveries"
   registration_link: "https://sfu.zoom.us/meeting/register/3MLcnkc9TJCYfHNrdVSbeQ#/registration"
+  recording_link: "https://www.youtube.com/watch?v=pl_ek2PvFb0"
   series: "GenAI"
   abstract: |
     AI agents--large language models equipped with tools and reasoning capabilities--are emerging as powerful research enablers. This talk will explore how agentic AI can accelerate scientific discoveries. I’ll first introduce the Virtual Lab--a collaborative team of AI scientist agents conducting in silico research meetings to tackle open-ended research projects. As an example application, the Virtual Lab designed new nanobody binders to recent Covid variants that we experimentally validated. Then I will introduce Paper2Agent, a framework to automatically convert passive research papers into interactive AI agents. Finally I will discuss learnings from Agents4Science, the first conference where the authors and reviewers are primarily AI systems.
@@ -50,12 +241,72 @@
     bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
     affiliation_logo: "/assets/img/speakers/affiliations/stanford-university.png"
 
+- date: 2026-03-04
+  time_et: "3:00 PM"
+  speaker: "Tingting Zhang"
+  speaker_full_name: "Dr. Tingting Zhang"
+  affiliation: "University of Pittsburgh"
+  title: "A Unified Mixed-Effects Framework for Brain Map Correspondence"
+  registration_link: "https://upenn.zoom.us/meeting/register/Uq77VRxBQze5vVowXjEfBw"
+  recording_link: "https://www.youtube.com/watch?v=1mmIZv2Frrk"
+  series: "Health"
+  abstract: |
+    Recent advances in neuroimaging technologies have generated large-scale multimodal datasets that capture complementary aspects of brain organization. These developments have fueled growing interest in identifying and quantifying associations between spatially distributed brain features across modalities, referred to as brain map correspondence. To meet this need, several permutation tests, including the spin test, Brain Surrogate Maps with Autocorrelated Spatial Heterogeneity (BrainSMASH), and the simple permutation-based intermodal correspondence (SPICE) test, have been developed to assess brain map correspondence while accounting for spatial autocorrelation. Despite their widespread use, these methods often yield inconsistent conclusions when applied to the same data, leading to long-standing confusion in the field regarding their interpretation and relationships.
+
+    We address this challenge by introducing a unified two-factor mixed-effects model that explicitly parameterizes inter-subject variability and spatial variability across brain locations. This formulation provides a principled statistical framework for decomposing sources of variation in brain maps and for formally linking each permutation test to the specific component of variability it probes. Within this framework, we derive analytical expressions for the null distributions of the spin test, BrainSMASH, and SPICE, thereby clarifying their implicit assumptions and fundamental distinctions.
+
+    Using extensive simulations and empirical analyses of both structural and functional brain maps, we demonstrate that the proposed modeling-based approach achieves well-calibrated type I error, substantially improved statistical power, and a more comprehensive and interpretable characterization of brain map correspondence.
+  speaker_bio: |
+    is a Professor of Statistics at the University of Pittsburgh. She received her Ph.D. in Statistics from Harvard University, where she also completed postdoctoral training. Dr. Zhang’s research focuses on developing efficient and robust statistical methods for analyzing large-scale multimodal brain data, with the goal of understanding both normal brain organization and neurological disorders, with a particular emphasis on Alzheimer’s disease. Dr. Zhang is an Associate Editor of the *Journal of the American Statistical Association* and the *Annals of Applied Statistics*.
+  speaker_image: "/assets/img/speakers/2026/03-04-tingting-zhang.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+
+- date: 2026-04-10
+  time_et: "3:00 PM"
+  speaker: "Mingyao Li"
+  speaker_full_name: "Dr. Mingyao Li"
+  affiliation: "University of Pennsylvania"
+  title: "Building Digital Tissue Twins: Uniting Spatial Omics with Histopathology"
+  registration_link: "https://vanderbilt.zoom.us/j/98934825560?pwd=zVrlh6j80rOinBq7F9Pf20vudJfbZO.1"
+  recording_link: ""
+  series: "Health"
+  abstract: |
+    Spatial omics technologies are reshaping how we study the molecular organization of tissues, offering unprecedented opportunities to map biology in its native spatial context. However, key challenges remain in resolution, scalability, and accessibility. In this talk, I will describe how my lab is developing AI-powered approaches that integrate spatial omics with histopathology to overcome these barriers. I will highlight computational strategies that make spatial omics experiments smarter, faster, and more informative, from enhancing spatial resolution beyond current experimental limits, to extending analyses across large and complex tissues, to integrating diverse molecular measurements within a unified framework. Together, these approaches enable the creation of “digital tissue twins,” computational representations of tissues that capture both molecular and structural organization. Finally, I will discuss our efforts to design AI systems that are transparent and trustworthy, ensuring that these tools can support robust biological discovery and clinical translation. These advances aim to unlock the full potential of spatial omics and enable new insights in the era of precision medicine.
+  speaker_bio: |
+    is a Professor of Biostatistics and Digital Pathology at the Perelman School of Medicine at the University of Pennsylvania (UPenn). She received her PhD in Biostatistics from the University of Michigan in 2005. Initially trained as a statistical geneticist, Dr. Li transitioned her research focus to statistical genomics after joining the University of Pennsylvania faculty in 2006. She has published more than 200 peer-reviewed papers, including senior-author publications in leading journals such as *Nature*, *Nature Biotechnology*, *Nature Cell Biology*, *Nature Methods*, and *Nature Machine Intelligence*.
+
+    The central focus of Dr. Li’s current research is the development and application of statistical and machine learning methods to characterize cellular heterogeneity in human disease-relevant tissues using data from single-cell and spatial omics studies, with the goal of translating these insights into clinical practice. More recently, she has expanded her research into computational pathology, which plays a critical role in processing and analyzing spatial omics data. In recognition of her contributions to integrating spatial omics with histopathology, Dr. Li was named to The Pathologist’s 2024 Power List.
+
+    At UPenn, Dr. Li serves as the Director of the Statistical Center for Single-Cell and Spatial Genomics and chairs the Graduate Program in Biostatistics. She is an elected member of the International Statistical Institute, a Fellow of the American Statistical Association, and a Fellow of the American Association for the Advancement of Science.
+  speaker_image: "/assets/img/speakers/2026/04-10-mingyao-li.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
+- date: 2026-04-23
+  time_et: "1:00 PM"
+  speaker: "Josh Siegle"
+  speaker_full_name: "Dr. Josh Siegle"
+  affiliation: "Allen Institute"
+  title: "Large-Scale Open Data as a Foundation for Discovery: Lessons from the Allen Brain Observatory"
+  registration_link: "https://us02web.zoom.us/meeting/register/p2T9QVjbQ1epN7WcSdC5fQ"
+  recording_link: "https://www.youtube.com/watch?v=EeDdRsyoQzA"
+  series: "Health"
+  abstract: |
+    Modern biomedical and neuroscience research increasingly depends on large-scale, standardized datasets to achieve the statistical power needed to detect subtle effects, characterize population-level variability, and validate computational models. Yet in practice, open data sharing remains the exception rather than the norm, limiting the community's ability to leverage these advantages. The Allen Brain Observatory is a case study in what becomes possible when large-scale surveys of neuronal activity are made freely available. These openly shared datasets, which include recordings of spiking activity across up to 8 mouse visual areas at a time, offer the kind of sample sizes and consistency that are rarely achievable within a single laboratory. To date, data from these surveys have supported over 100 publications spanning new neuroscientific discoveries, validation of computational and statistical algorithms, and cross-modality comparisons. I will discuss how open data at this scale creates unique opportunities for the development and testing of statistical and machine learning methods in high-dimensional neural data, and distill lessons learned about barriers to data reuse that are broadly relevant to health data science.
+  speaker_bio: |
+    leads the Electrophysiology group at the Allen Institute for Neural Dynamics. He joined the Allen Institute in 2014 and spent seven years investigating the mouse visual system as part of the MindScope Program, contributing to the large-scale data collection efforts described in this talk. Josh received a PhD in Neuroscience from MIT, where he studied hippocampal circuits with Matthew Wilson and somatosensory processing with Christopher Moore, and an Sc.B. in Neuroscience from Brown University. Beyond his scientific work, Josh is deeply involved in the design and dissemination of open-source tools for neuroscience, and co-founded Open Ephys to support collaborative open-source development across the research community.
+  speaker_image: "/assets/img/speakers/2026/04-23-josh-siegle.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+
 - date: 2026-05-08
   time_et: "2:00 PM"
   speaker: "Curtis Huttenhower"
   affiliation: "Harvard T.H. Chan School of Public Health"
   title: "Quantitative methods for microbial communities and the human microbiome"
   registration_link: "https://us02web.zoom.us/meeting/register/6V5L7h7YQ0-qs6JqnElBfg"
+  recording_link: ""
   series: "Health"
   abstract: |
     Statistical methods for microbial community research have evolved to address most of the tasks necessary for end-to-end environmental or human population study design and execution. These include power calculations, data handling and denoising, simulations and evaluation, and biostatistics for phenotypic and covariate analysis. All must take into account the now well-established properties of typical microbial ecology data, including compositionality, sparsity, and nonindependence. I will review the state of the art and discuss solutions for linear modeling, mediation analysis, and omnibus testing. The second bridges feature-wise association testing with interaction analyses, correcting false discovery rates and demonstrating substantial lack of agreement among mediation approaches. The third investigates the widespread use of PERMANOVA and similar methods, suggesting corrections that again better control false discovery rates and quantify biologically interpretable effect sizes. Together, these provide a flexible toolkit enabling most commonly needed quantitative analyses for microbial community science.
@@ -74,6 +325,7 @@
   affiliation: "UNC Gillings School of Global Public Health"
   title: "Staying in the Driver's Seat: Calibrating AI Use in Statistical Research, Training, and Practice"
   registration_link: "https://sfu.zoom.us/meeting/register/t_dkc6edSq2ql2STmKquqw"
+  recording_link: "https://www.youtube.com/watch?v=SScBaTQX2L0"
   series: "GenAI"
   abstract: |
     Generative AI tools have become part of daily statistical research and training. They can accelerate everyday tasks, help us work in unfamiliar coding frameworks, and reduce the friction of writing first drafts. But these gains raise a less obvious question: as we use AI for more substantive parts of our work, how do we stay actively engaged with the choices and reasoning embedded in its output? Without deliberate attention, reliance on AI output may make us less vigilant about errors, less attentive to nuance, and less disciplined about what we still need to understand ourselves.
@@ -85,4 +337,68 @@
   speaker_image: "/assets/img/speakers/2026/05-26-naim-rashid.avif"
   theme:
     affiliation_logo: "/assets/img/speakers/affiliations/unc-chapel-hill.png"
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
+- date: 2026-06-10
+  time_et: "3:00 PM"
+  speaker: "Jiang Bian"
+  speaker_full_name: "Dr. Jiang Bian"
+  affiliation: "Indiana University School of Medicine"
+  title: "Real-World Data and AI: Successes, Challenges, and Opportunities"
+  registration_link: "https://us02web.zoom.us/webinar/register/WN_SBuAdU3dQC-z-o6Lk-oG-w"
+  recording_link: "https://www.youtube.com/watch?v=aJp4gTvOX4Q"
+  series: "Health"
+  abstract: |
+    This presentation examines practical methods―and some AI tools―for transforming real-world data (RWD) into credible real-world evidence (RWE). It highlights the central role of data science in overcoming common obstacles in electronic health records (EHR) and claims data (e.g., missingness, measurement error, and coding variability). Using case studies focused on GLP-1 receptor agonists (GLP-1RAs), the talk illustrates how rigorous study design and causal inference―particularly target trial emulation―can be used to assess the effectiveness and safety of GLP-1RAs. The presentation emphasizes when and how RWE can complement randomized controlled trials―and where it can mislead without careful attention to potential biases, many of which originate from data limitations.
+  speaker_bio: |
+    is Walther and Regenstrief Endowed Chair in Cancer Informatics and a Professor of Biostatistics and Health Data Science from Indiana University (IU) School of Medicine. He specializes in biomedical informatics and health data science, interdisciplinary fields focused on leveraging data, information, and knowledge to drive scientific discovery, problem-solving, and decision-making, all aimed at improving human health. He has a diverse background in data harmonization and integration, AI/machine learning, causal AI, natural language processing, ontology development and evaluation, and software engineering. Dr. Bian brings extensive experience in developing real-world data infrastructure, informatics tools, and systems, as well as applying advanced AI and data science methods to analyze and interpret multimodal clinical and biomedical data. Dr. Bian serves as Chief Data Scientist at Regenstrief Institute, Chief Data Scientist at IU Health, Associate Dean of Data Science of Indiana University School of Medicine, Chief Research Information Officer at IU Melvin and Bren Simon Comprehensive Cancer Center, Regenstrief Institute Deputy Director of Indiana Clinical and Translational Sciences Institute (CTSI), and Vice Chair for Translational Informatics of the Department of Biostatistics and Health Data Science at IU School of Medicine.
+  speaker_image: "/assets/img/speakers/2026/06-10-jiang-bian.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+    affiliation_logo: "/assets/img/speakers/affiliations/indiana-university.png"
+
+- date: 2026-09-23
+  time_et: "2:00 PM"
+  speaker: "Edgar Dobriban"
+  speaker_full_name: "Dr. Edgar Dobriban"
+  affiliation: "University of Pennsylvania"
+  title: "Recent Progress on Using AI for Research in Statistics"
+  registration_link: "https://us02web.zoom.us/webinar/register/WN_dq5GpQIhRQGSHF_5PcR_ng"
+  recording_link: "https://www.youtube.com/watch?v=Q3MDqhEAOyw"
+  series: "Health"
+  abstract: |
+    Recent AI models have led to remarkable progress on longstanding open problems in mathematics, and their agentic modes can perform significant coding tasks. In this talk, we reflect on the impact of these advances on research in statistics. We will provide several examples where AI models have helped make progress in statistical research. We also discuss the future outlook, balancing the potential benefits and harms of increasing reliance on AI.
+  speaker_bio: |
+    is an Associate Professor in the Department of Statistics and Data Science at the University of Pennsylvania, with a secondary appointment in the Department of Computer and Information Science. Dr. Dobriban earned his B.A. in Mathematics from Princeton University and his Ph.D. in Statistics from Stanford University. His research spans mathematical statistics, statistical machine learning, and artificial intelligence, focusing on areas such as high-dimensional asymptotics, conformal prediction, AI safety, distributed learning, and uncertainty quantification. His contributions to the field have earned him prominent accolades, including the Peter Gavin Hall IMS Early Career Prize, a COPSS Emerging Leader Award, an NSF CAREER Award, and a Sloan Research Fellowship.
+  speaker_image: "/assets/img/speakers/2026/09-23-edgar-dobriban.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-1.svg"
+
+- date: 2026-10-13
+  time_et: "1:00 PM"
+  speaker: "Anru Zhang"
+  speaker_full_name: "Dr. Anru Zhang"
+  affiliation: "Duke University"
+  title: "Making EHR Ready for Analysis and AI: Statistics at the Data Frontier"
+  registration_link: "https://us02web.zoom.us/webinar/register/WN_s-YLyIQ8SCWuORhJyyL4yw"
+  recording_link: ""
+  series: "Health"
+  abstract: |
+    Electronic health records (EHR) are increasingly central to clinical research and AI, but they are not simply “big data.” They are irregular, heterogeneous, imbalanced, privacy-sensitive, and sometimes internally inconsistent. As a result, reliable statistical learning and inference often requires first solving problems of data readiness. In this talk, we will discuss statistical and computational methods our group has developed to make longitudinal EHR more comparable, learnable, shareable, and trustworthy. Topics include timeline registration for aligning patients along latent disease progression; synthetic data augmentation for learning from imbalanced EHR; privacy-preserving synthetic EHR generation; and large-language-model-assisted detection of clinical documentation inconsistencies. These examples motivate a broader perspective in which preparing EHR for analysis and AI is itself a statistical problem, and a necessary foundation for trustworthy clinical and generative AI.
+  speaker_bio: |
+    is a tenured full professor with primary appointments in the Department of Biostatistics & Bioinformatics and the Department of Computer Science at Duke University. He also serves as Vice Chair for Research in Duke’s Department of Biostatistics & Bioinformatics. His current research interests include generative models, biomedical data science, and tensor learning. He has received the Leo Breiman Junior Award, COPSS Emerging Leader Award, IMS Tweedie Award, ASA Gottfried E. Noether Junior Award, AMIA Data Science Outstanding Paper Award, Bernoulli Society New Researcher's Award, and NSF CAREER Award. He is a Fellow of the American Statistical Association (ASA). His trainees have also received major recognition, including two of his Ph.D. students who received the IMS Lawrence D. Brown Ph.D. Student Award. He currently serves as an associate editor for *The Annals of Statistics*, *Journal of the American Statistical Association* Theory & Methods and Applications & Case Studies, *Statistica Sinica*, and *ASA Discoveries*. His research is currently supported by two NIH R01 grants, one as sole PI and one as MPI with clinical investigators.
+  speaker_image: "/assets/img/speakers/2026/10-13-anru-zhang.jpg"
+  theme:
+    bg_pattern_svg: "/assets/img/bg/polygon-2.svg"
+    affiliation_logo: "/assets/img/speakers/affiliations/duke-university.png"
+
+# Placeholder: title, abstract, bio, photo and registration link still to come.
+- date: 2026-12-02
+  time_et: "2:00 PM"
+  speaker: "Bingxin Zhao"
+  affiliation: "University of Pennsylvania"
+  title: "Title to be announced"
+  registration_link: ""
+  series: "Health"
+  theme:
     bg_pattern_svg: "/assets/img/bg/polygon-1.svg"

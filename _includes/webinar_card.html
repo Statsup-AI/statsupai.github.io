@@ -1,3 +1,8 @@
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign t_day = include.t.date | date: "%Y-%m-%d" %}
+{% if t_day < today %}{% assign is_past = true %}{% else %}{% assign is_past = false %}{% endif %}
+{% if is_past %}{% assign meta_link = include.t.recording_link %}{% else %}{% assign meta_link = include.t.registration_link %}{% endif %}
+
 <div class="timeline-item" id="webinar-{{ include.t.date }}">
   <div class="timeline-content" data-series="{{ include.t.series }}">
     <span class="webinar-series-tag">{{ include.t.series }}</span>
@@ -32,40 +37,50 @@
     </div>
 
     <p class="webinar-meta">
-      <a href="{{include.t.registration_link}}" target="_blank">
+      {% if meta_link and meta_link != "" %}<a href="{{ meta_link }}" target="_blank">{% endif %}
         <strong>{{ include.t.date | date: "%b %-d, %Y" }}</strong>
         · {{ include.t.time_et }} ET
         · {{ include.t.speaker }} ({{ include.t.affiliation }})
-      </a>
+      {% if meta_link and meta_link != "" %}</a>{% endif %}
     </p>
     
+    {% if include.t.speaker_bio %}
     <div class="webinar-section speaker-bio">
+      {% if include.t.speaker_image %}
       <div class="webinar-speaker-photo">
-        <a href="{{ include.t.personal_website }}" target="_blank">
+        {% if include.t.personal_website %}<a href="{{ include.t.personal_website }}" target="_blank">{% endif %}
           <img src="{{ include.t.speaker_image }}" alt="{{ include.t.speaker }}"/>
-        </a>
+        {% if include.t.personal_website %}</a>{% endif %}
       </div>
+      {% endif %}
       {% assign speaker_name_str = include.t.speaker_full_name | default: include.t.speaker %}
       {% assign bio_str = include.t.speaker_bio %}
       {% assign bio_first_char = bio_str | slice: 0, 1 %}
 
-      <a class="webinar-label"
+      {% if include.t.personal_website %}<a class="webinar-label"
          href="{{ include.t.personal_website }}"
          target="_blank">
-        {{ speaker_name_str }}</a>{% if bio_first_char == ',' %}{{ bio_str | markdownify }}
+        {{ speaker_name_str }}</a>{% else %}<span class="webinar-label">{{ speaker_name_str }}</span>{% endif %}{% if bio_first_char == ',' %}{{ bio_str | markdownify }}
         {% else %}
         {{ bio_str | markdownify }}{% endif %}
     </div>
+    {% endif %}
 
+    {% if include.t.abstract %}
     <div class="webinar-section">
       <span class="webinar-label">Abstract: </span>
       {{ include.t.abstract | markdownify }}
-    </div>    
+    </div>
+    {% elsif is_past == false %}
+    <div class="webinar-section"><em>Talk details coming soon.</em></div>
+    {% endif %}
 
+    {% if meta_link and meta_link != "" %}
     <div class="webinar-section registration-button">
-      <a href="{{include.t.registration_link}}" target="_blank">Register! ↗
+      <a href="{{ meta_link }}" target="_blank">{% if is_past %}Watch recording ↗{% else %}Register! ↗{% endif %}
       </a>
     </div>
+    {% endif %}
 
   </div>
 
