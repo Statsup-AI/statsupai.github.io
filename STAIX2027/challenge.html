@@ -265,6 +265,7 @@
     
     
     </style>
+    <script src="resource-links.js" defer></script>
 </head>
 <body class="text-gray-900 flex flex-col min-h-screen">
 
@@ -286,7 +287,16 @@
                 <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
                 <a href="challenge.html" class="nav-link text-[#4682B4]">Challenge</a>
                 <a href="organizers.html" class="nav-link hover:text-gray-900">Organizers</a>
-                <a href="call-for-papers.html" class="nav-link">Call for Papers &amp; Posters</a>
+                <div class="relative group">
+                    <button type="button" class="nav-link cursor-pointer" aria-controls="cfp-desktop-menu">Call for Papers<br>&amp; Posters ▾</button>
+                    <div id="cfp-desktop-menu" class="absolute left-0 top-full hidden group-hover:block group-focus-within:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
             </div>
         </div>
@@ -296,7 +306,17 @@
             <a href="index.html" class="block py-2 nav-link">Home</a>
             <a href="challenge.html" class="block py-2 nav-link text-[#4682B4]">Challenge</a>
             <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
-            <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+            <div>
+                <button type="button" class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center" aria-controls="cfp-mobile-menu" aria-expanded="false">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="cfp-mobile-menu" class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
             <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
         </div>
     </nav>
@@ -329,8 +349,8 @@
                         and reusable statistical agents.
                     </p>
                     <div class="flex flex-wrap gap-3 justify-center">
-                        <a href="https://forms.gle/S25CpcJfP3EdfzjG9" class="btn-outline">Register Team</a>
-                        <a href="https://www.kaggle.com/t/117f935f903c610c7c6162325bd62288" class="btn-outline">Join Competition</a>
+                        <a href="not-available.html?resource=challenge-registration" data-resource="challenge-registration" class="btn-outline">Register Team</a>
+                        <a href="not-available.html?resource=challenge-competition" data-resource="challenge-competition" class="btn-outline">Join Competition</a>
                         <a href="mailto:staix.contact@gmail.com" class="btn-outline">Contact Us</a>
                     </div>
                 </div>
@@ -383,7 +403,7 @@
                     <div>
                         <div class="step-item">
                             <span class="step-num">1</span>
-                            <span>Read the <a href="https://www.dropbox.com/scl/fi/1m4lu2j3shiwu4wq66vn1/STAI-X_Challenge_2026_Rules.docx?rlkey=dt3hqejmrhhpvjkaplsxjvg0e&dl=0" class="text-[#315f86] font-semibold">competition rules</a> carefully.</span>
+                            <span>Read the <a href="not-available.html?resource=challenge-rules" data-resource="challenge-rules" class="text-[#315f86] font-semibold">competition rules</a> carefully.</span>
                         </div>
                         <div class="step-item">
                             <span class="step-num">2</span>
@@ -400,15 +420,15 @@
                         </div>
                         <div class="step-item">
                             <span class="step-num">4</span>
-                            <span>Complete the official <a href="https://forms.gle/S25CpcJfP3EdfzjG9" class="text-[#315f86] font-semibold">registration form</a> before submitting to any award track. Registration closes <strong class="text-gray-900">2027/06/01 at 11:59pm UTC</strong>.</span>
+                            <span>Complete the official <a href="not-available.html?resource=challenge-registration" data-resource="challenge-registration" class="text-[#315f86] font-semibold">registration form</a> before submitting to any award track. Registration closes <strong class="text-gray-900">TBD</strong>.</span>
                         </div>
                         <div class="step-item">
                             <span class="step-num">5</span>
-                            <span>Join the Kaggle competition using the <a href="https://www.kaggle.com/t/117f935f903c610c7c6162325bd62288" class="text-[#315f86] font-semibold">competition link</a>. Only registered teams are qualified for awards. The competition will be open from <strong class="text-gray-900">2027/05/04 at 12:00am UTC</strong> to <strong class="text-gray-900">2027/06/15 at 11:59pm UTC</strong>.</span>
+                            <span>Join the Kaggle competition using the <a href="not-available.html?resource=challenge-competition" data-resource="challenge-competition" class="text-[#315f86] font-semibold">competition link</a>. Only registered teams are qualified for awards. The competition will be open from <strong class="text-gray-900">TBD</strong> to <strong class="text-gray-900">TBD</strong>.</span>
                         </div>
                         <div class="step-item">
                             <span class="step-num">6</span>
-                            <span>Deadline for all award submissions is <strong class="text-gray-900">2027/06/15 at 11:59pm UTC</strong>.</span>
+                            <span>Deadline for all award submissions is <strong class="text-gray-900">TBD</strong>.</span>
                         </div>
                     </div>
                 </div>
@@ -428,10 +448,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td><strong>Registration Deadline</strong></td><td>Jun 1, 2027</td><td>Teams must register before submitting to any award track.</td></tr>
-                                <tr><td><strong>Phase I — Competition</strong></td><td>May 4 – Jun 15, 2027</td><td>All award submissions are due <strong>2027/06/15 at 11:59pm UTC</strong>.</td></tr>
-                                <tr><td><strong>Phase II — Evaluation</strong></td><td>Jun 16 – Jun 30, 2027</td><td>The committee reviews award participants and determines winners.</td></tr>
-                                <tr><td><strong>Phase III — Announcement</strong></td><td>Jul 1, 2027</td><td>Winners announced.</td></tr>
+                                <tr><td><strong>Registration Deadline</strong></td><td>TBD</td><td>Teams must register before submitting to any award track.</td></tr>
+                                <tr><td><strong>Phase I — Competition</strong></td><td>TBD</td><td>All award submissions are due <strong>TBD</strong>.</td></tr>
+                                <tr><td><strong>Phase II — Evaluation</strong></td><td>TBD</td><td>The committee reviews award participants and determines winners.</td></tr>
+                                <tr><td><strong>Phase III — Announcement</strong></td><td>TBD</td><td>Winners announced.</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -452,7 +472,7 @@
                                 <li>One Kaggle account per person. Multi-account participation disqualifies all affiliated submissions.</li>
                                 <li>Maximum team size is <strong class="text-gray-900">4</strong>. Team mergers are not allowed.</li>
                                 <li>Sponsor employees, organizers, and reviewers may participate but are not eligible to be ranked.</li>
-                                <li>Every team must register by <strong class="text-gray-900">2027/06/01 at 11:59pm UTC</strong>. Team membership cannot change after registration.</li>
+                                <li>Every team must register by <strong class="text-gray-900">TBD</strong>. Team membership cannot change after registration.</li>
                             </ul>
                         </div>
 
@@ -486,7 +506,7 @@
                                 <li>Participants for Award B must also enter Award A.</li>
                                 <li>After Phase I, up to the top 20 teams by Stage 1 full-holdout MAE are selected for Award B evaluation.</li>
                                 <li>Add the Award B markdown cell as the first cell of the Award A notebook so reviewers can find team information, GitHub repository, and architecture notes.</li>
-                                <li>Tag the repository commit <code class="inline-code">award-b-submission</code> before <strong class="text-gray-900">2027/06/15 11:59pm UTC</strong>.</li>
+                                <li>Tag the repository commit <code class="inline-code">award-b-submission</code> before <strong class="text-gray-900">TBD</strong>.</li>
                             </ul>
                         </div>
 
@@ -498,8 +518,8 @@
                                 <li>Add the necessary information in the post so reviewers can find team information, GitHub repository, and architecture notes.</li>
                                 <li>Describe what the statistical agent or skills does in plain language, and include team information.</li>
                                 <li>Include a demo link, architecture summary, and reproducibility link or notebook.</li>
-                                <li>Tag the repository commit <code class="inline-code">award-c-submission</code> before <strong class="text-gray-900">2027/06/15 11:59pm UTC</strong>.</li>
-                                <li>Posts must be published by <strong class="text-gray-900">2027/06/15 at 11:59pm UTC</strong>.</li>
+                                <li>Tag the repository commit <code class="inline-code">award-c-submission</code> before <strong class="text-gray-900">TBD</strong>.</li>
+                                <li>Posts must be published by <strong class="text-gray-900">TBD</strong>.</li>
                             </ul>
                         </div>
 
@@ -557,15 +577,13 @@
             <a href="challenge.html">Challenge</a>
             <a href="organizers.html">Organizers</a>
             <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
             <a href="mailto:staix.contact@gmail.com">Contact</a>
           </div>
         </div>
-        <div class="footer-contact">
+        <div class="footer-contact" data-volunteers>
           <h4>Volunteers</h4>
-          <p>Yuhan Geng (University of Michigan)</p>
-          <p>Zhiqiu Xia (Rutgers University)</p>
-          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
-          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
         </div>
         <div class="footer-contact">
           <h4>Contact</h4>
@@ -649,5 +667,14 @@
     this.setAttribute('aria-expanded', String(isOpen));
   });
 </script>
+    <script>
+        document.querySelectorAll('.mobile-submenu-toggle').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var isOpen = this.nextElementSibling.classList.toggle('open');
+                this.setAttribute('aria-expanded', String(isOpen));
+                this.querySelector('svg').classList.toggle('rotate-180');
+            });
+        });
+    </script>
 </body>
 </html>

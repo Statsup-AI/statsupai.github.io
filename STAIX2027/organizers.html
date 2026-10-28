@@ -51,7 +51,16 @@
                 <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
                 <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
                 <a href="organizers.html" class="nav-link text-[#4682B4]">Organizers</a>
-                <a href="call-for-papers.html" class="nav-link">Call for Papers &amp; Posters</a>
+                <div class="relative group">
+                    <button type="button" class="nav-link cursor-pointer" aria-controls="cfp-desktop-menu">Call for Papers<br>&amp; Posters ▾</button>
+                    <div id="cfp-desktop-menu" class="absolute left-0 top-full hidden group-hover:block group-focus-within:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
             </div>
         </div>
@@ -61,7 +70,17 @@
             <a href="index.html" class="block py-2 nav-link">Home</a>
             <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
             <a href="organizers.html" class="block py-2 nav-link text-[#4682B4]">Organizers</a>
-            <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+            <div>
+                <button type="button" class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center" aria-controls="cfp-mobile-menu" aria-expanded="false">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="cfp-mobile-menu" class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
             <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
         </div>
     </nav>
@@ -479,5 +498,14 @@
     sections.forEach(function(s) { observer.observe(s); });
   })();
 </script>
+    <script>
+        document.querySelectorAll('.mobile-submenu-toggle').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var isOpen = this.nextElementSibling.classList.toggle('open');
+                this.setAttribute('aria-expanded', String(isOpen));
+                this.querySelector('svg').classList.toggle('rotate-180');
+            });
+        });
+    </script>
 </body>
 </html>

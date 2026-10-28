@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=2027-footer">
+    <script src="resource-links.js" defer></script>
 </head>
 <body class="text-gray-900 flex flex-col min-h-screen">
 
@@ -39,7 +40,16 @@
                 <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
                 <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
                 <a href="organizers.html" class="nav-link hover:text-gray-900">Organizers</a>
-                <a href="call-for-papers.html" class="nav-link">Call for Papers &amp; Posters</a>
+                <div class="relative group">
+                    <button type="button" class="nav-link cursor-pointer" aria-controls="cfp-desktop-menu">Call for Papers<br>&amp; Posters ▾</button>
+                    <div id="cfp-desktop-menu" class="absolute left-0 top-full hidden group-hover:block group-focus-within:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
             </div>
         </div>
@@ -49,7 +59,17 @@
             <a href="index.html" class="block py-2 nav-link">Home</a>
             <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
             <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
-            <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+            <div>
+                <button type="button" class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center" aria-controls="cfp-mobile-menu" aria-expanded="false">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="cfp-mobile-menu" class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
             <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
         </div>
     </nav>
@@ -65,89 +85,6 @@
                     Registration has not started yet.
                 </p>
             </div>
-        </section>
-
-        <section id="instructions" class="glass-card p-10 md:p-16 scroll-mt-28">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10 text-center">Instructions</h2>
-            <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed">
-                <li>An account is free and required. ASA membership is NOT required.</li>
-                <li>Breakfast, coffee breaks, lunch and reception on August 1st are INCLUDED in the registration fee.</li>
-                <li>We value your inputs on our conference. Please fill out the optional survey questions.</li>
-                <li>Short courses are add-ons for additional fees.</li>
-                <li>A lunch ticket option for short course participants may be added for July 31. Be sure to click "Add" to purchase this option.</li>
-                <li>You may edit registration details such as answers to registration questions or purchase add-ons later.</li>
-                <li>Cancellation policy: Cancelations received through July 20, 2027, will be refunded less a 20 percent all items. Requests for refunds received after July 20, 2027, will not be honored. All cancelations must be submitted in writing and emailed to <a href="mailto:ASAInfo@amstat.org" class="text-[#4682B4] hover:underline">ASAInfo@amstat.org</a>.</li>
-            </ul>
-        </section>
-
-        <section id="registration-fee" class="glass-card p-10 md:p-16 scroll-mt-28">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-950 mb-10 text-center">Registration Fee</h2>
-
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Conference</h3>
-            <div class="overflow-x-auto mb-8">
-                <table class="w-full text-center border-collapse">
-                    <thead>
-                        <tr>
-                            <th class="border border-gray-200 bg-white/30 p-3" rowspan="2"></th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Early Bird (before June 1)</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Regular (after June 1)</th>
-                        </tr>
-                        <tr>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-200 p-3 font-semibold text-gray-800 bg-white/30">Conference</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$250</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$350</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$150</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$300</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$420</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$180</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Short Course</h3>
-            <div class="overflow-x-auto mb-8">
-                <table class="w-full text-center border-collapse">
-                    <thead>
-                        <tr>
-                            <th class="border border-gray-200 bg-white/30 p-3" rowspan="2"></th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Early Bird (before June 1)</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-[#4682B4] font-bold" colspan="3">Regular (after June 1)</th>
-                        </tr>
-                        <tr>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Academia/Government/Nonprofit</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Industry</th>
-                            <th class="border border-gray-200 bg-white/30 p-3 text-gray-700 font-semibold">Trainee</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-200 p-3 font-semibold text-gray-800 bg-white/30">Short Course</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$270</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$370</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$170</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$320</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$400</td>
-                            <td class="border border-gray-200 p-3 text-gray-700 bg-white/30">$190</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="text-gray-600 text-sm italic">*Trainee includes students and postdocs. Travel awards for trainees and junior faculty will be made available.</p>
         </section>
 
     </main>
@@ -168,15 +105,13 @@
             <a href="challenge.html">Challenge</a>
             <a href="organizers.html">Organizers</a>
             <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
             <a href="mailto:staix.contact@gmail.com">Contact</a>
           </div>
         </div>
-        <div class="footer-contact">
+        <div class="footer-contact" data-volunteers>
           <h4>Volunteers</h4>
-          <p>Yuhan Geng (University of Michigan)</p>
-          <p>Zhiqiu Xia (Rutgers University)</p>
-          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
-          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
         </div>
         <div class="footer-contact">
           <h4>Contact</h4>
@@ -203,7 +138,8 @@
   document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var sub = this.nextElementSibling;
-      sub.classList.toggle('open');
+      var isOpen = sub.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(isOpen));
       this.querySelector('svg').classList.toggle('rotate-180');
     });
   });

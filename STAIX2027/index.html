@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=2027-footer">
+    <script src="resource-links.js" defer></script>
 </head>
 <body class="text-gray-900 flex flex-col min-h-screen">
 
@@ -39,7 +40,16 @@
                 <a href="#home" class="nav-link text-[#4682B4]">Home</a>
                 <a href="challenge.html" class="nav-link">Challenge</a>
                 <a href="organizers.html" class="nav-link">Organizers</a>
-                <a href="call-for-papers.html" class="nav-link">Call for Papers &amp; Posters</a>
+                <div class="relative group">
+                    <button type="button" class="nav-link cursor-pointer" aria-controls="cfp-desktop-menu">Call for Papers<br>&amp; Posters ▾</button>
+                    <div id="cfp-desktop-menu" class="absolute left-0 top-full hidden group-hover:block group-focus-within:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
             </div>
         </div>
@@ -49,7 +59,17 @@
             <a href="#home" class="block py-2 nav-link text-[#4682B4]">Home</a>
             <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
             <a href="organizers.html" class="block py-2 nav-link">Organizers</a>
-            <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+            <div>
+                <button type="button" class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center" aria-controls="cfp-mobile-menu" aria-expanded="false">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="cfp-mobile-menu" class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
             <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
         </div>
     </nav>
@@ -181,7 +201,7 @@
                 <p class="text-gray-700 mb-6">All submissions should be made through the official OpenReview portal for STAI-X 2027.</p>
                 <div class="flex flex-wrap gap-4">
                     <a href="call-for-papers.html" class="inline-block bg-[#4682B4] hover:bg-[#d86f54] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Call for Papers &amp; Posters</a>
-                    <a href="https://openreview.net/group?id=STAI-X/2026/Conference" target="_blank" class="inline-block bg-[#4682B4] hover:bg-[#d86f54] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">OpenReview Submission</a>
+                    <a href="not-available.html?resource=paper-submission" data-resource="paper-submission" target="_blank" class="inline-block bg-[#4682B4] hover:bg-[#d86f54] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">OpenReview Submission</a>
                     <a href="submission-guide.html" class="inline-block bg-[#4682B4] hover:bg-[#d86f54] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300">Submission Guide</a>
                 </div>
                 <p class="font-semibold text-gray-900 mt-6">Fast track to journal review: <span class="text-[#4682B4]">Journal of the American Statistical Association (JASA): Theory and Methods (T&M), Applications and Case Studies (A&CS), Annals of Applied Statistics (AOAS), Harvard Data Science Review (HDSR), Genome Research (GR), GENETICS, Canadian Journal of Statistics, Data Science in Science, and ASA Discoveries</span></p>
@@ -339,15 +359,13 @@
             <a href="challenge.html">Challenge</a>
             <a href="organizers.html">Organizers</a>
             <a href="call-for-papers.html">Call for Papers &amp; Posters</a>
+            <a href="submission-guide.html">Submission Guide</a>
+            <a href="faq.html">FAQ</a>
             <a href="mailto:staix.contact@gmail.com">Contact</a>
           </div>
         </div>
-        <div class="footer-contact">
+        <div class="footer-contact" data-volunteers>
           <h4>Volunteers</h4>
-          <p>Yuhan Geng (University of Michigan)</p>
-          <p>Zhiqiu Xia (Rutgers University)</p>
-          <p>Ling Chang (UT MD Anderson Cancer Center)</p>
-          <p>Jiahe Shen (UT MD Anderson Cancer Center)</p>
         </div>
         <div class="footer-contact">
           <h4>Contact</h4>
@@ -395,5 +413,14 @@
     this.setAttribute('aria-expanded', String(isOpen));
   });
 </script>
+    <script>
+        document.querySelectorAll('.mobile-submenu-toggle').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var isOpen = this.nextElementSibling.classList.toggle('open');
+                this.setAttribute('aria-expanded', String(isOpen));
+                this.querySelector('svg').classList.toggle('rotate-180');
+            });
+        });
+    </script>
 </body>
 </html>
