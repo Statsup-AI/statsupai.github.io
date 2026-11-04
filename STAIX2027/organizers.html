@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAI-X 2027 | Organizers</title>
+    <link rel="icon" type="image/png" href="../img/staix-logo.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4T6CHG4PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B4T6CHG4PS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #section-rail {
+            top: calc(50% + 40px);
+        }
+        #section-rail ul {
+            max-height: calc(100vh - 168px);
+            overflow-y: auto;
+            padding: 4px;
+            overscroll-behavior: contain;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="../img/staix-logo.png" alt="STAI-X Logo" class="h-10 w-auto">
+                <span class="text-2xl font-semibold tracking-tight text-gray-900">STAI-X 2027</span>
+            </div>
+            <!-- Hamburger (mobile only) -->
+            <button id="nav-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 rounded"></span>
+            </button>
+
+            <!-- Desktop links (hidden below lg) -->
+            <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium text-gray-600 leading-tight text-center">
+                <a href="index.html" class="nav-link hover:text-gray-900">Home</a>
+                <a href="challenge.html" class="nav-link hover:text-gray-900">Challenge</a>
+                <a href="organizers.html" class="nav-link text-[#4682B4]">Organizers</a>
+                <div class="relative group">
+                    <button type="button" class="nav-link cursor-pointer" aria-controls="cfp-desktop-menu">Call for Papers<br>&amp; Posters ▾</button>
+                    <div id="cfp-desktop-menu" class="absolute left-0 top-full hidden group-hover:block group-focus-within:block pt-2 z-50">
+                        <div class="bg-white rounded-lg shadow-lg border border-gray-100 min-w-[180px]">
+                            <a href="call-for-papers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-t-lg">Call for Papers &amp; Posters</a>
+                            <a href="submission-guide.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4]">Submission Guide</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4682B4] rounded-b-lg">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="mailto:staix.contact@gmail.com" class="nav-link text-gray-500 hover:text-gray-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden at lg+) -->
+        <div id="mobile-menu" class="lg:hidden px-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="block py-2 nav-link">Home</a>
+            <a href="challenge.html" class="block py-2 nav-link">Challenge</a>
+            <a href="organizers.html" class="block py-2 nav-link text-[#4682B4]">Organizers</a>
+            <div>
+                <button type="button" class="mobile-submenu-toggle w-full text-left py-2 nav-link flex justify-between items-center" aria-controls="cfp-mobile-menu" aria-expanded="false">
+                    Call for Papers &amp; Posters
+                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="cfp-mobile-menu" class="mobile-submenu pl-4">
+                    <a href="call-for-papers.html" class="block py-2 nav-link">Call for Papers &amp; Posters</a>
+                    <a href="submission-guide.html" class="block py-2 nav-link">Submission Guide</a>
+                    <a href="faq.html" class="block py-2 nav-link">FAQ</a>
+                </div>
+            </div>
+            <a href="mailto:staix.contact@gmail.com" class="block py-2 nav-link text-gray-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Floating section rail (desktop only) -->
+    <nav id="section-rail" class="section-rail" aria-label="Page sections">
+        <ul>
+            <li><a href="#organizing-chairs" data-target="organizing-chairs" title="Organizing Committee"><span class="dot" aria-hidden="true"></span><span class="label">Organizing Committee</span></a></li>
+            <li><a href="#program-committee" data-target="program-committee" title="Program Committee"><span class="dot" aria-hidden="true"></span><span class="label">Program Committee</span></a></li>
+            <li><a href="#data-challenge-committee" data-target="data-challenge-committee" title="Data Challenge Committee"><span class="dot" aria-hidden="true"></span><span class="label">Data Challenge</span></a></li>
+            <li><a href="#local-committee" data-target="local-committee" title="Local Committee"><span class="dot" aria-hidden="true"></span><span class="label">Local Committee</span></a></li>
+            <li><a href="#short-course-committee" data-target="short-course-committee" title="Short Course Committee"><span class="dot" aria-hidden="true"></span><span class="label">Short Course</span></a></li>
+            <li><a href="#awards-committee" data-target="awards-committee" title="Award Committee"><span class="dot" aria-hidden="true"></span><span class="label">Awards</span></a></li>
+            <li><a href="#sponsorship-committee" data-target="sponsorship-committee" title="Sponsorship Committee"><span class="dot" aria-hidden="true"></span><span class="label">Sponsorship</span></a></li>
+            <li><a href="#outreach-communications" data-target="outreach-communications" title="Communication Committee"><span class="dot" aria-hidden="true"></span><span class="label">Communication</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 md:pl-40 2xl:pl-6 py-16 mt-20">
+        <div>
+
+            <!-- Main Content -->
+            <div>
+
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-16">
+            Organizers
+        </h1>
+
+        <!-- Organizing Committee -->
+        <section id="organizing-chairs" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Organizing Committee</h2>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Co-chairs</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/li-ma.jpg" alt="Li Ma" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://lm186.github.io/" class="hover:underline">Li Ma</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Chicago</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/peter-song.jpg" alt="Peter Song" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://public.websites.umich.edu/~pxsong/" class="hover:underline">Peter Song</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/elizabeth-tipton.jpg" alt="Elizabeth Tipton" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://statistics.northwestern.edu/people/faculty/elizabeth-tipton.html" class="hover:underline">Elizabeth Tipton</a></p>
+                        <p class="text-sm text-gray-500 italic">Northwestern University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/ya-xu.jpg" alt="Ya Xu" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.linkedin.com/in/ya-xu" class="hover:underline">Ya Xu</a></p>
+                        <p class="text-sm text-gray-500 italic">Google DeepMind</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Committee -->
+        <section id="program-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Program Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chairs</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/bryon-aragam.jpg" alt="Bryon Aragam" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.bryonaragam.com/" class="hover:underline">Bryon Aragam</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Chicago</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/tracy-ke.jpg" alt="Tracy Ke" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.tracyke.net/" class="hover:underline">Tracy Ke</a></p>
+                        <p class="text-sm text-gray-500 italic">Harvard University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/mladen-kolar.jpg" alt="Mladen Kolar" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.marshall.usc.edu/people/mladen-kolar" class="hover:underline">Mladen Kolar</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Southern California</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/wenyi-wang.jpg" alt="Wenyi Wang" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://faculty.mdanderson.org/profiles/wenyi_wang.html" class="hover:underline">Wenyi Wang</a></p>
+                        <p class="text-sm text-gray-500 italic">The University of Texas MD Anderson Cancer Center</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/linjun-zhang.jpg" alt="Linjun Zhang" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://linjunz.github.io/" class="hover:underline">Linjun Zhang</a></p>
+                        <p class="text-sm text-gray-500 italic">Rutgers University</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/grace-deng.jpg" alt="Grace Deng" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.niss.org/people/grace-deng" class="hover:underline">Grace Deng</a></p>
+                        <p class="text-sm text-gray-500 italic">Google</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/bei-jiang.jpg" alt="Bei Jiang" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.ualberta.ca/~bei1/" class="hover:underline">Bei Jiang</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Alberta</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/yinan-zheng.jpg" alt="Yinan Zheng" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://www.linkedin.com/in/yinan-zheng" class="hover:underline">Yinan Zheng</a></p>
+                        <p class="text-sm text-gray-500 italic">AbbVie</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/xinlei-wang.jpg" alt="Xinlei Wang" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://xswanglab.uta.edu/aboutpi/" class="hover:underline">Xinlei Wang</a></p>
+                        <p class="text-sm text-gray-500 italic">The University of Texas at Arlington</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Challenge Committee -->
+        <section id="data-challenge-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Data Challenge Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/hongtu-zhu.jpg" alt="Hongtu Zhu" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sph.unc.edu/adv_profile/hongtu-zhu-phd/" class="hover:underline">Hongtu Zhu</a></p>
+                        <p class="text-sm text-gray-500 italic">University of North Carolina at Chapel Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Member</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/shihao-yang.jpg" alt="Shihao Yang" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.gatech.edu/shihao-yang/" class="hover:underline">Shihao Yang</a></p>
+                        <p class="text-sm text-gray-500 italic">Georgia Institute of Technology</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Local Committee -->
+        <section id="local-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Local Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/david-uminsky.jpg" alt="David Uminsky" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://datascience.uchicago.edu/people/david-uminsky/" class="hover:underline">David Uminsky</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Chicago</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/lilly-gullickson.jpg" alt="Lilly Gullickson" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://datascience.uchicago.edu/people/lilly-gullickson/" class="hover:underline">Lilly Gullickson</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Chicago</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/kayleigh-nauracy.jpg" alt="Kayleigh Nauracy" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://datascience.uchicago.edu/people/kayleigh-nauracy/" class="hover:underline">Kayleigh Nauracy</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Chicago</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/aaron-schein.jpg" alt="Aaron Schein" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://aaronschein.com/" class="hover:underline">Aaron Schein</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Chicago</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Short Course Committee -->
+        <section id="short-course-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Short Course Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/anru-zhang.jpg" alt="Anru Zhang" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://anruzhang.github.io/" class="hover:underline">Anru Zhang</a></p>
+                        <p class="text-sm text-gray-500 italic">Duke University</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Members</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/yuliang-xu.jpg" alt="Yuliang Xu" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://yuliangxu.github.io/" class="hover:underline">Yuliang Xu</a></p>
+                        <p class="text-sm text-gray-500 italic">Johns Hopkins University</p>
+                    </div>
+
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/jian-kang.jpg" alt="Jian Kang" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://public.websites.umich.edu/~jiankang/" class="hover:underline">Jian Kang</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Michigan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Award Committee -->
+        <section id="awards-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Award Committee</h2>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/edgar-dobriban.jpg" alt="Edgar Dobriban" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://statistics.wharton.upenn.edu/profile/dobriban/" class="hover:underline">Edgar Dobriban</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Pennsylvania</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsorship Committee -->
+        <section id="sponsorship-committee" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Sponsorship Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/jingshu-wang.jpg" alt="Jingshu Wang" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://codas.uchicago.edu/people/jingshu-wang/" class="hover:underline">Jingshu Wang</a></p>
+                        <p class="text-sm text-gray-500 italic">University of Chicago</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-500">Member</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/tian-zheng.jpg" alt="Tian Zheng" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.stat.columbia.edu/tzheng/author/tian-zheng/" class="hover:underline">Tian Zheng</a></p>
+                        <p class="text-sm text-gray-500 italic">Columbia University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Communication Committee -->
+        <section id="outreach-communications" class="mb-20 scroll-mt-28">
+            <h2 class="text-2xl font-semibold mb-10 text-center">Communication Committee</h2>
+            <div class="mb-10">
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/yi-zhao.jpg" alt="Yi Zhao" class="w-36 h-36 mx-auto rounded-full object-cover object-top mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://sites.google.com/view/yi-zhao/" class="hover:underline">Yi Zhao</a></p>
+                        <p class="text-sm text-gray-500 italic">Indiana University School of Medicine</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-center mb-6 text-gray-700">Co-chair</h3>
+                <div class="flex justify-center gap-12 flex-wrap">
+                    <div class="text-center hover:scale-105 transition w-56">
+                        <img src="image/organizers/panpan-zhang.jpg" alt="Panpan Zhang" class="w-36 h-36 mx-auto rounded-full object-cover mb-4 shadow-lg">
+                        <p class="font-semibold"><a href="https://panpan-zhang.com/" class="hover:underline">Panpan Zhang</a></p>
+                        <p class="text-sm text-gray-500 italic">Vanderbilt University School of Medicine</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            </div> <!-- end main content col -->
+        </div> <!-- end grid -->
+    </div>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bjb2Q2kGhWxjN60LnmpUD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    var isOpen = document.getElementById('mobile-menu').classList.toggle('open');
+    this.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Section rail: toggle + scroll-synced active state
+  (function() {
+    var rail = document.getElementById('section-rail');
+    if (!rail) return;
+    var toggle = document.createElement('button');
+    toggle.className = 'rail-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', 'Toggle sidebar labels');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    rail.insertBefore(toggle, rail.firstChild);
+    try {
+    } catch (e) {}
+    toggle.addEventListener('click', function() {
+      rail.classList.toggle('collapsed');
+      try {
+        localStorage.setItem('sectionRailCollapsed', rail.classList.contains('collapsed') ? '1' : '0');
+      } catch (e) {}
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    rail.querySelectorAll('a[data-target]').forEach(function(a) {
+      links[a.getAttribute('data-target')] = a;
+    });
+    var sections = Object.keys(links)
+      .map(function(id) { return document.getElementById(id); })
+      .filter(Boolean);
+    var setActive = function(id) {
+      Object.keys(links).forEach(function(k) {
+        var a = links[k];
+        if (k === id) {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'true');
+        } else {
+          a.classList.remove('is-active');
+          a.removeAttribute('aria-current');
+        }
+      });
+    };
+    var visible = new Map();
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          visible.set(e.target.id, e.intersectionRatio);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      if (visible.size === 0) return;
+      var topId = null, topRatio = -1;
+      visible.forEach(function(ratio, id) {
+        if (ratio > topRatio) { topRatio = ratio; topId = id; }
+      });
+      if (topId) setActive(topId);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+</script>
+    <script>
+        document.querySelectorAll('.mobile-submenu-toggle').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var isOpen = this.nextElementSibling.classList.toggle('open');
+                this.setAttribute('aria-expanded', String(isOpen));
+                this.querySelector('svg').classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
