@@ -8,10 +8,6 @@
 (function () {
     // Edit this list to update every Volunteers section.
     const volunteers = [
-        'Yuhan Geng (University of Michigan)',
-        'Zhiqiu Xia (Rutgers University)',
-        'Ling Chang (UT MD Anderson Cancer Center)',
-        'Jiahe Shen (UT MD Anderson Cancer Center)',
         'Siyuan Ping (Indiana University School of Medicine)',
         'Minghao Zhou (Indiana University School of Medicine)'
     ];
