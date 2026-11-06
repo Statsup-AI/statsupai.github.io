@@ -19,7 +19,7 @@
             previousUrl: 'https://openreview.net/group?id=STAI-X/2026/Conference'
         },
         'poster-submission': {
-            label: 'Poster submission',
+            label: 'Late-breaking extended abstract submission',
             url: null,
             previousUrl: 'https://openreview.net/group?id=STAI-X/2026/Poster_Track'
         },
