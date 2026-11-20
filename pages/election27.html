@@ -1,0 +1,287 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>2027 Election | StatsUpAI</title>
+  <link rel="icon" href="/img/logo.png" type="image/png">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; color: #0F172A; }
+    h1, h2, h3 { font-family: 'Merriweather', serif; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- Navigation -->
+  <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-3">
+      <a href="/index.html" class="flex items-center gap-3">
+        <img src="/img/logo.svg" alt="StatsUpAI Logo" class="h-9 w-auto">
+        <span class="text-lg font-bold text-slate-900 tracking-tight">StatsUpAI</span>
+      </a>
+      <span class="text-lg text-slate-400 font-normal">|</span>
+      <span class="text-lg text-slate-400 font-normal">2027 Election</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-20 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/60 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+        <span class="text-sm font-semibold text-slate-700">ASA Interest Group</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
+        2027 Election &amp; Officer Appointments
+      </h1>
+
+      <p class="text-xl text-slate-700 mb-2">
+        Candidate Statements for the <span class="font-semibold">“Stats Up Artificial Intelligence”</span> Interest Group
+      </p>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-4 py-16">
+
+    <!-- Election overview + ballot -->
+    <section id="vote" class="mb-14 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-24">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+        <i class="ph ph-check-square-offset text-blue-600"></i>
+        About This Election
+      </h2>
+      <p class="text-slate-700 leading-relaxed">
+        The Stats Up AI Interest Group is holding its election for Chair-Elect and Program Chair-Elect for 2027.
+        Each office has one candidate. Candidate profiles and vision statements appear below, followed by officer
+        appointments and continuing leadership. Only Chair-Elect and Program Chair-Elect are on the ballot.
+      </p>
+      <p class="text-slate-700 leading-relaxed mt-3">
+        <!-- TODO: confirm dates, times and time zone with Tian/Shihao before publishing -->
+        Voting opens <span class="font-semibold">Monday, November 23, 2026</span> and closes
+        <span class="font-semibold">Monday, December 7, 2026</span>.
+        Please review the candidate statements before voting. You may select “Abstain” for either office.
+      </p>
+
+      <div class="mt-6">
+        <!-- TODO: replace href with the published Google Form responder link (not the /edit link),
+             then remove aria-disabled and the pointer-events-none / opacity classes. -->
+        <a href="#" aria-disabled="true"
+           class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-sm hover:bg-blue-700 transition pointer-events-none opacity-60">
+          <i class="ph ph-ballot"></i> Election ballot (link coming soon)
+        </a>
+      </div>
+    </section>
+
+    <!-- Directory -->
+    <section class="mb-14" id="directory">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <i class="ph ph-list-numbers text-blue-600"></i>
+            Directory
+          </h2>
+          <span class="text-sm text-slate-500">Jump to section</span>
+        </div>
+        <ul class="divide-y divide-slate-200">
+          <li>
+            <a href="#chair-elect" class="flex items-center justify-between px-6 py-5 hover:bg-slate-50 transition group">
+              <span class="text-lg font-semibold text-slate-900 group-hover:text-blue-700">Candidate for Chair-Elect (2027)</span>
+              <i class="ph ph-arrow-down-right text-xl text-slate-300 group-hover:text-blue-600"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#program-chair-elect" class="flex items-center justify-between px-6 py-5 hover:bg-slate-50 transition group">
+              <span class="text-lg font-semibold text-slate-900 group-hover:text-blue-700">Candidate for Program Chair-Elect (2027)</span>
+              <i class="ph ph-arrow-down-right text-xl text-slate-300 group-hover:text-blue-600"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#officers" class="flex items-center justify-between px-6 py-5 hover:bg-slate-50 transition group">
+              <span class="text-lg font-semibold text-slate-900 group-hover:text-blue-700">Officer Appointments</span>
+              <i class="ph ph-arrow-down-right text-xl text-slate-300 group-hover:text-blue-600"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#continuing" class="flex items-center justify-between px-6 py-5 hover:bg-slate-50 transition group">
+              <span class="text-lg font-semibold text-slate-900 group-hover:text-blue-700">Continuing Leadership</span>
+              <i class="ph ph-arrow-down-right text-xl text-slate-300 group-hover:text-blue-600"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Candidate: Chair-Elect -->
+    <section id="chair-elect" class="mb-14 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-24">
+      <div class="flex items-start justify-between gap-4 flex-wrap mb-6">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Candidate for Chair-Elect (2027)</h2>
+          <p class="text-slate-500 text-sm mt-1">Statement and profile information</p>
+        </div>
+        <a href="#directory" class="inline-flex items-center gap-2 text-sm text-blue-600 hover:underline">
+          <i class="ph ph-arrow-up"></i> Back to directory
+        </a>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-8">
+        <img src="/img/xihonglin.jpg" alt="Xihong Lin"
+             class="w-40 h-40 rounded-xl object-cover border border-slate-200 bg-slate-100" />
+
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-slate-900">Xihong Lin</h3>
+          <p class="text-slate-600 mt-2">
+            Professor of Statistics and Chair of the Department of Statistics<br>
+            Professor of Biostatistics, Harvard T.H. Chan School of Public Health<br>
+            Harvard University
+          </p>
+
+          <a href="https://hsph.harvard.edu/profile/xihong-lin/" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1 text-blue-600 hover:underline mt-3">
+            <i class="ph ph-link"></i> Professional Profile
+          </a>
+
+          <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <div class="text-sm font-semibold text-slate-900 mb-2 flex items-center gap-2">
+              <i class="ph ph-quotes text-blue-600"></i>
+              Vision Statement
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Building on the strong foundation and accomplishments of previous leaders and members of the ASA AI Interest Group, my vision as Chair-Elect is to further advance the interface of statistics and AI and strengthen the role of statistics in the rapidly evolving AI landscape. I see this as a joint community effort that calls for collaboration among statisticians, AI researchers, and domain scientists. Building on the momentum of the inaugural STAI-X conference, I hope to promote foundational and methodological advances at the intersection of statistics and AI, as well as their applications to accelerate scientific discovery across disciplines. A central goal is to advance principled AI with rigorous statistical guarantees for reliability, uncertainty quantification, and trustworthy discovery. I also hope to foster scientific exchange and collaboration across academia, industry, and the broader scientific community.
+            </p>
+            <p class="text-slate-700 leading-relaxed mt-3">
+              Education is another important priority. AI presents both significant challenges and transformative opportunities for statistics education. We need to rethink the competencies students will need to thrive and become leaders in the age of AI, including strong foundations in statistics and AI, the ability to leverage AI effectively and responsibly, and the critical thinking and scientific judgment to evaluate AI-generated results. We should also engage in discussions on the implications of AI for curriculum and education policies and practices.
+            </p>
+            <p class="text-slate-700 leading-relaxed mt-3">
+              Ultimately, I hope to work together with the ASA AI Interest Group community to build on its existing strengths, expand its reach, and enhance the visibility and impact of statistics in shaping the future of AI and scientific discovery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Candidate: Program Chair-Elect -->
+    <section id="program-chair-elect" class="mb-14 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-24">
+      <div class="flex items-start justify-between gap-4 flex-wrap mb-6">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Candidate for Program Chair-Elect (2027)</h2>
+          <p class="text-slate-500 text-sm mt-1">Statement and profile information</p>
+        </div>
+        <a href="#directory" class="inline-flex items-center gap-2 text-sm text-blue-600 hover:underline">
+          <i class="ph ph-arrow-up"></i> Back to directory
+        </a>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-8">
+        <img src="/img/mladen_kolar.jpg" alt="Mladen Kolar"
+             class="w-40 h-40 rounded-xl object-cover border border-slate-200 bg-slate-100" />
+
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-slate-900">Mladen Kolar</h3>
+          <p class="text-slate-600 mt-2">
+            Professor of Data Sciences and Operations, USC Marshall School of Business<br>
+            Visiting Professor of Statistics and Data Science, Mohamed bin Zayed University of Artificial Intelligence
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-3">
+            <a href="https://www.marshall.usc.edu/people/mladen-kolar" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1 text-blue-600 hover:underline">
+              <i class="ph ph-link"></i> Professional Profile
+            </a>
+            <!-- TODO: add CV link from the Google Doc draft -->
+          </div>
+
+          <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <div class="text-sm font-semibold text-slate-900 mb-2 flex items-center gap-2">
+              <i class="ph ph-quotes text-blue-600"></i>
+              Vision Statement
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Stats Up AI brings statisticians together to advance AI research and its applications through conferences, webinars, and shared resources. As Program Chair-Elect, I would support the continued success of STAI-X and the webinar series. I would also work with the group’s leadership to connect these events to sustained research collaboration. I would like to pilot small, mentored working groups that bring together statisticians, AI researchers, and domain scientists. These groups would develop open case studies on uncertainty quantification, distribution shift, and reliable decision-making. Each would aim to produce a reproducible analysis and practical evaluation guidance. Students and early-career researchers would take meaningful organizing roles. Joint activities with SLDS and other ASA communities would broaden participation. Together, these efforts would help translate statistical ideas into tools for building and evaluating trustworthy AI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Officer appointments -->
+    <section id="officers" class="mb-14 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-24">
+      <div class="flex items-start justify-between gap-4 flex-wrap mb-6">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Officer Appointments</h2>
+          <p class="text-slate-500 text-sm mt-1">The following officers will serve in 2027. These appointments are not part of the election ballot.</p>
+        </div>
+        <a href="#directory" class="inline-flex items-center gap-2 text-sm text-blue-600 hover:underline">
+          <i class="ph ph-arrow-up"></i> Back to directory
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <div class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-1">Secretary</div>
+          <h3 class="text-lg font-bold text-slate-900">Shihao Yang</h3>
+          <p class="text-slate-600 mt-2 text-sm">
+            Harold E. Smalley Early Career Professor and Assistant Professor<br>
+            H. Milton Stewart School of Industrial and Systems Engineering<br>
+            Georgia Institute of Technology
+          </p>
+          <a href="https://sites.gatech.edu/shihao-yang/" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1 text-blue-600 hover:underline mt-3 text-sm">
+            <i class="ph ph-link"></i> Professional Profile
+          </a>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <div class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-1">Treasurer</div>
+          <h3 class="text-lg font-bold text-slate-900">Jingshu Wang</h3>
+          <p class="text-slate-600 mt-2 text-sm">
+            Assistant Professor, Department of Statistics and the College<br>
+            The University of Chicago
+          </p>
+          <a href="https://codas.uchicago.edu/people/jingshu-wang/" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1 text-blue-600 hover:underline mt-3 text-sm">
+            <i class="ph ph-link"></i> Professional Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Continuing leadership -->
+    <section id="continuing" class="mb-14 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm scroll-mt-24">
+      <div class="flex items-start justify-between gap-4 flex-wrap mb-4">
+        <h2 class="text-2xl font-bold text-slate-900">Continuing Leadership</h2>
+        <a href="#directory" class="inline-flex items-center gap-2 text-sm text-blue-600 hover:underline">
+          <i class="ph ph-arrow-up"></i> Back to directory
+        </a>
+      </div>
+      <p class="text-slate-700 leading-relaxed">
+        Hongtu Zhu will become Chair and Linjun Zhang will become Program Chair on January 1, 2027, following their
+        service as Chair-Elect and Program Chair-Elect. Jackson Lautier continues as Outreach Chair under the office’s
+        two-year term. These positions are not on this ballot.
+      </p>
+    </section>
+
+    <!-- Footer note -->
+    <div class="border-t border-slate-200 pt-6 text-sm text-slate-500">
+      Source: Official Candidate Statements (January 2027) ·
+      <a href="/pages/election26.html" class="text-blue-600 hover:underline">2026 candidates</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  {% include asa_banner.html %}
+
+</body>
+</html>
