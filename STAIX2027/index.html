@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2027-footer">
+    <link rel="stylesheet" href="styles.css?v=2027-event-pagination">
     <script src="resource-links.js" defer></script>
 </head>
 <body class="text-gray-900 flex flex-col min-h-screen">
@@ -114,6 +114,31 @@
                     StatsUpAI, an ASA Interest Group
                 </a>.
             </p>
+        </section>
+
+        <section id="events" class="event-carousel scroll-mt-28" aria-labelledby="events-heading" aria-roledescription="carousel">
+            <header class="event-carousel__header">
+                <h2 id="events-heading">Upcoming Events</h2>
+            </header>
+            <div class="event-carousel__viewport">
+                <div data-event-slides>
+                    <article class="event-slide" aria-label="Info and Q&amp;A session">
+                        <h3>Info + Q&amp;A Session</h3>
+                        <dl>
+                            <div><dt>Date</dt><dd>TBD</dd></div>
+                            <div><dt>Time</dt><dd>TBD</dd></div>
+                        </dl>
+                    </article>
+                    <article class="event-slide" aria-label="STAI-X 2027 conference">
+                        <h3>STAI-X 2027 Conference</h3>
+                        <dl>
+                            <div><dt>Date</dt><dd>August 6&ndash;7, 2027</dd></div>
+                            <div><dt>Location</dt><dd>University of Chicago</dd></div>
+                        </dl>
+                    </article>
+                </div>
+            </div>
+            <div class="event-carousel__dots" role="group" aria-label="Choose an event"></div>
         </section>
 
         <!-- STAI-X 2026 conference highlights -->
@@ -391,6 +416,53 @@
   </footer>
     
   <script>
+    (function () {
+      const section = document.getElementById('events');
+      const track = section.querySelector('[data-event-slides]');
+      const slides = Array.from(track.children);
+      if (slides.length < 2) return;
+
+      const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let current = 0;
+      let timer;
+      const pagination = section.querySelector('.event-carousel__dots');
+      const buttons = slides.map((slide, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('aria-label', 'Show ' + slide.querySelector('h3').textContent);
+        button.addEventListener('click', () => {
+          current = index;
+          updateRotation();
+        });
+        pagination.append(button);
+        return button;
+      });
+
+      function showSlide() {
+        track.style.transform = 'translateX(-' + current * 100 + '%)';
+        slides.forEach((slide, index) => {
+          slide.inert = index !== current;
+          buttons[index].setAttribute('aria-current', String(index === current));
+        });
+      }
+
+      function updateRotation() {
+        clearInterval(timer);
+        showSlide();
+        if (!document.hidden && !motion.matches) {
+          timer = setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide();
+          }, 7000);
+        }
+      }
+
+      document.addEventListener('visibilitychange', updateRotation);
+      motion.addEventListener('change', updateRotation);
+      section.classList.add('is-ready');
+      updateRotation();
+    })();
+
     // Countdown timers
     function updateCountdowns() {
       document.querySelectorAll('.countdown').forEach(function(el) {
