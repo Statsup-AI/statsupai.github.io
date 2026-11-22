@@ -15,12 +15,12 @@
     const resources = {
         'paper-submission': {
             label: 'Paper submission',
-            url: null,
+            url: 'https://openreview.net/group?id=STAI-X/2027/Conference',
             previousUrl: 'https://openreview.net/group?id=STAI-X/2026/Conference'
         },
         'poster-submission': {
             label: 'Late-breaking extended abstract submission',
-            url: null,
+            url: 'https://openreview.net/group?id=STAI-X/2027/Poster_Track',
             previousUrl: 'https://openreview.net/group?id=STAI-X/2026/Poster_Track'
         },
         'latex-template': {
